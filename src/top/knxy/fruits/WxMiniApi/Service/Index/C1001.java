@@ -1,4 +1,4 @@
-package top.knxy.fruits.WxMiniApi.Service.IndexService;
+package top.knxy.fruits.WxMiniApi.Service.Index;
 
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.WxMiniApi.DataBase.Bean.Good;

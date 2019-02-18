@@ -15,7 +15,8 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="top/knxy/fruits/WxMiniApi/DataBase/Bean/Good.mapper.xml"/>
-        <mapper class="top.knxy.fruits.WxMiniApi.Service.IndexService.DataSource"/>
+        <mapper class="top.knxy.fruits.WxMiniApi.Service.Index.DataSource"/>
+        <mapper class="top.knxy.fruits.WxMiniApi.Service.Address.DataSource"/>
+
     </mappers>
 </configuration>

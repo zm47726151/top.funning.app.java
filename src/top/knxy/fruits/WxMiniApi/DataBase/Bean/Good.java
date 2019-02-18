@@ -1,5 +1,7 @@
 package top.knxy.fruits.WxMiniApi.DataBase.Bean;
 
+import top.knxy.fruits.WxMiniApi.DataBase.BaseBean;
+
 public class Good extends BaseBean {
 
     private String id;

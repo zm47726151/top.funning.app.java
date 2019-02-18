@@ -1,5 +1,5 @@
 create table User(
-    id int primary key auto_increament,
+    id int primary key auto_increment,
     openId varchar(32)
 )
 
@@ -28,11 +28,27 @@ create table GoodDetail(
 )
 
 /**
+state = {"1","2"}
+state = 2 : 默认
+**/
+create table Address(
+    id int primary key auto_increment,
+    userId char(32),
+    area varchar(16),
+    address varchar(256),
+    phone varchar(32),
+    nickname varchar(32),
+    state int default 1
+)
+
+/**
 state = {"待付款","准备中","已完成","退款中","已取消"}
 **/
 create table order(
     id int primary key auto_increment
 )
+
+
 
 insert into GoodType(name,state) values
 ('年货礼盒',1),

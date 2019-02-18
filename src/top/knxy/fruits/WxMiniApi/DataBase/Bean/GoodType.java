@@ -1,6 +1,8 @@
 package top.knxy.fruits.WxMiniApi.DataBase.Bean;
 
-public class GoodType  extends BaseBean{
+import top.knxy.fruits.WxMiniApi.DataBase.BaseBean;
+
+public class GoodType  extends BaseBean {
     private String id ;
     private String name;
     private String state;

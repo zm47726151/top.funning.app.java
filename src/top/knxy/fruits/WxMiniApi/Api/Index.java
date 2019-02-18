@@ -2,7 +2,7 @@ package top.knxy.fruits.WxMiniApi.Api;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-import top.knxy.fruits.WxMiniApi.Service.IndexService.C1001;
+import top.knxy.fruits.WxMiniApi.Service.Index.C1001;
 import top.knxy.fruits.WxMiniApi.Utils.StrUtils;
 
 import javax.servlet.ServletException;
@@ -52,6 +52,10 @@ public class Index extends HttpServlet {
             C1001 c1001 = new Gson().fromJson(data, C1001.class);
             c1001.start();
             ApiUtils.Response(pw, c1001);
+        } else if ("C1003".equals(cmd)) {
+
+        } else if ("C1003".equals(cmd)) {
+
         } else {
             ApiUtils.ResponseError(pw, "unknown cmd");
         }
