@@ -1,15 +1,24 @@
 package top.knxy.fruits.WxMiniApi.Service;
 
 public abstract class BaseService {
-	public boolean status;
-	public String code;
-	public String msg;
-	public Object data;
+    public int code;
+    public String msg;
+    public Object data;
 
-	public BaseService() {
+    public BaseService() {
 
-	}
+    }
 
-	public abstract void action();
+    public void start() {
+        try {
+            run();
+        } catch (Exception e) {
+            System.out.println("service exception");
+            e.printStackTrace();
+            ServicelUtils.createError(this, "处理异常");
+        }
+    }
 
+
+    public abstract void run() throws Exception;
 }

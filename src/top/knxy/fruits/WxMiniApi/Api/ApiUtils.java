@@ -1,4 +1,4 @@
-package top.knxy.fruits.WxMiniApi;
+package top.knxy.fruits.WxMiniApi.Api;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import com.google.gson.GsonBuilder;
 
 import top.knxy.fruits.WxMiniApi.Service.BaseService;
 
-public class RpUtils {
+public class ApiUtils {
 
 	public static String getString(HttpServletRequest request) {
 		BufferedReader br = null;
@@ -39,58 +39,61 @@ public class RpUtils {
 
 	public static Response createSuccess() {
 		Response response = new Response();
-		response.code = "1";
+		response.code = Code.success;
 		return response;
 	}
 
 	public static Response createError(String msg) {
 		Response response = new Response();
-		response.code = "1000";
+		response.code = Code.error;
 		response.msg = msg;
 		return response;
 	}
 
-	public static void print(PrintWriter pw, BaseService model) {
-		if (model.status) {
-			printSuccess(pw, model.data);
+	public static void Response(PrintWriter pw, BaseService model) {
+		if (model.code == 1) {
+			ResponseSuccess(pw, model.data);
 		} else {
-			printError(pw, model.msg);
+			ResponseError(pw, model.msg);
 		}
 	}
 
-	public static void printError(PrintWriter pw, String msg) {
+	public static void ResponseError(PrintWriter pw, String msg) {
 		Response response = createError(msg);
 
 		Gson gson = new Gson();
 		String jsonStr = gson.toJson(response);
 
-		pw.print(jsonStr);
-		pw.close();
+		printString(pw,jsonStr);
 	}
 
-	public static void printSuccess(PrintWriter pw, Object data) {
+	public static void ResponseSuccess(PrintWriter pw, Object data) {
 		Response response = createSuccess();
 		response.data = data;
 
 		Gson gson = new Gson();
 		String jsonStr = gson.toJson(response);
 
-		pw.print(jsonStr);
-		pw.close();
+		printString(pw,jsonStr);
 	}
 
-	public static void printSuccess(PrintWriter pw, Object data, String dateStringType) {
+	public static void ResponseSuccess(PrintWriter pw, Object data, String dateStringType) {
 		Response response = createSuccess();
 		response.data = data;
 
 		Gson gson = new GsonBuilder().setDateFormat(dateStringType).create();
 		String jsonStr = gson.toJson(response);
 
-		pw.print(jsonStr);
-		pw.close();
+		printString(pw,jsonStr);
 	}
 
-	public static void printSuccess(PrintWriter pw) {
-		printSuccess(pw, null);
+	public static void ResponseSuccess(PrintWriter pw) {
+		ResponseSuccess(pw, null);
+	}
+
+	public static void printString(PrintWriter pw,String str){
+		System.out.println(str);
+		pw.print(str);
+		pw.close();
 	}
 }

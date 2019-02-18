@@ -1,7 +1,8 @@
-package top.knxy.fruits.WxMiniApi;
+package top.knxy.fruits.WxMiniApi.Api;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import top.knxy.fruits.WxMiniApi.Service.IndexService.C1001;
 import top.knxy.fruits.WxMiniApi.Utils.StrUtils;
 
 import javax.servlet.ServletException;
@@ -26,45 +27,34 @@ public class Index extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter pw = response.getWriter();
-        RpUtils.printError(pw, "method should be POST");
+        ApiUtils.ResponseError(pw, "method should be POST");
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
-        String content = RpUtils.getString(request);
+        String content = ApiUtils.getString(request);
         PrintWriter pw = response.getWriter();
 
         Gson gson = new Gson();
 
         if (StrUtils.isEmpty(content)) {
-            RpUtils.printError(pw, "input json is empty");
+            ApiUtils.ResponseError(pw, "input json is empty");
             return;
         }
 
         Request rq = gson.fromJson(content, Request.class);
         String cmd = rq.cmd;
-        JsonObject data = rq.data;
+        JsonObject data = rq.data == null ? new JsonObject() : rq.data;
 
         if ("C1001".equals(cmd)) {
-            // get wx open id
-            /*C0001 c0001 = new Gson().fromJson(data, C0001.class);
-            c0001.action();
-            RpUtils.print(pw, c0001);*/
+            //get wx open id
+            C1001 c1001 = new Gson().fromJson(data, C1001.class);
+            c1001.start();
+            ApiUtils.Response(pw, c1001);
         } else {
-            RpUtils.printError(pw, "unknown cmd");
+            ApiUtils.ResponseError(pw, "unknown cmd");
         }
     }
 }
 
-
-class Request {
-    public String cmd;
-    public JsonObject data;
-}
-
-class Response {
-    public String code;
-    public String msg;
-    public Object data;
-}

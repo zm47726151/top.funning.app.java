@@ -17,20 +17,17 @@ public class ServicelUtils {
 	}
 
 	public static void createError(BaseService model, String msg) {
-		model.status = false;
-		model.code = "-1";
+		model.code = Code.error;
 		model.msg = msg;
 	}
 
-	public static void createError(BaseService model, String code, String msg) {
-		model.status = false;
+	public static void createError(BaseService model, int code, String msg) {
 		model.code = code;
 		model.msg = msg;
 	}
 
 	public static void createSuccess(BaseService model) {
-		model.status = true;
-		model.code = "1";
+		model.code = Code.success;
 	}
 
 	public static String requestGet(String urlString, Map<String, String> map) throws Exception {// 创建URL对象，xxx是服务器API
