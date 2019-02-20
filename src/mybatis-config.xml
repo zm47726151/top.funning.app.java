@@ -15,8 +15,9 @@
         </environment>
     </environments>
     <mappers>
-        <mapper class="top.knxy.fruits.WxMiniApi.Service.Index.DataSource"/>
-        <mapper class="top.knxy.fruits.WxMiniApi.Service.Address.DataSource"/>
+        <mapper class="top.knxy.fruits.WxMiniApi.Service.Index.DBOperation"/>
+        <mapper class="top.knxy.fruits.WxMiniApi.Service.Login.DBOperation"/>
+        <mapper class="top.knxy.fruits.WxMiniApi.Service.Order.DBOperation"/>
 
     </mappers>
 </configuration>

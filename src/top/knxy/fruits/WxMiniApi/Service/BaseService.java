@@ -20,5 +20,5 @@ public abstract class BaseService {
     }
 
 
-    public abstract void run() throws Exception;
+    protected abstract void run() throws Exception;
 }

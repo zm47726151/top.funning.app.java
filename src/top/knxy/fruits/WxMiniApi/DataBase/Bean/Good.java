@@ -4,7 +4,7 @@ import top.knxy.fruits.WxMiniApi.DataBase.BaseBean;
 
 public class Good extends BaseBean {
 
-    private String id;
+    private int id;
     private String name;
     private String description;
     private String imageUrl;
@@ -12,11 +12,11 @@ public class Good extends BaseBean {
     private String type;
     private String stock;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

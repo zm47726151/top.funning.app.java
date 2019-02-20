@@ -12,13 +12,20 @@ create table GoodType(
     state int
 )
 
+
+/**
+state = {"1","2"}
+state = 1 : 上架
+state = 2 : 下架
+**/
 create table Good(
     id int primary key auto_increment,
     name varchar(32),
     description varchar(128),
     imageUrl varchar(128),
-    price int,
+    price DECIMAL(14,2),
     stock int,
+    state int default 1,
     type int/** foreign key GoodType(id) **/
 )
 
@@ -42,10 +49,29 @@ create table Address(
 )
 
 /**
-state = {"待付款","准备中","已完成","退款中","已取消"}
+state = {"待付款" = 1,"准备中" = 2,"已完成" = 3,"退款中" = 4,"已取消" = 5}
 **/
-create table order(
-    id int primary key auto_increment
+create table `Order`(
+    id char(32) primary key,
+    goods text,
+    price DECIMAL(14,2),
+    poster DECIMAL(14,2),
+    amount DECIMAL(14,2),
+
+    provinceName  varchar(32),
+    cityName varchar(32),
+    countyName varchar(32),
+    detailInfo varchar(255),
+    telNumber varchar(32),
+    userName varchar(32),
+    nationalCode varchar(32),
+    postalCode varchar(32),
+
+    note varchar(255),
+    state int not null,
+    userId int,
+    createDT datetime not null,
+    payDT datetime
 )
 
 
@@ -61,22 +87,22 @@ insert into GoodType(name,state) values
 ('芒橙柑柚',1)
 
 insert into Good(name,description,imageUrl,price,stock,type) values
-('苹果','3.0rmb/kg','https://image.age.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg','4000',300,1),
-('雪梨','3.0rmb/kg','https://image.age.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg','4000',300,1),
-('橙子','3.0rmb/kg','https://image.age.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg','4000',300,1),
-('西瓜','3.0rmb/kg','https://image.age.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg','4000',300,1),
-('西红柿','3.0rmb/kg','https://image.age.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg','4000',300,1),
-('黄皮','3.0rmb/kg','https://image.age.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg','4000',300,1),
+('苹果','3.0rmb/kg','https://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,1),
+('雪梨','3.0rmb/kg','https://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,1),
+('橙子','3.0rmb/kg','https://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,1),
+('西瓜','3.0rmb/kg','https://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,1),
+('西红柿','3.0rmb/kg','https://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,1),
+('黄皮','3.0rmb/kg','https://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,1),
 
-('苹果2','3.0rmb/kg','https://image.age.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg','4000',300,2),
-('雪梨2','3.0rmb/kg','https://image.age.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg','4000',300,2),
-('橙子','3.0rmb/kg','https://image.age.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg','4000',300,2),
-('西瓜','3.0rmb/kg','https://image.age.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg','4000',300,2),
-('西红柿','3.0rmb/kg','https://image.age.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg','4000',300,2),
-('黄皮','3.0rmb/kg','https://image.age.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg','4000',300,2),
+('苹果2','3.0rmb/kg','https://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,2),
+('雪梨2','3.0rmb/kg','https://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,2),
+('橙子','3.0rmb/kg','https://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,2),
+('西瓜','3.0rmb/kg','https://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,2),
+('西红柿','3.0rmb/kg','https://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,2),
+('黄皮','3.0rmb/kg','https://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,2),
 
-('苹果3','3.0rmb/kg','https://image.age.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg','4000',300,3),
-('雪梨3','3.0rmb/kg','https://image.age.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg','4000',300,3),
-('橙子','3.0rmb/kg','https://image.age.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg','4000',300,3),
-('西瓜','3.0rmb/kg','https://image.age.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg','4000',300,3),
-('黄皮','3.0rmb/kg','https://image.age.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg','4000',300,3)
+('苹果3','3.0rmb/kg','https://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,3),
+('雪梨3','3.0rmb/kg','https://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,3),
+('橙子','3.0rmb/kg','https://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,3),
+('西瓜','3.0rmb/kg','https://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,3),
+('黄皮','3.0rmb/kg','https://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,3)

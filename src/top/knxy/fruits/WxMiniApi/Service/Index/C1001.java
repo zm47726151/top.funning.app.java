@@ -15,7 +15,7 @@ public class C1001 extends BaseService {
     @Override
     public void run() throws Exception {
         SqlSession session = MyBatisUtils.getSession();
-        DataSource mapper = session.getMapper(DataSource.class);
+        DBOperation mapper = session.getMapper(DBOperation.class);
         List<GoodType> goodTypeList = mapper.getGoodTypeList();
         List<Good> goodList = mapper.getGoodList();
         session.close();
@@ -27,7 +27,7 @@ public class C1001 extends BaseService {
 
         for (GoodType goodType : goodTypeList) {
             Data.Type type = new Data.Type(goodType);
-            typeMap.put(goodType.getId(), type);
+            typeMap.put(String.valueOf(goodType.getId()), type);
             data.typeList.add(type);
         }
 
@@ -40,6 +40,7 @@ public class C1001 extends BaseService {
         this.data = data;
 
         ServicelUtils.createSuccess(this);
+        session.close();
     }
 
     public static class Data {
@@ -52,7 +53,7 @@ public class C1001 extends BaseService {
             public List<Good> goodList;
 
             public Type(GoodType goodType) {
-                this.id = goodType.getId();
+                this.id = String.valueOf(goodType.getId());
                 this.name = goodType.getName();
                 this.goodList = new ArrayList<>();
             }
@@ -65,7 +66,7 @@ public class C1001 extends BaseService {
                 public String price;
 
                 public Good(top.knxy.fruits.WxMiniApi.DataBase.Bean.Good good) {
-                    this.id = good.getId();
+                    this.id = String.valueOf(good.getId());
                     this.name = good.getName();
                     this.description = good.getDescription();
                     this.imageUrl = good.getImageUrl();

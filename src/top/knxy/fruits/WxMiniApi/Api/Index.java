@@ -3,13 +3,17 @@ package top.knxy.fruits.WxMiniApi.Api;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import top.knxy.fruits.WxMiniApi.Service.Index.C1001;
+import top.knxy.fruits.WxMiniApi.Service.Login.C1003;
+import top.knxy.fruits.WxMiniApi.Config.C;
+import top.knxy.fruits.WxMiniApi.Service.Order.Comfirm.C1004;
+import top.knxy.fruits.WxMiniApi.Service.Order.Create.C1002;
+import top.knxy.fruits.WxMiniApi.Service.Order.List.C1005;
+import top.knxy.fruits.WxMiniApi.Service.SessionInfo;
 import top.knxy.fruits.WxMiniApi.Utils.StrUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -27,7 +31,7 @@ public class Index extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter pw = response.getWriter();
-        ApiUtils.ResponseError(pw, "method should be POST");
+        ApiUtils.responseError(pw, "method should be POST");
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -39,7 +43,7 @@ public class Index extends HttpServlet {
         Gson gson = new Gson();
 
         if (StrUtils.isEmpty(content)) {
-            ApiUtils.ResponseError(pw, "input json is empty");
+            ApiUtils.responseError(pw, "input json is empty");
             return;
         }
 
@@ -47,17 +51,52 @@ public class Index extends HttpServlet {
         String cmd = rq.cmd;
         JsonObject data = rq.data == null ? new JsonObject() : rq.data;
 
+        SessionInfo sessionInfo = null;
+        if ("C1002".equals(cmd) || "C1004".equals(cmd) ) {
+            sessionInfo = (SessionInfo) request.getSession().getAttribute("SessionInfo");
+            if (sessionInfo == null) {
+                ApiUtils.responseError(pw, "还没有登录");
+                return;
+            }
+        }
+
         if ("C1001".equals(cmd)) {
-            //get wx open id
-            C1001 c1001 = new Gson().fromJson(data, C1001.class);
+            //getGood wx open id
+            C1001 c1001 = gson.fromJson(data, C1001.class);
             c1001.start();
-            ApiUtils.Response(pw, c1001);
+            ApiUtils.response(pw, c1001);
+        } else if ("C1002".equals(cmd)) {
+            //order created
+            C1002 c1002 = gson.fromJson(data, C1002.class);
+            c1002.userId = sessionInfo.userId;
+            c1002.start();
+            ApiUtils.response(pw, c1002);
         } else if ("C1003".equals(cmd)) {
-
-        } else if ("C1003".equals(cmd)) {
-
+            //Login
+            C1003 c1003 = gson.fromJson(data, C1003.class);
+            c1003.start();
+            if (c1003.code == C.Service.success) {
+                HttpSession session = request.getSession();
+                C1003.Data d = (C1003.Data) c1003.data;
+                session.setAttribute("SessionInfo", new SessionInfo(d.openid, d.sessionKey, d.userId));
+                ApiUtils.responseSuccess(pw);
+            } else {
+                ApiUtils.responseError(pw, c1003.msg);
+            }
+        } else if ("C1004".equals(cmd)) {
+            //order confirm
+            C1004 c1004 = gson.fromJson(data, C1004.class);
+            c1004.userId = sessionInfo.userId;
+            c1004.start();
+            ApiUtils.response(pw, c1004);
+        }  else if ("C1005".equals(cmd)) {
+            //order list
+            C1005 c1005 = gson.fromJson(data, C1005.class);
+            c1005.userId = sessionInfo.userId;
+            c1005.start();
+            ApiUtils.response(pw, c1005);
         } else {
-            ApiUtils.ResponseError(pw, "unknown cmd");
+            ApiUtils.responseError(pw, "unknown cmd");
         }
     }
 }

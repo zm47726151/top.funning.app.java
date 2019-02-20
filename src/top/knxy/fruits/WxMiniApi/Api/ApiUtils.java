@@ -9,7 +9,10 @@ import javax.servlet.http.HttpServletRequest;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import org.springframework.http.HttpRequest;
 import top.knxy.fruits.WxMiniApi.Service.BaseService;
+import top.knxy.fruits.WxMiniApi.Config.C;
+import top.knxy.fruits.WxMiniApi.Service.SessionInfo;
 
 public class ApiUtils {
 
@@ -39,26 +42,26 @@ public class ApiUtils {
 
 	public static Response createSuccess() {
 		Response response = new Response();
-		response.code = Code.success;
+		response.code = C.Client.success;
 		return response;
 	}
 
 	public static Response createError(String msg) {
 		Response response = new Response();
-		response.code = Code.error;
+		response.code = C.Client.error;
 		response.msg = msg;
 		return response;
 	}
 
-	public static void Response(PrintWriter pw, BaseService model) {
-		if (model.code == 1) {
-			ResponseSuccess(pw, model.data);
+	public static void response(PrintWriter pw, BaseService model) {
+		if (model.code == C.Service.success) {
+			responseSuccess(pw, model.data);
 		} else {
-			ResponseError(pw, model.msg);
+			responseError(pw, model.msg);
 		}
 	}
 
-	public static void ResponseError(PrintWriter pw, String msg) {
+	public static void responseError(PrintWriter pw, String msg) {
 		Response response = createError(msg);
 
 		Gson gson = new Gson();
@@ -67,7 +70,7 @@ public class ApiUtils {
 		printString(pw,jsonStr);
 	}
 
-	public static void ResponseSuccess(PrintWriter pw, Object data) {
+	public static void responseSuccess(PrintWriter pw, Object data) {
 		Response response = createSuccess();
 		response.data = data;
 
@@ -77,7 +80,7 @@ public class ApiUtils {
 		printString(pw,jsonStr);
 	}
 
-	public static void ResponseSuccess(PrintWriter pw, Object data, String dateStringType) {
+	public static void responseSuccess(PrintWriter pw, Object data, String dateStringType) {
 		Response response = createSuccess();
 		response.data = data;
 
@@ -87,13 +90,17 @@ public class ApiUtils {
 		printString(pw,jsonStr);
 	}
 
-	public static void ResponseSuccess(PrintWriter pw) {
-		ResponseSuccess(pw, null);
+	public static void responseSuccess(PrintWriter pw) {
+		responseSuccess(pw, null);
 	}
 
 	public static void printString(PrintWriter pw,String str){
 		System.out.println(str);
 		pw.print(str);
 		pw.close();
+	}
+
+	public static SessionInfo getSession(HttpServletRequest request){
+		return (SessionInfo) request.getSession().getAttribute("SessionInfo");
 	}
 }
