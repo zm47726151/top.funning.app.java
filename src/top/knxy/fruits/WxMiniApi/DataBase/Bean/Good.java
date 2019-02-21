@@ -10,7 +10,6 @@ public class Good extends BaseBean {
     private String imageUrl;
     private String price;
     private String type;
-    private String stock;
 
     public int getId() {
         return id;
@@ -48,13 +47,6 @@ public class Good extends BaseBean {
         return price;
     }
 
-    public String getStock() {
-        return stock;
-    }
-
-    public void setStock(String stock) {
-        this.stock = stock;
-    }
 
     public void setPrice(String price) {
         this.price = price;

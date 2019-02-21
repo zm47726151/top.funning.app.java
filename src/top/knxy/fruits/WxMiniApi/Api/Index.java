@@ -5,9 +5,12 @@ import com.google.gson.JsonObject;
 import top.knxy.fruits.WxMiniApi.Service.Index.C1001;
 import top.knxy.fruits.WxMiniApi.Service.Login.C1003;
 import top.knxy.fruits.WxMiniApi.Config.C;
+import top.knxy.fruits.WxMiniApi.Service.Order.Cancel.C1007;
 import top.knxy.fruits.WxMiniApi.Service.Order.Comfirm.C1004;
 import top.knxy.fruits.WxMiniApi.Service.Order.Create.C1002;
+import top.knxy.fruits.WxMiniApi.Service.Order.Get.C1006;
 import top.knxy.fruits.WxMiniApi.Service.Order.List.C1005;
+import top.knxy.fruits.WxMiniApi.Service.Order.Refund.C1008;
 import top.knxy.fruits.WxMiniApi.Service.SessionInfo;
 import top.knxy.fruits.WxMiniApi.Utils.StrUtils;
 
@@ -26,7 +29,6 @@ public class Index extends HttpServlet {
      */
     public Index() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -51,11 +53,13 @@ public class Index extends HttpServlet {
         String cmd = rq.cmd;
         JsonObject data = rq.data == null ? new JsonObject() : rq.data;
 
-        SessionInfo sessionInfo = null;
-        if ("C1002".equals(cmd) || "C1004".equals(cmd) ) {
-            sessionInfo = (SessionInfo) request.getSession().getAttribute("SessionInfo");
+        SessionInfo sessionInfo = (SessionInfo) request.getSession().getAttribute("SessionInfo");
+        if ("C1002".equals(cmd) || "C1004".equals(cmd) ||
+                "C1005".equals(cmd) || "C1006".equals(cmd) ||
+                "C10067".equals(cmd) || "C1008".equals(cmd)) {
+
             if (sessionInfo == null) {
-                ApiUtils.responseError(pw, "还没有登录");
+                ApiUtils.responseError(pw, C.Client.needLogin, "还没有登录");
                 return;
             }
         }
@@ -89,12 +93,30 @@ public class Index extends HttpServlet {
             c1004.userId = sessionInfo.userId;
             c1004.start();
             ApiUtils.response(pw, c1004);
-        }  else if ("C1005".equals(cmd)) {
+        } else if ("C1005".equals(cmd)) {
             //order list
             C1005 c1005 = gson.fromJson(data, C1005.class);
             c1005.userId = sessionInfo.userId;
             c1005.start();
             ApiUtils.response(pw, c1005);
+        } else if ("C1006".equals(cmd)) {
+            //order get
+            C1006 c1006 = gson.fromJson(data, C1006.class);
+            c1006.userId = sessionInfo.userId;
+            c1006.start();
+            ApiUtils.response(pw, c1006);
+        } else if ("C1007".equals(cmd)) {
+            //order cancel
+            C1007 c1007 = gson.fromJson(data, C1007.class);
+            c1007.userId = sessionInfo.userId;
+            c1007.start();
+            ApiUtils.response(pw, c1007);
+        } else if ("C1008".equals(cmd)) {
+            //order refund
+            C1008 c1008 = gson.fromJson(data, C1008.class);
+            c1008.userId = sessionInfo.userId;
+            c1008.start();
+            ApiUtils.response(pw, c1008);
         } else {
             ApiUtils.responseError(pw, "unknown cmd");
         }

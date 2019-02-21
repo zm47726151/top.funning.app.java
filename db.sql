@@ -49,7 +49,7 @@ create table Address(
 )
 
 /**
-state = {"待付款" = 1,"准备中" = 2,"已完成" = 3,"退款中" = 4,"已取消" = 5}
+state = {"待付款" = 1,"准备中" = 2,"已完成" = 3,"退款中" = 4,"已取消" = 5,"已退款" = 6}
 **/
 create table `Order`(
     id char(32) primary key,

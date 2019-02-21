@@ -16,91 +16,91 @@ import top.knxy.fruits.WxMiniApi.Service.SessionInfo;
 
 public class ApiUtils {
 
-	public static String getString(HttpServletRequest request) {
-		BufferedReader br = null;
-		StringBuilder sb = new StringBuilder();
-		try {
-			br = request.getReader();
-			String str;
-			while ((str = br.readLine()) != null) {
-				sb.append(str);
-			}
-			br.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			if (null != br) {
-				try {
-					br.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
-		}
-		return sb.toString();
-	}
+    public static String getString(HttpServletRequest request) {
+        BufferedReader br = null;
+        StringBuilder sb = new StringBuilder();
+        try {
+            br = request.getReader();
+            String str;
+            while ((str = br.readLine()) != null) {
+                sb.append(str);
+            }
+            br.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (null != br) {
+                try {
+                    br.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return sb.toString();
+    }
 
-	public static Response createSuccess() {
-		Response response = new Response();
-		response.code = C.Client.success;
-		return response;
-	}
+    public static Response createSuccess() {
+        Response response = new Response();
+        response.code = C.Client.success;
+        return response;
+    }
 
-	public static Response createError(String msg) {
-		Response response = new Response();
-		response.code = C.Client.error;
-		response.msg = msg;
-		return response;
-	}
 
-	public static void response(PrintWriter pw, BaseService model) {
-		if (model.code == C.Service.success) {
-			responseSuccess(pw, model.data);
-		} else {
-			responseError(pw, model.msg);
-		}
-	}
+    public static void response(PrintWriter pw, BaseService model) {
+        if (model.code == C.Service.success) {
+            responseSuccess(pw, model.data);
+        } else {
+            responseError(pw, model.msg);
+        }
+    }
 
-	public static void responseError(PrintWriter pw, String msg) {
-		Response response = createError(msg);
+    public static void responseError(PrintWriter pw, String msg) {
+        responseError(pw, C.Client.error, msg);
+    }
 
-		Gson gson = new Gson();
-		String jsonStr = gson.toJson(response);
+    public static void responseError(PrintWriter pw, String code, String msg) {
+        Response response = new Response();
+        response.code = code;
+        response.msg = msg;
 
-		printString(pw,jsonStr);
-	}
+        Gson gson = new Gson();
+        String jsonStr = gson.toJson(response);
 
-	public static void responseSuccess(PrintWriter pw, Object data) {
-		Response response = createSuccess();
-		response.data = data;
+        printString(pw, jsonStr);
+    }
 
-		Gson gson = new Gson();
-		String jsonStr = gson.toJson(response);
+    public static void responseSuccess(PrintWriter pw, Object data) {
+        Response response = createSuccess();
+        response.data = data;
 
-		printString(pw,jsonStr);
-	}
+        Gson gson = new Gson();
+        String jsonStr = gson.toJson(response);
 
-	public static void responseSuccess(PrintWriter pw, Object data, String dateStringType) {
-		Response response = createSuccess();
-		response.data = data;
+        printString(pw, jsonStr);
+    }
 
-		Gson gson = new GsonBuilder().setDateFormat(dateStringType).create();
-		String jsonStr = gson.toJson(response);
+    public static void responseSuccess(PrintWriter pw, Object data, String dateStringType) {
+        Response response = createSuccess();
+        response.data = data;
 
-		printString(pw,jsonStr);
-	}
+        Gson gson = new GsonBuilder().setDateFormat(dateStringType).create();
+        String jsonStr = gson.toJson(response);
 
-	public static void responseSuccess(PrintWriter pw) {
-		responseSuccess(pw, null);
-	}
+        printString(pw, jsonStr);
+    }
 
-	public static void printString(PrintWriter pw,String str){
-		System.out.println(str);
-		pw.print(str);
-		pw.close();
-	}
+    public static void responseSuccess(PrintWriter pw) {
+        responseSuccess(pw, null);
+    }
 
-	public static SessionInfo getSession(HttpServletRequest request){
-		return (SessionInfo) request.getSession().getAttribute("SessionInfo");
-	}
+    public static void printString(PrintWriter pw, String str) {
+        System.out.println(str);
+        pw.print(str);
+        pw.close();
+    }
+
+    public static SessionInfo getSession(HttpServletRequest request) {
+        return (SessionInfo) request.getSession().getAttribute("SessionInfo");
+    }
 }

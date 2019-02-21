@@ -20,15 +20,9 @@ public class C1002 extends BaseService {
     public List<Item> goodList;
 
     public static class Item {
-        public Body body;
+        public Good body;
         public String amount;
-
-        public static class Body {
-            public String id;
-            public String name;
-        }
     }
-
 
     @Override
     public void run() throws Exception {
@@ -44,14 +38,13 @@ public class C1002 extends BaseService {
         this.data = data;
 
         BigDecimal price = new BigDecimal(0);
-        data.goodList = new ArrayList<>();
         for (Item item : goodList) {
-            Good good = ds.getGood(item.body.id);
+            Good good = ds.getGood(String.valueOf(item.body.getId()));
             if (good == null) {
-                ServicelUtils.createError(this, item.body.name + " 没货了");
+                ServicelUtils.createError(this, item.body.getName() + " 没货了");
                 return;
             }
-            data.goodList.add(new Data.Item(good, item.amount));
+            item.body = good;
             price = new BigDecimal(good.getPrice()).multiply(new BigDecimal(item.amount)).add(price);
         }
 
@@ -59,7 +52,7 @@ public class C1002 extends BaseService {
 
         Order order = new Order();
         order.setId(ServicelUtils.getUUid());
-        order.setGoods(gson.toJson(data.goodList));
+        order.setGoods(gson.toJson(goodList));
         order.setPrice(price.toString());
         order.setCreateDT(new Date());
         order.setUserId(userId);
@@ -72,7 +65,6 @@ public class C1002 extends BaseService {
             return;
         }
 
-        data.price = price.toString();
         data.id = order.getId();
         ServicelUtils.createSuccess(this);
         session.close();
@@ -80,19 +72,6 @@ public class C1002 extends BaseService {
 
 
     public static class Data {
-
         public String id;
-        public String price;
-        public List<Item> goodList;
-
-        public static class Item {
-            public Good body;
-            public String amount;
-
-            public Item(Good body, String amount) {
-                this.body = body;
-                this.amount = amount;
-            }
-        }
     }
 }
