@@ -4,7 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.WxMiniApi.Config.W;
-import top.knxy.fruits.WxMiniApi.DataBase.Bean.User;
+import top.knxy.fruits.WxMiniApi.DataBase.Table.User;
 import top.knxy.fruits.WxMiniApi.DataBase.MyBatisUtils;
 import top.knxy.fruits.WxMiniApi.Service.BaseService;
 import top.knxy.fruits.WxMiniApi.Service.ServicelUtils;

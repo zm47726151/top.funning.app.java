@@ -4,7 +4,7 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.SelectKey;
-import top.knxy.fruits.WxMiniApi.DataBase.Bean.User;
+import top.knxy.fruits.WxMiniApi.DataBase.Table.User;
 
 public interface DBOperation {
 

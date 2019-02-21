@@ -1,8 +1,8 @@
 package top.knxy.fruits.WxMiniApi.Service.Index;
 
 import org.apache.ibatis.session.SqlSession;
-import top.knxy.fruits.WxMiniApi.DataBase.Bean.Good;
-import top.knxy.fruits.WxMiniApi.DataBase.Bean.GoodType;
+import top.knxy.fruits.WxMiniApi.DataBase.Table.Good;
+import top.knxy.fruits.WxMiniApi.DataBase.Table.GoodType;
 import top.knxy.fruits.WxMiniApi.DataBase.MyBatisUtils;
 import top.knxy.fruits.WxMiniApi.Service.BaseService;
 import top.knxy.fruits.WxMiniApi.Service.ServicelUtils;
@@ -65,7 +65,7 @@ public class C1001 extends BaseService {
                 public String imageUrl;
                 public String price;
 
-                public Good(top.knxy.fruits.WxMiniApi.DataBase.Bean.Good good) {
+                public Good(top.knxy.fruits.WxMiniApi.DataBase.Table.Good good) {
                     this.id = String.valueOf(good.getId());
                     this.name = good.getName();
                     this.description = good.getDescription();

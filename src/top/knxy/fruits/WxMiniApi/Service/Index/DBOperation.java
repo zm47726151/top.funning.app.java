@@ -1,8 +1,8 @@
 package top.knxy.fruits.WxMiniApi.Service.Index;
 
 import org.apache.ibatis.annotations.Select;
-import top.knxy.fruits.WxMiniApi.DataBase.Bean.Good;
-import top.knxy.fruits.WxMiniApi.DataBase.Bean.GoodType;
+import top.knxy.fruits.WxMiniApi.DataBase.Table.Good;
+import top.knxy.fruits.WxMiniApi.DataBase.Table.GoodType;
 
 import java.util.List;
 

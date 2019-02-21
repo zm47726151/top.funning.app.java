@@ -1,7 +1,7 @@
 package top.knxy.fruits.WxMiniApi.Service.Order.Comfirm;
 
 import org.apache.ibatis.session.SqlSession;
-import top.knxy.fruits.WxMiniApi.DataBase.Bean.Order;
+import top.knxy.fruits.WxMiniApi.DataBase.Table.Order;
 import top.knxy.fruits.WxMiniApi.DataBase.MyBatisUtils;
 import top.knxy.fruits.WxMiniApi.Service.BaseService;
 import top.knxy.fruits.WxMiniApi.Service.Order.DBOperation;

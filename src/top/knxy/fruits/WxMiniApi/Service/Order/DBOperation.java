@@ -3,9 +3,8 @@ package top.knxy.fruits.WxMiniApi.Service.Order;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
-import top.knxy.fruits.WxMiniApi.DataBase.Bean.Address;
-import top.knxy.fruits.WxMiniApi.DataBase.Bean.Good;
-import top.knxy.fruits.WxMiniApi.DataBase.Bean.Order;
+import top.knxy.fruits.WxMiniApi.DataBase.Table.Good;
+import top.knxy.fruits.WxMiniApi.DataBase.Table.Order;
 
 import java.util.List;
 
@@ -18,7 +17,9 @@ public interface DBOperation {
             " values(#{id},#{goods},#{price},#{createDT},#{userId},#{state})")
     public int insert(Order order);
 
-    @Select("select id,userId,price from `Order` where id = #{id} and userId = #{userId}")
+    @Select("Select id,goods,price,poster,amount,provinceName,cityName,countyName," +
+            "detailInfo,telNumber,userName,nationalCode,postalCode,note,state,userId,createDT,payDT " +
+            "from `Order` where id = #{id} and userId = #{userId} limit 1")
     public Order getOrder(Order order);
 
     @Update("update `Order` set note = #{note}," +
@@ -37,4 +38,14 @@ public interface DBOperation {
             "state = #{state} " +
             "where id = #{id} and userId = #{userId}")
     public int update(Order order);
+
+
+    @Select("Select id,goods,price,poster,amount,provinceName,cityName,countyName," +
+            "detailInfo,telNumber,userName,nationalCode,postalCode,note,state,userId,createDT,payDT " +
+            "from `order` where userId = #{userId} order by createDT desc")
+    public List<Order> getList(String userId);
+
+    @Update("update `Order` set state = #{state} " +
+            "where id = #{id} and userId = #{userId}")
+    public int changeState(Order order);
 }
