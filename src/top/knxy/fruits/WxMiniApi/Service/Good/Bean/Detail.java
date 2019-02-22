@@ -1,21 +1,21 @@
-package top.knxy.fruits.WxMiniApi.DataBase.Bean;
+package top.knxy.fruits.WxMiniApi.Service.Good.Bean;
 
 import top.knxy.fruits.WxMiniApi.DataBase.BaseBean;
 
-public class Good extends BaseBean {
+public class Detail extends BaseBean {
 
-    private int id;
+    private String id;
     private String name;
     private String description;
     private String imageUrl;
     private String price;
-    private String type;
+    private String content;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -47,17 +47,15 @@ public class Good extends BaseBean {
         return price;
     }
 
-
     public void setPrice(String price) {
         this.price = price;
     }
 
-    public String getType() {
-        return type;
+    public String getContent() {
+        return content;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setContent(String content) {
+        this.content = content;
     }
-
 }

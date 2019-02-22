@@ -3,9 +3,8 @@ package top.knxy.fruits.WxMiniApi.Service.Order;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
-import top.knxy.fruits.WxMiniApi.DataBase.Bean.Address;
-import top.knxy.fruits.WxMiniApi.DataBase.Bean.Good;
-import top.knxy.fruits.WxMiniApi.DataBase.Bean.Order;
+import top.knxy.fruits.WxMiniApi.DataBase.Table.Good;
+import top.knxy.fruits.WxMiniApi.DataBase.Table.Order;
 
 import java.util.List;
 

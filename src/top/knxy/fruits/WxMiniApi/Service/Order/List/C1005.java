@@ -2,7 +2,7 @@ package top.knxy.fruits.WxMiniApi.Service.Order.List;
 
 import com.google.gson.Gson;
 import org.apache.ibatis.session.SqlSession;
-import top.knxy.fruits.WxMiniApi.DataBase.Bean.Order;
+import top.knxy.fruits.WxMiniApi.DataBase.Table.Order;
 import top.knxy.fruits.WxMiniApi.DataBase.MyBatisUtils;
 import top.knxy.fruits.WxMiniApi.Service.BaseService;
 import top.knxy.fruits.WxMiniApi.Service.Order.DBOperation;
@@ -33,10 +33,10 @@ public class C1005 extends BaseService {
     public static class Data {
         public List<Order> orders;
 
-        public Data(List<top.knxy.fruits.WxMiniApi.DataBase.Bean.Order> orders) {
+        public Data(List<top.knxy.fruits.WxMiniApi.DataBase.Table.Order> orders) {
             this.orders = new ArrayList<>();
             Gson gson = new Gson();
-            for (top.knxy.fruits.WxMiniApi.DataBase.Bean.Order o : orders) {
+            for (top.knxy.fruits.WxMiniApi.DataBase.Table.Order o : orders) {
                 String json = "{ \"goodList\" : " + o.getGoods() + "}";
                 Order order = gson.fromJson(json, Order.class);
                 order.setData(o);
@@ -69,7 +69,7 @@ public class C1005 extends BaseService {
 
             public List<Good> goodList;
 
-            public void setData(top.knxy.fruits.WxMiniApi.DataBase.Bean.Order o) {
+            public void setData(top.knxy.fruits.WxMiniApi.DataBase.Table.Order o) {
                 this.id = o.getId();
 
                 this.price = o.getPrice();

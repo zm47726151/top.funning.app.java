@@ -1,4 +1,4 @@
-package top.knxy.fruits.WxMiniApi.DataBase.Bean;
+package top.knxy.fruits.WxMiniApi.DataBase.Table;
 
 import top.knxy.fruits.WxMiniApi.DataBase.BaseBean;
 

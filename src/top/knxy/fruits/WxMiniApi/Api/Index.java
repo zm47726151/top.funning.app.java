@@ -2,6 +2,7 @@ package top.knxy.fruits.WxMiniApi.Api;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import top.knxy.fruits.WxMiniApi.Service.Good.Get.C1009;
 import top.knxy.fruits.WxMiniApi.Service.Index.C1001;
 import top.knxy.fruits.WxMiniApi.Service.Login.C1003;
 import top.knxy.fruits.WxMiniApi.Config.C;
@@ -117,6 +118,11 @@ public class Index extends HttpServlet {
             c1008.userId = sessionInfo.userId;
             c1008.start();
             ApiUtils.response(pw, c1008);
+        } else if ("C1009".equals(cmd)) {
+            //Good get
+            C1009 c1009 = gson.fromJson(data, C1009.class);
+            c1009.start();
+            ApiUtils.response(pw, c1009);
         } else {
             ApiUtils.responseError(pw, "unknown cmd");
         }

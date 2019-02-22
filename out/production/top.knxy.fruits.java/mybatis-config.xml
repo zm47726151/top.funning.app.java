@@ -18,6 +18,7 @@
         <mapper class="top.knxy.fruits.WxMiniApi.Service.Index.DBOperation"/>
         <mapper class="top.knxy.fruits.WxMiniApi.Service.Login.DBOperation"/>
         <mapper class="top.knxy.fruits.WxMiniApi.Service.Order.DBOperation"/>
+        <mapper class="top.knxy.fruits.WxMiniApi.Service.Good.DBOperation"/>
 
     </mappers>
 </configuration>
