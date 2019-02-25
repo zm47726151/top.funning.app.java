@@ -78,37 +78,53 @@ create table `Order`(
 
 
 insert into GoodType(name,state) values
-('年货礼盒',1),
-('车里草莓',1),
-('好吃推荐',1),
-('所有果品',1),
-('苹果蕉梨',1),
-('休闲干果',1),
-('西瓜蜜瓜',1),
-('芒橙柑柚',1)
+('家居日常',1),
+('洗浴护理',1),
+('除湿驱蚊',1),
+('文具文品',1),
+('五金工具',1)
 
 insert into Good(name,description,imageUrl,price,stock,type) values
-('苹果','3.0rmb/kg','http://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,1),
-('雪梨','3.0rmb/kg','http://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,1),
-('橙子','3.0rmb/kg','http://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,1),
-('西瓜','3.0rmb/kg','http://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,1),
-('西红柿','3.0rmb/kg','http://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,1),
-('黄皮','3.0rmb/kg','http://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,1),
+('维达(Vinda) 手帕纸','超韧4层纸巾*36包纸巾(无香)','https://fruits.knxy.top/1.jpg','19.00',300,9),
+('洗衣液','','https://fruits.knxy.top/2.jpg','40.00',300,9),
+('洗洁精','','https://fruits.knxy.top/3.jpg','11.00',300,9),
+('手帕','','https://fruits.knxy.top/4.jpg','15.00',300,9),
+('利是封','','https://fruits.knxy.top/5.jpg','5.00',300,9),
+('威猛先生厨房去污剂','','https://fruits.knxy.top/6.jpg','25.00',300,9),
+('电蚊液','','https://fruits.knxy.top/7.jpg','15.00',300,9),
+('电池','','https://fruits.knxy.top/8.jpg','2.00',300,9),
+('雨伞','','https://fruits.knxy.top/9.jpg','25.00',300,9),
+('卫生棉','','https://fruits.knxy.top/10.jpg','10.00',300,9),
+('牙刷','','https://fruits.knxy.top/11.jpg','7.00',300,9),
+('牙膏','','https://fruits.knxy.top/12.jpg','21.00',300,9),
 
-('苹果2','3.0rmb/kg','http://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,2),
-('雪梨2','3.0rmb/kg','http://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,2),
-('橙子','3.0rmb/kg','http://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,2),
-('西瓜','3.0rmb/kg','http://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,2),
-('西红柿','3.0rmb/kg','http://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,2),
-('黄皮','3.0rmb/kg','http://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,2),
+('沐浴露','','https://fruits.knxy.top/13.jpg','32.00',300,10),
+('香皂','','https://fruits.knxy.top/14.jpg','2.00',300,10),
+('洗衣液','','https://fruits.knxy.top/15.jpg','8.00',300,10),
+('洗头水','','https://fruits.knxy.top/16.jpg','38.00',300,10),
+('漱口水','','https://fruits.knxy.top/17.jpg','10.00',300,10),
+('剃须刀','','https://fruits.knxy.top/18.jpg','108.00',300,10),
 
-('苹果3','3.0rmb/kg','http://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,3),
-('雪梨3','3.0rmb/kg','http://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,3),
-('橙子','3.0rmb/kg','http://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,3),
-('西瓜','3.0rmb/kg','http://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,3),
-('黄皮','3.0rmb/kg','http://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','40.00',300,3)
+('电蚊液','','https://fruits.knxy.top/19.jpg','12.00',300,11),
+('花露水','','https://fruits.knxy.top/20.jpg','11.00',300,11),
+('电蚊器','','https://fruits.knxy.top/21.jpg','15.00',300,11),
+('电蚊片','','https://fruits.knxy.top/22.jpg','21.00',300,11),
+('电蚊拍','','https://fruits.knxy.top/23.jpg','21.00',300,11),
+('蚊香','','https://fruits.knxy.top/24.jpg','10.00',300,11),
+
+('铅笔','','https://fruits.knxy.top/25.jpg','2.00',300,13),
+('圆珠笔','','https://fruits.knxy.top/26.jpg','2.00',300,13),
+('原稿纸','','https://fruits.knxy.top/27.jpg','1.00',300,13),
+('信纸','','https://fruits.knxy.top/28.jpg','1.00',300,13),
+('橡皮','','https://fruits.knxy.top/29.jpg','1.00',300,13),
+
+('锤子','','https://fruits.knxy.top/31.jpg','20.00',300,14),
+('钉子','','https://fruits.knxy.top/32.jpg','1.00',300,14),
+('扳手','','https://fruits.knxy.top/33.jpg','18.00',300,14),
+('螺丝','','https://fruits.knxy.top/34.jpg','1.00',300,14),
+('螺丝刀','','https://fruits.knxy.top/35.jpg','10.00',300,14),
+('铁丝','','https://fruits.knxy.top/36.jpg','4.00',300,14)
 
 
-insert into GoodDetail(content,goodId)values ("{'header':{imageList:['http://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','http://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','http://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg']},'detai':{imageList:['http://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','http://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg','http://127.0.0.1:8080/430bc1e8f1ae4862a26b5e70a8090460.jpg']}}",52);
-
-
+insert into Gooddetail(content,goodId) values
+('{"header": {"imageList": ["https://fruits.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg", "https://fruits.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg", "https://fruits.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg"]},"detail": {"imageList": ["https://fruits.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg", "https://fruits.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg", "https://fruits.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg"]}}',69)
