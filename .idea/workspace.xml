@@ -7,7 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fa2d42c-42aa-4b36-88a0-60761e403109" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/db_p.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db_t.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mybatis-config.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,40 +59,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db.sql">
+        <entry file="file://$PROJECT_DIR$/src/db_p.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
-              <caret line="65" column="26" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/WxMiniApi/Api/Index.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/javax.servlet.jar!/javax/servlet/http/HttpServlet.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+            <state>
+              <caret column="6" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/WxMiniApi/Service/Login/C1003.java">
+        <entry file="file://$PROJECT_DIR$/src/mybatis-config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="996">
-              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="315">
+              <caret line="21" column="76" selection-start-line="21" selection-start-column="76" selection-end-line="21" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -149,7 +132,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/top/knxy/fruits/WxMiniApi/Service/Order/Comfirm/C1007.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b02a58fc-f2d2-4935-b32f-039b9081fff3/console_5.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b02a58fc-f2d2-4935-b32f-039b9081fff3/console_6.sql" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/WxMiniApi/Service/Address/GetDefault/C1002.java" />
@@ -191,7 +173,6 @@
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/WxMiniApi/Service/Good/Bean/Detail.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/WxMiniApi/Api/Index.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/WxMiniApi/Service/Good/DBOperation.java" />
-        <option value="$PROJECT_DIR$/src/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/WxMiniApi/Service/Good/Get/C1009.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b02a58fc-f2d2-4935-b32f-039b9081fff3/console_20.sql" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/WxMiniApi/Service/Order/Cancel/C1007.java" />
@@ -200,6 +181,8 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/db.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b02a58fc-f2d2-4935-b32f-039b9081fff3/console_22.sql" />
+        <option value="$PROJECT_DIR$/src/db_p.properties" />
+        <option value="$PROJECT_DIR$/src/mybatis-config.xml" />
       </list>
     </option>
   </component>
@@ -227,7 +210,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -250,38 +233,6 @@
               <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="fruits" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fruits" type="462c0819:PsiDirectoryNode" />
-              <item name="WxMiniApi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fruits" type="462c0819:PsiDirectoryNode" />
-              <item name="WxMiniApi" type="462c0819:PsiDirectoryNode" />
-              <item name="Api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fruits" type="462c0819:PsiDirectoryNode" />
-              <item name="WxMiniApi" type="462c0819:PsiDirectoryNode" />
-              <item name="Service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fruits" type="462c0819:PsiDirectoryNode" />
-              <item name="WxMiniApi" type="462c0819:PsiDirectoryNode" />
-              <item name="Service" type="462c0819:PsiDirectoryNode" />
-              <item name="Login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
@@ -313,7 +264,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -321,7 +272,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551081036327" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551337993206" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -333,16 +284,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web" />
-      <recent name="$PROJECT_DIR$/web/WEB-INF/image" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="top.knxy.fruits.WxMiniApi.Service.Good" />
       <recent name="top.knxy.fruits.WxMiniApi.Service.Order" />
       <recent name="top.knxy.fruits.WxMiniApi.Service.Address" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/src/top/knxy/fruits/WxMiniApi/Service/Order/Comfirm" />
+      <recent name="$PROJECT_DIR$/src/top/knxy/fruits/WxMiniApi/Service/Address/GetList" />
+      <recent name="$PROJECT_DIR$/src/top/knxy/fruits/WxMiniApi/Service/IndexService" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="top.knxy.fruits.WxMiniApi.Service.Order.Refund" />
@@ -351,11 +303,10 @@
       <recent name="top.knxy.fruits.WxMiniApi.Service.Order.List" />
       <recent name="top.knxy.fruits.WxMiniApi.Service.Order" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/web" />
-      <recent name="$PROJECT_DIR$/src/top/knxy/fruits/WxMiniApi/Service/Order/Comfirm" />
-      <recent name="$PROJECT_DIR$/src/top/knxy/fruits/WxMiniApi/Service/Address/GetList" />
-      <recent name="$PROJECT_DIR$/src/top/knxy/fruits/WxMiniApi/Service/IndexService" />
+      <recent name="$PROJECT_DIR$/web/WEB-INF/image" />
       <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
     </key>
   </component>
@@ -545,6 +496,7 @@
       <workItem from="1551082420663" duration="15000" />
       <workItem from="1551082714179" duration="768000" />
       <workItem from="1551094503495" duration="1863000" />
+      <workItem from="1551321676295" duration="983000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1548913859289</created>
@@ -585,7 +537,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106298000" />
+    <option name="totallyTimeSpent" value="107281000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -600,7 +552,7 @@
     <frame x="1280" y="-77" width="1600" height="823" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.497307" visible="true" weight="0.25224647" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.497307" visible="true" weight="0.2554557" />
       <window_info id="Structure" order="1" sideWeight="0.502693" side_tool="true" weight="0.2394095" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -670,23 +622,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/WxMiniApi/Service/Login/DBOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/WxMiniApi/Service/Index/DBOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b02a58fc-f2d2-4935-b32f-039b9081fff3/console_14.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -946,13 +881,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://b02a58fc-f2d2-4935-b32f-039b9081fff3/schema/r0nd38v04o/table/address" />
     <entry file="das://b02a58fc-f2d2-4935-b32f-039b9081fff3/schema/r0nd38v04o/table/order" />
     <entry file="das://b02a58fc-f2d2-4935-b32f-039b9081fff3/schema/r0nd38v04o/table/good" />
@@ -985,17 +913,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db.sql">
+    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/WxMiniApi/Service/Login/C1003.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="65" column="26" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/WxMiniApi/Api/Index.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+        <state relative-caret-position="858">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1006,13 +930,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/WxMiniApi/Service/Login/C1003.java">
+    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/WxMiniApi/Api/Index.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="996">
-          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="662">
+          <caret line="65" column="26" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db_p.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db_t.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="76" selection-start-line="21" selection-start-column="76" selection-end-line="21" selection-end-column="76" />
         </state>
       </provider>
     </entry>
