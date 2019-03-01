@@ -5,7 +5,7 @@ import top.knxy.fruits.DataBase.Table.Good;
 import top.knxy.fruits.DataBase.Table.GoodType;
 import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.Service.BaseService;
-import top.knxy.fruits.Service.ServicelUtils;
+import top.knxy.fruits.Utils.ServiceUtils;
 
 import java.util.*;
 
@@ -39,7 +39,7 @@ public class C1001 extends BaseService {
 
         this.data = data;
 
-        ServicelUtils.createSuccess(this);
+        ServiceUtils.createSuccess(this);
         session.close();
     }
 

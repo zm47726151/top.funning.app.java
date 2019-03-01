@@ -6,7 +6,7 @@ import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.Service.BaseService;
 import top.knxy.fruits.Service.Good.Bean.Detail;
 import top.knxy.fruits.Service.Good.DBOperation;
-import top.knxy.fruits.Service.ServicelUtils;
+import top.knxy.fruits.Utils.ServiceUtils;
 import top.knxy.fruits.Utils.StrUtils;
 
 import java.util.List;
@@ -18,7 +18,7 @@ public class C1009 extends BaseService {
     @Override
     protected void run() throws Exception {
         if (StrUtils.isEmpty(id)) {
-            ServicelUtils.createError(this);
+            ServiceUtils.createError(this);
             return;
         }
 
@@ -26,7 +26,7 @@ public class C1009 extends BaseService {
         Detail detail = session.getMapper(DBOperation.class).getDetail(id);
 
         if (detail == null) {
-            ServicelUtils.createError(this);
+            ServiceUtils.createError(this);
             return;
         }
 
@@ -44,7 +44,7 @@ public class C1009 extends BaseService {
         data.price = detail.getPrice();
 
         this.data = data;
-        ServicelUtils.createSuccess(this);
+        ServiceUtils.createSuccess(this);
         session.close();
     }
 

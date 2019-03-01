@@ -1,4 +1,4 @@
-package top.knxy.fruits;
+package top.knxy.fruits.Bean;
 
 import com.google.gson.JsonObject;
 

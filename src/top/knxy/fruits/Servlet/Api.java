@@ -1,7 +1,8 @@
-package top.knxy.fruits;
+package top.knxy.fruits.Servlet;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import top.knxy.fruits.Bean.Request;
 import top.knxy.fruits.Service.Good.Get.C1009;
 import top.knxy.fruits.Service.Index.C1001;
 import top.knxy.fruits.Service.Login.C1003;
@@ -13,6 +14,7 @@ import top.knxy.fruits.Service.Order.Get.C1006;
 import top.knxy.fruits.Service.Order.List.C1005;
 import top.knxy.fruits.Service.Order.Refund.C1008;
 import top.knxy.fruits.Service.SessionInfo;
+import top.knxy.fruits.Utils.ApiUtils;
 import top.knxy.fruits.Utils.StrUtils;
 
 import javax.servlet.ServletException;
@@ -21,14 +23,14 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/api")
-public class Index extends HttpServlet {
+@WebServlet(name = "api",urlPatterns = "/api")
+public class Api extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Index() {
+    public Api() {
         super();
     }
 
