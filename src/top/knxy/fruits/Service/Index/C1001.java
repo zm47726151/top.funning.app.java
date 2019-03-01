@@ -1,11 +1,12 @@
 package top.knxy.fruits.Service.Index;
 
 import org.apache.ibatis.session.SqlSession;
+import top.knxy.fruits.DataBase.DAL.IndexDAL;
 import top.knxy.fruits.DataBase.Table.Good;
 import top.knxy.fruits.DataBase.Table.GoodType;
 import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.Service.BaseService;
-import top.knxy.fruits.Service.ServicelUtils;
+import top.knxy.fruits.Utils.ServiceUtils;
 
 import java.util.*;
 
@@ -15,7 +16,7 @@ public class C1001 extends BaseService {
     @Override
     public void run() throws Exception {
         SqlSession session = MyBatisUtils.getSession();
-        DBOperation mapper = session.getMapper(DBOperation.class);
+        IndexDAL mapper = session.getMapper(IndexDAL.class);
         List<GoodType> goodTypeList = mapper.getGoodTypeList();
         List<Good> goodList = mapper.getGoodList();
         session.close();
@@ -33,13 +34,13 @@ public class C1001 extends BaseService {
 
         for (Good good : goodList) {
             Data.Type.Good dtg = new Data.Type.Good(good);
-            Data.Type type = typeMap.get(good.getType());
+            Data.Type type = typeMap.get(String.valueOf(good.getType()));
             type.goodList.add(dtg);
         }
 
         this.data = data;
 
-        ServicelUtils.createSuccess(this);
+        ServiceUtils.createSuccess(this);
         session.close();
     }
 

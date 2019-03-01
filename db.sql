@@ -1,6 +1,6 @@
 create table User(
     id int primary key auto_increment,
-    openId varchar(32)
+    openId varchar(32) UNIQUE
 )
 
 /**
@@ -9,7 +9,7 @@ state = {"show" = 1,"hide" = 2}
 create table GoodType(
     id int primary key auto_increment,
     name varchar(32),
-    state int
+    state int enum('1','2') not null;
 )
 
 
@@ -25,7 +25,7 @@ create table Good(
     imageUrl varchar(128),
     price DECIMAL(14,2),
     stock int,
-    state int default 1,
+    state int  enum('1','2') not null default 1,
     type int/** foreign key GoodType(id) **/
 )
 
@@ -36,21 +36,7 @@ create table GoodDetail(
 )
 
 /**
-state = {"1","2"}
-state = 2 : 默认
-**/
-create table Address(
-    id int primary key auto_increment,
-    userId char(32),
-    area varchar(16),
-    address varchar(256),
-    phone varchar(32),
-    nickname varchar(32),
-    state int default 1
-)
-
-/**
-state = {"待付款" = 1,"准备中" = 2,"已完成" = 3,"退款中" = 4,"已取消" = 5,"已退款" = 6}
+state = {"待付款" = 1,"准备中" = 2,"已完成" = 3,"退款中" = 4,"已取消" = 5,"已退款" = 6,"已付款" = 7}
 **/
 create table `Order`(
     id char(32) primary key,
@@ -69,13 +55,22 @@ create table `Order`(
     postalCode varchar(32),
 
     note varchar(255),
-    state int not null,
+    state int enum('1','2','3','4','5','6','7') not null,
     userId int,
     createDT datetime not null,
     payDT datetime
 )
 
+CREATE TABLE `Admin` (
+  `id` int primary key auto_increment,
+  `username` varchar(64) UNIQUE NOT NULL,
+  `password` char(40) NOT NULL,
+  `fail` int,
+  `lastFailTime` datetime,
+  `salt` char(12) NOT NULL
+)
 
+insert into Admin(username,password,salt)values ('fruits@knxy.top','3f4870db36720549b5da31975febf212cfb33e70','33f1c5df698d');
 
 insert into GoodType(name,state) values
 ('家居日常',1),

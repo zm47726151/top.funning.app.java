@@ -16,9 +16,12 @@
         </environment>
     </environments>
     <mappers>
-        <mapper class="top.knxy.fruits.WxMiniApi.Service.Index.DBOperation"/>
-        <mapper class="top.knxy.fruits.WxMiniApi.Service.Login.DBOperation"/>
-        <mapper class="top.knxy.fruits.WxMiniApi.Service.Order.DBOperation"/>
-        <mapper class="top.knxy.fruits.WxMiniApi.Service.Good.DBOperation"/>
+        <mapper class="top.knxy.fruits.DataBase.DAL.LoginDAL"/>
+        <mapper class="top.knxy.fruits.DataBase.DAL.IndexDAL"/>
+        <mapper class="top.knxy.fruits.DataBase.DAL.GoodDAL"/>
+        <mapper class="top.knxy.fruits.DataBase.DAL.OrderDAL"/>
+        <mapper class="top.knxy.fruits.DataBase.DAL.GoodTypeDAL"/>
+        <mapper class="top.knxy.fruits.DataBase.DAL.GoodDetailDAL"/>
+
     </mappers>
 </configuration>

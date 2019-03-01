@@ -2,12 +2,13 @@ package top.knxy.fruits.Service.Order.Create;
 
 import com.google.gson.Gson;
 import org.apache.ibatis.session.SqlSession;
+import top.knxy.fruits.DataBase.DAL.GoodDAL;
 import top.knxy.fruits.DataBase.Table.Good;
 import top.knxy.fruits.DataBase.Table.Order;
 import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.Service.BaseService;
-import top.knxy.fruits.Service.Order.DBOperation;
-import top.knxy.fruits.Service.ServicelUtils;
+import top.knxy.fruits.DataBase.DAL.OrderDAL;
+import top.knxy.fruits.Utils.ServiceUtils;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -26,21 +27,22 @@ public class C1002 extends BaseService {
     @Override
     public void run() throws Exception {
         if (goodList.isEmpty()) {
-            ServicelUtils.createError(this);
+            ServiceUtils.createError(this);
             return;
         }
 
         SqlSession session = MyBatisUtils.getSession();
-        DBOperation ds = session.getMapper(DBOperation.class);
+        OrderDAL orderDAL = session.getMapper(OrderDAL.class);
+        GoodDAL goodDAL = session.getMapper(GoodDAL.class);
 
         Data data = new Data();
         this.data = data;
 
         BigDecimal price = new BigDecimal(0);
         for (Item item : goodList) {
-            Good good = ds.getGood(String.valueOf(item.body.getId()));
+            Good good = goodDAL.get(String.valueOf(item.body.getId()));
             if (good == null) {
-                ServicelUtils.createError(this, item.body.getName() + " 没货了");
+                ServiceUtils.createError(this, item.body.getName() + " 没货了");
                 return;
             }
             item.body = good;
@@ -50,22 +52,22 @@ public class C1002 extends BaseService {
         Gson gson = new Gson();
 
         Order order = new Order();
-        order.setId(ServicelUtils.getUUid());
+        order.setId(ServiceUtils.getUUid());
         order.setGoods(gson.toJson(goodList));
         order.setPrice(price.toString());
         order.setCreateDT(new Date());
         order.setUserId(userId);
         order.setState(1);
 
-        int result = ds.insert(order);
+        int result = orderDAL.insert(order);
         session.commit();
         if (result < 1) {
-            ServicelUtils.createError(this, "生成订单失败");
+            ServiceUtils.createError(this, "生成订单失败");
             return;
         }
 
         data.id = order.getId();
-        ServicelUtils.createSuccess(this);
+        ServiceUtils.createSuccess(this);
         session.close();
     }
 

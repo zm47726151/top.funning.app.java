@@ -1,107 +1,80 @@
 package top.knxy.fruits.Service.Order.Comfirm;
 
 import org.apache.ibatis.session.SqlSession;
+import top.knxy.fruits.Config.S;
+import top.knxy.fruits.DataBase.DAL.LoginDAL;
 import top.knxy.fruits.DataBase.Table.Order;
 import top.knxy.fruits.DataBase.MyBatisUtils;
+import top.knxy.fruits.DataBase.Table.User;
 import top.knxy.fruits.Service.BaseService;
-import top.knxy.fruits.Service.Order.DBOperation;
-import top.knxy.fruits.Service.ServicelUtils;
-import top.knxy.fruits.Utils.StrUtils;
+import top.knxy.fruits.DataBase.DAL.OrderDAL;
+import top.knxy.fruits.Service.ServiceException;
+import top.knxy.fruits.Servlet.Admin.Remind;
+import top.knxy.fruits.Utils.ServiceUtils;
+import top.knxy.fruits.Utils.TextUtils;
+import top.knxy.fruits.Utils.WebUtils;
+import top.knxy.fruits.Utils.XmlUtils;
 
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.TreeMap;
 
 public class C1004 extends BaseService {
 
     public String userId;
     public String id;
-    public String note;
-    public Address address;
-
-    public static class Address {
-        public String provinceName;
-        public String cityName;
-        public String countyName;
-        public String detailInfo;
-        public String telNumber;
-        public String userName;
-        public String nationalCode;
-        public String postalCode;
-    }
-
 
     @Override
     public void run() throws Exception {
-        if (address == null) {
-            ServicelUtils.createError(this,"没有地址");
-            return;
+        if (TextUtils.isEmpty(id)) {
+            throw new ServiceException("没有地址");
+        }
+        if (TextUtils.isEmpty(userId)) {
+            throw new ServiceException("没有姓名");
         }
 
-        if (StrUtils.isEmpty(address.userName)) {
-            ServicelUtils.createError(this,"没有姓名");
-            return;
-        }
-
-        if (StrUtils.isEmpty(address.telNumber)) {
-            ServicelUtils.createError(this,"没有电话号码");
-            return;
-        }
-
-        if (StrUtils.isEmpty(address.detailInfo)) {
-            ServicelUtils.createError(this,"没有详细地址");
-            return;
-        }
-        if (StrUtils.isEmpty(address.provinceName)) {
-            ServicelUtils.createError(this,"没有区域");
-            return;
-        }
-        if (StrUtils.isEmpty(address.cityName)) {
-            ServicelUtils.createError(this,"没有城市");
-            return;
-        }
-        if (StrUtils.isEmpty(address.provinceName)) {
-            ServicelUtils.createError(this,"没有省份");
-            return;
-        }
 
         SqlSession session = MyBatisUtils.getSession();
-        DBOperation mapper = session.getMapper(DBOperation.class);
+        OrderDAL mapper = session.getMapper(OrderDAL.class);
 
-        String poster = "6";
         Order order = new Order();
         order.setId(id);
         order.setUserId(userId);
-        order = mapper.getOrder(order);
-        if(order == null){
-            ServicelUtils.createError(this,"没有订单");
-            return;
+        order = mapper.getOrderByUser(order);
+        if (order == null) {
+            session.close();
+            throw new ServiceException("没有订单 id = " + id);
         }
 
-        order.setNote(note);
-        order.setPoster(poster);
-        order.setAmount(new BigDecimal(poster).add(new BigDecimal(order.getPrice())).toString());
-
-        order.setProvinceName(address.provinceName);
-        order.setCityName(address.cityName);
-        order.setCountyName(address.countyName);
-        order.setDetailInfo(address.detailInfo);
-        order.setTelNumber(address.telNumber);
-        order.setUserName(address.userName);
-        order.setNationalCode(address.nationalCode);
-        order.setPostalCode(address.postalCode);
-        order.setPayDT(new Date());
-        order.setState(2);
-
-        int result = mapper.update(order);
-        session.commit();
-        if (result < 1) {
-            // TODO
-            ServicelUtils.createError(this, "订单修改失败");
-            return;
+        if (order.getState() == 1) {
+            order.setState(7);
+            int result = mapper.update(order);
+            session.commit();
+            if (result < 1) {
+                session.close();
+                throw new ServiceException("订单修改失败 order id = " + id);
+            }
         }
 
-        ServicelUtils.createSuccess(this);
+        ServiceUtils.createSuccess(this);
         session.close();
+    }
+
+
+    public static class OrderInfo {
+        public String return_code;
+        public String return_msg;
+        public String appid;
+        public String mch_id;
+        public String device_info;
+        public String nonce_str;
+        public String sign;
+        public String result_code;
+        public String err_code;
+        public String err_code_des;
+        public String trade_type;
+        public String prepay_id;
+        public String code_url;
     }
 
 }

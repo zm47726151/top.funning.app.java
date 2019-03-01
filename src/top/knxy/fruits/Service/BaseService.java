@@ -1,5 +1,7 @@
 package top.knxy.fruits.Service;
 
+import top.knxy.fruits.Utils.ServiceUtils;
+
 public abstract class BaseService {
     public int code;
     public String msg;
@@ -15,7 +17,7 @@ public abstract class BaseService {
         } catch (Exception e) {
             System.out.println("service exception");
             e.printStackTrace();
-            ServicelUtils.createError(this, "处理异常");
+            ServiceUtils.createError(this, "处理异常");
         }
     }
 

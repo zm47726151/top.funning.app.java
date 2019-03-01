@@ -1,11 +1,9 @@
 package top.knxy.fruits.DataBase.Table;
 
-import top.knxy.fruits.DataBase.BaseBean;
-
 public class GoodType  extends BaseBean {
     private int id ;
     private String name;
-    private String state;
+    private int state;
 
     public int getId() {
         return id;
@@ -23,11 +21,11 @@ public class GoodType  extends BaseBean {
         this.name = name;
     }
 
-    public String getState() {
+    public int getState() {
         return state;
     }
 
-    public void setState(String state) {
+    public void setState(int state) {
         this.state = state;
     }
 }

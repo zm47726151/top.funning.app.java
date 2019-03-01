@@ -5,10 +5,10 @@ import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.DataBase.Table.Order;
 import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.Service.BaseService;
-import top.knxy.fruits.Service.Order.DBOperation;
-import top.knxy.fruits.Service.Order.List.C1005;
-import top.knxy.fruits.Service.ServicelUtils;
-import top.knxy.fruits.Utils.StrUtils;
+import top.knxy.fruits.DataBase.DAL.OrderDAL;
+import top.knxy.fruits.Service.Order.List.OrderCollection;
+import top.knxy.fruits.Utils.ServiceUtils;
+import top.knxy.fruits.Utils.TextUtils;
 
 public class C1006 extends BaseService {
 
@@ -19,8 +19,8 @@ public class C1006 extends BaseService {
 
     @Override
     public void run() throws Exception {
-        if (StrUtils.isEmpty(id)) {
-            ServicelUtils.createError(this);
+        if (TextUtils.isEmpty(id)) {
+            ServiceUtils.createError(this);
             return;
         }
 
@@ -30,20 +30,16 @@ public class C1006 extends BaseService {
         order.setUserId(userId);
         order.setId(id);
 
-        order = session.getMapper(DBOperation.class).getOrder(order);
+        order = session.getMapper(OrderDAL.class).getOrderByUser(order);
 
-        Gson gson = new Gson();
-        String json = "{ \"goodList\" : " + order.getGoods() + "}";
-        C1005.Data.Order o = gson.fromJson(json, C1005.Data.Order.class);
-        o.setData(order);
-        this.data = o;
+        this.data = OrderCollection.createOrder(order,new Gson());
 
         if (this.data == null) {
-            ServicelUtils.createError(this);
+            ServiceUtils.createError(this);
             return;
         }
 
-        ServicelUtils.createSuccess(this);
+        ServiceUtils.createSuccess(this);
         session.close();
     }
 

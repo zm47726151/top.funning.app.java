@@ -4,9 +4,9 @@ import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.DataBase.Table.Order;
 import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.Service.BaseService;
-import top.knxy.fruits.Service.Order.DBOperation;
-import top.knxy.fruits.Service.ServicelUtils;
-import top.knxy.fruits.Utils.StrUtils;
+import top.knxy.fruits.DataBase.DAL.OrderDAL;
+import top.knxy.fruits.Utils.ServiceUtils;
+import top.knxy.fruits.Utils.TextUtils;
 
 public class C1007 extends BaseService {
 
@@ -17,8 +17,8 @@ public class C1007 extends BaseService {
 
     @Override
     public void run() throws Exception {
-        if (StrUtils.isEmpty(id)) {
-            ServicelUtils.createError(this);
+        if (TextUtils.isEmpty(id)) {
+            ServiceUtils.createError(this);
             return;
         }
 
@@ -29,16 +29,16 @@ public class C1007 extends BaseService {
         order.setId(id);
 
         SqlSession session = MyBatisUtils.getSession();
-        int result = session.getMapper(DBOperation.class).changeState(order);
+        int result = session.getMapper(OrderDAL.class).changeStateByUser(order);
         session.commit();
         session.close();
 
         if (result < 1) {
-            ServicelUtils.createError(this, "申请退款失败");
+            ServiceUtils.createError(this, "申请退款失败");
             return;
         }
 
-        ServicelUtils.createSuccess(this);
+        ServiceUtils.createSuccess(this);
         session.close();
     }
 

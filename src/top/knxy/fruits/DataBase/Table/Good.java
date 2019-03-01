@@ -1,7 +1,5 @@
 package top.knxy.fruits.DataBase.Table;
 
-import top.knxy.fruits.DataBase.BaseBean;
-
 public class Good extends BaseBean {
 
     private int id;
@@ -9,7 +7,8 @@ public class Good extends BaseBean {
     private String description;
     private String imageUrl;
     private String price;
-    private String type;
+    private Integer type;
+    private Integer state;
 
     public int getId() {
         return id;
@@ -52,12 +51,19 @@ public class Good extends BaseBean {
         this.price = price;
     }
 
-    public String getType() {
+    public Integer getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(Integer type) {
         this.type = type;
     }
 
+    public Integer getState() {
+        return state;
+    }
+
+    public void setState(Integer state) {
+        this.state = state;
+    }
 }

@@ -2,12 +2,12 @@ package top.knxy.fruits.Service.Good.Get;
 
 import com.google.gson.Gson;
 import org.apache.ibatis.session.SqlSession;
+import top.knxy.fruits.DataBase.DAL.GoodDAL;
 import top.knxy.fruits.DataBase.MyBatisUtils;
+import top.knxy.fruits.DataBase.Table.BaseBean;
 import top.knxy.fruits.Service.BaseService;
-import top.knxy.fruits.Service.Good.Bean.Detail;
-import top.knxy.fruits.Service.Good.DBOperation;
-import top.knxy.fruits.Service.ServicelUtils;
-import top.knxy.fruits.Utils.StrUtils;
+import top.knxy.fruits.Utils.ServiceUtils;
+import top.knxy.fruits.Utils.TextUtils;
 
 import java.util.List;
 
@@ -17,34 +17,34 @@ public class C1009 extends BaseService {
 
     @Override
     protected void run() throws Exception {
-        if (StrUtils.isEmpty(id)) {
-            ServicelUtils.createError(this);
+        if (TextUtils.isEmpty(id)) {
+            ServiceUtils.createError(this);
             return;
         }
 
         SqlSession session = MyBatisUtils.getSession();
-        Detail detail = session.getMapper(DBOperation.class).getDetail(id);
+        Good good = session.getMapper(GoodDAL.class).getDetailForUser(id);
 
-        if (detail == null) {
-            ServicelUtils.createError(this);
+        if (good == null) {
+            ServiceUtils.createError(this);
             return;
         }
 
-        String content = detail.getContent();
-        if (StrUtils.isEmpty(content)) {
+        String content = good.getContent();
+        if (TextUtils.isEmpty(content)) {
             content = "{}";
         }
 
         Gson gson = new Gson();
         Data data = gson.fromJson(content, Data.class);
-        data.id = detail.getId();
-        data.name = detail.getName();
-        data.description = detail.getDescription();
-        data.imageUrl = detail.getImageUrl();
-        data.price = detail.getPrice();
+        data.id = String.valueOf(good.getId());
+        data.name = good.getName();
+        data.description = good.getDescription();
+        data.imageUrl = good.getImageUrl();
+        data.price = good.getPrice();
 
         this.data = data;
-        ServicelUtils.createSuccess(this);
+        ServiceUtils.createSuccess(this);
         session.close();
     }
 
@@ -65,4 +65,62 @@ public class C1009 extends BaseService {
             public List<String> imageList;
         }
     }
+
+    public static class Good extends BaseBean {
+        public int id;
+        public String name;
+        public String description;
+        public String imageUrl;
+        public String price;
+        public String content;
+
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getDescription() {
+            return description;
+        }
+
+        public void setDescription(String description) {
+            this.description = description;
+        }
+
+        public String getImageUrl() {
+            return imageUrl;
+        }
+
+        public void setImageUrl(String imageUrl) {
+            this.imageUrl = imageUrl;
+        }
+
+        public String getPrice() {
+            return price;
+        }
+
+        public void setPrice(String price) {
+            this.price = price;
+        }
+
+        public String getContent() {
+            return content;
+        }
+
+        public void setContent(String content) {
+            this.content = content;
+        }
+    }
+
 }
