@@ -29,5 +29,6 @@
     <orderEntry type="library" name="ant-1.10.3" level="project" />
     <orderEntry type="library" name="mysql-connector-java-8.0.13" level="project" />
     <orderEntry type="library" name="mybatis-3.5.0" level="project" />
+    <orderEntry type="library" name="standard" level="project" />
   </component>
 </module>

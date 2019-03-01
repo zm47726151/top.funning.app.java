@@ -1,4 +1,4 @@
-package top.knxy.fruits.WxMiniApi.Api;
+package top.knxy.fruits.WxMiniApi;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
@@ -54,7 +54,7 @@ public class Index extends HttpServlet {
         String cmd = rq.cmd;
         JsonObject data = rq.data == null ? new JsonObject() : rq.data;
 
-        SessionInfo sessionInfo = (SessionInfo) request.getSession().getAttribute("SessionInfo");
+        SessionInfo sessionInfo = (SessionInfo) request.getSession().getAttribute("UserInfo");
         if ("C1002".equals(cmd) || "C1004".equals(cmd) ||
                 "C1005".equals(cmd) || "C1006".equals(cmd) ||
                 "C10067".equals(cmd) || "C1008".equals(cmd)) {
@@ -83,7 +83,7 @@ public class Index extends HttpServlet {
             if (c1003.code == C.Service.success) {
                 HttpSession session = request.getSession();
                 C1003.Data d = (C1003.Data) c1003.data;
-                session.setAttribute("SessionInfo", new SessionInfo(d.openid, d.sessionKey, d.userId));
+                session.setAttribute("UserInfo", new SessionInfo(d.openid, d.sessionKey, d.userId));
                 ApiUtils.responseSuccess(pw);
             } else {
                 ApiUtils.responseError(pw, c1003.msg);

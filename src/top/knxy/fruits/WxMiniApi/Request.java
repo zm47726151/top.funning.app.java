@@ -1,4 +1,4 @@
-package top.knxy.fruits.WxMiniApi.Api;
+package top.knxy.fruits.WxMiniApi;
 
 import com.google.gson.JsonObject;
 
