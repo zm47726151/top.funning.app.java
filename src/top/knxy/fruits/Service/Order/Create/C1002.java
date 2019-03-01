@@ -7,7 +7,7 @@ import top.knxy.fruits.DataBase.Table.Order;
 import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.Service.BaseService;
 import top.knxy.fruits.Service.Order.DBOperation;
-import top.knxy.fruits.Service.ServicelUtils;
+import top.knxy.fruits.Utils.ServiceUtils;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -26,7 +26,7 @@ public class C1002 extends BaseService {
     @Override
     public void run() throws Exception {
         if (goodList.isEmpty()) {
-            ServicelUtils.createError(this);
+            ServiceUtils.createError(this);
             return;
         }
 
@@ -40,7 +40,7 @@ public class C1002 extends BaseService {
         for (Item item : goodList) {
             Good good = ds.getGood(String.valueOf(item.body.getId()));
             if (good == null) {
-                ServicelUtils.createError(this, item.body.getName() + " 没货了");
+                ServiceUtils.createError(this, item.body.getName() + " 没货了");
                 return;
             }
             item.body = good;
@@ -50,7 +50,7 @@ public class C1002 extends BaseService {
         Gson gson = new Gson();
 
         Order order = new Order();
-        order.setId(ServicelUtils.getUUid());
+        order.setId(ServiceUtils.getUUid());
         order.setGoods(gson.toJson(goodList));
         order.setPrice(price.toString());
         order.setCreateDT(new Date());
@@ -60,12 +60,12 @@ public class C1002 extends BaseService {
         int result = ds.insert(order);
         session.commit();
         if (result < 1) {
-            ServicelUtils.createError(this, "生成订单失败");
+            ServiceUtils.createError(this, "生成订单失败");
             return;
         }
 
         data.id = order.getId();
-        ServicelUtils.createSuccess(this);
+        ServiceUtils.createSuccess(this);
         session.close();
     }
 

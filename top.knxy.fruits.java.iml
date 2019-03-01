@@ -30,5 +30,6 @@
     <orderEntry type="library" name="mysql-connector-java-8.0.13" level="project" />
     <orderEntry type="library" name="mybatis-3.5.0" level="project" />
     <orderEntry type="library" name="standard" level="project" />
+    <orderEntry type="library" name="dom4j-2.1.1" level="project" />
   </component>
 </module>

@@ -75,7 +75,16 @@ create table `Order`(
     payDT datetime
 )
 
+CREATE TABLE `Admin` (
+  `id` int primary key auto_increment,
+  `username` varchar(64) NOT NULL,
+  `password` char(40) NOT NULL,
+  `fail` int,
+  `lastFailTime` datetime,
+  `salt` char(12) NOT NULL
+)
 
+insert into Admin(username,password,salt)values ('fruits@knxy.top','3f4870db36720549b5da31975febf212cfb33e70','33f1c5df698d');
 
 insert into GoodType(name,state) values
 ('家居日常',1),
