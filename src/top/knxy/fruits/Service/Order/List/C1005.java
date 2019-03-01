@@ -6,7 +6,7 @@ import top.knxy.fruits.DataBase.Table.Order;
 import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.Service.BaseService;
 import top.knxy.fruits.Service.Order.DBOperation;
-import top.knxy.fruits.Service.ServicelUtils;
+import top.knxy.fruits.Utils.ServiceUtils;
 import top.knxy.fruits.Utils.DateUtils;
 
 import java.util.ArrayList;
@@ -26,7 +26,7 @@ public class C1005 extends BaseService {
         this.data = new Data(orders);
 
         session.close();
-        ServicelUtils.createSuccess(this);
+        ServiceUtils.createSuccess(this);
     }
 
 
@@ -87,7 +87,7 @@ public class C1005 extends BaseService {
 
                 this.note = o.getNote();
                 this.state = String.valueOf(o.getState());
-                this.stateStr = ServicelUtils.getStateStr(o.getState());
+                this.stateStr = ServiceUtils.getStateStr(o.getState());
                 this.userId = o.getUserId();
                 if (o.getCreateDT() != null)
                     this.createDT = DateUtils.dateToString(o.getCreateDT(), DateUtils.dateStringType2);

@@ -5,7 +5,7 @@ import top.knxy.fruits.DataBase.Table.Order;
 import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.Service.BaseService;
 import top.knxy.fruits.Service.Order.DBOperation;
-import top.knxy.fruits.Service.ServicelUtils;
+import top.knxy.fruits.Utils.ServiceUtils;
 import top.knxy.fruits.Utils.StrUtils;
 
 import java.math.BigDecimal;
@@ -33,34 +33,34 @@ public class C1004 extends BaseService {
     @Override
     public void run() throws Exception {
         if (address == null) {
-            ServicelUtils.createError(this,"没有地址");
+            ServiceUtils.createError(this,"没有地址");
             return;
         }
 
         if (StrUtils.isEmpty(address.userName)) {
-            ServicelUtils.createError(this,"没有姓名");
+            ServiceUtils.createError(this,"没有姓名");
             return;
         }
 
         if (StrUtils.isEmpty(address.telNumber)) {
-            ServicelUtils.createError(this,"没有电话号码");
+            ServiceUtils.createError(this,"没有电话号码");
             return;
         }
 
         if (StrUtils.isEmpty(address.detailInfo)) {
-            ServicelUtils.createError(this,"没有详细地址");
+            ServiceUtils.createError(this,"没有详细地址");
             return;
         }
         if (StrUtils.isEmpty(address.provinceName)) {
-            ServicelUtils.createError(this,"没有区域");
+            ServiceUtils.createError(this,"没有区域");
             return;
         }
         if (StrUtils.isEmpty(address.cityName)) {
-            ServicelUtils.createError(this,"没有城市");
+            ServiceUtils.createError(this,"没有城市");
             return;
         }
         if (StrUtils.isEmpty(address.provinceName)) {
-            ServicelUtils.createError(this,"没有省份");
+            ServiceUtils.createError(this,"没有省份");
             return;
         }
 
@@ -73,7 +73,7 @@ public class C1004 extends BaseService {
         order.setUserId(userId);
         order = mapper.getOrder(order);
         if(order == null){
-            ServicelUtils.createError(this,"没有订单");
+            ServiceUtils.createError(this,"没有订单");
             return;
         }
 
@@ -96,11 +96,11 @@ public class C1004 extends BaseService {
         session.commit();
         if (result < 1) {
             // TODO
-            ServicelUtils.createError(this, "订单修改失败");
+            ServiceUtils.createError(this, "订单修改失败");
             return;
         }
 
-        ServicelUtils.createSuccess(this);
+        ServiceUtils.createSuccess(this);
         session.close();
     }
 

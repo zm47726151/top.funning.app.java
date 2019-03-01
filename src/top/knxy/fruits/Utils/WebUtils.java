@@ -8,47 +8,57 @@ import java.net.URLEncoder;
 import java.util.Map;
 import java.util.Set;
 
-public class WebRequest {
+public class WebUtils {
 
 
     public static String requestGet(String urlString, Map<String, String> data) throws Exception {// 创建URL对象，xxx是服务器API
-        urlString += "?";
+
         Set<String> keySet = data.keySet();
+        StringBuilder sb = new StringBuilder();
+        sb.append(urlString).append("?");
         for (String key : keySet) {
             String value = data.get(key);
             if (value == null) value = "";
             value = URLEncoder.encode(value, "UTF-8");
-            urlString += key;
-            urlString += "=";
-            urlString += value;
-            urlString += "&";
+            sb.append(key);
+            sb.append("=");
+            sb.append(value);
+            sb.append("&");
         }
-        return requestGet(urlString);
+        sb.deleteCharAt(sb.length() - 1);
+        return requestGet(sb.toString());
     }
 
-    public static String requestGet(String urlString) throws Exception {// 创建URL对象，xxx是服务器API
-        System.out.println(urlString);
-        URL url = new URL(urlString);
-        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-        conn.setRequestMethod("GET");
-        conn.setConnectTimeout(5000);
+    public static String requestGet(String urlString) throws Exception {
+        HttpURLConnection conn = getConnectionSetting(urlString, "GET");
         return getString(conn);
     }
 
 
     public static String requestPost(String urlString, String data) throws Exception {
-        URL url;
-        url = new URL(urlString);
+        HttpURLConnection conn = getConnectionSetting(urlString, "POST");
+        OutputStream op = conn.getOutputStream();
+        op.write(data.getBytes());
+        return getString(conn);
+    }
+
+    public static <T> T requestPost(String urlString, String data, Class<T> cls) throws Exception {
+        HttpURLConnection conn = getConnectionSetting(urlString, "POST");
+        OutputStream op = conn.getOutputStream();
+        op.write(data.getBytes());
+        String str = getString(conn);
+        return XmlUtils.xmlStrToBean(str,cls);
+    }
+
+    private static HttpURLConnection getConnectionSetting(String urlString, String method) throws Exception {
+        URL url = new URL(urlString);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-        conn.setRequestMethod("POST");
+        conn.setRequestMethod(method);
         conn.setConnectTimeout(5000);
         conn.setDoInput(true);
         conn.setDoOutput(true);
         conn.setUseCaches(false);
-        conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-        OutputStream op = conn.getOutputStream();
-        op.write(data.getBytes());
-        return getString(conn);
+        return conn;
     }
 
     private static String getString(HttpURLConnection conn) throws Exception {
@@ -67,5 +77,4 @@ public class WebRequest {
             throw new Exception("statu = " + code);
         }
     }
-
 }

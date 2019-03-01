@@ -7,9 +7,9 @@ import top.knxy.fruits.Config.W;
 import top.knxy.fruits.DataBase.Table.User;
 import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.Service.BaseService;
-import top.knxy.fruits.Service.ServicelUtils;
+import top.knxy.fruits.Utils.ServiceUtils;
 import top.knxy.fruits.Utils.StrUtils;
-import top.knxy.fruits.Utils.WebRequest;
+import top.knxy.fruits.Utils.WebUtils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,7 +22,7 @@ public class C1003 extends BaseService {
     public void run() throws Exception {
 
         if (StrUtils.isEmpty(jsCode)) {
-            ServicelUtils.createError(this, "jsCode is empty");
+            ServiceUtils.createError(this, "jsCode is empty");
             return;
         }
 
@@ -31,12 +31,12 @@ public class C1003 extends BaseService {
         map.put("secret", W.secret);
         map.put("js_code", jsCode);
         map.put("grant_type", "authorization_code");
-        String str = WebRequest.requestGet("https://api.weixin.qq.com/sns/jscode2session", map);
+        String str = WebUtils.requestGet("https://api.weixin.qq.com/sns/jscode2session", map);
 
         Gson gson = new Gson();
         WeiXinResponseModel wxrp = gson.fromJson(str, WeiXinResponseModel.class);
         if (!StrUtils.isEmpty(wxrp.errcode) && !"0".equals(wxrp.errcode)) {
-            ServicelUtils.createError(this, wxrp.errmsg);
+            ServiceUtils.createError(this, wxrp.errmsg);
             return;
         }
 
@@ -51,13 +51,13 @@ public class C1003 extends BaseService {
             int result = mapper.insert(user);
             session.commit();
             if (result < 1) {
-                ServicelUtils.createError(this, "登录失败");
+                ServiceUtils.createError(this, "登录失败");
             }
         }
 
 
         this.data = new Data(wxrp, user.getId());
-        ServicelUtils.createSuccess(this);
+        ServiceUtils.createSuccess(this);
         session.close();
     }
 

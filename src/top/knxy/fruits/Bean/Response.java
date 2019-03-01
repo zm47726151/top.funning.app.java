@@ -1,4 +1,4 @@
-package top.knxy.fruits;
+package top.knxy.fruits.Bean;
 
 public class Response {
     public String code;

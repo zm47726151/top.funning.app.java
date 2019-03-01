@@ -1,10 +1,11 @@
-package top.knxy.fruits.Service;
+package top.knxy.fruits.Utils;
 
 import top.knxy.fruits.Config.C;
+import top.knxy.fruits.Service.BaseService;
 
 import java.util.UUID;
 
-public class ServicelUtils {
+public class ServiceUtils {
 
 	public static String getUUid() {
 		UUID uuid = UUID.randomUUID();

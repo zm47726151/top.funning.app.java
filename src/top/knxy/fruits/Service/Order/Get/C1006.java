@@ -7,7 +7,7 @@ import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.Service.BaseService;
 import top.knxy.fruits.Service.Order.DBOperation;
 import top.knxy.fruits.Service.Order.List.C1005;
-import top.knxy.fruits.Service.ServicelUtils;
+import top.knxy.fruits.Utils.ServiceUtils;
 import top.knxy.fruits.Utils.StrUtils;
 
 public class C1006 extends BaseService {
@@ -20,7 +20,7 @@ public class C1006 extends BaseService {
     @Override
     public void run() throws Exception {
         if (StrUtils.isEmpty(id)) {
-            ServicelUtils.createError(this);
+            ServiceUtils.createError(this);
             return;
         }
 
@@ -39,11 +39,11 @@ public class C1006 extends BaseService {
         this.data = o;
 
         if (this.data == null) {
-            ServicelUtils.createError(this);
+            ServiceUtils.createError(this);
             return;
         }
 
-        ServicelUtils.createSuccess(this);
+        ServiceUtils.createSuccess(this);
         session.close();
     }
 
