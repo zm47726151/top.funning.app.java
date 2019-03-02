@@ -1,6 +1,6 @@
 package top.knxy.fruits.Service.Good.Bean;
 
-import top.knxy.fruits.DataBase.BaseBean;
+import top.knxy.fruits.DataBase.Table.BaseBean;
 
 public class Detail extends BaseBean {
 

@@ -1,7 +1,5 @@
 package top.knxy.fruits.DataBase.Table;
 
-import top.knxy.fruits.DataBase.BaseBean;
-
 public class GoodDetail extends BaseBean {
     private int id;
     private String content;
