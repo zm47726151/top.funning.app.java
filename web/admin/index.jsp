@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link rel="icon" href="../image/favicon.png">
+    <link rel="icon" href="/admin/image/favicon.png">
     <title>Admin</title>
 
     <!-- Bootstrap core CSS -->
@@ -24,7 +24,7 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="css/index.css" rel="stylesheet">
+    <link href="/admin/css/index.css" rel="stylesheet">
 
 
     <!-- Bootstrap core JavaScript
@@ -54,7 +54,63 @@
 
 <body>
 
-<%@ include file="header.jsp" %>
+<script>
+    let page = "${page}";
+    $(function () {
+        console.log(page);
+        $("[href='" + page + "']").addClass("active");
+    })
+
+</script>
+
+<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+    <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/order/operation">
+                    <span data-feather="file"></span>
+                    未处理订单
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/order/list">
+                    <span data-feather="file"></span>
+                    订单列表
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/order/search">
+                    <span data-feather="file"></span>
+                    订单查询
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/order/good">
+                    <span data-feather="shopping-cart"></span>
+                    商品管理<br/>（列表，添加，删除，修改，查询）
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/order/goodType">
+                    <span data-feather="shopping-cart"></span>
+                    商品类型管理<br/>（列表，添加，删除，修改，查询）
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/order/goodType">
+                    <span data-feather="shopping-cart"></span>
+                    修改密码<br/>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/order/goodType">
+                    <span data-feather="shopping-cart"></span>
+                    添加管理员<br/>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
 <div class="container-fluid">
     <div class="row">

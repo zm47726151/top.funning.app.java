@@ -21,6 +21,7 @@
         <mapper class="top.knxy.fruits.Service.Order.DBOperation"/>
         <mapper class="top.knxy.fruits.Service.Good.DBOperation"/>
         <mapper class="top.knxy.fruits.Service.Manager.DBOperation"/>
+        <mapper class="top.knxy.fruits.Service.Manager.Order.DBOperation"/>
 
     </mappers>
 </configuration>
