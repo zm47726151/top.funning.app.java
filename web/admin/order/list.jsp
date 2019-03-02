@@ -7,42 +7,42 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-    <div
-            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-        <h1 class="h2">Dashboard</h1>
-        <div class="btn-toolbar mb-2 mb-md-0">
-            <div class="btn-group mr-2">
-                <button class="btn btn-sm btn-outline-secondary">Share</button>
-                <button class="btn btn-sm btn-outline-secondary">Export</button>
-            </div>
-            <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                <span data-feather="calendar"></span>
-                This week
-            </button>
-        </div>
-    </div>
 
-    <canvas class="my-4" id="myChart" width="900" height="380"></canvas>
 
-    <h2>Section title</h2>
+
+    未处理订单 所有订单
     <div class="table-responsive">
         <table class="table table-striped table-sm">
             <thead>
             <tr>
-                <th>#</th>
-                <th>Header</th>
-                <th>Header</th>
-                <th>Header</th>
-                <th>Header</th>
+                <th>订单编号</th>
+                <th>商品列表</th>
+                <th>商品价格</th>
+                <th>运费</th>
+                <th>总价</th>
+                <th>运送地址</th>
+                <th>备注</th>
+                <th>状态</th>
+                <th>用户编号</th>
+                <th>下单时间</th>
+                <th>支付时间</th>
+                <th>操作</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td>1,001</td>
-                <td>Lorem</td>
-                <td>ipsum</td>
-                <td>dolor</td>
-                <td>sit</td>
+                <th>订单编号</th>
+                <th>商品</th>
+                <th>商品价格</th>
+                <th>运费</th>
+                <th>总价</th>
+                <th>运送地址</th>
+                <th>备注</th>
+                <th>状态</th>
+                <th>用户编号</th>
+                <th>下单时间</th>
+                <th>支付时间</th>
+                <th>完成</th>
             </tr>
             <tr>
                 <td>1,002</td>
