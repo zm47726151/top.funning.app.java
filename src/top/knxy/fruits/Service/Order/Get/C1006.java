@@ -6,7 +6,7 @@ import top.knxy.fruits.DataBase.Table.Order;
 import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.Service.BaseService;
 import top.knxy.fruits.Service.Order.DBOperation;
-import top.knxy.fruits.Service.Order.List.C1005;
+import top.knxy.fruits.Service.Order.List.OrderCollection;
 import top.knxy.fruits.Utils.ServiceUtils;
 import top.knxy.fruits.Utils.StrUtils;
 
@@ -34,7 +34,7 @@ public class C1006 extends BaseService {
 
         Gson gson = new Gson();
         String json = "{ \"goodList\" : " + order.getGoods() + "}";
-        C1005.Data.Order o = gson.fromJson(json, C1005.Data.Order.class);
+        OrderCollection.Order o = gson.fromJson(json, OrderCollection.Order.class);
         o.setData(order);
         this.data = o;
 

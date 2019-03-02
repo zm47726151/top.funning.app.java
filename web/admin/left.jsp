@@ -20,37 +20,43 @@
     <div class="sidebar-sticky">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link" href="order/list">
+                <a class="nav-link" href="/admin/order/operation">
+                    <span data-feather="file"></span>
+                    未处理订单
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/order/list">
                     <span data-feather="file"></span>
                     订单列表
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="order/search">
+                <a class="nav-link" href="/admin/order/search">
                     <span data-feather="file"></span>
                     订单查询
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="good">
+                <a class="nav-link" href="/admin/order/good">
                     <span data-feather="shopping-cart"></span>
                     商品管理<br/>（列表，添加，删除，修改，查询）
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="goodType">
+                <a class="nav-link" href="/admin/order/goodType">
                     <span data-feather="shopping-cart"></span>
                     商品类型管理<br/>（列表，添加，删除，修改，查询）
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="goodType">
+                <a class="nav-link" href="/admin/order/goodType">
                     <span data-feather="shopping-cart"></span>
                     修改密码<br/>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="goodType">
+                <a class="nav-link" href="/admin/order/goodType">
                     <span data-feather="shopping-cart"></span>
                     添加管理员<br/>
                 </a>
