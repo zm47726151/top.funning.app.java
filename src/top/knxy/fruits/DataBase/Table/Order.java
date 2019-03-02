@@ -1,7 +1,5 @@
 package top.knxy.fruits.DataBase.Table;
 
-import top.knxy.fruits.DataBase.BaseBean;
-
 import java.util.Date;
 
 public class Order extends BaseBean {

@@ -1,4 +1,4 @@
-package top.knxy.fruits.Servlet.admin;
+package top.knxy.fruits.Servlet.Admin;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,9 +9,6 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = {"/admin/index"})
 public class Index extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.sendRedirect("/admin/order/list");
-    }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.sendRedirect("/admin/order/list");

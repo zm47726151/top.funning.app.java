@@ -2,37 +2,89 @@ package top.knxy.fruits.Servlet.Model;
 
 import top.knxy.fruits.Utils.StrUtils;
 
+import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
+
 public class Page {
 
-    private int index;
+    private ArrayList<Item> items;
+    private Item previous;
+    private Item next;
 
-    private int size = 30;
-
-    public Page(String pString) throws Exception{
+    public Page(HttpServletRequest request) {
+        String pStr = request.getParameter("page");
         int page = 1;
-        if(!StrUtils.isEmpty(pString)){
-            page = Integer.valueOf(pString);
+        if (!StrUtils.isEmpty(pStr) && StrUtils.isNumeric(pStr)) {
+            page = Integer.valueOf(pStr);
         }
 
         if (page < 1) {
-            throw new Exception("page < 1");
+            page = 1;
         }
-        index = (page - 1) * size;
+
+        items = new ArrayList<>(3);
+        if (page == 1) {
+            previous = new Item(false, -1);
+            items.add(new Item(true, 1));
+            items.add(new Item(false, 2));
+            items.add(new Item(false, 3));
+            next = new Item(true, 2);
+        } else {
+            previous = new Item(true, page - 1);
+            items.add(new Item(false, page - 1));
+            items.add(new Item(true, page));
+            items.add(new Item(false, page + 1));
+            next = new Item(true, page + 1);
+        }
     }
 
-    public int getIndex() {
-        return index;
+    public ArrayList<Item> getItems() {
+        return items;
     }
 
-    public void setIndex(int index) {
-        this.index = index;
+    public void setItems(ArrayList<Item> items) {
+        this.items = items;
     }
 
-    public int getSize() {
-        return size;
+    public Item getPrevious() {
+        return previous;
     }
 
-    public void setSize(int size) {
-        this.size = size;
+    public void setPrevious(Item previous) {
+        this.previous = previous;
+    }
+
+    public Item getNext() {
+        return next;
+    }
+
+    public void setNext(Item next) {
+        this.next = next;
+    }
+
+    public static class Item {
+        private boolean active;
+        private int value;
+
+        public Item(boolean active, int value) {
+            this.active = active;
+            this.value = value;
+        }
+
+        public boolean isActive() {
+            return active;
+        }
+
+        public void setActive(boolean active) {
+            this.active = active;
+        }
+
+        public int getValue() {
+            return value;
+        }
+
+        public void setValue(int value) {
+            this.value = value;
+        }
     }
 }

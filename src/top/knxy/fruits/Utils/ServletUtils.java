@@ -1,16 +1,15 @@
 package top.knxy.fruits.Utils;
 
 
-import java.io.*;
-import java.lang.reflect.Field;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import top.knxy.fruits.Config.V;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import top.knxy.fruits.Config.V;
+import java.io.IOException;
+import java.lang.reflect.Field;
 
 public class ServletUtils {
     public static <T> T requestParamToModel(HttpServletRequest request, Class<T> beanClass) {
@@ -41,6 +40,15 @@ public class ServletUtils {
         Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd hh:mm:ss").create();
         String data = gson.toJson(obj);
         request.setAttribute(V.data, data);
+    }
+
+    public static void setViewAndForward(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String path = req.getRequestURI();
+
+        System.out.println(path);
+        req.setAttribute("currentURI", path);
+        req.setAttribute("viewJsp", path + ".jsp");
+        req.getRequestDispatcher("/admin/common.jsp").forward(req, resp);
     }
 
     /*public static void toErrorPage(HttpServletRequest request, HttpServletResponse response, String msg) throws ServletException, IOException {

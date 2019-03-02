@@ -1,4 +1,4 @@
-package top.knxy.fruits.Servlet.admin.Order;
+package top.knxy.fruits.Servlet.Admin.Order;
 
 
 import javax.servlet.annotation.WebServlet;

@@ -7,40 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<link href="css/list.css" rel="stylesheet">
 <div role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-    <form method="get" class="row search">
-        <input type="text" name="id" class="form-control col-md-2" placeholder="订单编号" />
-        <input type="text" name="telNumber" class="form-control col-md-2" placeholder="电话号码" />
-        <input type="text" name="name" class="form-control col-md-2" placeholder="收件人" />
-        <input type="hidden"  id="state_value" name="state" />
-        <div id="state_choice" class="dropdown">
-            <button class="btn btn-info dropdown-toggle" type="button" id="state" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                状态: <span id="state_text"> - - </span>
-            </button>
-            <script>
-                $(function () {
-                    $("#state_choice a").click(function () {
-                        let state = $(this).attr("state");
-                        let text =  $(this).html();
-                        $("#state_value").val(state);
-                        $("#state_text").html(text);
-                    });
-                })
-
-            </script>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" state="" > - - </a>
-                <a class="dropdown-item" state="1" >待付款</a>
-                <a class="dropdown-item" state="2" >准备中</a>
-                <a class="dropdown-item" state="3" >已完成</a>
-                <a class="dropdown-item" state="4" >退款中</a>
-                <a class="dropdown-item" state="5" >已取消</a>
-                <a class="dropdown-item" state="6" >已退款</a>
-            </div>
-        </div>
-        <button type="submit" class="btn btn-primary">查询</button>
-    </form>
     <div class="table-responsive">
         <table class="table table-striped table-sm">
             <thead>
@@ -55,6 +22,7 @@
                 <th>用户编号</th>
                 <th>下单时间</th>
                 <th>支付时间</th>
+                <th>操作</th>
             </tr>
             </thead>
             <tbody>
@@ -70,6 +38,7 @@
                     <td>${order.userId}</td>
                     <td>${order.createDT}</td>
                     <td>${order.payDT}</td>
+                    <td>完成</td>
                 </tr>
             </c:forEach>
             </tbody>
