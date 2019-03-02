@@ -73,9 +73,8 @@
     <div class="row">
 
         <script>
-            let page = "${viewJsp}";
+            let page = "${currentURI}";
             $(function () {
-                page = page.replace(".jsp", "");
                 console.log(page);
                 $("[href='" + page + "']").addClass("active");
             })
@@ -85,7 +84,7 @@
             <div class="sidebar-sticky">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link" href="/admin/order/operation">
+                        <a class="nav-link" href="/admin/order/undo">
                             <span data-feather="file"></span>
                             未处理订单
                         </a>

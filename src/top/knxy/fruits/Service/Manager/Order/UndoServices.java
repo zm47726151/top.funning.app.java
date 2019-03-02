@@ -10,21 +10,15 @@ import top.knxy.fruits.Utils.ServiceUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListServices extends BaseService {
+public class UndoServices extends BaseService {
 
     public String page;
-    public String id;
-    public String telNumber;
-    public String userName;
-    public String state;
 
     @Override
     public void run() throws Exception {
         Page pModel = new Page(page);
         SqlSession session = MyBatisUtils.getSession();
-        this.data = new Data(session.getMapper(DBOperation.class).getList(pModel));
-
-
+        this.data = new Data(session.getMapper(DBOperation.class).getUndoList(pModel));
 
         session.close();
         ServiceUtils.createSuccess(this);
