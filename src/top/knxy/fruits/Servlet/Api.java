@@ -23,7 +23,7 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "api",urlPatterns = "/api")
+@WebServlet(urlPatterns = "/api")
 public class Api extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
