@@ -6,150 +6,81 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<link href="css/search.css" rel="stylesheet">
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+    <form method="post" class="row form">
+        <input name="id" type="text" placeholder="订单编号" class="form-control col-md-3" value="${data.id}"/>
+        <button type="submit" class="btn btn-primary col-md-1">查询</button>
+    </form>
 
-
-
-    未处理订单 所有订单
-    <div class="table-responsive">
-        <table class="table table-striped table-sm">
-            <thead>
-            <tr>
-                <th>订单编号</th>
-                <th>商品列表</th>
-                <th>商品价格</th>
-                <th>运费</th>
-                <th>总价</th>
-                <th>运送地址</th>
-                <th>备注</th>
-                <th>状态</th>
-                <th>用户编号</th>
-                <th>下单时间</th>
-                <th>支付时间</th>
-                <th>操作</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th>订单编号</th>
-                <th>商品</th>
-                <th>商品价格</th>
-                <th>运费</th>
-                <th>总价</th>
-                <th>运送地址</th>
-                <th>备注</th>
-                <th>状态</th>
-                <th>用户编号</th>
-                <th>下单时间</th>
-                <th>支付时间</th>
-                <th>完成</th>
-            </tr>
-            <tr>
-                <td>1,002</td>
-                <td>amet</td>
-                <td>consectetur</td>
-                <td>adipiscing</td>
-                <td>elit</td>
-            </tr>
-            <tr>
-                <td>1,003</td>
-                <td>Integer</td>
-                <td>nec</td>
-                <td>odio</td>
-                <td>Praesent</td>
-            </tr>
-            <tr>
-                <td>1,003</td>
-                <td>libero</td>
-                <td>Sed</td>
-                <td>cursus</td>
-                <td>ante</td>
-            </tr>
-            <tr>
-                <td>1,004</td>
-                <td>dapibus</td>
-                <td>diam</td>
-                <td>Sed</td>
-                <td>nisi</td>
-            </tr>
-            <tr>
-                <td>1,005</td>
-                <td>Nulla</td>
-                <td>quis</td>
-                <td>sem</td>
-                <td>at</td>
-            </tr>
-            <tr>
-                <td>1,006</td>
-                <td>nibh</td>
-                <td>elementum</td>
-                <td>imperdiet</td>
-                <td>Duis</td>
-            </tr>
-            <tr>
-                <td>1,007</td>
-                <td>sagittis</td>
-                <td>ipsum</td>
-                <td>Praesent</td>
-                <td>mauris</td>
-            </tr>
-            <tr>
-                <td>1,008</td>
-                <td>Fusce</td>
-                <td>nec</td>
-                <td>tellus</td>
-                <td>sed</td>
-            </tr>
-            <tr>
-                <td>1,009</td>
-                <td>augue</td>
-                <td>semper</td>
-                <td>porta</td>
-                <td>Mauris</td>
-            </tr>
-            <tr>
-                <td>1,010</td>
-                <td>massa</td>
-                <td>Vestibulum</td>
-                <td>lacinia</td>
-                <td>arcu</td>
-            </tr>
-            <tr>
-                <td>1,011</td>
-                <td>eget</td>
-                <td>nulla</td>
-                <td>Class</td>
-                <td>aptent</td>
-            </tr>
-            <tr>
-                <td>1,012</td>
-                <td>taciti</td>
-                <td>sociosqu</td>
-                <td>ad</td>
-                <td>litora</td>
-            </tr>
-            <tr>
-                <td>1,013</td>
-                <td>torquent</td>
-                <td>per</td>
-                <td>conubia</td>
-                <td>nostra</td>
-            </tr>
-            <tr>
-                <td>1,014</td>
-                <td>per</td>
-                <td>inceptos</td>
-                <td>himenaeos</td>
-                <td>Curabitur</td>
-            </tr>
-            <tr>
-                <td>1,015</td>
-                <td>sodales</td>
-                <td>ligula</td>
-                <td>in</td>
-                <td>libero</td>
-            </tr>
-            </tbody>
-        </table>
+    <div><label>订单编号：</label>${data.id}</div>
+    <div class="row">
+        <div class="col-md-3"><label>商品价格：</label>${data.price}</div>
+        <div class="col-md-3"><label>运费：</label>${data.poster}</div>
+        <div class="col-md-3 text_color_red"><label>总价：</label>${data.priceAmount}</div>
+        <div class="col-md-3 text_color_red"><label>状态：</label>${data.stateStr}</div>
     </div>
+    <div class="row">
+        <div class="col-md-3"><label>消费者编号：</label>${data.userId}</div>
+        <div class="col-md-3"><label>下单时间：</label>${data.createDT}</div>
+        <div class="col-md-3"><label>支付时间：</label>${data.payDT}</div>
+    </div>
+    <div>
+        <label>运送地址：</label>
+        ${data.provinceName} ${data.cityName} ${data.countyName}
+        ${data.detailInfo}
+        ${data.telNumber}
+        ${data.userName}
+    </div>
+
+    <div>
+        <label>备注：</label>${data.note}
+    </div>
+
+    <label>商品列表</label>
+    <div class="good_list row">
+        <c:forEach items="${data.goodList}" var="good">
+            <div class="col-md-2">
+                <div goodId="${good.body.id}" class="item">
+                    <img alt="${good.body.name}" src="${good.body.imageUrl}"/>
+                    <div><label>商品名称：</label>${good.body.name}</div>
+                    <div class="text_color_orange"><label>商品价格：</label>${good.body.price}</div>
+                    <div class="text_color_orange"><label>购买数量：</label>${good.amount}</div>
+                </div>
+            </div>
+        </c:forEach>
+    </div>
+
+    <script>
+
+        $(function () {
+            let state = "${data.state}";
+            $("[currentState='" + state + "']").removeClass("hide");
+        });
+
+
+        function toState(s) {
+            if (window.confirm('你确定吗？')) {
+                $("[name='state']").val(s);
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
+
+    <form class="operation" method="post">
+        <input type="hidden" name="id" value="${data.id}">
+        <input type="hidden" name="state">
+        <button type="submit" currentState="2" onclick="toState('3')"
+                class="btn btn-primary col-md-3 hide">订单已完成
+        </button>
+        <button type="submit" currentState="4" onclick="toState('6')"
+                class="btn btn-primary col-md-3 hide">退款
+        </button>
+        <button type="submit" currentState="2" onclick="toState('5')"
+                class="btn btn-primary col-md-3 hide">取消订单
+        </button>
+    </form>
 </main>
