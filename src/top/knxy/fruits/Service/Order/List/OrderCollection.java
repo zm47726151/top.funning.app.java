@@ -14,11 +14,44 @@ public class OrderCollection {
         this.orders = new ArrayList<>();
         Gson gson = new Gson();
         for (top.knxy.fruits.DataBase.Table.Order o : orders) {
-            String json = "{ \"goodList\" : " + o.getGoods() + "}";
-            Order order = gson.fromJson(json, Order.class);
-            order.setData(o);
-            this.orders.add(order);
+            this.orders.add(createOrder(o,gson));
         }
+    }
+
+    public static Order createOrder(top.knxy.fruits.DataBase.Table.Order o, Gson gson) {
+        String json = "{ \"goodList\" : " + o.getGoods() + "}";
+        Order order = gson.fromJson(json, Order.class);
+
+        order.id = o.getId();
+
+        order.price = o.getPrice();
+        order.poster = o.getPoster();
+        order.priceAmount = o.getAmount();
+
+        order.provinceName = o.getProvinceName();
+        order.cityName = o.getCityName();
+        order.countyName = o.getCountyName();
+        order.detailInfo = o.getDetailInfo();
+        order.telNumber = o.getTelNumber();
+        order.userName = o.getUserName();
+        order.nationalCode = o.getNationalCode();
+        order.postalCode = o.getPostalCode();
+
+        order.note = o.getNote();
+        order.state = String.valueOf(o.getState());
+        order.stateStr = ServiceUtils.getStateStr(o.getState());
+        order.userId = o.getUserId();
+        if (o.getCreateDT() != null)
+            order.createDT = DateUtils.dateToString(o.getCreateDT(), DateUtils.dateStringType2);
+        if (o.getPayDT() != null)
+            order.payDT = DateUtils.dateToString(o.getPayDT(), DateUtils.dateStringType2);
+
+        int goodAmount = 0;
+        for (Order.Good good : order.goodList) {
+            goodAmount += Integer.valueOf(good.amount);
+        }
+        order.goodAmount = String.valueOf(goodAmount);
+        return order;
     }
 
     public List<Order> getOrders() {
@@ -53,6 +86,8 @@ public class OrderCollection {
         public String goodAmount;
 
         public List<Good> goodList;
+
+
 
         public String getId() {
             return id;
@@ -214,37 +249,7 @@ public class OrderCollection {
             this.goodList = goodList;
         }
 
-        public void setData(top.knxy.fruits.DataBase.Table.Order o) {
-            this.id = o.getId();
 
-            this.price = o.getPrice();
-            this.poster = o.getPoster();
-            this.priceAmount = o.getAmount();
-
-            this.provinceName = o.getProvinceName();
-            this.cityName = o.getCityName();
-            this.countyName = o.getCountyName();
-            this.detailInfo = o.getDetailInfo();
-            this.telNumber = o.getTelNumber();
-            this.userName = o.getUserName();
-            this.nationalCode = o.getNationalCode();
-            this.postalCode = o.getPostalCode();
-
-            this.note = o.getNote();
-            this.state = String.valueOf(o.getState());
-            this.stateStr = ServiceUtils.getStateStr(o.getState());
-            this.userId = o.getUserId();
-            if (o.getCreateDT() != null)
-                this.createDT = DateUtils.dateToString(o.getCreateDT(), DateUtils.dateStringType2);
-            if (o.getPayDT() != null)
-                this.payDT = DateUtils.dateToString(o.getPayDT(), DateUtils.dateStringType2);
-
-            int goodAmount = 0;
-            for (Order.Good good : this.goodList) {
-                goodAmount += Integer.valueOf(good.amount);
-            }
-            this.goodAmount = String.valueOf(goodAmount);
-        }
 
         public static class Good {
 
