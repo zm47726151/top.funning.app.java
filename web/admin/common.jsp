@@ -24,7 +24,7 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="/admin/css/index.css" rel="stylesheet">
+    <link href="/admin/css/common.css" rel="stylesheet">
 
 
     <!-- Bootstrap core JavaScript
@@ -85,7 +85,6 @@
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/order/undo">
-                            <span data-feather="file"></span>
                             未处理订单
                         </a>
                     </li>
@@ -95,24 +94,45 @@
                             订单列表
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item line">
                         <a class="nav-link" href="/admin/order/search">
                             <span data-feather="file"></span>
-                            订单查询
+                            订单详情
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/order/good">
+                            <span data-feather="shopping-cart"></span>
+                            商品列表<br/>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/order/good">
                             <span data-feather="shopping-cart"></span>
-                            商品管理<br/>（列表，添加，删除，修改，查询）
+                            添加商品<br/>
                         </a>
                     </li>
+                    <li class="nav-item line">
+                        <a class="nav-link" href="/admin/order/good">
+                            <span data-feather="shopping-cart"></span>
+                            商品详情<br/>
+                        </a>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/order/goodType">
                             <span data-feather="shopping-cart"></span>
-                            商品类型管理<br/>（列表，添加，删除，修改，查询）
+                            商品类型列表<br/>
                         </a>
                     </li>
+                    <li class="nav-item line">
+                        <a class="nav-link" href="/admin/order/goodType">
+                            <span data-feather="shopping-cart"></span>
+                            商品类型添加<br/>
+                        </a>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/order/goodType">
                             <span data-feather="shopping-cart"></span>

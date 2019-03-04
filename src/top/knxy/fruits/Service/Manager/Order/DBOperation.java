@@ -1,7 +1,6 @@
 package top.knxy.fruits.Service.Manager.Order;
 
 import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.SelectProvider;
 import top.knxy.fruits.DataBase.Model.Page;
 import top.knxy.fruits.DataBase.Table.Order;
 
@@ -16,10 +15,15 @@ public interface DBOperation {
     public List<Order> getList(Page page);
 
     @Select("Select id,price,poster,amount,telNumber,userName,state,userId,createDT,payDT " +
-            "from `order`  where state=2  order by payDT desc " +
+            "from `order` where state=2  order by payDT desc " +
             "limit #{index},#{size}")
     public List<Order> getUndoList(Page page);
 
+    @Select("Select id,goods,price,poster,amount,provinceName,cityName," +
+            "countyName,detailInfo,telNumber,userName,nationalCode,postalCode," +
+            "note,state,userId,createDT,payDT " +
+            "from `order` where id=#{id} limit 1")
+    public Order get(String id);
 
     /**
      * Reference:https://www.cnblogs.com/guoyafenghome/p/9123442.html
@@ -30,7 +34,6 @@ public interface DBOperation {
                     "Select id,price,poster,amount,telNumber,userName,state,userId,createDT,payDT " +
                             "from `Order` order by createDT desc " +
                             "limit #{index},#{size}";
-
             return sql;
         }
     }
