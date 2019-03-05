@@ -3,7 +3,7 @@ package top.knxy.fruits.Servlet;
 import top.knxy.fruits.Config.C;
 import top.knxy.fruits.Config.V;
 import top.knxy.fruits.DataBase.Table.Admin;
-import top.knxy.fruits.Service.Manager.LoginServices;
+import top.knxy.fruits.Service.Login.Manager.M1004;
 import top.knxy.fruits.Utils.ServletUtils;
 
 import javax.servlet.ServletException;
@@ -21,7 +21,7 @@ public class Login extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        LoginServices services = ServletUtils.requestParamToModel(request, LoginServices.class);
+        M1004 services = ServletUtils.requestParamToModel(request, M1004.class);
         String username = services.username;
         String password = services.password;
         services.start();

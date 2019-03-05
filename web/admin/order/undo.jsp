@@ -22,7 +22,7 @@
                 <th>用户编号</th>
                 <th>下单时间</th>
                 <th>支付时间</th>
-                <th>操作</th>
+                <th>#</th>
             </tr>
             </thead>
             <tbody>
@@ -38,7 +38,9 @@
                     <td>${order.userId}</td>
                     <td>${order.createDT}</td>
                     <td>${order.payDT}</td>
-                    <td>完成</td>
+                    <td>
+                        <a href="search?id=${order.id}" target="_blank">详情</a>
+                    </td>
                 </tr>
             </c:forEach>
             </tbody>

@@ -9,7 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <link href="css/search.css" rel="stylesheet">
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-    <form method="post" class="row form">
+    <form method="get" class="row form">
         <input name="id" type="text" placeholder="订单编号" class="form-control col-md-3" value="${data.id}"/>
         <button type="submit" class="btn btn-primary col-md-1">查询</button>
     </form>
@@ -46,7 +46,7 @@
                     <img alt="${good.body.name}" src="${good.body.imageUrl}"/>
                     <div><label>商品名称：</label>${good.body.name}</div>
                     <div class="text_color_orange"><label>商品价格：</label>${good.body.price}</div>
-                    <div><label>购买数量：</label>${good.amount}</div>
+                    <div class="text_color_orange"><label>购买数量：</label>${good.amount}</div>
                 </div>
             </div>
         </c:forEach>
@@ -61,10 +61,10 @@
 
 
         function toState(s) {
-            if(window.confirm('你确定吗？')){
+            if (window.confirm('你确定吗？')) {
                 $("[name='state']").val(s);
                 return true;
-            }else{
+            } else {
                 return false;
             }
         }

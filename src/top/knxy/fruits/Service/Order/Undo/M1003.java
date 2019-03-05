@@ -1,16 +1,17 @@
-package top.knxy.fruits.Service.Manager.Order;
+package top.knxy.fruits.Service.Order.Undo;
 
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.DataBase.Model.Page;
 import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.Service.BaseService;
+import top.knxy.fruits.DataBase.DAL.OrderDAL;
 import top.knxy.fruits.Utils.DateUtils;
 import top.knxy.fruits.Utils.ServiceUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class UndoServices extends BaseService {
+public class M1003 extends BaseService {
 
     public String page;
 
@@ -18,7 +19,7 @@ public class UndoServices extends BaseService {
     public void run() throws Exception {
         Page pModel = new Page(page);
         SqlSession session = MyBatisUtils.getSession();
-        this.data = new Data(session.getMapper(DBOperation.class).getUndoList(pModel));
+        this.data = new Data(session.getMapper(OrderDAL.class).getUndoList(pModel));
 
         session.close();
         ServiceUtils.createSuccess(this);

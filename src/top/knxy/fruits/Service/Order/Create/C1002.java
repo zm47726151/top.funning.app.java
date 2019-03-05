@@ -6,7 +6,7 @@ import top.knxy.fruits.DataBase.Table.Good;
 import top.knxy.fruits.DataBase.Table.Order;
 import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.Service.BaseService;
-import top.knxy.fruits.Service.Order.DBOperation;
+import top.knxy.fruits.DataBase.DAL.OrderDAL;
 import top.knxy.fruits.Utils.ServiceUtils;
 
 import java.math.BigDecimal;
@@ -31,7 +31,7 @@ public class C1002 extends BaseService {
         }
 
         SqlSession session = MyBatisUtils.getSession();
-        DBOperation ds = session.getMapper(DBOperation.class);
+        OrderDAL ds = session.getMapper(OrderDAL.class);
 
         Data data = new Data();
         this.data = data;

@@ -42,18 +42,6 @@
         </div>
         <button type="submit" class="btn btn-primary">查询</button>
     </form>
-
-    <script>
-        $(function () {
-            $("tr").click(function () {
-                let orderId = $(this).attr("orderId");
-                if (orderId) {
-                    window.open("search?id=" + orderId);
-                }
-            })
-        });
-
-    </script>
     <div class="table-responsive">
         <table class="table table-striped table-sm">
             <thead>
@@ -68,11 +56,12 @@
                 <th>用户编号</th>
                 <th>下单时间</th>
                 <th>支付时间</th>
+                <th>#</th>
             </tr>
             </thead>
             <tbody>
             <c:forEach items="${data.orders}" var="order">
-                <tr orderId="${order.id}">
+                <tr>
                     <td>${order.id}</td>
                     <td>${order.price}</td>
                     <td>${order.poster}</td>
@@ -83,6 +72,9 @@
                     <td>${order.userId}</td>
                     <td>${order.createDT}</td>
                     <td>${order.payDT}</td>
+                    <td>
+                        <a href="search?id=${order.id}" target="_blank">详情</a>
+                    </td>
                 </tr>
             </c:forEach>
             </tbody>

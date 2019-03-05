@@ -1,9 +1,9 @@
-package top.knxy.fruits.Service.Good;
+package top.knxy.fruits.DataBase.DAL;
 
 import org.apache.ibatis.annotations.Select;
 import top.knxy.fruits.Service.Good.Bean.Detail;
 
-public interface DBOperation  {
+public interface GoodDAL {
 
     @Select("select g.id,g.name,g.description,g.imageUrl,g.price,gd.content " +
             "from Good g, GoodDetail gd " +

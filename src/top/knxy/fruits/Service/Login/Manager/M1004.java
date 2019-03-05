@@ -1,9 +1,10 @@
-package top.knxy.fruits.Service.Manager;
+package top.knxy.fruits.Service.Login.Manager;
 
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.DataBase.Table.Admin;
 import top.knxy.fruits.Service.BaseService;
+import top.knxy.fruits.DataBase.DAL.LoginDAL;
 import top.knxy.fruits.Utils.PwdUtils;
 import top.knxy.fruits.Utils.ServiceUtils;
 import top.knxy.fruits.Utils.StrUtils;
@@ -11,21 +12,14 @@ import top.knxy.fruits.Utils.StrUtils;
 import java.util.Calendar;
 import java.util.Date;
 
-public class LoginServices extends BaseService {
+public class M1004 extends BaseService {
 
     public String username;
     public String password;
 
     public Admin result;
 
-    public LoginServices() {
-    }
-
-    public LoginServices(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
-
+ 
     @Override
     public void run() throws Exception {
         if (StrUtils.isEmpty(username)) {
@@ -40,8 +34,8 @@ public class LoginServices extends BaseService {
 
 
         SqlSession session = MyBatisUtils.getSession();
-        DBOperation mapper = session.getMapper(DBOperation.class);
-        Admin admin = mapper.get(username);
+        LoginDAL mapper = session.getMapper(LoginDAL.class);
+        Admin admin = mapper.getAdmin(username);
 
         if (admin == null) {
             ServiceUtils.createError(this, "username is not exist");
