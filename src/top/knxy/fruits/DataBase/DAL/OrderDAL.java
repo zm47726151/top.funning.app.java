@@ -12,8 +12,6 @@ import java.util.List;
 
 public interface OrderDAL {
 
-    @Select("select id,name,description,imageUrl,price,stock,type from good where id=#{id} and state = 1")
-    public Good getGood(String id);
 
     @Insert("insert into `Order`(id,goods,price,createDT,userId,state)" +
             " values(#{id},#{goods},#{price},#{createDT},#{userId},#{state})")

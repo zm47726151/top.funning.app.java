@@ -1,31 +1,27 @@
-.type_add {
+.main .type_add {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.type_add label {
+.main .type_add label {
     margin-bottom: 0;
     margin-right: 10px;
 }
 
-.type_add input {
+.main .type_add input {
     margin-right: 10px;
 }
 
-.table {
+.main .table {
     table-layout: fixed;
 }
 
-.table td {
+.main .table td {
     vertical-align: middle;
     height: 50px;
 }
 
-.table input {
+.main .table input {
     width: 400px;
-}
-
-.hide {
-    display: none;
 }

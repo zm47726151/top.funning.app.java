@@ -9,9 +9,12 @@ import javax.servlet.http.HttpServletRequest;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import com.google.gson.JsonObject;
+import com.sun.xml.internal.rngom.parse.host.Base;
 import top.knxy.fruits.Bean.Response;
 import top.knxy.fruits.Service.BaseService;
 import top.knxy.fruits.Config.C;
+import top.knxy.fruits.Service.GoodType.Add.M1006;
 import top.knxy.fruits.Service.SessionInfo;
 
 public class ApiUtils {
@@ -38,6 +41,12 @@ public class ApiUtils {
             }
         }
         return sb.toString();
+    }
+
+    public static <T extends BaseService> void doService(Class<T> tClass, JsonObject data, Gson gson, PrintWriter pw) {
+        T t = gson.fromJson(data, tClass);
+        t.start();
+        ApiUtils.response(pw, t);
     }
 
     public static Response createSuccess() {
@@ -100,7 +109,4 @@ public class ApiUtils {
         pw.close();
     }
 
-    public static SessionInfo getSession(HttpServletRequest request) {
-        return (SessionInfo) request.getSession().getAttribute("SessionInfo");
-    }
 }

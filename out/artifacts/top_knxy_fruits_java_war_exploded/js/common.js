@@ -39,3 +39,12 @@ let Web = {
         $.ajax(json);
     }
 }
+
+let LoadingDialog = {
+    show: function () {
+        $("#LoadingDialog").modal('show');
+    },
+    hide: function () {
+        $("#LoadingDialog").modal('hide');
+    },
+}
