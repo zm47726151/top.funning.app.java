@@ -100,3 +100,89 @@ body {
 .line{
     margin-bottom: 20px;
 }
+
+.hide {
+    display: none;
+}
+
+
+
+/* Loadding View Animation */
+
+.lv_floater {
+    padding: 3px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.lv_container {
+    width: 190px;
+    height: 190px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #00000090;
+    border-radius: 20px;
+}
+
+.lv_point {
+    height: 20px;
+    width: 20px;
+    margin: 10px;
+    background: #fff;
+    border-radius: 15px;
+    animation-duration: 1.5s;
+    animation-name: lv_point;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.lv_point1 {
+    animation-delay: 0s;
+}
+
+.lv_point2 {
+    animation-delay: 0.5s;
+    opacity: 0.2;
+}
+
+.lv_point3 {
+    animation-delay: 1s;
+    opacity: 0.2;
+}
+
+@keyframes lv_point {
+    0% {
+        opacity: 0.2;
+    }
+
+    13.3% {
+        opacity: 0.2;
+    }
+
+    33.3% {
+        opacity: 1;
+    }
+
+    53.3% {
+        opacity: 0.2;
+    }
+
+    66.6% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
+}
+
+/* Loadding View Animation */

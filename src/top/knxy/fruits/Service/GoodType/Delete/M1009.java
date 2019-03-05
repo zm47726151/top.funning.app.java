@@ -1,13 +1,13 @@
-package top.knxy.fruits.Servlet.Admin.GoodType;
+package top.knxy.fruits.Service.GoodType.Delete;
 
 import org.apache.ibatis.session.SqlSession;
+import top.knxy.fruits.DataBase.DAL.GoodTypeDAL;
 import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.Service.BaseService;
-import top.knxy.fruits.DataBase.DAL.OrderDAL;
 import top.knxy.fruits.Utils.ServiceUtils;
 import top.knxy.fruits.Utils.StrUtils;
 
-public class Delete extends BaseService {
+public class M1009 extends BaseService {
     public String id;
 
     @Override
@@ -18,7 +18,14 @@ public class Delete extends BaseService {
         }
 
         SqlSession session = MyBatisUtils.getSession();
-        OrderDAL dao = session.getMapper(OrderDAL.class);
-        dao.delete(id);
+        GoodTypeDAL dal = session.getMapper(GoodTypeDAL.class);
+        int result = dal.delete(id);
+        session.commit();
+        session.close();
+        if (result < 1) {
+            throw new Exception();
+        }
+
+        ServiceUtils.createSuccess(this);
     }
 }

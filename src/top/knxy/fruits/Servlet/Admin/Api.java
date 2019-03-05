@@ -7,6 +7,8 @@ import top.knxy.fruits.Config.C;
 import top.knxy.fruits.Config.V;
 import top.knxy.fruits.Service.Good.Get.C1009;
 import top.knxy.fruits.Service.GoodType.Add.M1006;
+import top.knxy.fruits.Service.GoodType.Delete.M1009;
+import top.knxy.fruits.Service.GoodType.Modify.M1008;
 import top.knxy.fruits.Service.Index.C1001;
 import top.knxy.fruits.Service.Login.Wechat.C1003;
 import top.knxy.fruits.Service.Order.Cancel.C1007;
@@ -61,14 +63,21 @@ public class Api extends HttpServlet {
         String cmd = rq.cmd;
         JsonObject data = rq.data == null ? new JsonObject() : rq.data;
 
-        //int adminId = (int) request.getSession().getAttribute(V.adminId);
-
+        int adminId = (int) request.getSession().getAttribute(V.adminId);
 
         if ("M1006".equals(cmd)) {
             //good type add
             M1006 m1006 = gson.fromJson(data, M1006.class);
             m1006.start();
             ApiUtils.response(pw, m1006);
+        } else if ("M1009".equals(cmd)) {
+            //good type delete
+            M1009 m1006 = gson.fromJson(data, M1009.class);
+            m1006.start();
+            ApiUtils.response(pw, m1006);
+        } else if ("M1008".equals(cmd)) {
+            //good type modify
+            ApiUtils.doService(M1008.class, data, gson, pw);
         } else {
             ApiUtils.responseError(pw, "unknown cmd");
         }

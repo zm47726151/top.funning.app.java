@@ -1,6 +1,8 @@
 package top.knxy.fruits.DataBase.DAL;
 
 import org.apache.ibatis.annotations.Select;
+import top.knxy.fruits.DataBase.Model.Page;
+import top.knxy.fruits.DataBase.Table.Good;
 import top.knxy.fruits.Service.Good.Bean.Detail;
 
 public interface GoodDAL {
@@ -11,4 +13,9 @@ public interface GoodDAL {
             "limit 1 ")
     public Detail getDetail(String id);
 
+    @Select("select id,name,description,imageUrl,price,stock,type from `Good` where id=#{id} and state = 1")
+    public Good get(String id);
+
+    @Select("select id,name,description,imageUrl,price,stock,type,state from `Good` limit #{index},#{size}")
+    public Good getList(Page page);
 }
