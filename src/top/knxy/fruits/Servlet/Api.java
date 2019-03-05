@@ -5,7 +5,7 @@ import com.google.gson.JsonObject;
 import top.knxy.fruits.Bean.Request;
 import top.knxy.fruits.Service.Good.Get.C1009;
 import top.knxy.fruits.Service.Index.C1001;
-import top.knxy.fruits.Service.Login.C1003;
+import top.knxy.fruits.Service.Login.Wechat.C1003;
 import top.knxy.fruits.Config.C;
 import top.knxy.fruits.Service.Order.Cancel.C1007;
 import top.knxy.fruits.Service.Order.Comfirm.C1004;

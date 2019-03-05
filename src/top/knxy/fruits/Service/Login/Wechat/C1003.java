@@ -1,4 +1,4 @@
-package top.knxy.fruits.Service.Login;
+package top.knxy.fruits.Service.Login.Wechat;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
@@ -7,6 +7,7 @@ import top.knxy.fruits.Config.W;
 import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.DataBase.Table.User;
 import top.knxy.fruits.Service.BaseService;
+import top.knxy.fruits.DataBase.DAL.LoginDAL;
 import top.knxy.fruits.Utils.ServiceUtils;
 import top.knxy.fruits.Utils.StrUtils;
 import top.knxy.fruits.Utils.WebUtils;
@@ -41,9 +42,9 @@ public class C1003 extends BaseService {
         }
 
         SqlSession session = MyBatisUtils.getSession();
-        DBOperation mapper = session.getMapper(DBOperation.class);
+        LoginDAL mapper = session.getMapper(LoginDAL.class);
         //1. getGood user info form db
-        User user = mapper.get(wxrp.openid);
+        User user = mapper.getUser(wxrp.openid);
         if (user == null) {
             //2. 将记录插入到数据库中
             user = new User();

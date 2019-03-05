@@ -1,4 +1,4 @@
-package top.knxy.fruits.Service.Index;
+package top.knxy.fruits.DataBase.DAL;
 
 import org.apache.ibatis.annotations.Select;
 import top.knxy.fruits.DataBase.Table.Good;
@@ -6,7 +6,7 @@ import top.knxy.fruits.DataBase.Table.GoodType;
 
 import java.util.List;
 
-public interface DBOperation {
+public interface IndexDAL {
 
     @Select("select id,name from GoodType where state = 1")
     public List<GoodType> getGoodTypeList();

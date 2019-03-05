@@ -30,9 +30,7 @@
     <!-- Bootstrap core JavaScript
         ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
     <script>window.jQuery || document.write('<script src="https://v4.bootcss.com/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
@@ -42,6 +40,8 @@
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
+
+    <script src="/js/common.js"></script>
 
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
@@ -97,7 +97,7 @@
                     <li class="nav-item line">
                         <a class="nav-link" href="/admin/order/search">
                             <span data-feather="file"></span>
-                            订单查询
+                            订单详情
                         </a>
                     </li>
 
@@ -113,23 +113,17 @@
                             添加商品<br/>
                         </a>
                     </li>
-                    <li class="nav-item line">
+                    <li class="nav-item">
                         <a class="nav-link" href="/admin/order/good">
                             <span data-feather="shopping-cart"></span>
-                            商品查询<br/>
+                            商品详情<br/>
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/admin/order/goodType">
+                    <li class="nav-item line">
+                        <a class="nav-link" href="/admin/goodtype/list">
                             <span data-feather="shopping-cart"></span>
                             商品类型列表<br/>
-                        </a>
-                    </li>
-                    <li class="nav-item line">
-                        <a class="nav-link" href="/admin/order/goodType">
-                            <span data-feather="shopping-cart"></span>
-                            商品类型添加<br/>
                         </a>
                     </li>
 
