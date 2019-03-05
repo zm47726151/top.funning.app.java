@@ -147,6 +147,17 @@
     </div>
 </div>
 
+<div id="LoadingDialog" class="modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <view class="lv_floater">
+        <div class="lv_container">
+            <view class="lv_point lv_point1"></view>
+            <view class="lv_point lv_point2"></view>
+            <view class="lv_point lv_point3"></view>
+        </div>
+    </view>
+</div>
+
+
 </body>
 
 </html>

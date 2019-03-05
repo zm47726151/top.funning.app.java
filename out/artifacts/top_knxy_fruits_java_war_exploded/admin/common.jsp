@@ -55,7 +55,7 @@
 <body>
 
 <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">昕阳光</a>
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">科宁新远小程序商城</a>
     <div class="w-100"></div>
     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
@@ -146,6 +146,17 @@
         <jsp:include page="${viewJsp}"></jsp:include>
     </div>
 </div>
+
+<div id="LoadingDialog" class="modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <view class="lv_floater">
+        <div class="lv_container">
+            <view class="lv_point lv_point1"></view>
+            <view class="lv_point lv_point2"></view>
+            <view class="lv_point lv_point3"></view>
+        </div>
+    </view>
+</div>
+
 
 </body>
 

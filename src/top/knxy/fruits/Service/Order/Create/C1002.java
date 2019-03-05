@@ -2,6 +2,7 @@ package top.knxy.fruits.Service.Order.Create;
 
 import com.google.gson.Gson;
 import org.apache.ibatis.session.SqlSession;
+import top.knxy.fruits.DataBase.DAL.GoodDAL;
 import top.knxy.fruits.DataBase.Table.Good;
 import top.knxy.fruits.DataBase.Table.Order;
 import top.knxy.fruits.DataBase.MyBatisUtils;
@@ -31,14 +32,15 @@ public class C1002 extends BaseService {
         }
 
         SqlSession session = MyBatisUtils.getSession();
-        OrderDAL ds = session.getMapper(OrderDAL.class);
+        OrderDAL orderDAL = session.getMapper(OrderDAL.class);
+        GoodDAL goodDAL = session.getMapper(GoodDAL.class);
 
         Data data = new Data();
         this.data = data;
 
         BigDecimal price = new BigDecimal(0);
         for (Item item : goodList) {
-            Good good = ds.getGood(String.valueOf(item.body.getId()));
+            Good good = goodDAL.get(String.valueOf(item.body.getId()));
             if (good == null) {
                 ServiceUtils.createError(this, item.body.getName() + " 没货了");
                 return;
@@ -57,7 +59,7 @@ public class C1002 extends BaseService {
         order.setUserId(userId);
         order.setState(1);
 
-        int result = ds.insert(order);
+        int result = orderDAL.insert(order);
         session.commit();
         if (result < 1) {
             ServiceUtils.createError(this, "生成订单失败");

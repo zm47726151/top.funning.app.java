@@ -40,5 +40,7 @@ public class M1008 extends BaseService {
         opreation.update(type);
         session.commit();
         session.close();
+
+        ServiceUtils.createSuccess(this);
     }
 }

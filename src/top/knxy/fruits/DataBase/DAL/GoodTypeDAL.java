@@ -17,8 +17,8 @@ public interface GoodTypeDAL {
     public List<GoodType> getList();
 
     @Update("update `GoodType` set name=#{name},state=#{state} where id=#{id}")
-    public void update(GoodType type);
+    public int update(GoodType type);
 
     @Delete("delete from `GoodType` where id=#{id}")
-    public void delete(String id);
+    public int delete(String id);
 }
