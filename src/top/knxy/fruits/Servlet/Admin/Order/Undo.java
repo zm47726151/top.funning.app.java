@@ -3,7 +3,7 @@ package top.knxy.fruits.Servlet.Admin.Order;
 
 import top.knxy.fruits.Config.C;
 import top.knxy.fruits.Config.V;
-import top.knxy.fruits.Service.Manager.Order.UndoServices;
+import top.knxy.fruits.Service.Order.Undo.M1003;
 import top.knxy.fruits.Servlet.Model.Page;
 import top.knxy.fruits.Utils.ServletUtils;
 
@@ -18,7 +18,7 @@ import java.io.IOException;
 public class Undo extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        UndoServices services = ServletUtils.requestParamToModel(req, UndoServices.class);
+        M1003 services = ServletUtils.requestParamToModel(req, M1003.class);
 
         services.start();
         if (services.code == C.Service.success) {

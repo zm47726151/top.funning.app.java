@@ -4,7 +4,7 @@ import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.DataBase.Table.Order;
 import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.Service.BaseService;
-import top.knxy.fruits.Service.Order.DBOperation;
+import top.knxy.fruits.DataBase.DAL.OrderDAL;
 import top.knxy.fruits.Utils.ServiceUtils;
 import top.knxy.fruits.Utils.StrUtils;
 
@@ -65,13 +65,13 @@ public class C1004 extends BaseService {
         }
 
         SqlSession session = MyBatisUtils.getSession();
-        DBOperation mapper = session.getMapper(DBOperation.class);
+        OrderDAL mapper = session.getMapper(OrderDAL.class);
 
         String poster = "6";
         Order order = new Order();
         order.setId(id);
         order.setUserId(userId);
-        order = mapper.getOrder(order);
+        order = mapper.getOrderByUser(order);
         if(order == null){
             ServiceUtils.createError(this,"没有订单");
             return;

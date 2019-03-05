@@ -5,7 +5,7 @@ import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.Service.BaseService;
 import top.knxy.fruits.Service.Good.Bean.Detail;
-import top.knxy.fruits.Service.Good.DBOperation;
+import top.knxy.fruits.DataBase.DAL.GoodDAL;
 import top.knxy.fruits.Utils.ServiceUtils;
 import top.knxy.fruits.Utils.StrUtils;
 
@@ -23,7 +23,7 @@ public class C1009 extends BaseService {
         }
 
         SqlSession session = MyBatisUtils.getSession();
-        Detail detail = session.getMapper(DBOperation.class).getDetail(id);
+        Detail detail = session.getMapper(GoodDAL.class).getDetail(id);
 
         if (detail == null) {
             ServiceUtils.createError(this);

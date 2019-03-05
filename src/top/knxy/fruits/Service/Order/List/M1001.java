@@ -1,16 +1,17 @@
-package top.knxy.fruits.Service.Manager.Order;
+package top.knxy.fruits.Service.Order.List;
 
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.DataBase.Model.Page;
 import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.Service.BaseService;
+import top.knxy.fruits.DataBase.DAL.OrderDAL;
 import top.knxy.fruits.Utils.DateUtils;
 import top.knxy.fruits.Utils.ServiceUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListServices extends BaseService {
+public class M1001 extends BaseService {
 
     public String page;
     public String id;
@@ -22,9 +23,7 @@ public class ListServices extends BaseService {
     public void run() throws Exception {
         Page pModel = new Page(page);
         SqlSession session = MyBatisUtils.getSession();
-        this.data = new Data(session.getMapper(DBOperation.class).getList(pModel));
-
-
+        this.data = new Data(session.getMapper(OrderDAL.class).getList(pModel));
 
         session.close();
         ServiceUtils.createSuccess(this);

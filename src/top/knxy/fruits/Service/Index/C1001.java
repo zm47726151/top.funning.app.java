@@ -1,6 +1,7 @@
 package top.knxy.fruits.Service.Index;
 
 import org.apache.ibatis.session.SqlSession;
+import top.knxy.fruits.DataBase.DAL.IndexDAL;
 import top.knxy.fruits.DataBase.Table.Good;
 import top.knxy.fruits.DataBase.Table.GoodType;
 import top.knxy.fruits.DataBase.MyBatisUtils;
@@ -15,7 +16,7 @@ public class C1001 extends BaseService {
     @Override
     public void run() throws Exception {
         SqlSession session = MyBatisUtils.getSession();
-        DBOperation mapper = session.getMapper(DBOperation.class);
+        IndexDAL mapper = session.getMapper(IndexDAL.class);
         List<GoodType> goodTypeList = mapper.getGoodTypeList();
         List<Good> goodList = mapper.getGoodList();
         session.close();
