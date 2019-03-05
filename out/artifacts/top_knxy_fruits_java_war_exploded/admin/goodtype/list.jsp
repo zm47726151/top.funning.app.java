@@ -89,7 +89,7 @@
 
         $("[class='delete']").click(function () {
             let id = $($($(this).parent()).parent()).attr("id");
-            
+            $("#" + id + " td span").hide();
         });
 
         $("[class='dropdown-item']").click(function () {
