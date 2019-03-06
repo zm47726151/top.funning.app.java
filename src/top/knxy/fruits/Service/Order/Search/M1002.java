@@ -12,7 +12,7 @@ import top.knxy.fruits.Utils.StrUtils;
 
 public class M1002 extends BaseService {
 
-    public static String id;
+    public String id;
 
     @Override
     protected void run() throws Exception {
