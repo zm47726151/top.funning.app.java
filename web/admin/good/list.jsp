@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<script src="js/list.js"></script>
 <div role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 
     <div class="table-responsive">
@@ -23,15 +24,17 @@
             </thead>
             <tbody>
             <c:forEach items="${data.dataList}" var="item">
-                <tr>
+                <tr id="tr_${item.id}">
                     <td>${item.id}</td>
                     <td>${item.name}</td>
                     <td>${item.price}</td>
                     <td>${item.typeName}</td>
                     <td>${item.stateStr}</td>
                     <td>
-                        <a href="search?id=${item.id}" target="_blank">详情</a>
-                        <a href="search?id=${item.id}" target="_blank">删除</a>
+                        <a type="button" class="btn btn-primary btn-sm" onclick="Page.delete('${item.id}')"
+                           target="_blank">详情</a>
+                        <a type="button" class="btn btn-primary btn-sm" href="search?id=${item.id}"
+                           target="_blank">删除</a>
                     </td>
                 </tr>
             </c:forEach>
