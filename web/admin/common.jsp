@@ -102,19 +102,19 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/admin/order/good">
+                        <a class="nav-link" href="/admin/good/list">
                             <span data-feather="shopping-cart"></span>
                             商品列表<br/>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/admin/order/good">
+                        <a class="nav-link" href="/admin/good/add">
                             <span data-feather="shopping-cart"></span>
                             添加商品<br/>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/admin/order/good">
+                        <a class="nav-link" href="/admin/good/detail">
                             <span data-feather="shopping-cart"></span>
                             商品详情<br/>
                         </a>
