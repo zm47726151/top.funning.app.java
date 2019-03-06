@@ -47,4 +47,8 @@ let LoadingDialog = {
     hide: function () {
         $("#LoadingDialog").modal('hide');
     },
+    msg:function (msg) {
+        $("#LoadingDialog [class='lv_msg']").html(msg);
+
+    }
 }

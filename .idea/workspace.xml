@@ -7,18 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fa2d42c-42aa-4b36-88a0-60761e403109" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Good/List.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/admin/good/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/admin/good/search.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/admin/good/js/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/admin/common.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/admin/common.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/admin/order/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/admin/order/search.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/DAL/GoodDAL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/DAL/GoodDAL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/List/M1010.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/List/M1010.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Search/M1002.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Search/M1002.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Order/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Order/Search.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/admin/common.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/common.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/order/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/order/search.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/good/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/good/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/good/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/good/search.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/error/500.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/error/500.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/common.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -101,83 +97,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Good/List.java">
+        <entry file="file://$PROJECT_DIR$/web/admin/good/search.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="1287">
+              <caret line="72" column="67" selection-start-line="72" selection-start-column="67" selection-end-line="72" selection-end-column="67" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/List/M1010.java">
+        <entry file="file://$PROJECT_DIR$/web/admin/good/js/search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1307#1308#0" expanded="true" />
-                <element signature="e#1348#1349#0" expanded="true" />
-                <element signature="e#1392#1393#0" expanded="true" />
-                <element signature="e#1436#1437#0" expanded="true" />
-                <element signature="e#1475#1476#0" expanded="true" />
-                <element signature="e#1518#1519#0" expanded="true" />
-                <element signature="e#1566#1567#0" expanded="true" />
-                <element signature="e#1614#1615#0" expanded="true" />
-                <element signature="e#1654#1655#0" expanded="true" />
-                <element signature="e#1698#1699#0" expanded="true" />
-                <element signature="e#1748#1749#0" expanded="true" />
-                <element signature="e#1798#1799#0" expanded="true" />
-                <element signature="e#1837#1838#0" expanded="true" />
-                <element signature="e#1880#1881#0" expanded="true" />
-                <element signature="e#1928#1929#0" expanded="true" />
-                <element signature="e#1976#1977#0" expanded="true" />
-                <element signature="e#2019#2020#0" expanded="true" />
-                <element signature="e#2066#2067#0" expanded="true" />
-                <element signature="e#2122#2123#0" expanded="true" />
-                <element signature="e#2178#2179#0" expanded="true" />
-                <element signature="e#2218#2219#0" expanded="true" />
-                <element signature="e#2262#2263#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="450">
+              <caret line="198" column="30" selection-start-line="198" selection-start-column="30" selection-end-line="198" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/DataBase/DAL/GoodDAL.java">
+        <entry file="file://$PROJECT_DIR$/db.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/admin/good/list.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+            <state relative-caret-position="1144">
+              <caret line="87" selection-start-line="87" selection-end-line="87" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/admin/good/search.jsp">
+        <entry file="file://$PROJECT_DIR$/web/admin/good/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/admin/order/search.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1035">
-              <caret line="69" column="10" selection-start-line="11" selection-start-column="3" selection-end-line="69" selection-end-column="10" />
+            <state relative-caret-position="333">
+              <caret line="33" column="73" selection-start-line="33" selection-start-column="73" selection-end-line="33" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -191,18 +141,13 @@
         <option value="HTML File" />
         <option value="Jsp File" />
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>insert into GoodDetail(content,goodId)values</find>
-      <find>&quot;{'header':{imageList:['https://fruits.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg','https://fruits.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg','https://fruits.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg']},'detai':{imageList:['https://fruits.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg','https://fruits.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg','https://fruits.knxy.top/430bc1e8f1ae4862a26b5e70a8090460.jpg']}}&quot;</find>
-      <find>detai</find>
-      <find>430bc1e8f1ae4862a26b5e70a8090460</find>
-      <find>3.0rmb/kg</find>
       <find>https://fruits.knxy.top/</find>
       <find>springmvc-servlet.xml</find>
       <find>SessionInfo</find>
@@ -228,6 +173,11 @@
       <find>style</find>
       <find>lv_container</find>
       <find>good</find>
+      <find>href=&quot;#&quot;</find>
+      <find>getItem</find>
+      <find>imageList</find>
+      <find>name</find>
+      <find>delete\</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -245,6 +195,8 @@
       <replace>order</replace>
       <replace>select</replace>
       <replace>px</replace>
+      <replace>id</replace>
+      <replace>getItemView</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/web/WEB-INF/lib</dir>
@@ -257,8 +209,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/ChangeState/M005.java" />
-        <option value="$PROJECT_DIR$/src/top/knxy/fruits/Utils/ServiceUtils.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/ChangeState/M1005.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Login/Wechat/DBOperation.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Login/DBOperation.java" />
@@ -297,17 +247,19 @@
         <option value="$PROJECT_DIR$/web/admin/goodtype/list.jsp" />
         <option value="$PROJECT_DIR$/web/admin/js/common.js" />
         <option value="$PROJECT_DIR$/web/admin/goodtype/js/list.js" />
-        <option value="$PROJECT_DIR$/web/js/common.js" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Search/M1002.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Order/Search.java" />
         <option value="$PROJECT_DIR$/web/admin/order/search.jsp" />
         <option value="$PROJECT_DIR$/db.sql" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/List/M1010.java" />
-        <option value="$PROJECT_DIR$/web/admin/common.jsp" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/DAL/GoodDAL.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Good/List.java" />
-        <option value="$PROJECT_DIR$/web/admin/good/list.jsp" />
+        <option value="$PROJECT_DIR$/web/error/500.jsp" />
         <option value="$PROJECT_DIR$/web/admin/good/search.jsp" />
+        <option value="$PROJECT_DIR$/web/admin/common.jsp" />
+        <option value="$PROJECT_DIR$/web/js/common.js" />
+        <option value="$PROJECT_DIR$/web/admin/good/js/search.js" />
+        <option value="$PROJECT_DIR$/web/admin/good/list.jsp" />
       </list>
     </option>
   </component>
@@ -428,15 +380,6 @@
               <item name="fruits" type="462c0819:PsiDirectoryNode" />
               <item name="Service" type="462c0819:PsiDirectoryNode" />
               <item name="Order" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fruits" type="462c0819:PsiDirectoryNode" />
-              <item name="Service" type="462c0819:PsiDirectoryNode" />
-              <item name="Order" type="462c0819:PsiDirectoryNode" />
-              <item name="Get" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
@@ -579,7 +522,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551792555360" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551857568867" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -820,6 +763,7 @@
       <workItem from="1551494315599" duration="55665000" />
       <workItem from="1551771702208" duration="13858000" />
       <workItem from="1551793104618" duration="4000" />
+      <workItem from="1551839451433" duration="11491000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1548913859289</created>
@@ -905,11 +849,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551786669872</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="c">
+      <created>1551839593678</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1551839593678</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203336000" />
+    <option name="totallyTimeSpent" value="214827000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -921,10 +872,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="-77" width="1600" height="823" extended-state="6" />
+    <frame x="1280" y="-77" width="1600" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.60509557" visible="true" weight="0.22079588" />
-      <window_info id="Structure" order="1" sideWeight="0.5044586" side_tool="true" weight="0.18677792" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.677707" visible="true" weight="0.17715019" />
+      <window_info id="Structure" order="1" sideWeight="0.32229298" side_tool="true" visible="true" weight="0.17715019" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -932,8 +884,8 @@
       <window_info id="Favorites" order="6" sideWeight="0.5044586" side_tool="true" weight="0.18677792" />
       <window_info x="1520" y="319" width="291" height="309" id="Web" order="7" sideWeight="0.39490446" side_tool="true" type="FLOATING" weight="0.18677792" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3269494" />
-      <window_info anchor="bottom" x="1442" y="77" width="1280" height="723" id="Run" order="2" weight="0.62243503" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32611465" />
+      <window_info anchor="bottom" x="1442" y="77" width="1280" height="723" id="Run" order="2" weight="0.62165606" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.26675788" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -956,7 +908,7 @@
       <window_info anchor="right" id="Maven" order="3" weight="0.32991013" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" sideWeight="0.4978903" visible="true" weight="0.3055199" />
+      <window_info anchor="right" id="Database" order="6" sideWeight="0.4978903" weight="0.3055199" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Coverage" order="9" sideWeight="0.5021097" side_tool="true" weight="0.32991013" />
@@ -1022,14 +974,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Login/Wechat/DBOperation.java" />
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Login/Manager/M1004.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="37" column="48" lean-forward="true" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Login/Wechat/C1003.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
@@ -1256,13 +1200,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="47" column="33" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Utils/ServletUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -1290,13 +1227,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1181">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Get/C1006.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1311,13 +1241,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/common.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="123" column="61" selection-start-line="123" selection-start-column="57" selection-end-line="123" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -1358,10 +1281,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/DataBase/DAL/GoodDAL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/order/search.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="69" column="10" selection-start-line="11" selection-start-column="3" selection-end-line="69" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/List/M1010.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1307#1308#0" expanded="true" />
@@ -1390,31 +1327,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/DataBase/DAL/GoodDAL.java">
+    <entry file="file://$PROJECT_DIR$/db.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+        <state relative-caret-position="1144">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/good/list.jsp">
+    <entry file="file://$PROJECT_DIR$/web/error/500.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/order/search.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="69" column="10" selection-start-line="11" selection-start-column="3" selection-end-line="69" selection-end-column="10" />
+        <state relative-caret-position="465">
+          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/admin/good/search.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        <state relative-caret-position="1287">
+          <caret line="72" column="67" selection-start-line="72" selection-start-column="67" selection-end-line="72" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/common.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="149" column="22" selection-start-line="149" selection-start-column="9" selection-end-line="149" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/good/js/search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="198" column="30" selection-start-line="198" selection-start-column="30" selection-end-line="198" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/good/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="33" column="73" selection-start-line="33" selection-start-column="73" selection-end-line="33" selection-end-column="73" />
         </state>
       </provider>
     </entry>

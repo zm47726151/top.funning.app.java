@@ -6,22 +6,32 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html; charset=UTF-8" isErrorPage="true" %>
-<%@ page import="java.io.*" %>
-<html>
-<header>
-    <title>exception page</title>
-    <body>
-    <hr/>
-    <pre>
-            <%
-response.getWriter().println("Exception: " + exception);
 
-if(exception != null)
-{
-   response.getWriter().println("<pre>");
-   exception.printStackTrace(response.getWriter());
-   response.getWriter().println("</pre>");
-}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/image/favicon.png">
 
-response.getWriter().println("<hr/>");
-%>
+    <title>Something Wrong</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://v4.bootcss.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://v4.bootcss.com/docs/4.0/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Begin page content -->
+<main role="main" class="container">
+    <h1 class="mt-5">出错了！</h1>
+</main>
+
+</body>
+</html>
+
