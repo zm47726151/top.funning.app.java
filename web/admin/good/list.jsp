@@ -31,6 +31,7 @@
                     <td>${item.stateStr}</td>
                     <td>
                         <a href="search?id=${item.id}" target="_blank">详情</a>
+                        <a href="search?id=${item.id}" target="_blank">删除</a>
                     </td>
                 </tr>
             </c:forEach>

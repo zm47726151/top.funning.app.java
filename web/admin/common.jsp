@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link rel="icon" href="/admin/image/favicon.png">
+    <link rel="icon" href="/image/favicon.png">
     <title>Admin</title>
 
     <!-- Bootstrap core CSS -->
@@ -154,6 +154,7 @@
             <view class="lv_point lv_point2"></view>
             <view class="lv_point lv_point3"></view>
         </div>
+        <div class="lv_msg"></div>
     </view>
 </div>
 

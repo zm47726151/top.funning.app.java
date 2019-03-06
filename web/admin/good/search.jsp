@@ -7,6 +7,14 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<script src="js/search.js"></script>
+<script>
+    $(function () {
+        Page.data = ${data.detail};
+        Page.init();
+    })
+
+</script>
 <div role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 
     <form method="get" class="row form">
@@ -14,67 +22,74 @@
         <button type="submit" class="btn btn-primary col-md-1">查询</button>
     </form>
 
+    <hr/>
+
     <div id="content">
         <div><label>商品编号：</label>${data.id}</div>
         <div class="row">
             <div class="col-md-3">
-                <img alt="商品图片" src="">
+                <img alt="商品图片" id="imageUrl" src="${data.imageUrl}">
+                <a onclick="changeImage()">点击上传</a>
+                <!--
+                    1. 使用shop_fruits --- image.fruits.knxy.top
+                    2. 点击选择后记录地址，显示本地图片
+                    3. 管理员点击保存，上传图片到七牛云，保存到数据库。
+                -->
             </div>
             <div class="col-md-6">
-                <div>商品名称</div>
+                <input value="${data.name}" id="name"/>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-md-9"> 商品描述</div>
+            <input value="${data.description}" id="description"/>
         </div>
 
         <div class="row">
-            <div class="col-md-9"> 商品价格</div>
-            <div class="col-md-9"> 状态</div>
-            <div class="col-md-9"> 类型</div>
-        </div>
-
-        <label>商品详情图片列表</label>
-        <div class="good_list row">
-            <c:forEach items="${data.goodList}" var="good">
-                <div class="col-md-2">
-                    <div goodId="${good.body.id}" class="item">
-                        <img alt="${good.body.name}" src="${good.body.imageUrl}"/>
-                        <div><label>商品名称：</label>${good.body.name}</div>
-                        <div class="text_color_orange"><label>商品价格：</label>${good.body.price}</div>
-                        <div class="text_color_orange"><label>购买数量：</label>${good.amount}</div>
+            <div class="col-md-3">
+                <input value="${data.price}" id="price"/>
+            </div>
+            <div class="col-md-3">
+                <div class="dropdown">
+                    <button id="state_text" class="btn btn-secondary dropdown-toggle" type="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        ${data.stateStr}
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" onclick="Page.changeState(this,'1')">上架</a>
+                        <a class="dropdown-item" onclick="Page.changeState(this,'2')">下架</a>
                     </div>
                 </div>
-            </c:forEach>
+                <input value="${data.state}" type="hidden" id="state"/>
+            </div>
+            <div class="col-md-3">
+                <div class="dropdown">
+                    <button id="type_text"  class="btn btn-secondary dropdown-toggle" type="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        ${data.typeStr}
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <c:forEach items="${data.typeList}" var="type">
+                            <a class="dropdown-item" onclick="Page.changeType(this,'${type.id}')">${type.name}</a>
+                        </c:forEach>
+                    </div>
+                </div>
+                <input value="${data.type}" id="type"/>
+            </div>
+        </div>
+
+        <!-- 暂时不做修改 -->
+        <label>商品详情图片列表</label>
+        <div id="detail_header_imageList" class="row">
         </div>
 
         <label>商品详情说破图片列表</label>
-        <div class="good_list row">
-            <c:forEach items="${data.goodList}" var="good">
-                <div class="col-md-2">
-                    <div goodId="${good.body.id}" class="item">
-                        <img alt="${good.body.name}" src="${good.body.imageUrl}"/>
-                        <div><label>商品名称：</label>${good.body.name}</div>
-                        <div class="text_color_orange"><label>商品价格：</label>${good.body.price}</div>
-                        <div class="text_color_orange"><label>购买数量：</label>${good.amount}</div>
-                    </div>
-                </div>
-            </c:forEach>
+        <div id="detail_content_imageList" class="row">
         </div>
 
-        <form class="operation" method="post">
-            <input type="hidden" name="id" value="${data.id}">
-            <input type="hidden" name="state">
-            <button type="submit" currentState="2" onclick="toState('3')"
-                    class="btn btn-primary col-md-3 hide">订单已完成
-            </button>
-            <button type="submit" currentState="4" onclick="toState('6')"
-                    class="btn btn-primary col-md-3 hide">退款
-            </button>
-            <button type="submit" currentState="2" onclick="toState('5')"
-                    class="btn btn-primary col-md-3 hide">取消订单
-            </button>
-        </form>
+        <input type="file" id="imageUrl_input" onchange="imageChoice()" class="hide">
+        <div class="operation">
+            <button type="submit" onclick="Page.save()" class="btn btn-primary col-md-3">保存</button>
+        </div>
     </div>
 </div>
