@@ -40,11 +40,54 @@ let Web = {
     }
 }
 
+let Qiniu = {
+    uploadImage : function(imageFile, name, upToken, callback) {
+        let putExtra = {
+            fname : imageFile["name"],
+            params : {}
+        };
+        let config = {
+            useCdnDomain : true
+        };
+        let observable = qiniu.upload(imageFile, name, upToken, putExtra, config)
+        let subscription = observable.subscribe(callback);
+    }
+};
+
 let LoadingDialog = {
     show: function () {
         $("#LoadingDialog").modal('show');
     },
     hide: function () {
         $("#LoadingDialog").modal('hide');
+        $("#LoadingDialog [class='lv_msg']").hide();
     },
+    msg: function (msg) {
+        $("#LoadingDialog [class='lv_msg']").show();
+        $("#LoadingDialog [class='lv_msg']").html(msg);
+    }
+}
+
+let Utils = {
+    getSuffix: function (name) {
+        let index = name.lastIndexOf(".");
+        if (index < 0) {
+            return;
+        }
+
+        let suffix = name.substring(index + 1);
+        return suffix;
+    },
+    getImageInfo: function (imageFile,listener) {
+        let reader = new FileReader();
+        reader.onload = function (e) {
+            let data = e.target.result;
+            let image = new Image();
+            image.onload = function () {
+                listener(image.width, image.height);
+            }
+            image.src = data;
+        }
+        reader.readAsDataURL(imageFile);
+    }
 }

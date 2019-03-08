@@ -3,30 +3,21 @@ package top.knxy.fruits.Servlet.Admin;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import top.knxy.fruits.Bean.Request;
-import top.knxy.fruits.Config.C;
 import top.knxy.fruits.Config.V;
-import top.knxy.fruits.Service.Good.Get.C1009;
+import top.knxy.fruits.Service.Good.Delete.M1012;
+import top.knxy.fruits.Service.Good.Modify.M1011;
 import top.knxy.fruits.Service.GoodType.Add.M1006;
 import top.knxy.fruits.Service.GoodType.Delete.M1009;
 import top.knxy.fruits.Service.GoodType.Modify.M1008;
-import top.knxy.fruits.Service.Index.C1001;
-import top.knxy.fruits.Service.Login.Wechat.C1003;
-import top.knxy.fruits.Service.Order.Cancel.C1007;
-import top.knxy.fruits.Service.Order.Comfirm.C1004;
-import top.knxy.fruits.Service.Order.Create.C1002;
-import top.knxy.fruits.Service.Order.Get.C1006;
-import top.knxy.fruits.Service.Order.List.C1005;
-import top.knxy.fruits.Service.Order.Refund.C1008;
-import top.knxy.fruits.Service.SessionInfo;
+import top.knxy.fruits.Service.QiNiu.getUploadToken.M1015;
 import top.knxy.fruits.Utils.ApiUtils;
-import top.knxy.fruits.Utils.StrUtils;
+import top.knxy.fruits.Utils.TextUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -54,7 +45,7 @@ public class Api extends HttpServlet {
 
         Gson gson = new Gson();
 
-        if (StrUtils.isEmpty(content)) {
+        if (TextUtils.isEmpty(content)) {
             ApiUtils.responseError(pw, "input json is empty");
             return;
         }
@@ -78,6 +69,15 @@ public class Api extends HttpServlet {
         } else if ("M1008".equals(cmd)) {
             //good type modify
             ApiUtils.doService(M1008.class, data, gson, pw);
+        } else if ("M1011".equals(cmd)) {
+            //good Modify
+            ApiUtils.doService(M1011.class, data, gson, pw);
+        } else if ("M1012".equals(cmd)) {
+            //good delete
+            ApiUtils.doService(M1012.class, data, gson, pw);
+        } else if ("M1015".equals(cmd)) {
+            //get UpToken
+            ApiUtils.doService(M1015.class, data, gson, pw);
         } else {
             ApiUtils.responseError(pw, "unknown cmd");
         }

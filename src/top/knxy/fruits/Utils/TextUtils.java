@@ -1,13 +1,9 @@
 package top.knxy.fruits.Utils;
 
-import java.math.BigInteger;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class StrUtils {
+public class TextUtils {
 
     public static boolean isEmpty(String str) {
         if (str == null || str.length() < 1 || str.trim().length() < 1)
@@ -16,6 +12,9 @@ public class StrUtils {
     }
 
     public static boolean isNumeric(String str) {
+        if(isEmpty(str)){
+            return false;
+        }
         Pattern pattern = Pattern.compile("[0-9]*");
         Matcher isNum = pattern.matcher(str);
         if (!isNum.matches()) {

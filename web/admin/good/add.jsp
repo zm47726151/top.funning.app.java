@@ -16,20 +16,11 @@
 
 </script>
 <div role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-
-    <form method="get" class="row form">
-        <input name="id" type="text" placeholder="商品编号" class="form-control col-md-3" value="${data.id}"/>
-        <button type="submit" class="btn btn-primary col-md-1">查询</button>
-    </form>
-
-    <hr/>
-
     <div id="content">
-        <div><label>商品编号：</label>${data.id}</div>
         <div class="row">
             <div class="col-md-3">
                 <img alt="商品图片" id="imageUrl" src="${data.imageUrl}">
-                <a onclick="changeImage()">点击上传</a>
+                <a onclick="changeImage()">点击修改</a>
                 <!--
                     1. 使用shop_fruits --- image.fruits.knxy.top
                     2. 点击选择后记录地址，显示本地图片
@@ -37,12 +28,14 @@
                 -->
             </div>
             <div class="col-md-6">
-                <input value="${data.name}" id="name"/>
+                <label>商品名称</label>
+                <input value="" id="name"/>
             </div>
         </div>
 
         <div class="row">
-            <input value="${data.description}" id="description"/>
+            <label>商品描述</label>
+            <input value="" id="description"/>
         </div>
 
         <div class="row">
@@ -53,14 +46,14 @@
                 <div class="dropdown">
                     <button id="state_text" class="btn btn-secondary dropdown-toggle" type="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        ${data.stateStr}
+                        上架
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" onclick="Page.changeState(this,'1')">上架</a>
                         <a class="dropdown-item" onclick="Page.changeState(this,'2')">下架</a>
                     </div>
                 </div>
-                <input value="${data.state}" type="hidden" id="state"/>
+                <input value="1" type="hidden" id="state"/>
             </div>
             <div class="col-md-3">
                 <div class="dropdown">

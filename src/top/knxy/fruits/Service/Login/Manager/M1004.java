@@ -7,7 +7,7 @@ import top.knxy.fruits.Service.BaseService;
 import top.knxy.fruits.DataBase.DAL.LoginDAL;
 import top.knxy.fruits.Utils.PwdUtils;
 import top.knxy.fruits.Utils.ServiceUtils;
-import top.knxy.fruits.Utils.StrUtils;
+import top.knxy.fruits.Utils.TextUtils;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -22,12 +22,12 @@ public class M1004 extends BaseService {
  
     @Override
     public void run() throws Exception {
-        if (StrUtils.isEmpty(username)) {
+        if (TextUtils.isEmpty(username)) {
             ServiceUtils.createError(this, "username is empty");
             return;
         }
 
-        if (StrUtils.isEmpty(password)) {
+        if (TextUtils.isEmpty(password)) {
             ServiceUtils.createError(this, "password is empty");
             return;
         }
