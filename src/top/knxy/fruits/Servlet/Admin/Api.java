@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import top.knxy.fruits.Bean.Request;
 import top.knxy.fruits.Config.V;
+import top.knxy.fruits.Service.Good.Add.M1014;
 import top.knxy.fruits.Service.Good.Delete.M1012;
 import top.knxy.fruits.Service.Good.Modify.M1011;
 import top.knxy.fruits.Service.GoodType.Add.M1006;
@@ -56,6 +57,7 @@ public class Api extends HttpServlet {
 
         int adminId = (int) request.getSession().getAttribute(V.adminId);
 
+        System.out.println(cmd + ":" + data);
         if ("M1006".equals(cmd)) {
             //good type add
             M1006 m1006 = gson.fromJson(data, M1006.class);
@@ -75,6 +77,9 @@ public class Api extends HttpServlet {
         } else if ("M1012".equals(cmd)) {
             //good delete
             ApiUtils.doService(M1012.class, data, gson, pw);
+        } else if ("M1014".equals(cmd)) {
+            //good add
+            ApiUtils.doService(M1014.class, data, gson, pw);
         } else if ("M1015".equals(cmd)) {
             //get UpToken
             ApiUtils.doService(M1015.class, data, gson, pw);

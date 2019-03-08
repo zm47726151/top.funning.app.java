@@ -1,7 +1,6 @@
 package top.knxy.fruits.DataBase.DAL;
 
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import top.knxy.fruits.DataBase.Model.Page;
 import top.knxy.fruits.DataBase.Table.Good;
 import top.knxy.fruits.Service.Good.Get.C1009;
@@ -30,7 +29,7 @@ public interface GoodDAL {
 
     @Select("select g.id,g.name,g.price,g.type,gt.name typeName,g.state " +
             "from `Good` g left join `GoodType` gt on gt.id = g.type " +
-            "limit #{index},#{size}")
+            "order by g.id desc limit #{index},#{size}")
     public List<M1010.Data.Good> getList(Page page);
 
     @Delete("delete from `Good` where id = #{id}")
@@ -39,4 +38,10 @@ public interface GoodDAL {
     @Delete("update `Good` set name=#{name},description=#{description},imageUrl=#{imageUrl},price=#{price},type=#{type},state=#{state} " +
             "where id=#{id}")
     public int update(Good good);
+
+    @Insert("insert into `Good`(id,name,description,imageUrl,price,type,state) values " +
+            "(#{id},#{name},#{description},#{imageUrl},#{price},#{type},#{state})")
+    @Options(useGeneratedKeys = true, keyProperty = "id")
+    @SelectKey(statement = "SELECT LAST_INSERT_ID()", keyProperty = "id", resultType = Integer.class, before = false)
+    public int insert(Good good);
 }

@@ -114,7 +114,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/admin/good/detail">
+                        <a class="nav-link" href="/admin/good/search">
                             <span data-feather="shopping-cart"></span>
                             商品详情<br/>
                         </a>
@@ -159,8 +159,6 @@
         </div>
     </view>
 </div>
-
-
 </body>
 
 </html>

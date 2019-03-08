@@ -2,9 +2,7 @@ package top.knxy.fruits.Servlet.Admin.Good;
 
 import top.knxy.fruits.Config.C;
 import top.knxy.fruits.Config.V;
-import top.knxy.fruits.Service.Good.Get.M1013;
-import top.knxy.fruits.Service.Good.List.M1010;
-import top.knxy.fruits.Servlet.Model.Page;
+import top.knxy.fruits.Service.GoodType.get.M1016;
 import top.knxy.fruits.Utils.ServletUtils;
 
 import javax.servlet.ServletException;
@@ -14,18 +12,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/admin/good/search")
-public class Search extends HttpServlet {
+@WebServlet(urlPatterns = "/admin/good/add")
+public class Add extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        M1013 service = ServletUtils.requestParamToModel(req, M1013.class);
-        service.start();
-        if (service.code == C.Service.success) {
-            req.setAttribute(V.data, service.data);
+        M1016 m1016 = ServletUtils.requestParamToModel(req, M1016.class);
+        m1016.start();
+        if (m1016.code == C.Service.success) {
+            req.setAttribute(V.data, m1016.data);
             ServletUtils.setViewAndForward(req, resp);
         } else {
-            ServletUtils.setViewAndForward(req, resp);
+            resp.sendError(500, m1016.msg);
         }
+
     }
 }
