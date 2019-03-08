@@ -97,14 +97,13 @@ body {
     border-bottom: 1px solid #e5e5e5;
 }
 
-.line{
+.line {
     margin-bottom: 20px;
 }
 
 .hide {
     display: none;
 }
-
 
 
 /* Loadding View Animation */
@@ -123,14 +122,26 @@ body {
 }
 
 .lv_container {
-    width: 190px;
-    height: 190px;
+    padding: 50px 40px 50px 40px;
+    background: #00000090;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lv_load_view {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: #00000090;
-    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.lv_msg {
+    color: #fff;
 }
 
 .lv_point {

@@ -6,7 +6,7 @@ import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.Service.BaseService;
 import top.knxy.fruits.DataBase.DAL.OrderDAL;
 import top.knxy.fruits.Utils.ServiceUtils;
-import top.knxy.fruits.Utils.StrUtils;
+import top.knxy.fruits.Utils.TextUtils;
 
 public class C1008 extends BaseService {
 
@@ -17,7 +17,7 @@ public class C1008 extends BaseService {
 
     @Override
     public void run() throws Exception {
-        if (StrUtils.isEmpty(id)) {
+        if (TextUtils.isEmpty(id)) {
             ServiceUtils.createError(this);
             return;
         }

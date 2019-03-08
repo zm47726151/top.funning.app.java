@@ -31,10 +31,12 @@
                     <td>${item.typeName}</td>
                     <td>${item.stateStr}</td>
                     <td>
-                        <a type="button" class="btn btn-primary btn-sm" onclick="Page.delete('${item.id}')"
-                           target="_blank">详情</a>
-                        <a type="button" class="btn btn-primary btn-sm" href="search?id=${item.id}"
-                           target="_blank">删除</a>
+                        <button type="button" class="btn btn-primary btn-sm"
+                                onclick="Page.search('${item.id}')" target="_blank">详情
+                        </button>
+                        <button type="button" class="btn btn-danger btn-sm"
+                                onclick="Page.delete('${item.id}')" target="_blank">删除
+                        </button>
                     </td>
                 </tr>
             </c:forEach>

@@ -1,15 +1,13 @@
 package top.knxy.fruits.Service.Good.Bean;
 
-import top.knxy.fruits.DataBase.Table.BaseBean;
-
-public class Detail extends BaseBean {
-
+public class Good {
     private String id;
     private String name;
     private String description;
     private String imageUrl;
     private String price;
     private String content;
+    private String state;
 
     public String getId() {
         return id;
@@ -57,5 +55,13 @@ public class Detail extends BaseBean {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 }

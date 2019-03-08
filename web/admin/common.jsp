@@ -24,7 +24,7 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="/admin/css/common.css" rel="stylesheet">
+    <link href="/admin/css/common.css?version=${version}" rel="stylesheet">
 
 
     <!-- Bootstrap core JavaScript
@@ -150,11 +150,13 @@
 <div id="LoadingDialog" class="modal" tabindex="-1" role="dialog" aria-hidden="true">
     <view class="lv_floater">
         <div class="lv_container">
-            <view class="lv_point lv_point1"></view>
-            <view class="lv_point lv_point2"></view>
-            <view class="lv_point lv_point3"></view>
+            <div class="lv_load_view">
+                <view class="lv_point lv_point1"></view>
+                <view class="lv_point lv_point2"></view>
+                <view class="lv_point lv_point3"></view>
+            </div>
+            <div class="lv_msg"></div>
         </div>
-        <div class="lv_msg"></div>
     </view>
 </div>
 
