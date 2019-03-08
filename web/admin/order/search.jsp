@@ -7,13 +7,13 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<link href="css/search.css" rel="stylesheet">
+<link href="css/search.css?time=1" rel="stylesheet">
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
     <form method="get" class="row form">
         <input name="id" type="text" placeholder="订单编号" class="form-control col-md-3" value="${data.id}"/>
         <button type="submit" class="btn btn-primary col-md-1">查询</button>
     </form>
-
+    <hr/>
     <div id="content">
         <div><label>订单编号：</label>${data.id}</div>
         <div class="row">

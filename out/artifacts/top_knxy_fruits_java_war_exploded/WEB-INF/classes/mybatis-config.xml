@@ -21,6 +21,7 @@
         <mapper class="top.knxy.fruits.DataBase.DAL.GoodDAL"/>
         <mapper class="top.knxy.fruits.DataBase.DAL.OrderDAL"/>
         <mapper class="top.knxy.fruits.DataBase.DAL.GoodTypeDAL"/>
+        <mapper class="top.knxy.fruits.DataBase.DAL.GoodDetailDAL"/>
 
     </mappers>
 </configuration>

@@ -11,31 +11,8 @@ import java.util.Date;
 public class C {
     public final static boolean isDebug = true;
 
-    public final static String getVideoUrl() {
-        if (isDebug) {
-            //return "http://pih1cnizy.bkt.clouddn.com/";
-            return "http://qiniu.funning.top/";
-        } else {
-            return "http://qiniu.funning.top/";
-        }
-    }
-
-    public final static String getImageUrl() {
-        if (isDebug) {
-            //return "http://pih1cnizy.bkt.clouddn.com/";
-            return "http://qiniu.funning.top/";
-        } else {
-            return "http://qiniu.funning.top/";
-        }
-    }
-
-    public final static String getCdnBucket() {
-        if (isDebug) {
-            //return "laughingwhensee-test";
-            return "laughingwhensee";
-        } else {
-            return "laughingwhensee";
-        }
+    public final static String getImageHost() {
+        return "http://image.fruits.knxy.top/";
     }
 
     public final static String getVersion() {

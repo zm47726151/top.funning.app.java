@@ -6,7 +6,7 @@ public class Page {
 
     private int index;
 
-    private int size = 30;
+    private int size = 20;
 
     public Page(String pString) throws Exception{
         int page = 1;
