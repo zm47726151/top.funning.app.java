@@ -1,6 +1,6 @@
 package top.knxy.fruits.DataBase.Model;
 
-import top.knxy.fruits.Utils.StrUtils;
+import top.knxy.fruits.Utils.TextUtils;
 
 public class Page {
 
@@ -10,7 +10,7 @@ public class Page {
 
     public Page(String pString) throws Exception{
         int page = 1;
-        if(!StrUtils.isEmpty(pString)){
+        if(!TextUtils.isEmpty(pString)){
             page = Integer.valueOf(pString);
         }
 

@@ -72,7 +72,7 @@ public class XmlUtils {
      * @throws Exception 异常
      */
     public static Map<String, Object> xmlStrToMap(String xmlStr) throws Exception {
-        if (StrUtils.isEmpty(xmlStr)) {
+        if (TextUtils.isEmpty(xmlStr)) {
             return null;
         }
         Map<String, Object> map = new HashMap<String, Object>();

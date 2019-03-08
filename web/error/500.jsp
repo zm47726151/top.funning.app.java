@@ -35,3 +35,8 @@
 </body>
 </html>
 
+<%
+    if (exception != null) {
+        exception.printStackTrace();
+    }
+%>

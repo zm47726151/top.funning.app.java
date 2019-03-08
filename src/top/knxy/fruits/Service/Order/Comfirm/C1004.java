@@ -6,7 +6,7 @@ import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.Service.BaseService;
 import top.knxy.fruits.DataBase.DAL.OrderDAL;
 import top.knxy.fruits.Utils.ServiceUtils;
-import top.knxy.fruits.Utils.StrUtils;
+import top.knxy.fruits.Utils.TextUtils;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -37,29 +37,29 @@ public class C1004 extends BaseService {
             return;
         }
 
-        if (StrUtils.isEmpty(address.userName)) {
+        if (TextUtils.isEmpty(address.userName)) {
             ServiceUtils.createError(this,"没有姓名");
             return;
         }
 
-        if (StrUtils.isEmpty(address.telNumber)) {
+        if (TextUtils.isEmpty(address.telNumber)) {
             ServiceUtils.createError(this,"没有电话号码");
             return;
         }
 
-        if (StrUtils.isEmpty(address.detailInfo)) {
+        if (TextUtils.isEmpty(address.detailInfo)) {
             ServiceUtils.createError(this,"没有详细地址");
             return;
         }
-        if (StrUtils.isEmpty(address.provinceName)) {
+        if (TextUtils.isEmpty(address.provinceName)) {
             ServiceUtils.createError(this,"没有区域");
             return;
         }
-        if (StrUtils.isEmpty(address.cityName)) {
+        if (TextUtils.isEmpty(address.cityName)) {
             ServiceUtils.createError(this,"没有城市");
             return;
         }
-        if (StrUtils.isEmpty(address.provinceName)) {
+        if (TextUtils.isEmpty(address.provinceName)) {
             ServiceUtils.createError(this,"没有省份");
             return;
         }

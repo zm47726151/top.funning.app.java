@@ -6,7 +6,7 @@ import top.knxy.fruits.DataBase.Table.Order;
 import top.knxy.fruits.Service.BaseService;
 import top.knxy.fruits.DataBase.DAL.OrderDAL;
 import top.knxy.fruits.Utils.ServiceUtils;
-import top.knxy.fruits.Utils.StrUtils;
+import top.knxy.fruits.Utils.TextUtils;
 
 public class M1005 extends BaseService {
 
@@ -16,12 +16,12 @@ public class M1005 extends BaseService {
 
     @Override
     protected void run() throws Exception {
-        if (StrUtils.isEmpty(id)) {
+        if (TextUtils.isEmpty(id)) {
             ServiceUtils.createError(this);
             return;
         }
 
-        if (!StrUtils.isNumeric(state)) {
+        if (!TextUtils.isNumeric(state)) {
             ServiceUtils.createError(this);
             return;
         }

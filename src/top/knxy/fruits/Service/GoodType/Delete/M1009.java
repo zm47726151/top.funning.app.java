@@ -5,14 +5,14 @@ import top.knxy.fruits.DataBase.DAL.GoodTypeDAL;
 import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.Service.BaseService;
 import top.knxy.fruits.Utils.ServiceUtils;
-import top.knxy.fruits.Utils.StrUtils;
+import top.knxy.fruits.Utils.TextUtils;
 
 public class M1009 extends BaseService {
     public String id;
 
     @Override
     protected void run() throws Exception {
-        if (!StrUtils.isNumeric(id)) {
+        if (!TextUtils.isNumeric(id)) {
             ServiceUtils.createSuccess(this);
             return;
         }

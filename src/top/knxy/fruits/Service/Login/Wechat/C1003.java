@@ -3,13 +3,13 @@ package top.knxy.fruits.Service.Login.Wechat;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import org.apache.ibatis.session.SqlSession;
-import top.knxy.fruits.Config.W;
+import top.knxy.fruits.Config.S;
 import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.DataBase.Table.User;
 import top.knxy.fruits.Service.BaseService;
 import top.knxy.fruits.DataBase.DAL.LoginDAL;
 import top.knxy.fruits.Utils.ServiceUtils;
-import top.knxy.fruits.Utils.StrUtils;
+import top.knxy.fruits.Utils.TextUtils;
 import top.knxy.fruits.Utils.WebUtils;
 
 import java.util.HashMap;
@@ -22,21 +22,21 @@ public class C1003 extends BaseService {
     @Override
     public void run() throws Exception {
 
-        if (StrUtils.isEmpty(jsCode)) {
+        if (TextUtils.isEmpty(jsCode)) {
             ServiceUtils.createError(this, "jsCode is empty");
             return;
         }
 
         Map<String, String> map = new HashMap<>();
-        map.put("appid", W.appid);
-        map.put("secret", W.secret);
+        map.put("appid", S.WeChat.appid);
+        map.put("secret", S.WeChat.secret);
         map.put("js_code", jsCode);
         map.put("grant_type", "authorization_code");
         String str = WebUtils.requestGet("https://api.weixin.qq.com/sns/jscode2session", map);
 
         Gson gson = new Gson();
         WeiXinResponseModel wxrp = gson.fromJson(str, WeiXinResponseModel.class);
-        if (!StrUtils.isEmpty(wxrp.errcode) && !"0".equals(wxrp.errcode)) {
+        if (!TextUtils.isEmpty(wxrp.errcode) && !"0".equals(wxrp.errcode)) {
             ServiceUtils.createError(this, wxrp.errmsg);
             return;
         }

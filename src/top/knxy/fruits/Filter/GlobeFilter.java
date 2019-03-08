@@ -1,5 +1,7 @@
 package top.knxy.fruits.Filter;
 
+import top.knxy.fruits.Config.C;
+
 import javax.servlet.annotation.WebFilter;
 
 
@@ -25,6 +27,7 @@ public class GlobeFilter implements Filter {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
+        request.setAttribute("version", C.getVersion());
 
         String requestURI = request.getRequestURI();
 

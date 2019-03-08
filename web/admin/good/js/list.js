@@ -3,12 +3,15 @@ let Page = {
         LoadingDialog.show();
         Web.request("M1012", {"id": id}, {
             onSuccess: function (p) {
-                $("tr_" + id).hide();
+                $("#tr_" + id).hide();
                 LoadingDialog.hide();
             },
             onError: function (p) {
                 LoadingDialog.hide();
             }
         })
+    },
+    search: function (id) {
+        window.open('search?id=' + id, '_blank')
     }
 }

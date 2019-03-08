@@ -5,9 +5,8 @@ import com.google.gson.JsonObject;
 import top.knxy.fruits.Bean.Request;
 import top.knxy.fruits.Config.V;
 import top.knxy.fruits.Service.Index.C1001;
-import top.knxy.fruits.Service.SessionInfo;
 import top.knxy.fruits.Utils.ApiUtils;
-import top.knxy.fruits.Utils.StrUtils;
+import top.knxy.fruits.Utils.TextUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -35,7 +34,7 @@ public class Index extends HttpServlet {
 
         Gson gson = new Gson();
 
-        if (StrUtils.isEmpty(content)) {
+        if (TextUtils.isEmpty(content)) {
             ApiUtils.responseError(pw, "input json is empty");
             return;
         }

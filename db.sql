@@ -9,7 +9,7 @@ state = {"show" = 1,"hide" = 2}
 create table GoodType(
     id int primary key auto_increment,
     name varchar(32),
-    state int
+    state int enum('1','2') not null;
 )
 
 
@@ -25,7 +25,7 @@ create table Good(
     imageUrl varchar(128),
     price DECIMAL(14,2),
     stock int,
-    state int default 1,
+    state int  enum('1','2') not null default 1,
     type int/** foreign key GoodType(id) **/
 )
 
@@ -33,20 +33,6 @@ create table GoodDetail(
     id int primary key auto_increment,
     content text,
     goodId int
-)
-
-/**
-state = {"1","2"}
-state = 2 : 默认
-**/
-create table Address(
-    id int primary key auto_increment,
-    userId char(32),
-    area varchar(16),
-    address varchar(256),
-    phone varchar(32),
-    nickname varchar(32),
-    state int default 1
 )
 
 /**
@@ -69,7 +55,7 @@ create table `Order`(
     postalCode varchar(32),
 
     note varchar(255),
-    state int not null,
+    state int enum('1','2','3','4','5','6') not null,
     userId int,
     createDT datetime not null,
     payDT datetime

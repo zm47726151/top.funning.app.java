@@ -1,6 +1,6 @@
 package top.knxy.fruits.Servlet.Model;
 
-import top.knxy.fruits.Utils.StrUtils;
+import top.knxy.fruits.Utils.TextUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ public class Page {
     public Page(HttpServletRequest request) {
         String pStr = request.getParameter("page");
         int page = 1;
-        if (!StrUtils.isEmpty(pStr) && StrUtils.isNumeric(pStr)) {
+        if (!TextUtils.isEmpty(pStr) && TextUtils.isNumeric(pStr)) {
             page = Integer.valueOf(pStr);
         }
 
