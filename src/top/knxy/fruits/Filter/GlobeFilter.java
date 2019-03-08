@@ -6,12 +6,11 @@ import javax.servlet.annotation.WebFilter;
 
 
 import javax.servlet.*;
-import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebFilter( filterName = "GlobeFilter",urlPatterns = "/*")
+@WebFilter(filterName = "GlobeFilter", urlPatterns = "/*")
 public class GlobeFilter implements Filter {
 
     @Override
@@ -28,6 +27,7 @@ public class GlobeFilter implements Filter {
         response.setCharacterEncoding("UTF-8");
 
         request.setAttribute("version", C.getVersion());
+        request.setAttribute("imageHost", C.getImageHost());
 
         String requestURI = request.getRequestURI();
 

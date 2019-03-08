@@ -10,12 +10,20 @@
 
 <link href="css/search.css" rel="stylesheet">
 <script src="/js/qiniu.min.js"></script>
+<script src="js/upload.js"></script>
 <script src="js/search.js?time=${version}"></script>
 <script>
+    let imageHost = "${imageHost}";
     $(function () {
-        Page.data = ${data.detail};
+        console.log("imageHost : " + imageHost);
+        Page.data = ${data.detail==null?"null":data.detail};
         Page.init();
+        let id = "${data.id}";
+        if (!id) {
+            $("#content").hide();
+        }
     })
+
 </script>
 <div role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
     <form method="get" class="row form">
@@ -36,10 +44,13 @@
             <div class="col-md-6 base_info">
                 <div class="row">
                     <div class="col-md-6">
-                        <label>名称: </label> <input class="form-control" value="${data.name}" id="name"/>
+                        <label>名称: </label>
+                        <input class="form-control" value="${data.name}" id="name"/>
                     </div>
                     <div class="col-md-6">
-                        <label>名称: </label> <input class="form-control" value="${data.price}" id="price"/>
+                        <label>价格: </label>
+                        <input class="form-control" value="${data.price}" id="price"
+                               onkeyup="this.value=this.value.replace(/[^\d.]/g,'')"/>
                     </div>
                 </div>
                 <div class="row">

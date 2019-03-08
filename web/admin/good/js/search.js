@@ -2,6 +2,9 @@ let Page = {
     id: 0,
     data: {},
     init: function () {
+        if (!Page.data) {
+            return;
+        }
         Page.dataInit();
         Page.detail.header.init();
         Page.detail.content.init();
@@ -221,6 +224,10 @@ let Page = {
                 alert("价格不能为空");
                 return;
             }
+            if (!Utils.validMoney(Page.save.data.price)) {
+                alert("金额格式不正确");
+                return;
+            }
 
             let list = Page.data.header.imageList;
             if (!list || list.length < 1) {
@@ -238,7 +245,7 @@ let Page = {
                 return;
             }
             let imageFile = Page.data.imageFile;
-            let upload = new UploadImage(imageFile);
+            let upload = new Upload(imageFile);
             upload.listener = {
                 next: function (fname, percent) {
                     let message = "正在上传 \"" + fname + "\"<br/>已经上传了: " + percent.toFixed(2) + "%";
@@ -249,7 +256,7 @@ let Page = {
                     alert(msg);
                 },
                 complete: function (res) {
-                    Page.save.data.imageUrl = res.fileName;
+                    Page.save.data.imageUrl = imageHost + res.fileName;
                     Page.save._uploadContentImageList(0);
                 }
             };
@@ -268,7 +275,7 @@ let Page = {
                 return;
             }
             console.log("save", "uploadContentImageList index = " + index);
-            let upload = new UploadImage(item.file);
+            let upload = new Upload(item.file);
             upload.listener = {
                 next: function (fname, percent) {
                     let message = "正在上传 \"" + fname + "\"<br/>已经上传了: " + percent.toFixed(2) + "%";
@@ -279,7 +286,7 @@ let Page = {
                     LoadingDialog.hide();
                 },
                 complete: function (res) {
-                    item.url = res.fileName;
+                    item.url = imageHost + res.fileName;
                     item.type = "server";
                     item.file = null;
                     Page.save._uploadContentImageList(index);
@@ -300,7 +307,7 @@ let Page = {
                 return;
             }
             console.log("save", "uploadHeaderImageList index = " + index);
-            let upload = new UploadImage(item.file);
+            let upload = new Upload(item.file);
             upload.listener = {
                 next: function (fname, percent) {
                     let message = "正在上传 \"" + fname + "\"<br/>已经上传了: " + percent.toFixed(2) + "%";
@@ -311,7 +318,7 @@ let Page = {
                     LoadingDialog.hide();
                 },
                 complete: function (res) {
-                    item.url = res.fileName;
+                    item.url = imageHost + res.fileName;
                     item.type = "server";
                     item.file = null;
                     Page.save._uploadHeaderImageList(index);
@@ -335,7 +342,7 @@ let Page = {
                 data.detail.header.imageList.push(item.url);
             }
 
-            Web.request("M1011", data, {
+            Web.request("M1014", data, {
                 onSuccess: function (p) {
                     LoadingDialog.hide();
                     window.location.reload();
@@ -346,62 +353,6 @@ let Page = {
                 }
             })
         },
-
     }
 }
 
-
-class UploadImage {
-    _file;
-    _suffix;
-    _name;
-    _upToken;
-
-    listener;
-
-    constructor(file) {
-        this._file = file;
-    }
-
-    start() {
-
-        console.log("UploadImage", "start");
-        this._getUploadToken();
-    }
-
-    _getUploadToken() {
-        console.log("UploadImage", "_getUploadToken");
-        let that = this;
-        this._suffix = Utils.getSuffix(that._file["name"]);
-        Web.request("M1015", {
-            "suffix": that._suffix
-        }, {
-            onSuccess: function (rp) {
-                let data = rp.data;
-                that._name = data.name;
-                that._upToken = data.token;
-                that._upload();
-            },
-            onError: function (rp) {
-                that.listener.error("response.code", rp.msg);
-            }
-        });
-    }
-
-    _upload() {
-        console.log("UploadImage", "_upload");
-        let that = this;
-        Qiniu.uploadImage(that._file, that._name, that._upToken, {
-            next: function (res) {
-                that.listener.next(that._file["name"], res.total.percent);
-            },
-            error: function (err) {
-                that.listener.error("-1", err);
-            },
-            complete: function (res) {
-                res.fileName = that._name;
-                that.listener.complete(res);
-            }
-        });
-    }
-}
