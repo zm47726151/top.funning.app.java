@@ -3,6 +3,7 @@ package top.knxy.fruits.Utils;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.UUID;
 
 public class PwdUtils {
 
@@ -51,5 +52,12 @@ public class PwdUtils {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public static String createSalt() {
+        UUID uuid = UUID.randomUUID();
+        String salt = uuid.toString().replace("-", "");
+        salt = salt.substring(0, 12);
+        return salt;
     }
 }

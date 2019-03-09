@@ -45,7 +45,7 @@ public interface OrderDAL {
     public int update(Order order);
 
     @Select("select id,price,poster,amount,telNumber,userName,state,userId,createDT,payDT " +
-            "from `order` where state=2  order by payDT desc " +
+            "from `order` where state=2 and state=4 order by payDT desc " +
             "limit #{index},#{size}")
     public List<Order> getUndoList(Page page);
 
@@ -64,10 +64,13 @@ public interface OrderDAL {
     @Select("select id,state from `Order` where id=#{id} limit 1")
     public Order getState(String id);
 
+
+    @Select("select count(id) where id=#{id} limit 1")
+    public void getUnDoNumber();
+
     @Update("update `Order` set state = #{state} " +
             "where id = #{id}")
     public int changeState(Order order);
-
 
     @Update("update `Order` set state = #{state} " +
             "where id = #{id} and userId = #{userId}")

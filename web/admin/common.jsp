@@ -77,9 +77,14 @@
             $(function () {
                 console.log(page);
                 $("[href='" + page + "']").addClass("active");
+
+
+                let m = document.getElementById('sound_remind');
+                m.play();//播放
             })
         </script>
 
+        <audio id="sound_remind" class="hide" auto src="/admin/res/remind.mp3"></audio>
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
             <div class="sidebar-sticky">
                 <ul class="nav flex-column">
@@ -128,7 +133,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/admin/order/goodType">
+                        <a class="nav-link" href="/admin/modifyPwd">
                             <span data-feather="shopping-cart"></span>
                             修改密码<br/>
                         </a>
