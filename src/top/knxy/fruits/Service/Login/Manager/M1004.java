@@ -35,7 +35,7 @@ public class M1004 extends BaseService {
 
         SqlSession session = MyBatisUtils.getSession();
         LoginDAL mapper = session.getMapper(LoginDAL.class);
-        Admin admin = mapper.getAdmin(username);
+        Admin admin = mapper.getAdminByUserName(username);
 
         if (admin == null) {
             ServiceUtils.createError(this, "username is not exist");
@@ -48,7 +48,7 @@ public class M1004 extends BaseService {
             if (now > admin.getLastFailTime().getTime() * 24 * 60 * 60 * 1000) {
                 admin.setLastFailTime(getInitData());
                 admin.setFail(0);
-                mapper.update(admin);
+                mapper.updateFail(admin);
                 session.commit();
             } else if (admin.getFail() > 3) {
                 ServiceUtils.createError(this, "input wrong password is too much, you can try 24h after.");
@@ -61,7 +61,7 @@ public class M1004 extends BaseService {
             if (admin.getFail() > 0 || admin.getLastFailTime() != null) {
                 admin.setLastFailTime(getInitData());
                 admin.setFail(0);
-                mapper.update(admin);
+                mapper.updateFail(admin);
                 session.commit();
             }
             result = admin;
@@ -73,7 +73,7 @@ public class M1004 extends BaseService {
             if (admin.getLastFailTime() == null) {
                 admin.setLastFailTime(new Date());
             }
-            mapper.update(admin);
+            mapper.updateFail(admin);
             session.commit();
             ServiceUtils.createError(this, "password is wrong, it is the " + admin.getFail() + " time you input wrong password");
         }

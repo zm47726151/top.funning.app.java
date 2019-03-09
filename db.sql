@@ -63,7 +63,7 @@ create table `Order`(
 
 CREATE TABLE `Admin` (
   `id` int primary key auto_increment,
-  `username` varchar(64) NOT NULL,
+  `username` varchar(64) UNIQUE NOT NULL,
   `password` char(40) NOT NULL,
   `fail` int,
   `lastFailTime` datetime,
