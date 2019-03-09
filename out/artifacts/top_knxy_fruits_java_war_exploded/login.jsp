@@ -38,7 +38,7 @@
     </div>
 
     <div class="form-label-group">
-        <input name="password" value="${password}" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
         <label for="inputPassword">Password</label>
     </div>
 

@@ -7,10 +7,17 @@ import top.knxy.fruits.DataBase.Table.User;
 public interface LoginDAL {
 
     @Select("select id,username,password,fail,lastFailTime,salt from Admin where username=#{username} limit 1")
-    public Admin getAdmin(String username);
+    public Admin getAdminByUserName(String username);
 
-    @Update("update Admin set fail=#{fail}, lastFailTime=#{lastFailTime} where id = #{id}")
-    public void update(Admin admin);
+
+    @Select("select id,username,password,fail,lastFailTime,salt from Admin where id=#{id} limit 1")
+    public Admin getAdminById(String id);
+
+    @Update("update `Admin` set fail=#{fail}, lastFailTime=#{lastFailTime} where id = #{id}")
+    public void updateFail(Admin admin);
+
+    @Update("update `Admin` set password=#{password}, salt=#{salt} where id = #{id}")
+    public void updatePassword(Admin admin);
 
     @Select({"select id,openId from User where openId = #{openId} limit 1"})
     public User getUser(String openId);
