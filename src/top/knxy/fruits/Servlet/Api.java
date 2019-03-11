@@ -12,9 +12,12 @@ import top.knxy.fruits.Service.Order.Comfirm.C1004;
 import top.knxy.fruits.Service.Order.Create.C1002;
 import top.knxy.fruits.Service.Order.Get.C1006;
 import top.knxy.fruits.Service.Order.List.C1005;
+import top.knxy.fruits.Service.Order.Pay.C1010;
 import top.knxy.fruits.Service.Order.Refund.C1008;
 import top.knxy.fruits.Service.SessionInfo;
 import top.knxy.fruits.Utils.ApiUtils;
+import top.knxy.fruits.Utils.ServiceUtils;
+import top.knxy.fruits.Utils.ServletUtils;
 import top.knxy.fruits.Utils.TextUtils;
 
 import javax.servlet.ServletException;
@@ -59,7 +62,7 @@ public class Api extends HttpServlet {
         SessionInfo sessionInfo = (SessionInfo) request.getSession().getAttribute("UserInfo");
         if ("C1002".equals(cmd) || "C1004".equals(cmd) ||
                 "C1005".equals(cmd) || "C1006".equals(cmd) ||
-                "C10067".equals(cmd) || "C1008".equals(cmd)) {
+                "C10067".equals(cmd) || "C1008".equals(cmd) || "C1010".equals(cmd)) {
 
             if (sessionInfo == null) {
                 ApiUtils.responseError(pw, C.Client.needLogin, "还没有登录");
@@ -120,6 +123,12 @@ public class Api extends HttpServlet {
             c1008.userId = sessionInfo.userId;
             c1008.start();
             ApiUtils.response(pw, c1008);
+        } else if ("C1010".equals(cmd)) {
+            //order pay
+            C1010 service = gson.fromJson(data, C1010.class);
+            service.userId = sessionInfo.userId;
+            service.start();
+            ApiUtils.response(pw, service);
         } else if ("C1009".equals(cmd)) {
             //Good get
             C1009 c1009 = gson.fromJson(data, C1009.class);
