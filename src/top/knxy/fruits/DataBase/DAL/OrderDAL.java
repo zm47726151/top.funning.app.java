@@ -65,8 +65,8 @@ public interface OrderDAL {
     public Order getState(String id);
 
 
-    @Select("select count(id) where id=#{id} limit 1")
-    public void getUnDoNumber();
+    @Select("select count(*) from `Order` where state=2 or state=4")
+    public int getUnDoNumber();
 
     @Update("update `Order` set state = #{state} " +
             "where id = #{id}")

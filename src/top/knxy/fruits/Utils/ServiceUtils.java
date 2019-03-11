@@ -1,8 +1,11 @@
 package top.knxy.fruits.Utils;
 
 import top.knxy.fruits.Config.C;
+import top.knxy.fruits.Config.S;
 import top.knxy.fruits.Service.BaseService;
 
+import java.util.Set;
+import java.util.TreeMap;
 import java.util.UUID;
 
 public class ServiceUtils {
@@ -54,5 +57,15 @@ public class ServiceUtils {
 		model.code = C.Service.success;
 	}
 
+
+	public static String getWXPaySignValue(TreeMap<Object,Object> map){
+		Set<Object> keySet = map.keySet();
+		StringBuilder sb = new StringBuilder();
+		for (Object key : keySet) {
+			sb.append(key).append("=").append(map.get(key)).append("&");
+		}
+		sb.append("key").append("=").append(S.WCPay.apiKey);
+		return PwdUtils.md5(sb.toString()).toUpperCase();
+	}
 
 }

@@ -1,5 +1,5 @@
 let Page = {
-
+    id: 0,
     data: {},
     init: function () {
         Page.dataInit();
@@ -95,6 +95,7 @@ let Page = {
                 $("#imageUrl_input").trigger("click");
             },
             delete: function (id) {
+                console.log(id);
                 let imageList = Page.data.header.imageList;
                 for (let i = 0; i < imageList.length; i++) {
                     let item = imageList[i];
