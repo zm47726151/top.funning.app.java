@@ -1,6 +1,6 @@
 create table User(
     id int primary key auto_increment,
-    openId varchar(32)
+    openId varchar(32) UNIQUE
 )
 
 /**

@@ -41,7 +41,6 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
 
-    <script src="/js/common.js"></script>
 
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
@@ -49,6 +48,8 @@
         feather.replace()
     </script>
 
+    <script src="/js/common.js"></script>
+    <script src="/js/index.js"></script>
 </head>
 
 
@@ -75,12 +76,10 @@
         <script>
             let page = "${currentURI}";
             $(function () {
+                Reminder.init();
+
                 console.log(page);
                 $("[href='" + page + "']").addClass("active");
-
-
-                let m = document.getElementById('sound_remind');
-                m.play();//播放
             })
         </script>
 
@@ -90,7 +89,7 @@
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/order/undo">
-                            未处理订单
+                            未处理订单 <span id="red_point" class="red_point hide">13</span>
                         </a>
                     </li>
                     <li class="nav-item">

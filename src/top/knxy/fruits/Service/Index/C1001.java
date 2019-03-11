@@ -34,7 +34,7 @@ public class C1001 extends BaseService {
 
         for (Good good : goodList) {
             Data.Type.Good dtg = new Data.Type.Good(good);
-            Data.Type type = typeMap.get(good.getType());
+            Data.Type type = typeMap.get(String.valueOf(good.getType()));
             type.goodList.add(dtg);
         }
 

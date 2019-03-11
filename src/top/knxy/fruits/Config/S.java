@@ -2,8 +2,14 @@ package top.knxy.fruits.Config;
 
 public class S {
     public static class WeChat {
-        public static String appid = "wxe1f28f4b32adfad1";
-        public static String secret = "a6ccc9d652f9a9f57ab273e6a3139db8";
+        public static final String appid = "wxe1f28f4b32adfad1";
+        public static final String secret = "a6ccc9d652f9a9f57ab273e6a3139db8";
+    }
+
+
+    public static class WCPay {
+        public static final String mchId = "";
+        public static final String apiKey = "";
     }
 
     public static class QiNiu {
