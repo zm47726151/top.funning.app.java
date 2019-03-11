@@ -2,6 +2,7 @@ package top.knxy.fruits.Utils;
 
 
 import org.dom4j.Document;
+import org.dom4j.DocumentException;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 
@@ -70,7 +71,7 @@ public class XmlUtils {
      * @return Map对象
      * @throws Exception 异常
      */
-    public static Map<String, Object> xmlStrToMap(String xmlStr) throws Exception {
+    public static Map<String, Object> xmlStrToMap(String xmlStr) throws DocumentException {
         if (TextUtils.isEmpty(xmlStr)) {
             return null;
         }

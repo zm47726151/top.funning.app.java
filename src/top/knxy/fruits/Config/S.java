@@ -8,8 +8,8 @@ public class S {
 
 
     public static class WCPay {
-        public static final String mchId = "";
-        public static final String apiKey = "";
+        public static final String mchId = "1528324351";
+        public static final String apiKey = "fdd826101ee74af5824f9cf8f6982e0b";
     }
 
     public static class QiNiu {
