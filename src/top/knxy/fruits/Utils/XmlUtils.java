@@ -48,7 +48,6 @@ public class XmlUtils {
     }
 
 
-
     /**
      * xml字符串转换成bean对象
      *

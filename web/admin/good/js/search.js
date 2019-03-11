@@ -342,7 +342,7 @@ let Page = {
                 data.detail.header.imageList.push(item.url);
             }
 
-            Web.request("M1014", data, {
+            Web.request("M1011", data, {
                 onSuccess: function (p) {
                     LoadingDialog.hide();
                     window.location.reload();

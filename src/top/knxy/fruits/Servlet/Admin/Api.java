@@ -10,6 +10,7 @@ import top.knxy.fruits.Service.Good.Modify.M1011;
 import top.knxy.fruits.Service.GoodType.Add.M1006;
 import top.knxy.fruits.Service.GoodType.Delete.M1009;
 import top.knxy.fruits.Service.GoodType.Modify.M1008;
+import top.knxy.fruits.Service.Order.Undo.GetNumber.M1017;
 import top.knxy.fruits.Service.QiNiu.getUploadToken.M1015;
 import top.knxy.fruits.Utils.ApiUtils;
 import top.knxy.fruits.Utils.TextUtils;
@@ -83,6 +84,9 @@ public class Api extends HttpServlet {
         } else if ("M1015".equals(cmd)) {
             //get UpToken
             ApiUtils.doService(M1015.class, data, gson, pw);
+        }  else if ("M1017".equals(cmd)) {
+            //get UpToken
+            ApiUtils.doService(M1017.class, data, gson, pw);
         } else {
             ApiUtils.responseError(pw, "unknown cmd");
         }

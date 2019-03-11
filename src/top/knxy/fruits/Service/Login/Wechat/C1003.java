@@ -8,6 +8,7 @@ import top.knxy.fruits.DataBase.MyBatisUtils;
 import top.knxy.fruits.DataBase.Table.User;
 import top.knxy.fruits.Service.BaseService;
 import top.knxy.fruits.DataBase.DAL.LoginDAL;
+import top.knxy.fruits.Service.ServiceException;
 import top.knxy.fruits.Utils.ServiceUtils;
 import top.knxy.fruits.Utils.TextUtils;
 import top.knxy.fruits.Utils.WebUtils;
@@ -44,7 +45,7 @@ public class C1003 extends BaseService {
         SqlSession session = MyBatisUtils.getSession();
         LoginDAL mapper = session.getMapper(LoginDAL.class);
         //1. getGood user info form db
-        User user = mapper.getUser(wxrp.openid);
+        User user = mapper.getUserByOpenId(wxrp.openid);
         if (user == null) {
             //2. 将记录插入到数据库中
             user = new User();
@@ -52,10 +53,10 @@ public class C1003 extends BaseService {
             int result = mapper.insert(user);
             session.commit();
             if (result < 1) {
-                ServiceUtils.createError(this, "登录失败");
+                session.close();
+                throw new ServiceException("登录失败");
             }
         }
-
 
         this.data = new Data(wxrp, user.getId());
         ServiceUtils.createSuccess(this);

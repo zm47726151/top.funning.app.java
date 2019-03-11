@@ -9,7 +9,6 @@ public interface LoginDAL {
     @Select("select id,username,password,fail,lastFailTime,salt from Admin where username=#{username} limit 1")
     public Admin getAdminByUserName(String username);
 
-
     @Select("select id,username,password,fail,lastFailTime,salt from Admin where id=#{id} limit 1")
     public Admin getAdminById(String id);
 
@@ -20,7 +19,10 @@ public interface LoginDAL {
     public void updatePassword(Admin admin);
 
     @Select({"select id,openId from User where openId = #{openId} limit 1"})
-    public User getUser(String openId);
+    public User getUserByOpenId(String openId);
+
+    @Select({"select id,openId from User where id = #{id} limit 1"})
+    public User getUser(String id);
 
     @Insert({"insert into User(openId) values(#{openId})"})
     @Options(useGeneratedKeys = true, keyProperty = "id")
