@@ -36,7 +36,7 @@ create table GoodDetail(
 )
 
 /**
-state = {"待付款" = 1,"准备中" = 2,"已完成" = 3,"退款中" = 4,"已取消" = 5,"已退款" = 6}
+state = {"待付款" = 1,"准备中" = 2,"已完成" = 3,"退款中" = 4,"已取消" = 5,"已退款" = 6,"已付款" = 7}
 **/
 create table `Order`(
     id char(32) primary key,
@@ -55,7 +55,7 @@ create table `Order`(
     postalCode varchar(32),
 
     note varchar(255),
-    state int enum('1','2','3','4','5','6') not null,
+    state int enum('1','2','3','4','5','6','7') not null,
     userId int,
     createDT datetime not null,
     payDT datetime
