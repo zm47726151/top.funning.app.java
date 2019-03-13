@@ -33,7 +33,7 @@ public class C1011 extends BaseService {
         String sign = ServiceUtils.getWXPaySignValue(tMap);
 
         if (!sign.equals(tMap.get("sign"))) {
-            throw new ServiceException("签名失败");
+            throw new ServiceException("签名失败 order id (out_trade_no) = " + map.get("out_trade_no"));
         }
 
         RequestData requestData = XmlUtils.xmlStrToBean(data, RequestData.class);

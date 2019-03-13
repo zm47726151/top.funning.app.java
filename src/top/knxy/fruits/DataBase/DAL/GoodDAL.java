@@ -15,6 +15,14 @@ public interface GoodDAL {
             "from Good g, GoodDetail gd " +
             "where g.id=#{id} and g.id = gd.goodId " +
             "limit 1 ")
+    @Results({
+            @Result(id = true, column = "id", property = "id"),
+            @Result(column = "name", property = "name"),
+            @Result(column = "description", property = "description"),
+            @Result(column = "imageUrl", property = "imageUrl"),
+            @Result(column = "price", property = "price"),
+            @Result(column = "content", property = "content")
+    })
     public C1009.Good getDetailForUser(String id);
 
 

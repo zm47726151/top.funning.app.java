@@ -93,18 +93,20 @@
     }
 
     function refund() {
-        LoadingDialog.show()
-        Web.request("M1018", {
-            id: "${data.id}"
-        }, {
-            onSuccess: function (res) {
-                LoadingDialog.hide();
-                window.location.reload();
-            },
-            onError: function (res) {
-                LoadingDialog.hide();
-                alert(res.msg);
-            }
-        })
+        if (window.confirm('你确定吗？')) {
+            LoadingDialog.show()
+            Web.request("M1018", {
+                id: "${data.id}"
+            }, {
+                onSuccess: function (res) {
+                    LoadingDialog.hide();
+                    window.location.reload();
+                },
+                onError: function (res) {
+                    LoadingDialog.hide();
+                    alert(res.msg);
+                }
+            });
+        }
     }
 </script>
