@@ -1,4 +1,4 @@
-package top.knxy.fruits.Service.Order.Refund;
+package top.knxy.fruits.Service.Order.Refund.Client;
 
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.DataBase.Table.Order;
@@ -12,9 +12,7 @@ import top.knxy.fruits.Utils.TextUtils;
 public class C1008 extends BaseService {
 
     public String userId;
-
     public String id;
-
 
     @Override
     public void run() throws Exception {
@@ -43,6 +41,4 @@ public class C1008 extends BaseService {
         ServiceUtils.createSuccess(this);
         session.close();
     }
-
-
 }
