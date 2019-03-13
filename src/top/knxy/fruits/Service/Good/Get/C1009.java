@@ -66,19 +66,19 @@ public class C1009 extends BaseService {
         }
     }
 
-    public class Good extends BaseBean {
-        private String id;
-        private String name;
-        private String description;
-        private String imageUrl;
-        private String price;
-        private String content;
+    public static class Good extends BaseBean {
+        public int id;
+        public String name;
+        public String description;
+        public String imageUrl;
+        public String price;
+        public String content;
 
-        public String getId() {
+        public int getId() {
             return id;
         }
 
-        public void setId(String id) {
+        public void setId(int id) {
             this.id = id;
         }
 
