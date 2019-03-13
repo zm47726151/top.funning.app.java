@@ -71,7 +71,7 @@ public class C1010 extends BaseService {
         SqlSession session = MyBatisUtils.getSession();
         OrderDAL mapper = session.getMapper(OrderDAL.class);
 
-        String poster = "6";
+        String poster = "0";
         Order order = new Order();
         order.setId(id);
         order.setUserId(userId);
@@ -118,7 +118,6 @@ public class C1010 extends BaseService {
             map.put("sign_type", "MD5");
             map.put("body", "购买商品");
             map.put("out_trade_no", order.getId());
-            ;
             map.put("total_fee", new BigDecimal(order.getAmount()).multiply(new BigDecimal(100)).setScale(0, BigDecimal.ROUND_UP));
             map.put("openid", user.getOpenId());
             map.put("spbill_create_ip", "39.106.114.227");
@@ -130,9 +129,20 @@ public class C1010 extends BaseService {
             orderInfo = WebUtils.requestPost("https://api.mch.weixin.qq.com/pay/unifiedorder", data, OrderInfo.class);
         }
 
+        if (!"SUCCESS".equals(orderInfo.return_code)) {
+            session.close();
+            throw new ServiceException(String.format("code = %s, msg = %s, order id = %s",
+                    orderInfo.return_code,
+                    orderInfo.return_msg,
+                    order.getId()));
+        }
+
         if (!"SUCCESS".equals(orderInfo.result_code)) {
             session.close();
-            throw new ServiceException(orderInfo.return_msg);
+            throw new ServiceException(String.format("err_code = %s, err_code_des = %s, order id = %s",
+                    orderInfo.err_code,
+                    orderInfo.err_code_des,
+                    order.getId()));
         }
 
         {

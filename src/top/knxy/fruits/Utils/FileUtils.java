@@ -26,4 +26,8 @@ public class FileUtils {
 
         return sb.toString();
     }
+
+    public static String getFilePathInSrc(String filePath) {
+        return FileUtils.class.getResource("/"+filePath).getFile();
+    }
 }

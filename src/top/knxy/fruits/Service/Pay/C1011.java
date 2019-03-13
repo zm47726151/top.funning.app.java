@@ -12,6 +12,7 @@ import top.knxy.fruits.Utils.TextUtils;
 import top.knxy.fruits.Utils.XmlUtils;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
@@ -58,6 +59,7 @@ public class C1011 extends BaseService {
             throw new ServiceException("交易金额不对等,order id = " + orderId);
         }
 
+        order.setPayDT(new Date());
         order.setState(2);
         int result = dal.update(order);
         session.commit();

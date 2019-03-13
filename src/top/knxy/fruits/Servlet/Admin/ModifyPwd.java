@@ -1,9 +1,7 @@
 package top.knxy.fruits.Servlet.Admin;
 
-import top.knxy.fruits.Config.C;
 import top.knxy.fruits.Config.V;
-import top.knxy.fruits.Service.Login.ModifyPwd.M1016;
-import top.knxy.fruits.Utils.ServiceUtils;
+import top.knxy.fruits.Service.Login.ModifyPwd.M1019;
 import top.knxy.fruits.Utils.ServletUtils;
 
 import javax.servlet.ServletException;
@@ -22,11 +20,11 @@ public class ModifyPwd extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        M1016 m1016 = ServletUtils.requestParamToModel(request, M1016.class);
-        m1016.adminId = request.getSession().getAttribute(V.adminId).toString();
-        m1016.start();
-        request.setAttribute(V.code, m1016.code);
-        request.setAttribute(V.errorMsg, m1016.msg);
+        M1019 service = ServletUtils.requestParamToModel(request, M1019.class);
+        service.adminId = request.getSession().getAttribute(V.adminId).toString();
+        service.start();
+        request.setAttribute(V.code, service.code);
+        request.setAttribute(V.errorMsg, service.msg);
         ServletUtils.setViewAndForward(request, response);
     }
 }

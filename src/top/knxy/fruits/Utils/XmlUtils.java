@@ -18,7 +18,6 @@ import java.util.Map;
 public class XmlUtils {
 
 
-
     /**
      * 转化成xml, 单层无嵌套
      *
@@ -75,7 +74,7 @@ public class XmlUtils {
         if (TextUtils.isEmpty(xmlStr)) {
             return null;
         }
-        Map<String, Object> map = new HashMap<String, Object>();
+        Map<String, Object> map = new HashMap<>();
         //将xml格式的字符串转换成Document对象
         Document doc = DocumentHelper.parseText(xmlStr);
         //获取根节点
@@ -107,6 +106,7 @@ public class XmlUtils {
                 String propertyName = entry.getKey();
                 Object value = entry.getValue();
                 Field field = getClassField(clazz, propertyName);
+                if (field == null) continue;
                 Class fieldTypeClass = field.getType();
                 value = convertValType(value, fieldTypeClass);
                 field.set(t, value);
