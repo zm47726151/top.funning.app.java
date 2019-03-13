@@ -63,7 +63,7 @@ public class ServiceUtils {
         Set<Object> keySet = map.keySet();
         StringBuilder sb = new StringBuilder();
         for (Object key : keySet) {
-            if ("sign".equals(key)) break;
+            if ("sign".equals(key)) continue;
             sb.append(key).append("=").append(map.get(key)).append("&");
         }
         sb.append("key").append("=").append(S.WCPay.apiKey);
