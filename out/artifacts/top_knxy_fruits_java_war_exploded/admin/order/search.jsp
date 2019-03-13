@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<link href="css/search.css?time=1" rel="stylesheet">
+<link href="css/search.css?v=${version}" rel="stylesheet">
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
     <form method="get" class="row form">
         <input name="id" type="text" placeholder="订单编号" class="form-control col-md-3" value="${data.id}"/>
@@ -60,7 +60,7 @@
             <button type="submit" currentState="2" onclick="toState('3')"
                     class="btn btn-primary col-md-3 hide">订单已完成
             </button>
-            <button type="submit" currentState="4" onclick="toState('6')"
+            <button type="button" currentState="4" onclick="refund()"
                     class="btn btn-primary col-md-3 hide">退款
             </button>
             <button type="submit" currentState="2" onclick="toState('5')"
@@ -90,5 +90,21 @@
         } else {
             return false;
         }
+    }
+
+    function refund() {
+        LoadingDialog.show()
+        Web.request("M1018", {
+            id: "${data.id}"
+        }, {
+            onSuccess: function (res) {
+                LoadingDialog.hide();
+                window.location.reload();
+            },
+            onError: function (res) {
+                LoadingDialog.hide();
+                alert(res.msg);
+            }
+        })
     }
 </script>

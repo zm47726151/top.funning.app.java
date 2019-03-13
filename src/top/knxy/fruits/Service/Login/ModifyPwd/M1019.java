@@ -11,7 +11,7 @@ import top.knxy.fruits.Utils.TextUtils;
 
 import javax.sql.rowset.serial.SerialException;
 
-public class M1016 extends BaseService {
+public class M1019 extends BaseService {
 
     public String adminId;
     public String prePassword;

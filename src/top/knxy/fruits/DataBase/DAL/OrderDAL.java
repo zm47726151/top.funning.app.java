@@ -45,7 +45,7 @@ public interface OrderDAL {
     public int update(Order order);
 
     @Select("select id,price,poster,amount,telNumber,userName,state,userId,createDT,payDT " +
-            "from `order` where state=2 and state=4 order by payDT desc " +
+            "from `order` where state=2 or state=4 order by payDT desc " +
             "limit #{index},#{size}")
     public List<Order> getUndoList(Page page);
 
