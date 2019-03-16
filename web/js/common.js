@@ -1,3 +1,25 @@
+$(function () {
+    Reminder.init();
+});
+
+let Page = {
+    exit: function () {
+        if (!window.confirm("确认退出吗?")) return;
+
+        LoadingDialog.show();
+        Web.request("M1020", {}, {
+            onSuccess: function (rp) {
+                window.location.href = "/login";
+            },
+            onError: function (rp) {
+                alert(rp.msg);
+                LoadingDialog.hide();
+            }
+        })
+    }
+}
+
+
 let Web = {
     request: function (cmd, data, listenet) {
         if (cmd == null) {
@@ -17,7 +39,6 @@ let Web = {
                 }
             },
             error: function (xmlHttpRequest, errorMsg, exception) {
-                console.log(response);
                 let response = {
                     code: "L0000",
                     msg: errorMsg
@@ -96,12 +117,66 @@ let Utils = {
     原文：https://blog.csdn.net/laixiao_hero/article/details/78665592
     版权声明：本文为博主原创文章，转载请附上博文链接！
      */
-    validMoney: function(money){
+    validMoney: function (money) {
         let reg = /(^[1-9]([0-9]+)?(\.[0-9]{1,2})?$)|(^(0){1}$)|(^[0-9]\.[0-9]([0-9])?$)/;
         if (reg.test(money)) {
             return true;
-        }else{
+        } else {
             return false;
+        }
+        ;
+    }
+}
+
+let Reminder = {
+    init: function () {
+        let host;
+        if (window.location.protocol == 'http:') {
+            host = 'ws://' + window.location.host + '/admin/remind';
+        } else {
+            host = 'wss://' + window.location.host + '/admin/remind';
+        }
+
+        let socket;
+        if ('WebSocket' in window) {
+            socket = new WebSocket(host);
+        } else if ('MozWebSocket' in window) {
+            socket = new MozWebSocket(host);
+        } else {
+            Console.log('Error: WebSocket is not supported by this browser.');
+            return;
+        }
+        socket.onopen = function () {
+            console.log("WebSocket", "open");
         };
+        socket.onclose = function () {
+            console.log("WebSocket", "close");
+        };
+        socket.onmessage = function (message) {
+            console.log("WebSocket", "message : " + message);
+            Manager.remind(message)
+        };
+    },
+}
+
+let Manager = {
+    remind: function (msg) {
+        let m = document.getElementById('sound_remind');
+        m.play();//播放
+        Web.request("M1017", {}, {
+            onSuccess: function (rp) {
+                let value = rp.data.value;
+                $("#red_point").html(value);
+                value = Number(value);
+                if (value < 1) {
+                    $("#red_point").hide();
+                } else {
+                    $("#red_point").show();
+                }
+            },
+            onError: function (rp) {
+
+            }
+        });
     }
 }
