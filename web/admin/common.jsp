@@ -56,7 +56,7 @@
 <body>
 
 <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">科宁新远小程序商城</a>
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">小程序商城</a>
     <div class="w-100"></div>
     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
@@ -137,7 +137,7 @@
                             修改密码<br/>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item hide">
                         <a class="nav-link" href="/admin/order/goodType">
                             <span data-feather="shopping-cart"></span>
                             添加管理员<br/>
