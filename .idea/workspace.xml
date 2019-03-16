@@ -2,16 +2,19 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="top.knxy.fruits.java:war" />
+      <artifact name="top.knxy.fruits.java:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fa2d42c-42aa-4b36-88a0-60761e403109" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/admin/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Index.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/common.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/common.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/good/js/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/good/js/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/WEB-INF/classes/META-INF/top.knxy.fruits.java.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/admin/common.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/admin/common.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/admin/good/js/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/admin/good/js/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/top.knxy.fruits.java/META-INF/top.knxy.fruits.java.kotlin_module" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,52 +61,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/admin/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="157" selection-start-line="10" selection-start-column="157" selection-end-line="10" selection-end-column="157" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#p#0;n#main#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#p#0;n#main#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#2;n#p#0;n#main#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Index.java">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/admin/common.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1898">
-              <caret line="139" column="44" selection-start-line="139" selection-start-column="44" selection-end-line="139" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="65" column="11" selection-start-line="65" selection-start-column="3" selection-end-line="65" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/admin/modifyPwd.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="81" column="7" lean-forward="true" selection-start-line="8" selection-end-line="81" selection-end-column="7" />
+            <state relative-caret-position="405">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -195,8 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Message.java" />
-        <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Undo/List/M1003.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Test.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/ChatServerApplicationConfig.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/ChatEndpoint.java" />
@@ -207,7 +167,6 @@
         <option value="$PROJECT_DIR$/web/admin/css/common.css" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Undo/GetNumber/M1017.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Index/C1001.java" />
-        <option value="$PROJECT_DIR$/web/js/index.js" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Login/Wechat/C1003.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/DAL/LoginDAL.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Delete/M1012.java" />
@@ -225,7 +184,6 @@
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Refund/C1008.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Refund/Client/C1008.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Refund/Admin/M1016.java" />
-        <option value="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Api.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/ModifyPwd.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/DAL/OrderDAL.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Utils/WebUtils.java" />
@@ -242,10 +200,14 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b02a58fc-f2d2-4935-b32f-039b9081fff3/console_33.sql" />
         <option value="$PROJECT_DIR$/web/admin/good/js/search.js" />
         <option value="$PROJECT_DIR$/web/admin/css/index.jsp" />
-        <option value="$PROJECT_DIR$/web/admin/common.jsp" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/web/admin/index.jsp" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Index.java" />
+        <option value="$PROJECT_DIR$/web/js/index.js" />
+        <option value="$PROJECT_DIR$/web/admin/common.jsp" />
+        <option value="$PROJECT_DIR$/web/js/common.js" />
+        <option value="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Api.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -330,24 +292,6 @@
             <path>
               <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
               <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="top_knxy_fruits_java_war" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -391,6 +335,12 @@
             </path>
             <path>
               <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
@@ -409,7 +359,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552707365702" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552709954323" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -669,7 +619,7 @@
       <workItem from="1551960023175" duration="44398000" />
       <workItem from="1552280014544" duration="9000" />
       <workItem from="1552280248891" duration="45934000" />
-      <workItem from="1552654410437" duration="3165000" />
+      <workItem from="1552654410437" duration="5696000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1548913859289</created>
@@ -818,11 +768,32 @@
       <option name="project" value="LOCAL" />
       <updated>1552471598169</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="1. 修复 商品详情 只能录入正方形图片的bug&#10;2. 修改首页左上角名字&#10;3. 隐藏添加管理员的功能">
+      <created>1552707527902</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1552707527902</updated>
+    </task>
+    <task id="LOCAL-00023" summary="增加admin/index">
+      <created>1552707559996</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1552707559997</updated>
+    </task>
+    <task id="LOCAL-00024" summary="1. 修复 商品详情 只能添加 正方形图片 的 bug &#10;3. 整合js文件 &#10;5. 增加退出功能">
+      <created>1552709650501</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1552709650501</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="349649000" />
+    <option name="totallyTimeSpent" value="352180000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -837,7 +808,7 @@
     <frame x="1280" y="-77" width="1600" height="823" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5719745" visible="true" weight="0.20924261" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5719745" visible="true" weight="0.2406932" />
       <window_info id="Structure" order="1" sideWeight="0.42802548" side_tool="true" weight="0.22015405" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -847,7 +818,7 @@
       <window_info x="1520" y="319" width="291" height="309" id="Web" order="7" sideWeight="0.39490446" side_tool="true" type="FLOATING" weight="0.18677792" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32611465" />
-      <window_info anchor="bottom" x="1442" y="77" width="1280" height="723" id="Run" order="2" weight="0.4598726" />
+      <window_info anchor="bottom" x="1442" y="77" width="1280" height="723" id="Run" order="2" weight="0.45964432" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.34140128" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -855,7 +826,7 @@
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32738853" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5006418" side_tool="true" weight="0.4101911" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32611465" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3255814" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32738853" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32831737" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
@@ -933,7 +904,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="c" />
-    <option name="LAST_COMMIT_MESSAGE" value="c" />
+    <MESSAGE value="1. 修复 商品详情 只能录入正方形图片的bug&#10;2. 修改首页左上角名字&#10;3. 隐藏添加管理员的功能" />
+    <MESSAGE value="增加admin/index" />
+    <MESSAGE value="1. 修复 商品详情 只能添加 正方形图片 的 bug &#10;3. 整合js文件 &#10;5. 增加退出功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. 修复 商品详情 只能添加 正方形图片 的 bug &#10;3. 整合js文件 &#10;5. 增加退出功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -976,61 +950,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/ChangeState/M1005.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/mybatis-3.5.0.jar!/org/apache/ibatis/session/SqlSession.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="71" column="10" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Utils/ApiUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-132">
-          <caret line="34" column="12" lean-forward="true" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Undo/GetNumber/M1017.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Comfirm/C1004.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="56" column="9" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Login/ModifyPwd/M1019.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/DataBase/DAL/OrderDAL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="47" column="42" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Undo/List/M1003.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1060,13 +979,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Api.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="87" column="25" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1220,13 +1132,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Index/C1001.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
@@ -1300,13 +1205,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/modifyPwd.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="81" column="7" lean-forward="true" selection-start-line="8" selection-end-line="81" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://b02a58fc-f2d2-4935-b32f-039b9081fff3/schema/r0nd38v04o/table/admin">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1314,17 +1212,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db.sql">
+    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/ModifyPwd.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="65" column="11" selection-start-line="65" selection-start-column="3" selection-end-line="65" selection-end-column="11" />
+        <state relative-caret-position="120">
+          <caret line="17" selection-start-line="17" selection-end-line="17" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="33" lean-forward="true" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/admin/common.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1898">
-          <caret line="139" column="44" selection-start-line="139" selection-start-column="44" selection-end-line="139" selection-end-column="44" />
+        <state relative-caret-position="94">
+          <caret line="50" column="60" lean-forward="true" selection-start-line="50" selection-start-column="60" selection-end-line="50" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Remind.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Index.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
@@ -1340,17 +1262,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/ModifyPwd.java">
+    <entry file="file://$PROJECT_DIR$/db.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="17" selection-start-line="17" selection-end-line="17" selection-end-column="58" />
+        <state relative-caret-position="371">
+          <caret line="65" column="11" selection-start-line="65" selection-start-column="3" selection-end-line="65" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Index.java">
+    <entry file="file://$PROJECT_DIR$/web/admin/modifyPwd.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+        <state relative-caret-position="594">
+          <caret line="81" column="7" lean-forward="true" selection-start-line="8" selection-end-line="81" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Api.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="920">
+          <caret line="96" column="39" selection-start-line="96" selection-start-column="39" selection-end-line="96" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/admin/common.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/top.knxy.fruits.java/top/knxy/fruits/Bean/Request.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/top.knxy.fruits.java/db_t.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/top.knxy.fruits.java/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="16" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
