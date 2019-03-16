@@ -48,15 +48,14 @@
         feather.replace()
     </script>
 
-    <script src="/js/common.js"></script>
-    <script src="/js/index.js"></script>
+    <script src="/js/common.js?version=${version}"></script>
 </head>
 
 
 <body>
 
 <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">小程序商城</a>
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/admin/index">小程序商城</a>
     <div class="w-100"></div>
     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
@@ -65,7 +64,7 @@
     </ul>
     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-            <a class="nav-link" href="#">退出</a>
+            <a class="nav-link" onclick="Page.exit()" href="#">退出</a>
         </li>
     </ul>
 </nav>
@@ -76,9 +75,6 @@
         <script>
             let page = "${currentURI}";
             $(function () {
-                Reminder.init();
-
-                console.log(page);
                 $("[href='" + page + "']").addClass("active");
             })
         </script>

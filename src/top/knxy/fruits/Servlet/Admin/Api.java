@@ -91,6 +91,10 @@ public class Api extends HttpServlet {
         } else if ("M1017".equals(cmd)) {
             //get undo list count
             ApiUtils.doService(M1017.class, data, gson, pw);
+        }  else if ("M1020".equals(cmd)) {
+            //exit
+            request.getSession().removeAttribute(V.adminId);
+            ApiUtils.responseSuccess(pw);
         } else {
             ApiUtils.responseError(pw, "unknown cmd");
         }
