@@ -57,8 +57,6 @@ public class Api extends HttpServlet {
         String cmd = rq.cmd;
         JsonObject data = rq.data == null ? new JsonObject() : rq.data;
 
-        int adminId = (int) request.getSession().getAttribute(V.adminId);
-
         System.out.println(cmd + ":" + data);
         if ("M1006".equals(cmd)) {
             //good type add

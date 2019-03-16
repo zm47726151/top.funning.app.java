@@ -29,6 +29,7 @@ public class Login extends HttpServlet {
             Admin admin = services.result;
             HttpSession session = request.getSession();
             session.setAttribute(V.adminId, admin.getId());
+            session.setAttribute(V.adminName, admin.getUsername());
             response.sendRedirect("/admin/index");
         } else {
             request.setAttribute("username", username);
