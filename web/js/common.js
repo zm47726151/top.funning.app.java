@@ -2,7 +2,7 @@ $(function () {
     Reminder.init();
 });
 
-let Page = {
+let Common = {
     exit: function () {
         if (!window.confirm("确认退出吗?")) return;
 

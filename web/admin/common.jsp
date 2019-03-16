@@ -59,12 +59,12 @@
     <div class="w-100"></div>
     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-            <a class="nav-link" href="#">消息</a>
+            <a class="nav-link" style="color:#fff">${adminName}</a>
         </li>
     </ul>
     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-            <a class="nav-link" onclick="Page.exit()" href="#">退出</a>
+            <a class="nav-link" onclick="Common.exit()" href="#">退出</a>
         </li>
     </ul>
 </nav>
