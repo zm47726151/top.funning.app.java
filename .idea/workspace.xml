@@ -6,16 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fa2d42c-42aa-4b36-88a0-60761e403109" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/WEB-INF/classes/META-INF/top.knxy.fruits.java.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/admin/common.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/admin/common.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/admin/good/js/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/admin/good/js/search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/top.knxy.fruits.java/META-INF/top.knxy.fruits.java.kotlin_module" beforeDir="false" />
-    </list>
+    <list default="true" id="4fa2d42c-42aa-4b36-88a0-60761e403109" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -359,7 +350,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552709954323" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552710018725" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -619,7 +610,7 @@
       <workItem from="1551960023175" duration="44398000" />
       <workItem from="1552280014544" duration="9000" />
       <workItem from="1552280248891" duration="45934000" />
-      <workItem from="1552654410437" duration="5696000" />
+      <workItem from="1552654410437" duration="5941000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1548913859289</created>
@@ -789,11 +780,18 @@
       <option name="project" value="LOCAL" />
       <updated>1552709650501</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="1. 删除out文件&#10;3. 修改ignore">
+      <created>1552710006837</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1552710006837</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="352180000" />
+    <option name="totallyTimeSpent" value="352425000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -806,9 +804,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-77" width="1600" height="823" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5719745" visible="true" weight="0.2406932" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5719745" visible="true" weight="0.2406932" />
       <window_info id="Structure" order="1" sideWeight="0.42802548" side_tool="true" weight="0.22015405" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -907,7 +904,8 @@
     <MESSAGE value="1. 修复 商品详情 只能录入正方形图片的bug&#10;2. 修改首页左上角名字&#10;3. 隐藏添加管理员的功能" />
     <MESSAGE value="增加admin/index" />
     <MESSAGE value="1. 修复 商品详情 只能添加 正方形图片 的 bug &#10;3. 整合js文件 &#10;5. 增加退出功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. 修复 商品详情 只能添加 正方形图片 的 bug &#10;3. 整合js文件 &#10;5. 增加退出功能" />
+    <MESSAGE value="1. 删除out文件&#10;3. 修改ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. 删除out文件&#10;3. 修改ignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
