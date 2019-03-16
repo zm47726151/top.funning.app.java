@@ -161,22 +161,16 @@ let Page = {
                 ele.value = null;
                 ele.onchange = function () {
                     let imageFile = document.getElementById("imageUrl_input").files[0];
-                    Utils.getImageInfo(imageFile, function (width, height) {
-                        if (width == height) {
-                            let path = window.URL.createObjectURL(imageFile);
-                            let imageList = Page.data.content.imageList;
-                            Page.id = Page.id + 1;
-                            imageList.push({
-                                "id": Page.id,
-                                "url": path,
-                                "type": "local",
-                                "file": imageFile
-                            });
-                            Page.detail.content.init();
-                        } else {
-                            alert("请选择一张正方形的图片");
-                        }
+                    let path = window.URL.createObjectURL(imageFile);
+                    let imageList = Page.data.content.imageList;
+                    Page.id = Page.id + 1;
+                    imageList.push({
+                        "id": Page.id,
+                        "url": path,
+                        "type": "local",
+                        "file": imageFile
                     });
+                    Page.detail.content.init();
                 };
 
                 $("#imageUrl_input").trigger("click");
