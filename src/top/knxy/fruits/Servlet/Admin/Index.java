@@ -1,5 +1,7 @@
 package top.knxy.fruits.Servlet.Admin;
 
+import top.knxy.fruits.Utils.ServletUtils;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,7 +13,7 @@ import java.io.IOException;
 public class Index extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.sendRedirect("/admin/order/list");
+        ServletUtils.setViewAndForward(request, response);
     }
 
     @Override
