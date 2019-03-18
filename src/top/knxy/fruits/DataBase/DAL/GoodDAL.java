@@ -13,7 +13,7 @@ public interface GoodDAL {
 
     @Select("select g.id,g.name,g.description,g.imageUrl,g.price,gd.content " +
             "from Good g, GoodDetail gd " +
-            "where g.id=#{id} and g.id = gd.goodId " +
+            "where g.id=#{id} and g.id = gd.goodId and state=1 " +
             "limit 1 ")
     @Results({
             @Result(id = true, column = "id", property = "id"),
@@ -40,10 +40,16 @@ public interface GoodDAL {
             "order by g.id desc limit #{index},#{size}")
     public List<M1010.Data.Good> getList(Page page);
 
+
+    @Select("select id,name,price,imageUrl " +
+            "from `Good` where  state=1  " +
+            "order by name ")
+    public List<top.knxy.fruits.DataBase.Cache.Good.Item> getSearchList();
+
     @Delete("delete from `Good` where id = #{id}")
     public int delete(String id);
 
-    @Delete("update `Good` set name=#{name},description=#{description},imageUrl=#{imageUrl},price=#{price},type=#{type},state=#{state} " +
+    @Update("update `Good` set name=#{name},description=#{description},imageUrl=#{imageUrl},price=#{price},type=#{type},state=#{state} " +
             "where id=#{id}")
     public int update(Good good);
 

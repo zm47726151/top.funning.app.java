@@ -87,7 +87,7 @@ public class Api extends HttpServlet {
             //order refund
             ApiUtils.doService(M1018.class, data, gson, pw);
         } else if ("M1017".equals(cmd)) {
-            //get undo list count
+            //order get undo list count
             ApiUtils.doService(M1017.class, data, gson, pw);
         }  else if ("M1020".equals(cmd)) {
             //exit
