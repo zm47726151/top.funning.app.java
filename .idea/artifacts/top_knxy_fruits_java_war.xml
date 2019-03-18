@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="top.knxy.fruits.java:war">
     <output-path>$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war</output-path>
-    <root id="archive" name="top.knxy.fruits.java_war.war">
+    <root id="archive" name="top.knxy.fruits.war">
       <element id="artifact" artifact-name="top.knxy.fruits.java:war exploded" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="lib">
