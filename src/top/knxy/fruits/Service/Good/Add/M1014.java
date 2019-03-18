@@ -75,6 +75,9 @@ public class M1014 extends BaseService {
             return;
         }
 
+        //删除缓存
+        top.knxy.fruits.DataBase.Cache.Good.clear();
+
         M1011.Content content = new M1011.Content();
 
         content.header = new M1011.Content.Header();
