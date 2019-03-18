@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import top.knxy.fruits.Bean.Request;
 import top.knxy.fruits.Service.Good.Get.C1009;
+import top.knxy.fruits.Service.Good.Search.C1012;
 import top.knxy.fruits.Service.Index.C1001;
 import top.knxy.fruits.Service.Login.Wechat.C1003;
 import top.knxy.fruits.Config.C;
@@ -60,7 +61,8 @@ public class Api extends HttpServlet {
         SessionInfo sessionInfo = (SessionInfo) request.getSession().getAttribute("UserInfo");
         if ("C1002".equals(cmd) || "C1004".equals(cmd) ||
                 "C1005".equals(cmd) || "C1006".equals(cmd) ||
-                "C10067".equals(cmd) || "C1008".equals(cmd) || "C1010".equals(cmd)) {
+                "C10067".equals(cmd) || "C1008".equals(cmd) ||
+                "C1010".equals(cmd) || "C1012".equals(cmd)) {
 
             if (sessionInfo == null) {
                 ApiUtils.responseError(pw, C.Client.needLogin, "还没有登录");
@@ -69,7 +71,7 @@ public class Api extends HttpServlet {
         }
 
         if ("C1001".equals(cmd)) {
-            //getGood wx open id
+            //get wx open id
             C1001 c1001 = gson.fromJson(data, C1001.class);
             c1001.start();
             ApiUtils.response(pw, c1001);
@@ -132,6 +134,9 @@ public class Api extends HttpServlet {
             C1009 c1009 = gson.fromJson(data, C1009.class);
             c1009.start();
             ApiUtils.response(pw, c1009);
+        } else if ("C1012".equals(cmd)) {
+            //Good search
+            ApiUtils.doService(C1012.class, data, gson, pw);
         } else {
             ApiUtils.responseError(pw, "unknown cmd");
         }
