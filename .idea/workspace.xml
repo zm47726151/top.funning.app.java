@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="top.knxy.fruits.java:war exploded" />
+      <artifact name="top.knxy.fruits.java:war" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fa2d42c-42aa-4b36-88a0-60761e403109" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/Cache/Good.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Search/C1012.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/top_knxy_fruits_java_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/top_knxy_fruits_java_war.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/DAL/GoodDAL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/DAL/GoodDAL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Add/M1014.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Add/M1014.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Delete/M1012.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Delete/M1012.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Modify/M1011.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Modify/M1011.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Api.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Api.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,11 +62,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Api.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="138" column="23" lean-forward="true" selection-start-line="138" selection-start-column="23" selection-end-line="138" selection-end-column="23" />
+            <state relative-caret-position="1516">
+              <caret line="138" column="23" selection-start-line="138" selection-start-column="23" selection-end-line="138" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/artifacts/top_knxy_fruits_java_war.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -213,7 +215,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/ServiceException.java" />
         <option value="$PROJECT_DIR$/web/admin/css/common.css" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Undo/GetNumber/M1017.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Index/C1001.java" />
@@ -264,6 +265,7 @@
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Search/C1012.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/Cache/Good.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/DAL/GoodDAL.java" />
+        <option value="$PROJECT_DIR$/.idea/artifacts/top_knxy_fruits_java_war.xml" />
       </list>
     </option>
   </component>
@@ -348,6 +350,40 @@
             <path>
               <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
               <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="top_knxy_fruits_java_war" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -381,15 +417,6 @@
             <path>
               <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
               <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fruits" type="462c0819:PsiDirectoryNode" />
-              <item name="Service" type="462c0819:PsiDirectoryNode" />
-              <item name="Good" type="462c0819:PsiDirectoryNode" />
-              <item name="Search" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -412,7 +439,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552894305987" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552897719604" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -421,7 +448,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.18275861" />
+    <property name="project.structure.side.proportion" value="0.2045977" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
@@ -672,7 +699,7 @@
       <workItem from="1551960023175" duration="44398000" />
       <workItem from="1552280014544" duration="9000" />
       <workItem from="1552280248891" duration="45934000" />
-      <workItem from="1552654410437" duration="13352000" />
+      <workItem from="1552654410437" duration="13826000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1548913859289</created>
@@ -856,11 +883,18 @@
       <option name="project" value="LOCAL" />
       <updated>1552723400938</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="增加搜索功能">
+      <created>1552897268429</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1552897268429</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="359836000" />
+    <option name="totallyTimeSpent" value="360310000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -975,7 +1009,8 @@
     <MESSAGE value="1. 修复 商品详情 只能添加 正方形图片 的 bug &#10;3. 整合js文件 &#10;5. 增加退出功能" />
     <MESSAGE value="1. 删除out文件&#10;3. 修改ignore" />
     <MESSAGE value="1. bug fix&#10;3. show username (email in admin/index)" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. bug fix&#10;3. show username (email in admin/index)" />
+    <MESSAGE value="增加搜索功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加搜索功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1144,9 +1179,6 @@
         <state relative-caret-position="-1891" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/artifacts/top_knxy_fruits_java_war.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/artifacts/top_knxy_fruits_java_war_exploded.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1303,8 +1335,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Api.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="138" column="23" lean-forward="true" selection-start-line="138" selection-start-column="23" selection-end-line="138" selection-end-column="23" />
+        <state relative-caret-position="1516">
+          <caret line="138" column="23" selection-start-line="138" selection-start-column="23" selection-end-line="138" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/artifacts/top_knxy_fruits_java_war.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1318,7 +1357,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.18275861" />
+                <option value="0.23448277" />
                 <option value="0.5" />
               </list>
             </option>
