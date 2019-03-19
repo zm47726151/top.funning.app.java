@@ -70,6 +70,11 @@ CREATE TABLE `Admin` (
   `salt` char(12) NOT NULL
 )
 
+CREATE TABLE `KV`(
+  `key` varchar(64) primary key,
+  `value` varchar(255)
+)
+
 insert into Admin(username,password,salt)values ('fruits@knxy.top','3f4870db36720549b5da31975febf212cfb33e70','33f1c5df698d');
 
 insert into GoodType(name,state) values

@@ -8,4 +8,5 @@ public class V {
     public final static String code = "code";
     public final static String errorMsg = "errorMsg";
     public final static String adminName = "adminName";
+    public final static String postImageUrl = "postImageUrl";
 }

@@ -1,6 +1,8 @@
 package top.knxy.fruits.Service.Index;
 
 import org.apache.ibatis.session.SqlSession;
+import top.knxy.fruits.Config.V;
+import top.knxy.fruits.DataBase.Cache.AppMap;
 import top.knxy.fruits.DataBase.DAL.IndexDAL;
 import top.knxy.fruits.DataBase.Table.Good;
 import top.knxy.fruits.DataBase.Table.GoodType;
@@ -38,6 +40,8 @@ public class C1001 extends BaseService {
             type.goodList.add(dtg);
         }
 
+        data.postImageUrl = AppMap.get(V.postImageUrl);
+
         this.data = data;
 
         ServiceUtils.createSuccess(this);
@@ -45,6 +49,8 @@ public class C1001 extends BaseService {
     }
 
     public static class Data {
+
+        public String postImageUrl;
 
         public List<Type> typeList;
 

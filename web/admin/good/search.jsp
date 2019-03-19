@@ -10,7 +10,6 @@
 
 <link href="css/search.css" rel="stylesheet">
 <script src="/js/qiniu.min.js"></script>
-<script src="js/upload.js"></script>
 <script src="js/search.js?time=${version}"></script>
 <script>
     let imageHost = "${imageHost}";
@@ -115,7 +114,7 @@
             <div id="detail_header_imageList" class="row">
             </div>
 
-            <h5>商品详情说破图片列表</h5>
+            <h5>商品详情图片列表</h5>
             <div id="detail_content_imageList" class="row">
             </div>
         </div>

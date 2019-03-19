@@ -2,7 +2,7 @@ package top.knxy.fruits.DataBase.Table;
 
 import java.util.Date;
 
-public class Admin {
+public class Admin extends BaseBean {
 
 
     private int id;
