@@ -11,7 +11,6 @@
 <link href="css/search.css" rel="stylesheet">
 <script src="/js/qiniu.min.js"></script>
 <script src="js/add.js?time=${version}"></script>
-<script src="js/upload.js"></script>
 <script>
 
     let imageHost = "${imageHost}";

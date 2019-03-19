@@ -1,6 +1,6 @@
 package top.knxy.fruits.DataBase.Table;
 
-public class User {
+public class User  extends BaseBean  {
 
     private int id;
     private String openId;

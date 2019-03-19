@@ -10,6 +10,8 @@ import top.knxy.fruits.Service.Good.Modify.M1011;
 import top.knxy.fruits.Service.GoodType.Add.M1006;
 import top.knxy.fruits.Service.GoodType.Delete.M1009;
 import top.knxy.fruits.Service.GoodType.Modify.M1008;
+import top.knxy.fruits.Service.Index.Poster.Put.M1021;
+import top.knxy.fruits.Service.Index.Poster.Remove.M1022;
 import top.knxy.fruits.Service.Order.Refund.Admin.M1018;
 import top.knxy.fruits.Service.Order.Undo.GetNumber.M1017;
 import top.knxy.fruits.Service.QiNiu.getUploadToken.M1015;
@@ -93,7 +95,13 @@ public class Api extends HttpServlet {
             //exit
             request.getSession().removeAttribute(V.adminId);
             ApiUtils.responseSuccess(pw);
-        } else {
+        }else if ("M1021".equals(cmd)) {
+            //poster commit
+            ApiUtils.doService(M1021.class, data, gson, pw);
+        } else if ("M1022".equals(cmd)) {
+            //poster delete
+            ApiUtils.doService(M1022.class, data, gson, pw);
+        }  else {
             ApiUtils.responseError(pw, "unknown cmd");
         }
     }
