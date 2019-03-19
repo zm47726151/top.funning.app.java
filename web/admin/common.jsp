@@ -49,6 +49,7 @@
     </script>
 
     <script src="/js/common.js?version=${version}"></script>
+    <script src="/admin/js/index.js?version=${version}"></script>
 </head>
 
 
@@ -127,6 +128,12 @@
                         </a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/poster">
+                            <span data-feather="shopping-cart"></span>
+                            修改首页海报<br/>
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/modifyPwd">
                             <span data-feather="shopping-cart"></span>
