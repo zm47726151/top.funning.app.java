@@ -40,6 +40,16 @@ public interface GoodDAL {
             "order by g.id desc limit #{index},#{size}")
     public List<M1010.Data.Good> getList(Page page);
 
+    @Select({"select g.id," +
+            "g.name," +
+            "g.description," +
+            "g.imageUrl," +
+            "g.price," +
+            "g.stock," +
+            "g.type " +
+            "from Good g,GoodType gd " +
+            "where g.type = gd.id and gd.state = 1 and g.state = 1"})
+    public List<Good> getUsefulList();
 
     @Select("select id,name,price,imageUrl " +
             "from `Good` where  state=1  " +

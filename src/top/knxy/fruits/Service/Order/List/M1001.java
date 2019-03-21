@@ -14,16 +14,14 @@ import java.util.List;
 public class M1001 extends BaseService {
 
     public String page;
-    public String id;
-    public String telNumber;
-    public String userName;
-    public String state;
+    public String userId;
 
     @Override
     public void run() throws Exception {
         Page pModel = new Page(page);
         SqlSession session = MyBatisUtils.getSession();
-        this.data = new Data(session.getMapper(OrderDAL.class).getList(pModel));
+        OrderDAL orderDal = session.getMapper(OrderDAL.class);
+        this.data = new Data(orderDal.getList(pModel.getIndex(), pModel.getSize(), userId));
 
         session.close();
         ServiceUtils.createSuccess(this);

@@ -7,8 +7,9 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<link href="css/list.css" rel="stylesheet">
+<link href="css/list.css?v=${version}" rel="stylesheet">
 <div role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+
     <form method="get" class="row search">
         <input type="text" name="id" class="form-control col-md-2" placeholder="订单编号"/>
         <input type="text" name="telNumber" class="form-control col-md-2" placeholder="电话号码"/>
@@ -42,6 +43,7 @@
         </div>
         <button type="submit" class="btn btn-primary">查询</button>
     </form>
+
     <div class="table-responsive">
         <table class="table table-striped table-sm">
             <thead>
@@ -80,18 +82,55 @@
             </tbody>
         </table>
 
+
         <ul class="pagination">
             <li class="page-item <c:if test="${!page.previous.active}">disabled</c:if>">
-                <a class="page-link" href="?page=${page.previous.value}">上一页</a>
+                <a class="page-link" role="page_btn" page="${page.previous.value}">上一页</a>
             </li>
             <c:forEach items="${page.items}" var="item">
                 <li class="page-item <c:if test="${item.active}">active</c:if>">
-                    <a class="page-link" href="?page=${item.value}">${item.value}</a>
+                    <a class="page-link" role="page_btn" page="${item.value}">${item.value}</a>
                 </li>
             </c:forEach>
             <li class="page-item <c:if test="${!page.next.active}">disabled</c:if>">
-                <a class="page-link" href="?page=${page.next.value}">下一页</a>
+                <a class="page-link" role="page_btn" page="${page.next.value}">下一页</a>
             </li>
+            <script>
+                $(function () {
+                    let url = window.location.href;
+                    let mapper = {};
+                    let index = url.indexOf("?");
+
+                    if (index != -1) {
+                        let str = url.substr(index + 1);
+                        let ps = str.split("&");
+
+                        for (let j = 0; j < ps.length; j++) {
+                            let p = ps[j];
+                            let position = p.indexOf("=");
+                            if (position > 0) {
+                                let name = p.substring(0, position);
+                                let value = p.substr(position + 1);
+                                mapper[name] = value;
+                            }
+                        }
+                    }
+
+                    console.log(mapper);
+
+                    url = url.substring(0, index);
+                    let as = $("[role='page_btn']");
+                    for (let i = 0; i < as.length; i++) {
+                        let href = url + "?";
+                        mapper["page"] = $(as[i]).attr("page");
+                        for (let name in mapper) {
+                            href += name + "=" + mapper[name] + "&";
+                        }
+                        $(as[i]).attr({"href": href});
+                    }
+                })
+
+            </script>
         </ul>
     </div>
 </div>
