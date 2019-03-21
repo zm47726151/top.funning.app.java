@@ -1,5 +1,6 @@
 package top.knxy.fruits.Service.Order.Pay;
 
+import com.google.gson.Gson;
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.Config.S;
 import top.knxy.fruits.DataBase.DAL.LoginDAL;
@@ -9,16 +10,18 @@ import top.knxy.fruits.DataBase.Table.Order;
 import top.knxy.fruits.DataBase.Table.User;
 import top.knxy.fruits.Service.BaseService;
 import top.knxy.fruits.Service.ServiceException;
-import top.knxy.fruits.Utils.ServiceUtils;
-import top.knxy.fruits.Utils.TextUtils;
-import top.knxy.fruits.Utils.WebUtils;
-import top.knxy.fruits.Utils.XmlUtils;
+import top.knxy.fruits.Utils.*;
 
 import java.math.BigDecimal;
+import java.net.URLEncoder;
 import java.util.Date;
 import java.util.TreeMap;
 
 public class C1010 extends BaseService {
+
+    private final static double locationLat = 23.091333102548455;
+    private final static double locationLng = 113.33717442876233;
+
 
     public String userId;
     public String id;
@@ -68,10 +71,11 @@ public class C1010 extends BaseService {
             return;
         }
 
+
+        //查询订单
         SqlSession session = MyBatisUtils.getSession();
         OrderDAL mapper = session.getMapper(OrderDAL.class);
 
-        String poster = "0";
         Order order = new Order();
         order.setId(id);
         order.setUserId(userId);
@@ -81,6 +85,35 @@ public class C1010 extends BaseService {
             throw new ServiceException("没有订单 id = " + id);
         }
 
+        //计算运费
+        String url = "http://api.map.baidu.com/geocoder/v2/?address=" +
+                URLEncoder.encode(address.provinceName + address.provinceName + address.cityName + address.detailInfo, "UTF-8") +
+                "&output=json&ak=tj3qu8wHTAFgQ3OmZbl8CLzTznki2VGR";
+        LocationInfo locationInfo = new Gson().fromJson(WebUtils.requestGet(url), LocationInfo.class);
+
+        if (locationInfo.status != 0) {
+            session.close();
+            throw new ServiceException("get location fail. " + url);
+        }
+
+
+        double distance = LocationUtils.getDistance(
+                locationInfo.result.location.lat,
+                locationInfo.result.location.lng,
+                locationLat,
+                locationLng
+        );
+        distance = distance / 1000;
+
+        System.out.println(String.format("price = %s , distance = %s , lat1 = %s , lng2 = %s , lat2 = %s , lng2 = %s",
+                order.getPrice(), distance,
+                locationInfo.result.location.lat, locationInfo.result.location.lng,
+                locationLat, locationLng));
+
+        String poster = "6";
+        if (distance < 10 && new BigDecimal(order.getPrice()).compareTo(new BigDecimal(30)) >= 0) {
+            poster = "0";
+        }
 
         order.setNote(note);
         order.setPoster(poster);
@@ -94,6 +127,7 @@ public class C1010 extends BaseService {
         order.setUserName(address.userName);
         order.setNationalCode(address.nationalCode);
         order.setPostalCode(address.postalCode);
+
         int result = mapper.update(order);
         session.commit();
         if (result < 1) {
@@ -101,12 +135,14 @@ public class C1010 extends BaseService {
             throw new ServiceException("订单修改失败 order id = " + id);
         }
 
+        //支付
         LoginDAL dal = session.getMapper(LoginDAL.class);
         User user = dal.getUser(userId);
         if (user == null) {
             session.close();
             throw new ServiceException("没有用户 user id = " + userId);
         }
+
 
         OrderInfo orderInfo;
         {
@@ -163,6 +199,27 @@ public class C1010 extends BaseService {
         session.close();
     }
 
+    public static class LocationInfo {
+
+
+        public int status;
+        public Result result;
+
+        public static class Result {
+
+            public Location location;
+            public int precise;
+            public int confidence;
+            public int comprehension;
+            public String level;
+
+            public static class Location {
+
+                public double lng;
+                public double lat;
+            }
+        }
+    }
 
     public static class OrderInfo {
         public String return_code;
