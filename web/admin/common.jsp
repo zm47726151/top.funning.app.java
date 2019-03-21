@@ -129,6 +129,12 @@
                     </li>
 
                     <li class="nav-item">
+                        <a class="nav-link" href="/admin/user/list">
+                            <span data-feather="shopping-cart"></span>
+                            消费者列表<br/>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="/admin/poster">
                             <span data-feather="shopping-cart"></span>
                             修改首页海报<br/>
