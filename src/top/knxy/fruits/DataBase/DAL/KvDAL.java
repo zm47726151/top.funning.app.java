@@ -6,12 +6,13 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 import top.knxy.fruits.DataBase.Table.Kv;
 
+import java.util.List;
 import java.util.Map;
 
 public interface KvDAL {
 
     @Select("select `key`,`value` from Kv")
-    public Map<String,String> pull();
+    public List<Kv> pull();
 
 
     @Select("select `key`,`value` from `Kv` where `key`=#{key} limit 1 ")

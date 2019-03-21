@@ -8,11 +8,12 @@ import top.knxy.fruits.DataBase.Table.Kv;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class AppMap {
 
-    private static Map<String, String> map;
+    private final static Map<String, String> map = new HashMap<>();
 
     static {
         init();
@@ -22,12 +23,13 @@ public class AppMap {
         try {
             SqlSession session = MyBatisUtils.getSession();
             KvDAL dal = session.getMapper(KvDAL.class);
-            map = dal.pull();
+            List<Kv> list = dal.pull();
             session.close();
+            for (Kv kv : list) {
+                map.put(kv.getKey(), kv.getValue());
+            }
         } catch (Exception e) {
             new DBException(e).printStackTrace();
-        } finally {
-            if (map == null) map = new HashMap<>();
         }
     }
 
