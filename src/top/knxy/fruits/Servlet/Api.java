@@ -61,8 +61,8 @@ public class Api extends HttpServlet {
         SessionInfo sessionInfo = (SessionInfo) request.getSession().getAttribute("UserInfo");
         if ("C1002".equals(cmd) || "C1004".equals(cmd) ||
                 "C1005".equals(cmd) || "C1006".equals(cmd) ||
-                "C10067".equals(cmd) || "C1008".equals(cmd) ||
-                "C1010".equals(cmd) || "C1012".equals(cmd)) {
+                "C1006".equals(cmd) || "C1007".equals(cmd) ||
+                "C1008".equals(cmd) || "C1010".equals(cmd) || "C1012".equals(cmd)) {
 
             if (sessionInfo == null) {
                 ApiUtils.responseError(pw, C.Client.needLogin, "还没有登录");

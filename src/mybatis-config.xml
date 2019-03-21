@@ -17,7 +17,7 @@
     </environments>
     <mappers>
         <mapper class="top.knxy.fruits.DataBase.DAL.LoginDAL"/>
-        <mapper class="top.knxy.fruits.DataBase.DAL.IndexDAL"/>
+        <mapper class="top.knxy.fruits.DataBase.DAL.UserDAL"/>
         <mapper class="top.knxy.fruits.DataBase.DAL.GoodDAL"/>
         <mapper class="top.knxy.fruits.DataBase.DAL.OrderDAL"/>
         <mapper class="top.knxy.fruits.DataBase.DAL.GoodTypeDAL"/>
