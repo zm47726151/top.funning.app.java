@@ -1,12 +1,10 @@
 package top.knxy.fruits.DataBase.DAL;
 
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 import top.knxy.fruits.DataBase.Model.Page;
 import top.knxy.fruits.DataBase.Table.Good;
 import top.knxy.fruits.DataBase.Table.Order;
+import top.knxy.fruits.Utils.TextUtils;
 
 import java.util.List;
 
@@ -54,11 +52,13 @@ public interface OrderDAL {
             "from `order` where userId = #{userId} order by createDT desc")
     public List<Order> getListByUserId(String userId);
 
-    @Select("select id,price,poster,amount,telNumber,userName,state,userId,createDT,payDT " +
+    /*@Select("select id,price,poster,amount,telNumber,userName,state,userId,createDT,payDT " +
             "from `Order` order by createDT desc " +
-            "limit #{index},#{size}")
-    //@selectProvider(type = SqlProvider.class, method = "getList")
-    public List<Order> getList(Page page);
+            "limit #{index},#{size}")*/
+    @SelectProvider(type = SqlProvider.class, method = "getList")
+    public List<Order> getList(@Param("index") int index,
+                               @Param("size") int size,
+                               @Param("userId") String userId);
 
 
     @Select("select id,state from `Order` where id=#{id} limit 1")
@@ -81,10 +81,14 @@ public interface OrderDAL {
      * Reference:https://www.cnblogs.com/guoyafenghome/p/9123442.html
      */
     class SqlProvider {
-        public String getList() {
+        public String getList(@Param("index") int index,
+                              @Param("size") int size,
+                              @Param("userId") String userId) {
             String sql =
                     "select id,price,poster,amount,telNumber,userName,state,userId,createDT,payDT " +
-                            "from `Order` order by createDT desc " +
+                            "from `Order` "
+                            + (TextUtils.isEmpty(userId) ? "" : "where userId = #{userId} ") +
+                            "order by createDT desc " +
                             "limit #{index},#{size}";
             return sql;
         }
