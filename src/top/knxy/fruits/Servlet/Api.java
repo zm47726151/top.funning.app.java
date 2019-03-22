@@ -3,6 +3,7 @@ package top.knxy.fruits.Servlet;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import top.knxy.fruits.Bean.Request;
+import top.knxy.fruits.Service.Address.PosterComputer.C1013;
 import top.knxy.fruits.Service.Good.Get.C1009;
 import top.knxy.fruits.Service.Good.Search.C1012;
 import top.knxy.fruits.Service.Index.C1001;
@@ -137,6 +138,9 @@ public class Api extends HttpServlet {
         } else if ("C1012".equals(cmd)) {
             //Good search
             ApiUtils.doService(C1012.class, data, gson, pw);
+        }  else if ("C1013".equals(cmd)) {
+            //Good search
+            ApiUtils.doService(C1013.class, data, gson, pw);
         } else {
             ApiUtils.responseError(pw, "unknown cmd");
         }
