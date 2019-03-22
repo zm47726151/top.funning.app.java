@@ -9,7 +9,7 @@ import java.util.Date;
  * code > 1000 为自定义范围代码
  */
 public class C {
-    public final static boolean isDebug = true;
+    public final static boolean isDebug = false;
 
     public final static String getImageHost() {
         return "http://image.fruits.knxy.top/";
@@ -19,7 +19,7 @@ public class C {
         if (isDebug) {
             return DateUtils.dateToString(new Date(), DateUtils.dateStringType1);
         } else {
-            return "8";
+            return "1";
         }
     }
 
