@@ -214,7 +214,6 @@ public class C1010 extends BaseService {
             public String level;
 
             public static class Location {
-
                 public double lng;
                 public double lat;
             }
