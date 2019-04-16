@@ -1,11 +1,11 @@
 package top.knxy.fruits.Servlet.Admin.Order;
 
 
-import top.knxy.fruits.Config.C;
-import top.knxy.fruits.Config.V;
+import top.knxy.library.Config.C;
+import top.knxy.library.Config.V;
 import top.knxy.fruits.Service.Order.Undo.List.M1003;
 import top.knxy.fruits.Servlet.Model.Page;
-import top.knxy.fruits.Utils.ServletUtils;
+import top.knxy.library.Utils.ServletUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,7 +21,7 @@ public class Undo extends HttpServlet {
         M1003 services = ServletUtils.requestParamToModel(req, M1003.class);
 
         services.start();
-        if (services.code == C.Service.success) {
+        if (services.code == C.Service.SUCCESS) {
             req.setAttribute(V.page, new Page(req));
             req.setAttribute(V.data, services.data);
             ServletUtils.setViewAndForward(req, resp);

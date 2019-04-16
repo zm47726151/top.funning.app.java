@@ -2,12 +2,12 @@ package top.knxy.fruits.Service.Login.ModifyPwd;
 
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.DataBase.DAL.LoginDAL;
-import top.knxy.fruits.DataBase.MyBatisUtils;
+import top.knxy.library.Utils.MyBatisUtils;
 import top.knxy.fruits.DataBase.Table.Admin;
-import top.knxy.fruits.Service.BaseService;
-import top.knxy.fruits.Utils.PwdUtils;
-import top.knxy.fruits.Utils.ServiceUtils;
-import top.knxy.fruits.Utils.TextUtils;
+import top.knxy.library.BaseService;
+import top.knxy.library.Utils.PwdUtils;
+import top.knxy.library.Utils.ServiceUtils;
+import top.knxy.library.Utils.TextUtils;
 
 import javax.sql.rowset.serial.SerialException;
 

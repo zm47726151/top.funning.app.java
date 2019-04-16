@@ -1,10 +1,9 @@
 package top.knxy.fruits.Servlet.Admin.GoodType;
 
-import top.knxy.fruits.Config.C;
-import top.knxy.fruits.Config.V;
+import top.knxy.library.Config.C;
+import top.knxy.library.Config.V;
 import top.knxy.fruits.Service.GoodType.List.M1007;
-import top.knxy.fruits.Utils.ServiceUtils;
-import top.knxy.fruits.Utils.ServletUtils;
+import top.knxy.library.Utils.ServletUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,7 +19,7 @@ public class List extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         M1007 service = ServletUtils.requestParamToModel(req, M1007.class);
         service.start();
-        if (service.code == C.Service.success) {
+        if (service.code == C.Service.SUCCESS) {
             req.setAttribute(V.data, service.data);
             ServletUtils.setViewAndForward(req, resp);
         } else {
