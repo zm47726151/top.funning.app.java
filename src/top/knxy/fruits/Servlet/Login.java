@@ -1,10 +1,10 @@
 package top.knxy.fruits.Servlet;
 
-import top.knxy.fruits.Config.C;
-import top.knxy.fruits.Config.V;
+import top.knxy.library.Config.C;
+import top.knxy.library.Config.V;
 import top.knxy.fruits.DataBase.Table.Admin;
 import top.knxy.fruits.Service.Login.Manager.M1004;
-import top.knxy.fruits.Utils.ServletUtils;
+import top.knxy.library.Utils.ServletUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,7 +25,7 @@ public class Login extends HttpServlet {
         String username = services.username;
         String password = services.password;
         services.start();
-        if (services.code == C.Service.success) {
+        if (services.code == C.Service.SUCCESS) {
             Admin admin = services.result;
             HttpSession session = request.getSession();
             session.setAttribute(V.adminId, admin.getId());

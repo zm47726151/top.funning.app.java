@@ -1,8 +1,10 @@
 package top.knxy.fruits.DataBase.Table;
 
+import top.knxy.library.Bean.BaseTable;
+
 import java.util.Date;
 
-public class Admin extends BaseBean {
+public class Admin extends BaseTable {
 
 
     private int id;

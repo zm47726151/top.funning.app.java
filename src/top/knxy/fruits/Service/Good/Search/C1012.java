@@ -1,9 +1,9 @@
 package top.knxy.fruits.Service.Good.Search;
 
 import top.knxy.fruits.DataBase.Cache.Good;
-import top.knxy.fruits.Service.BaseService;
-import top.knxy.fruits.Utils.ServiceUtils;
-import top.knxy.fruits.Utils.TextUtils;
+import top.knxy.library.BaseService;
+import top.knxy.library.Utils.ServiceUtils;
+import top.knxy.library.Utils.TextUtils;
 
 import java.util.ArrayList;
 

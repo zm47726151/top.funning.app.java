@@ -1,10 +1,10 @@
 package top.knxy.fruits.Service.GoodType.List;
 
-import top.knxy.fruits.DataBase.MyBatisUtils;
+import top.knxy.library.Utils.MyBatisUtils;
 import top.knxy.fruits.DataBase.Table.GoodType;
-import top.knxy.fruits.Service.BaseService;
+import top.knxy.library.BaseService;
 import top.knxy.fruits.DataBase.DAL.GoodTypeDAL;
-import top.knxy.fruits.Utils.ServiceUtils;
+import top.knxy.library.Utils.ServiceUtils;
 
 import java.util.List;
 

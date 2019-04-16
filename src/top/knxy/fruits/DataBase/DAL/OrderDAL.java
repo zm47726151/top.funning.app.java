@@ -2,9 +2,8 @@ package top.knxy.fruits.DataBase.DAL;
 
 import org.apache.ibatis.annotations.*;
 import top.knxy.fruits.DataBase.Model.Page;
-import top.knxy.fruits.DataBase.Table.Good;
 import top.knxy.fruits.DataBase.Table.Order;
-import top.knxy.fruits.Utils.TextUtils;
+import top.knxy.library.Utils.TextUtils;
 
 import java.util.List;
 

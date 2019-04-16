@@ -1,8 +1,10 @@
 package top.knxy.fruits.DataBase.Table;
 
+import top.knxy.library.Bean.BaseTable;
+
 import java.util.Date;
 
-public class Order extends BaseBean {
+public class Order extends BaseTable {
     private String id;
     private String goods;
     private String price;
