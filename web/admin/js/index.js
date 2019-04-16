@@ -21,7 +21,6 @@ let Common = {
 }
 
 
-
 let Qiniu = {
     uploadImage: function (imageFile, name, upToken, callback) {
         let putExtra = {
@@ -36,6 +35,7 @@ let Qiniu = {
     }
 };
 
+
 let LoadingDialog = {
     show: function () {
         $("#LoadingDialog").modal('show');
@@ -48,8 +48,7 @@ let LoadingDialog = {
         $("#LoadingDialog [class='lv_msg']").show();
         $("#LoadingDialog [class='lv_msg']").html(msg);
     }
-}
-
+};
 
 
 let Reminder = {
@@ -106,12 +105,12 @@ let Manager = {
 }
 
 class Upload {
-    _file;
-    _suffix;
-    _name;
-    _upToken;
+    //_file;
+    //_suffix;
+    //_name;
+    //_upToken;
 
-    listener;
+    //listener;
 
     constructor(file) {
         this._file = file;
