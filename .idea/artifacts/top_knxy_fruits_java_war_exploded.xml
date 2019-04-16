@@ -6,6 +6,7 @@
         <element id="directory" name="classes">
           <element id="module-output" name="top.knxy.fruits.java" />
           <element id="file-copy" path="$PROJECT_DIR$/property/app_develope.properties" output-file-name="app.properties" />
+          <element id="module-output" name="top.knxy.library" />
         </element>
         <element id="directory" name="lib">
           <element id="dir-copy" path="$PROJECT_DIR$/lib/common" />

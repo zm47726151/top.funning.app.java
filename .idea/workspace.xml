@@ -7,8 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fa2d42c-42aa-4b36-88a0-60761e403109" name="Default Changelist" comment="bug 修复">
+      <change afterPath="$PROJECT_DIR$/../top.knxy.java.library/top.knxy.library.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/top_knxy_fruits_java_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/top_knxy_fruits_java_war.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/top_knxy_fruits_java_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/top_knxy_fruits_java_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Utils/ApiUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Utils/ApiUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/top.knxy.fruits.java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/top.knxy.fruits.java.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../top.knxy.java.library/BaseService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../top.knxy.java.library/Bean/BaseTable.java" beforeDir="false" />
@@ -71,50 +74,15 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Config/C.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/top.knxy.java.library/src/main/java/top/knxy/library/BaseService.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/top.knxy.java.library/src/main/java/top/knxy/library/DBException.java">
+        <entry file="file://$PROJECT_DIR$/top.knxy.fruits.java.iml">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Utils/ApiUtils.java">
+        <entry file="file://$PROJECT_DIR$/../top.knxy.java.library/src/top/knxy/library/Utils/FileUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Login.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="19" column="78" selection-start-line="19" selection-start-column="78" selection-end-line="19" selection-end-column="78" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Filter/GlobeFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="434">
+              <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -205,7 +173,7 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../top.knxy.java.library" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -255,12 +223,12 @@
         <option value="$PROJECT_DIR$/src/db_t.properties" />
         <option value="$PROJECT_DIR$/property/app_develope.properties" />
         <option value="$PROJECT_DIR$/src/mybatis-config.xml" />
-        <option value="$PROJECT_DIR$/../top.knxy.java.library/src/top/knxy/library/Utils/FileUtils.java" />
         <option value="$PROJECT_DIR$/.idea/artifacts/top_knxy_fruits_java_war_exploded.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Config/C.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Login.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Utils/ApiUtils.java" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/../top.knxy.java.library/src/top/knxy/library/Utils/FileUtils.java" />
       </list>
     </option>
   </component>
@@ -291,13 +259,13 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1455" />
-    <option name="y" value="29" />
+    <option name="x" value="-13" />
+    <option name="y" value="32" />
     <option name="width" value="1280" />
     <option name="height" value="723" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -306,74 +274,112 @@
           <expand>
             <path>
               <item name="top.knxy.fruits.java" type="58d84e3e:PackageViewProjectNode" />
-              <item name="top.knxy.fruits.java" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="58d84e3e:PackageViewProjectNode" />
-              <item name="top.knxy.fruits.java" type="616d4139:PackageViewModuleNode" />
-              <item name="top.knxy.fruits" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="58d84e3e:PackageViewProjectNode" />
-              <item name="top.knxy.fruits.java" type="616d4139:PackageViewModuleNode" />
-              <item name="top.knxy.fruits" type="1f31426a:PackageElementNode" />
-              <item name="Config" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="58d84e3e:PackageViewProjectNode" />
-              <item name="top.knxy.fruits.java" type="616d4139:PackageViewModuleNode" />
-              <item name="top.knxy.fruits" type="1f31426a:PackageElementNode" />
-              <item name="Filter" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="58d84e3e:PackageViewProjectNode" />
-              <item name="top.knxy.fruits.java" type="616d4139:PackageViewModuleNode" />
-              <item name="top.knxy.fruits" type="1f31426a:PackageElementNode" />
-              <item name="Service" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="58d84e3e:PackageViewProjectNode" />
-              <item name="top.knxy.fruits.java" type="616d4139:PackageViewModuleNode" />
-              <item name="top.knxy.fruits" type="1f31426a:PackageElementNode" />
-              <item name="Servlet" type="1f31426a:PackageElementNode" />
+              <item name="top.knxy.fruits" type="eaaa3913:PackageViewModuleGroupNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="top.knxy.fruits.java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="top" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="top.knxy.fruits.java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="top" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="knxy" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="top.knxy.fruits.java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="top" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="knxy" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="library" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="top.knxy.fruits.java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="top" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="knxy" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="library" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="top.knxy.fruits.java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="top" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="knxy" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="library" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="top" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="top.knxy.fruits.java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="top" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="knxy" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="library" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="top" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="knxy" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="top.knxy.fruits.java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="top" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="knxy" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="library" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="top" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="knxy" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="library" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="top.knxy.fruits.java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="top" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="knxy" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="library" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="top" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="knxy" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="library" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Bean" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="top.knxy.fruits.java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="top" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="knxy" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="library" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="top" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="knxy" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="library" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="top.knxy.fruits.java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="top" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="knxy" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="library" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="top" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="knxy" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="library" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Utils" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="top.knxy" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="top.knxy.fruits" type="9c53a853:ProjectViewModuleGroupNode" />
             </path>
             <path>
               <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="top.knxy" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="java" type="9c53a853:ProjectViewModuleGroupNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="top.knxy" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="java" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="top.knxy.java.library" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="top.knxy" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="java" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="top.knxy.java.library" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="top.knxy" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="java" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="top.knxy.java.library" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="library" type="462c0819:PsiDirectoryNode" />
+              <item name="top.knxy.fruits" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -387,7 +393,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555415950557" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555417835857" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -396,7 +402,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2045977" />
+    <property name="project.structure.side.proportion" value="0.20804597" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
@@ -894,11 +900,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555401940757</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="bug 修复">
+      <created>1555416212450</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1555416212450</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="430183000" />
+    <option name="totallyTimeSpent" value="431972000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -910,9 +923,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="-77" width="1600" height="877" extended-state="6" />
+    <frame x="-13" y="32" width="1280" height="723" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5719745" visible="true" weight="0.22721438" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5719745" visible="true" weight="0.28594506" />
       <window_info id="Structure" order="1" sideWeight="0.42802548" side_tool="true" weight="0.22015405" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -945,7 +959,7 @@
       <window_info anchor="right" id="Maven" order="3" weight="0.32991013" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" sideWeight="0.4978903" visible="true" weight="0.169448" />
+      <window_info anchor="right" id="Database" order="6" sideWeight="0.4978903" visible="true" weight="0.21324718" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Coverage" order="9" sideWeight="0.5021097" side_tool="true" weight="0.32991013" />
@@ -1062,25 +1076,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/math/BigDecimal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="2622" column="15" selection-start-line="2622" selection-start-column="15" selection-end-line="2622" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Utils/LocationUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding>
-            <element signature="e#154#155#0" expanded="true" />
-            <element signature="e#196#197#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b02a58fc-f2d2-4935-b32f-039b9081fff3/schema/r0nd38v04o/table/kv" />
     <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/DataBase/DAL/KvDAL.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
@@ -1361,18 +1356,6 @@
     <entry file="file://$USER_HOME$/Desktop/top.knxy.java.library/src/main/java/top/knxy/library/DBException.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../top.knxy.java.library/src/top/knxy/library/Utils/FileUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1276#1277#0" expanded="true" />
-            <element signature="e#1301#1302#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../top.knxy.java.library/src/top/knxy/library/Vehicle/Request.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1407,17 +1390,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../top.knxy.java.library/src/top/knxy/library/BaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Bean/Request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top.knxy.fruits.java.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../top.knxy.java.library/src/top/knxy/library/Utils/FileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>top.knxy.fruits.java:war exploded</last-edited>
+          <last-edited>top.knxy.fruits.java:war</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2045977" />
+                <option value="0.20804597" />
                 <option value="0.5" />
               </list>
             </option>
@@ -1462,7 +1472,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>top.knxy.fruits.java</last-edited>
+          <last-edited>library|knxy</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
