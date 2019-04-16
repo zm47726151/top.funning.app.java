@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="commons">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/common/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common/dom4j-2.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common/gson-2.8.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common/httpclient-4.5.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common/httpcore-4.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common/jstl-core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common/jstl-standard.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common/mybatis-3.5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common/mysql-connector-java-8.0.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common/qiniu-java-sdk-7.2.17.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

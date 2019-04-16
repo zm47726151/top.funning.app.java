@@ -19,9 +19,7 @@
     })
 </script>
 <div role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-
     <div id="content">
-
         <div class="row">
             <div class="col-md-6 base_info">
                 <div class="row">
@@ -93,11 +91,11 @@
 
         <!-- 暂时不做修改 -->
         <div class="detail">
-            <h5>商品详情图片列表</h5>
+            <h5>商品 Banner 图片列表</h5>
             <div id="detail_header_imageList" class="row">
             </div>
 
-            <h5>商品详情说破图片列表</h5>
+            <h5>商品详情图片列表</h5>
             <div id="detail_content_imageList" class="row">
             </div>
         </div>
