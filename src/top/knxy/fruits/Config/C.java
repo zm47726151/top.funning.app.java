@@ -19,7 +19,7 @@ public class C {
         if (isDebug) {
             return DateUtils.dateToString(new Date(), DateUtils.dateStringType1);
         } else {
-            return "1";
+            return "2";
         }
     }
 
