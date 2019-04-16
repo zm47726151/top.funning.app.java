@@ -1,6 +1,7 @@
 package top.knxy.fruits.Service.Index.Poster.Put;
 
-import top.knxy.library.Config.C;
+import top.knxy.fruits.Config.C;
+import top.knxy.library.Config.Code;
 import top.knxy.library.Config.V;
 import top.knxy.fruits.DataBase.Cache.AppMap;
 import top.knxy.library.BaseService;

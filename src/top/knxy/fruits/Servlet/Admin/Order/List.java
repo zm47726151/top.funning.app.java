@@ -1,7 +1,7 @@
 package top.knxy.fruits.Servlet.Admin.Order;
 
 
-import top.knxy.library.Config.C;
+import top.knxy.library.Config.Code;
 import top.knxy.library.Config.V;
 import top.knxy.fruits.Service.Order.List.M1001;
 import top.knxy.fruits.Servlet.Model.Page;
@@ -21,7 +21,7 @@ public class List extends HttpServlet {
         M1001 services = ServletUtils.requestParamToModel(req, M1001.class);
 
         services.start();
-        if (services.code == C.Service.SUCCESS) {
+        if (services.code == Code.Service.SUCCESS) {
             req.setAttribute(V.page, new Page(req));
             req.setAttribute(V.data, services.data);
             ServletUtils.setViewAndForward(req, resp);

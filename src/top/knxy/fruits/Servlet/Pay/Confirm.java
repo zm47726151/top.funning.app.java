@@ -1,6 +1,6 @@
 package top.knxy.fruits.Servlet.Pay;
 
-import top.knxy.library.Config.C;
+import top.knxy.library.Config.Code;
 import top.knxy.fruits.Service.Pay.C1011;
 import top.knxy.library.Utils.ApiUtils;
 import top.knxy.library.Utils.XmlUtils;
@@ -30,7 +30,7 @@ public class Confirm extends HttpServlet {
         c1011.data = data;
         c1011.start();
         Map<Object, Object> map = new HashMap<>(2);
-        if (c1011.code == C.Service.SUCCESS) {
+        if (c1011.code == Code.Service.SUCCESS) {
             map.put("return_code", "SUCCESS");
             map.put("return_msg", "OK");
         } else {
