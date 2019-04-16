@@ -7,29 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fa2d42c-42aa-4b36-88a0-60761e403109" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/server.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/property/app_develope.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/top_knxy_fruits_java_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/top_knxy_fruits_java_war.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/top_knxy_fruits_java_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/top_knxy_fruits_java_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/ant_1_10_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/commons_logging_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/dom4j_2_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/gson_2_8_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/httpclient_4_5_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/json_lib_2_4_jdk15.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mybatis_3_5_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/qiniu_java_sdk_7_2_17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/standard.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/tomcat_websocket.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/top.knxy.fruits.java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/top.knxy.fruits.java.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/good/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/good/add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/good/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/good/search.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/goodtype/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/goodtype/js/list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/goodtype/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/goodtype/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db_t.properties" beforeDir="false" afterPath="$PROJECT_DIR$/property/app_release.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mybatis-config.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,10 +55,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/admin/js/index.js">
+        <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Config/C.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="110" column="6" selection-start-line="110" selection-start-column="6" selection-end-line="110" selection-end-column="6" />
+            <state relative-caret-position="120">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -167,8 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/admin/css/poster.css" />
-        <option value="$PROJECT_DIR$/src/top/knxy/fruits/Config/V.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Poster.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Index/Poster/C1020.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Index/Poster/C1021.java" />
@@ -212,12 +194,14 @@
         <option value="$PROJECT_DIR$/web/error/500.jsp" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Config/C.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Config/S.java" />
-        <option value="$PROJECT_DIR$/src/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/web/admin/good/search.jsp" />
         <option value="$PROJECT_DIR$/web/admin/goodtype/list.jsp" />
         <option value="$PROJECT_DIR$/web/admin/good/add.jsp" />
         <option value="$PROJECT_DIR$/web/admin/goodtype/js/list.js" />
         <option value="$PROJECT_DIR$/web/admin/js/index.js" />
+        <option value="$PROJECT_DIR$/src/db_t.properties" />
+        <option value="$PROJECT_DIR$/property/app_develope.properties" />
+        <option value="$PROJECT_DIR$/src/mybatis-config.xml" />
       </list>
     </option>
   </component>
@@ -262,52 +246,31 @@
             <path>
               <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
               <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
               <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fruits" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fruits" type="462c0819:PsiDirectoryNode" />
-              <item name="Servlet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
               <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="fruits" type="462c0819:PsiDirectoryNode" />
-              <item name="Servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
               <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="good" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="fruits" type="462c0819:PsiDirectoryNode" />
+              <item name="Config" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -361,7 +324,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555068092410" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555403908540" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -374,19 +337,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web/admin" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/web/admin/res" />
-      <recent name="$PROJECT_DIR$/web/admin/good/image" />
-      <recent name="$PROJECT_DIR$/web/admin/order" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="top.knxy.fruits.Service.Order.Refund" />
       <recent name="top.knxy.fruits.Service.Order.Undo" />
       <recent name="top.knxy.fruits.DataBase.DAL" />
       <recent name="top.knxy.fruits.Service" />
       <recent name="top.knxy.fruits.Filter" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/property" />
+      <recent name="$PROJECT_DIR$/web/admin/user" />
+      <recent name="$PROJECT_DIR$/web/admin/js" />
+      <recent name="$PROJECT_DIR$/src/top/knxy/fruits/Service/Index/Poster" />
+      <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="top.knxy.fruits.Service.Index.Poster" />
@@ -395,12 +358,12 @@
       <recent name="top.knxy.fruits.Servlet.Admin.Good" />
       <recent name="top.knxy.fruits.Service.Good.Add" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web/admin/user" />
-      <recent name="$PROJECT_DIR$/web/admin/js" />
-      <recent name="$PROJECT_DIR$/src/top/knxy/fruits/Service/Index/Poster" />
-      <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
-      <recent name="$PROJECT_DIR$/web/image" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/property" />
+      <recent name="$PROJECT_DIR$/web/admin" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/web/admin/res" />
+      <recent name="$PROJECT_DIR$/web/admin/good/image" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -635,7 +598,7 @@
       <workItem from="1554951583477" duration="2014000" />
       <workItem from="1555059481451" duration="1697000" />
       <workItem from="1555071433314" duration="655000" />
-      <workItem from="1555397071692" duration="4233000" />
+      <workItem from="1555397071692" duration="6196000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1548913859289</created>
@@ -861,11 +824,18 @@
       <option name="project" value="LOCAL" />
       <updated>1553249991953</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="bug 修复">
+      <created>1555401940757</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1555401940757</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="425931000" />
+    <option name="totallyTimeSpent" value="427894000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -878,9 +848,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-77" width="1600" height="877" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5719745" visible="true" weight="0.22464699" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5719745" visible="true" weight="0.22464699" />
       <window_info id="Structure" order="1" sideWeight="0.42802548" side_tool="true" weight="0.22015405" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1030,13 +999,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/DataBase/DAL/OrderDAL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-158">
-          <caret line="58" column="23" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/List/M1001.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1213,13 +1175,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Config/C.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/DataBase/Model/Page.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1228,13 +1183,6 @@
             <element signature="e#471#472#0" expanded="true" />
             <element signature="e#499#500#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/db_t.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -1308,13 +1256,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/admin/good/search.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
@@ -1368,8 +1309,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/admin/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="110" column="6" selection-start-line="110" selection-start-column="6" selection-end-line="110" selection-end-column="6" />
+        <state relative-caret-position="241">
+          <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/property/app_release.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/property/app_develope.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Config/C.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1379,11 +1348,11 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>top.knxy.fruits.java:war exploded</last-edited>
+          <last-edited>top.knxy.fruits.java:war</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.28735632" />
+                <option value="0.2045977" />
                 <option value="0.5" />
               </list>
             </option>
