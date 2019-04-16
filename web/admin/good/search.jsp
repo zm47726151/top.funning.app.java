@@ -110,7 +110,7 @@
 
         <!-- 暂时不做修改 -->
         <div class="detail">
-            <h5>商品详情图片列表</h5>
+            <h5>商品 Banner 图片列表</h5>
             <div id="detail_header_imageList" class="row">
             </div>
 

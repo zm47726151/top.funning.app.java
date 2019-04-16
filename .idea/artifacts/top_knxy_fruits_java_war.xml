@@ -8,7 +8,7 @@
           <element id="library" level="project" name="mybatis-3.5.0" />
           <element id="library" level="project" name="mysql-connector-java-8.0.13" />
           <element id="library" level="project" name="ant-1.10.3" />
-          <element id="library" level="project" name="commons-logging-1.2" />
+          <element id="library" level="project" name="commons" />
           <element id="library" level="project" name="gson-2.8.5" />
           <element id="library" level="project" name="Java EE 6-Java EE 6" />
         </element>
