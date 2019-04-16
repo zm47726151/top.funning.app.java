@@ -1,6 +1,6 @@
 package top.knxy.fruits.Servlet.Admin.Good;
 
-import top.knxy.library.Config.C;
+import top.knxy.library.Config.Code;
 import top.knxy.library.Config.V;
 import top.knxy.fruits.Service.Good.List.M1010;
 import top.knxy.fruits.Servlet.Model.Page;
@@ -20,7 +20,7 @@ public class List extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         M1010 service = ServletUtils.requestParamToModel(req, M1010.class);
         service.start();
-        if (service.code == C.Service.SUCCESS) {
+        if (service.code == Code.Service.SUCCESS) {
             req.setAttribute(V.data, service.data);
             req.setAttribute(V.page, new Page(req));
             ServletUtils.setViewAndForward(req, resp);

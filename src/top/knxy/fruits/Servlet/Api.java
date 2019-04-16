@@ -8,7 +8,7 @@ import top.knxy.fruits.Service.Good.Get.C1009;
 import top.knxy.fruits.Service.Good.Search.C1012;
 import top.knxy.fruits.Service.Index.C1001;
 import top.knxy.fruits.Service.Login.Wechat.C1003;
-import top.knxy.library.Config.C;
+import top.knxy.library.Config.Code;
 import top.knxy.fruits.Service.Order.Cancel.C1007;
 import top.knxy.fruits.Service.Order.Comfirm.C1004;
 import top.knxy.fruits.Service.Order.Create.C1002;
@@ -66,7 +66,7 @@ public class Api extends HttpServlet {
                 "C1008".equals(cmd) || "C1010".equals(cmd) || "C1012".equals(cmd)) {
 
             if (sessionInfo == null) {
-                ApiUtils.responseError(pw, C.Client.NEED_LOGIN, "还没有登录");
+                ApiUtils.responseError(pw, Code.Client.NEED_LOGIN, "还没有登录");
                 return;
             }
         }
@@ -86,7 +86,7 @@ public class Api extends HttpServlet {
             //Login
             C1003 c1003 = gson.fromJson(data, C1003.class);
             c1003.start();
-            if (c1003.code == C.Service.SUCCESS) {
+            if (c1003.code == Code.Service.SUCCESS) {
                 HttpSession session = request.getSession();
                 C1003.Data d = (C1003.Data) c1003.data;
                 session.setAttribute("UserInfo", new SessionInfo(d.openid, d.sessionKey, d.userId));

@@ -1,6 +1,6 @@
 package top.knxy.fruits.Servlet.Admin.Good;
 
-import top.knxy.library.Config.C;
+import top.knxy.library.Config.Code;
 import top.knxy.library.Config.V;
 import top.knxy.fruits.Service.GoodType.get.M1016;
 import top.knxy.library.Utils.ServletUtils;
@@ -19,7 +19,7 @@ public class Add extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         M1016 m1016 = ServletUtils.requestParamToModel(req, M1016.class);
         m1016.start();
-        if (m1016.code == C.Service.SUCCESS) {
+        if (m1016.code == Code.Service.SUCCESS) {
             req.setAttribute(V.data, m1016.data);
             ServletUtils.setViewAndForward(req, resp);
         } else {
