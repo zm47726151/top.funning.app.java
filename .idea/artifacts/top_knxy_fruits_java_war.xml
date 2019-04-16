@@ -2,15 +2,11 @@
   <artifact type="war" name="top.knxy.fruits.java:war">
     <output-path>$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war</output-path>
     <root id="archive" name="top.knxy.fruits.war">
-      <element id="artifact" artifact-name="top.knxy.fruits.java:war exploded" />
+      <element id="dir-copy" path="$PROJECT_DIR$/web" />
       <element id="directory" name="WEB-INF">
-        <element id="directory" name="lib">
-          <element id="library" level="project" name="mybatis-3.5.0" />
-          <element id="library" level="project" name="mysql-connector-java-8.0.13" />
-          <element id="library" level="project" name="ant-1.10.3" />
-          <element id="library" level="project" name="commons" />
-          <element id="library" level="project" name="gson-2.8.5" />
-          <element id="library" level="project" name="Java EE 6-Java EE 6" />
+        <element id="directory" name="classes">
+          <element id="module-output" name="top.knxy.fruits.java" />
+          <element id="file-copy" path="$PROJECT_DIR$/property/app_release.properties" output-file-name="app.properties" />
         </element>
       </element>
     </root>
