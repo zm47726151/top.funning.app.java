@@ -3,11 +3,11 @@ package top.knxy.fruits.Service.Good.Get;
 import com.google.gson.Gson;
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.DataBase.DAL.GoodDAL;
-import top.knxy.fruits.DataBase.MyBatisUtils;
-import top.knxy.fruits.DataBase.Table.BaseBean;
-import top.knxy.fruits.Service.BaseService;
-import top.knxy.fruits.Utils.ServiceUtils;
-import top.knxy.fruits.Utils.TextUtils;
+import top.knxy.library.Utils.MyBatisUtils;
+import top.knxy.library.Bean.BaseTable;
+import top.knxy.library.BaseService;
+import top.knxy.library.Utils.ServiceUtils;
+import top.knxy.library.Utils.TextUtils;
 
 import java.util.List;
 
@@ -66,7 +66,7 @@ public class C1009 extends BaseService {
         }
     }
 
-    public static class Good extends BaseBean {
+    public static class Good extends BaseTable {
         public int id;
         public String name;
         public String description;

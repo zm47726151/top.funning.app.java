@@ -2,7 +2,7 @@ package top.knxy.fruits.DataBase.Cache;
 
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.DataBase.DAL.GoodDAL;
-import top.knxy.fruits.DataBase.MyBatisUtils;
+import top.knxy.library.Utils.MyBatisUtils;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
 package top.knxy.fruits.Servlet.Admin;
 
-import top.knxy.fruits.Utils.ServletUtils;
+import top.knxy.library.Utils.ServletUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

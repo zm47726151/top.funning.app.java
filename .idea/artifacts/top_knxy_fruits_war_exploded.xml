@@ -1,18 +1,18 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="top.knxy.fruits.java:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded</output-path>
+  <artifact type="exploded-war" name="top.knxy.fruits:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/top_knxy_fruits_war_exploded</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="top.knxy.fruits.java" />
           <element id="file-copy" path="$PROJECT_DIR$/property/app_develope.properties" output-file-name="app.properties" />
           <element id="module-output" name="top.knxy.library" />
+          <element id="module-output" name="top.knxy.fruits" />
         </element>
         <element id="directory" name="lib">
           <element id="dir-copy" path="$PROJECT_DIR$/lib/common" />
         </element>
       </element>
-      <element id="javaee-facet-resources" facet="top.knxy.fruits.java/web/Web" />
+      <element id="dir-copy" path="$PROJECT_DIR$/web" />
     </root>
   </artifact>
 </component>

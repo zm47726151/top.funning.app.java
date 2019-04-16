@@ -3,9 +3,9 @@ package top.knxy.fruits.Service.Good.List;
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.DataBase.DAL.GoodDAL;
 import top.knxy.fruits.DataBase.Model.Page;
-import top.knxy.fruits.DataBase.MyBatisUtils;
-import top.knxy.fruits.Service.BaseService;
-import top.knxy.fruits.Utils.ServiceUtils;
+import top.knxy.library.Utils.MyBatisUtils;
+import top.knxy.library.BaseService;
+import top.knxy.library.Utils.ServiceUtils;
 
 import java.util.List;
 

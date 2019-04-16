@@ -1,6 +1,8 @@
 package top.knxy.fruits.DataBase.Table;
 
-public class Kv extends BaseBean {
+import top.knxy.library.Bean.BaseTable;
+
+public class Kv extends BaseTable {
 
     private String key;
     private String value;

@@ -2,8 +2,8 @@ package top.knxy.fruits.Service.QiNiu.getUploadToken;
 
 import com.qiniu.util.Auth;
 import top.knxy.fruits.Config.S;
-import top.knxy.fruits.Service.BaseService;
-import top.knxy.fruits.Utils.ServiceUtils;
+import top.knxy.library.BaseService;
+import top.knxy.library.Utils.ServiceUtils;
 
 public class M1015 extends BaseService {
 
