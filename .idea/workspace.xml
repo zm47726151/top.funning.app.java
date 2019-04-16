@@ -7,45 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fa2d42c-42aa-4b36-88a0-60761e403109" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../top.knxy.java.library/src/top/knxy/library/Config/D.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Bean/Request.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Bean/Response.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Config/C.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Config/C.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Config/V.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/DBException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/MyBatisUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/Table/BaseBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Filter/GlobeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Filter/GlobeFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/BaseService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Index/Poster/Put/M1021.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Index/Poster/Put/M1021.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/ServiceException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Good/Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Good/Add.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Good/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Good/List.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Good/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Good/Search.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/GoodType/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/GoodType/List.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Order/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Order/List.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Order/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Order/Search.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Order/Undo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Order/Undo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/User/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/User/List.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Api.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Pay/Confirm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Pay/Confirm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Utils/ApiUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Utils/DateUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Utils/FileUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Utils/LocationUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Utils/LogUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Utils/PwdUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Utils/ServiceUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Utils/ServletUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Utils/TextUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Utils/WebUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Utils/XmlUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../top.knxy.java.library/src/top/knxy/library/Config/C.java" beforeDir="false" afterPath="$PROJECT_DIR$/../top.knxy.java.library/src/top/knxy/library/Config/Code.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../top.knxy.java.library/src/top/knxy/library/Utils/ApiUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../top.knxy.java.library/src/top/knxy/library/Utils/ApiUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../top.knxy.java.library/src/top/knxy/library/Utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../top.knxy.java.library/src/top/knxy/library/Utils/FileUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../top.knxy.java.library/src/top/knxy/library/Utils/ServiceUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../top.knxy.java.library/src/top/knxy/library/Utils/ServiceUtils.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -104,7 +66,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Config/C.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
@@ -114,6 +76,24 @@
                 <element signature="e#99#100#0" expanded="true" />
                 <element signature="e#153#154#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Index/Poster/Put/M1021.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Filter/GlobeFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -219,7 +199,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/User/M1023.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/DAL/OrderDAL.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/List/M1001.java" />
         <option value="$PROJECT_DIR$/web/admin/order/undo.jsp" />
@@ -236,7 +215,6 @@
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Utils/WebUtils.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Address/C1013.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Address/PosterComputer/C1013.java" />
-        <option value="$PROJECT_DIR$/src/top/knxy/fruits/Filter/GlobeFilter.java" />
         <option value="$PROJECT_DIR$/web/error/500.jsp" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Config/S.java" />
         <option value="$PROJECT_DIR$/web/admin/good/search.jsp" />
@@ -270,6 +248,8 @@
         <option value="$PROJECT_DIR$/../top.knxy.java.library/src/top/knxy/library/Config/D.java" />
         <option value="$PROJECT_DIR$/../top.knxy.java.library/src/top/knxy/library/Config/Code.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Config/C.java" />
+        <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Index/Poster/Put/M1021.java" />
+        <option value="$PROJECT_DIR$/src/top/knxy/fruits/Filter/GlobeFilter.java" />
       </list>
     </option>
   </component>
@@ -404,7 +384,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555420921961" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555420930668" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -917,11 +897,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555420218658</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="lib包结构调整">
+      <created>1555420931244</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1555420931244</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="435103000" />
+    <option name="totallyTimeSpent" value="435158000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -934,7 +921,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="723" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5719745" visible="true" weight="0.28594506" />
       <window_info id="Structure" order="1" sideWeight="0.42802548" side_tool="true" weight="0.22015405" />
@@ -1088,18 +1074,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/WEB-INF/classes/top/knxy/library/Bean/BaseTable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#196#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war_exploded/WEB-INF/classes/top/knxy/library/BaseService.class">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1401,6 +1375,20 @@
             <element signature="e#99#100#0" expanded="true" />
             <element signature="e#153#154#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Index/Poster/Put/M1021.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Filter/GlobeFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
         </state>
       </provider>
     </entry>
