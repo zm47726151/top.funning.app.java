@@ -23,7 +23,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.12" level="application_server_libraries" />
-    <orderEntry type="library" name="commons-logging-1.2" level="project" />
+    <orderEntry type="library" name="commons" level="project" />
     <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
     <orderEntry type="library" name="gson-2.8.5" level="project" />
     <orderEntry type="library" name="ant-1.10.3" level="project" />
@@ -35,5 +35,7 @@
     <orderEntry type="library" name="json-lib-2.4-jdk15" level="project" />
     <orderEntry type="library" name="tomcat-websocket" level="project" />
     <orderEntry type="library" name="httpclient-4.5.7" level="project" />
+    <orderEntry type="library" name="commons" level="project" />
+    <orderEntry type="library" name="server" level="project" />
   </component>
 </module>
