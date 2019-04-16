@@ -2,8 +2,8 @@ package top.knxy.fruits.Servlet.Admin;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-import top.knxy.fruits.Bean.Request;
-import top.knxy.fruits.Config.V;
+import top.knxy.library.Vehicle.Request;
+import top.knxy.library.Config.V;
 import top.knxy.fruits.Service.Good.Add.M1014;
 import top.knxy.fruits.Service.Good.Delete.M1012;
 import top.knxy.fruits.Service.Good.Modify.M1011;
@@ -15,8 +15,8 @@ import top.knxy.fruits.Service.Index.Poster.Remove.M1022;
 import top.knxy.fruits.Service.Order.Refund.Admin.M1018;
 import top.knxy.fruits.Service.Order.Undo.GetNumber.M1017;
 import top.knxy.fruits.Service.QiNiu.getUploadToken.M1015;
-import top.knxy.fruits.Utils.ApiUtils;
-import top.knxy.fruits.Utils.TextUtils;
+import top.knxy.library.Utils.ApiUtils;
+import top.knxy.library.Utils.TextUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

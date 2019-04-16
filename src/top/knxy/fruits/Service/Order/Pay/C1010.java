@@ -5,12 +5,12 @@ import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.Config.S;
 import top.knxy.fruits.DataBase.DAL.LoginDAL;
 import top.knxy.fruits.DataBase.DAL.OrderDAL;
-import top.knxy.fruits.DataBase.MyBatisUtils;
+import top.knxy.library.Utils.MyBatisUtils;
 import top.knxy.fruits.DataBase.Table.Order;
 import top.knxy.fruits.DataBase.Table.User;
-import top.knxy.fruits.Service.BaseService;
-import top.knxy.fruits.Service.ServiceException;
-import top.knxy.fruits.Utils.*;
+import top.knxy.library.BaseService;
+import top.knxy.library.ServiceException;
+import top.knxy.library.Utils.*;
 
 import java.math.BigDecimal;
 import java.net.URLEncoder;
@@ -159,7 +159,7 @@ public class C1010 extends BaseService {
             map.put("spbill_create_ip", "39.106.114.227");
             map.put("notify_url", "https://fruits.knxy.top/pay/confirm");
             map.put("trade_type", "JSAPI");
-            map.put("sign", ServiceUtils.getWXPaySignValue(map));
+            map.put("sign", ServiceUtils.getWXPaySignValue(map,S.WCPay.apiKey));
 
             String data = XmlUtils.mapToXmlStr(map, false);
             orderInfo = WebUtils.requestPost("https://api.mch.weixin.qq.com/pay/unifiedorder", data, OrderInfo.class);
@@ -189,7 +189,7 @@ public class C1010 extends BaseService {
             map.put("nonceStr", ServiceUtils.getUUid());
             map.put("package", "prepay_id=" + orderInfo.prepay_id);
             map.put("signType", "MD5");
-            map.put("sign", ServiceUtils.getWXPaySignValue(map));
+            map.put("sign", ServiceUtils.getWXPaySignValue(map,S.WCPay.apiKey));
 
             map.remove("appId");
             this.data = map;

@@ -2,13 +2,13 @@ package top.knxy.fruits.Servlet;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-import top.knxy.fruits.Bean.Request;
+import top.knxy.library.Vehicle.Request;
 import top.knxy.fruits.Service.Address.PosterComputer.C1013;
 import top.knxy.fruits.Service.Good.Get.C1009;
 import top.knxy.fruits.Service.Good.Search.C1012;
 import top.knxy.fruits.Service.Index.C1001;
 import top.knxy.fruits.Service.Login.Wechat.C1003;
-import top.knxy.fruits.Config.C;
+import top.knxy.library.Config.C;
 import top.knxy.fruits.Service.Order.Cancel.C1007;
 import top.knxy.fruits.Service.Order.Comfirm.C1004;
 import top.knxy.fruits.Service.Order.Create.C1002;
@@ -17,8 +17,8 @@ import top.knxy.fruits.Service.Order.List.C1005;
 import top.knxy.fruits.Service.Order.Pay.C1010;
 import top.knxy.fruits.Service.Order.Refund.Client.C1008;
 import top.knxy.fruits.Service.SessionInfo;
-import top.knxy.fruits.Utils.ApiUtils;
-import top.knxy.fruits.Utils.TextUtils;
+import top.knxy.library.Utils.ApiUtils;
+import top.knxy.library.Utils.TextUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -66,7 +66,7 @@ public class Api extends HttpServlet {
                 "C1008".equals(cmd) || "C1010".equals(cmd) || "C1012".equals(cmd)) {
 
             if (sessionInfo == null) {
-                ApiUtils.responseError(pw, C.Client.needLogin, "还没有登录");
+                ApiUtils.responseError(pw, C.Client.NEED_LOGIN, "还没有登录");
                 return;
             }
         }
@@ -86,7 +86,7 @@ public class Api extends HttpServlet {
             //Login
             C1003 c1003 = gson.fromJson(data, C1003.class);
             c1003.start();
-            if (c1003.code == C.Service.success) {
+            if (c1003.code == C.Service.SUCCESS) {
                 HttpSession session = request.getSession();
                 C1003.Data d = (C1003.Data) c1003.data;
                 session.setAttribute("UserInfo", new SessionInfo(d.openid, d.sessionKey, d.userId));

@@ -1,6 +1,6 @@
 package top.knxy.fruits.Filter;
 
-import top.knxy.fruits.Config.C;
+import top.knxy.library.Config.C;
 
 import javax.servlet.annotation.WebFilter;
 

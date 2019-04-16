@@ -2,8 +2,8 @@ package top.knxy.fruits.DataBase.Cache;
 
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.DataBase.DAL.KvDAL;
-import top.knxy.fruits.DataBase.DBException;
-import top.knxy.fruits.DataBase.MyBatisUtils;
+import top.knxy.library.DBException;
+import top.knxy.library.Utils.MyBatisUtils;
 import top.knxy.fruits.DataBase.Table.Kv;
 
 import java.io.IOException;

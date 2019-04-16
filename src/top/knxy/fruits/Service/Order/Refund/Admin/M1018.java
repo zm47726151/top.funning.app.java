@@ -12,11 +12,11 @@ import org.apache.http.util.EntityUtils;
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.Config.S;
 import top.knxy.fruits.DataBase.DAL.OrderDAL;
-import top.knxy.fruits.DataBase.MyBatisUtils;
+import top.knxy.library.Utils.MyBatisUtils;
 import top.knxy.fruits.DataBase.Table.Order;
-import top.knxy.fruits.Service.BaseService;
-import top.knxy.fruits.Service.ServiceException;
-import top.knxy.fruits.Utils.*;
+import top.knxy.library.BaseService;
+import top.knxy.library.ServiceException;
+import top.knxy.library.Utils.*;
 
 import javax.net.ssl.SSLContext;
 import java.io.File;
@@ -57,7 +57,7 @@ public class M1018 extends BaseService {
         BigDecimal money = new BigDecimal(order.getAmount()).multiply(new BigDecimal(100)).setScale(0, BigDecimal.ROUND_UP);
         map.put("total_fee", money);
         map.put("refund_fee", money);
-        map.put("sign", ServiceUtils.getWXPaySignValue(map));
+        map.put("sign", ServiceUtils.getWXPaySignValue(map,S.WCPay.apiKey));
 
         String data = XmlUtils.mapToXmlStr(map, false);
         WCPayResponse wcPayResponse = doRefund(data);

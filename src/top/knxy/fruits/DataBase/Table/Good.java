@@ -1,6 +1,8 @@
 package top.knxy.fruits.DataBase.Table;
 
-public class Good extends BaseBean {
+import top.knxy.library.Bean.BaseTable;
+
+public class Good extends BaseTable {
 
     private int id;
     private String name;

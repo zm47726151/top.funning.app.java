@@ -1,6 +1,6 @@
 package top.knxy.fruits.Servlet.Model;
 
-import top.knxy.fruits.Utils.TextUtils;
+import top.knxy.library.Utils.TextUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
