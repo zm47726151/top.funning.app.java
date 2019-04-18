@@ -17,13 +17,13 @@ public class Remind {
     private Session session;
 
     @OnOpen
-    public void start(Session session) {
+    public void onOpen(Session session) {
         this.session = session;
         connections.add(this);
     }
 
     @OnClose
-    public void end() {
+    public void onClose() {
         connections.remove(this);
     }
 

@@ -71,21 +71,25 @@ let Reminder = {
         }
         socket.onopen = function () {
             console.log("WebSocket", "open");
+            Manager.getUnDoCount();
         };
         socket.onclose = function () {
             console.log("WebSocket", "close");
         };
         socket.onmessage = function (message) {
             console.log("WebSocket", "message : " + message);
-            Manager.remind(message)
+            Manager.remind()
         };
     },
 }
 
 let Manager = {
-    remind: function (msg) {
+    remind: function () {
         let m = document.getElementById('sound_remind');
         m.play();//播放
+        this.getUnDoCount();
+    },
+    getUnDoCount:function () {
         Web.request("M1017", {}, {
             onSuccess: function (rp) {
                 let value = rp.data.value;
