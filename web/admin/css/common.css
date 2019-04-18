@@ -111,12 +111,12 @@ body {
 }
 
 .red_point {
-    border-radius: 10px;
+    border-radius: 20px;
     background: #d9534f;
     color: #ffffff;
     padding: 2px 5px 2px 5px;
-    font-size: 0.1rem;
-    margin-left: 12px;
+    font-size: 14px;
+    margin-left: 4px;
 }
 
 
