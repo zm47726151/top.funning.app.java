@@ -6,13 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fa2d42c-42aa-4b36-88a0-60761e403109" name="Default Changelist" comment="bug fix">
+    <list default="true" id="4fa2d42c-42aa-4b36-88a0-60761e403109" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Remind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Admin/Remind.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/common.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/common.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/login.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -362,7 +357,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555570669323" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555570836730" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -616,7 +611,7 @@
       <workItem from="1555071433314" duration="655000" />
       <workItem from="1555397071692" duration="6196000" />
       <workItem from="1555486766916" duration="20000" />
-      <workItem from="1555554692294" duration="4932000" />
+      <workItem from="1555554692294" duration="5144000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1548913859289</created>
@@ -891,11 +886,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555567637804</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="&#10;    1. firefox 遮住左边导航栏的bug&#10;    1. webscoket open时即获取数据">
+      <created>1555570938246</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1555570938246</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="440110000" />
+    <option name="totallyTimeSpent" value="440322000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -908,9 +910,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-77" width="1600" height="823" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5719745" visible="true" weight="0.23491655" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5719745" visible="true" weight="0.23491655" />
       <window_info id="Structure" order="1" sideWeight="0.42802548" side_tool="true" weight="0.22015405" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -920,7 +921,7 @@
       <window_info x="1520" y="319" width="291" height="309" id="Web" order="7" sideWeight="0.39490446" side_tool="true" type="FLOATING" weight="0.18677792" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32484075" />
-      <window_info anchor="bottom" x="1442" y="77" width="1280" height="723" id="Run" order="2" visible="true" weight="0.42270863" />
+      <window_info anchor="bottom" x="1442" y="77" width="1280" height="723" id="Run" order="2" weight="0.42270863" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.34062928" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1020,7 +1021,8 @@
     <MESSAGE value="library init" />
     <MESSAGE value="lib包结构调整" />
     <MESSAGE value="bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
+    <MESSAGE value="&#10;    1. firefox 遮住左边导航栏的bug&#10;    1. webscoket open时即获取数据" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;    1. firefox 遮住左边导航栏的bug&#10;    1. webscoket open时即获取数据" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
