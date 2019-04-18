@@ -81,12 +81,12 @@
         </script>
 
         <audio id="sound_remind" class="hide" auto src="/admin/res/remind.mp3"></audio>
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+        <nav style="position:static" class="col-md-2 d-none d-md-block bg-light sidebar">
             <div class="sidebar-sticky">
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/order/undo">
-                            未处理订单 <span id="red_point" class="red_point hide">13</span>
+                            未处理订单 <span id="red_point" class="red_point hide"></span>
                         </a>
                     </li>
                     <li class="nav-item">
