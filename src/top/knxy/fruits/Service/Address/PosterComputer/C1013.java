@@ -20,11 +20,10 @@ public class C1013 extends BaseService {
         map.put("address", address);
         map.put("output", "json");
         map.put("ak", S.Baidu.key);
-        C1010.LocationInfo locationInfo = new Gson().fromJson(WebUtils.requestGet(S.Baidu.mapApiUrl, map), C1010.LocationInfo.class);
+        C1010.LocationInfo locationInfo = new Gson().fromJson(WebUtils.get(S.Baidu.mapApiUrl, map), C1010.LocationInfo.class);
 
         if (locationInfo.status != 0) {
-            System.out.println(new Gson().toJson(locationInfo));
-            throw new ServiceException("get location fail. address : " + address);
+            throw new ServiceException("get location fail. address : " + address + " . Response" + new Gson().toJson(locationInfo));
         }
 
         Data data = new Data();
