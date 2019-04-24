@@ -33,7 +33,7 @@ public class C1003 extends BaseService {
         map.put("secret", S.WeChat.secret);
         map.put("js_code", jsCode);
         map.put("grant_type", "authorization_code");
-        String str = WebUtils.requestGet("https://api.weixin.qq.com/sns/jscode2session", map);
+        String str = WebUtils.get("https://api.weixin.qq.com/sns/jscode2session", map);
 
         Gson gson = new Gson();
         WeiXinResponseModel wxrp = gson.fromJson(str, WeiXinResponseModel.class);
