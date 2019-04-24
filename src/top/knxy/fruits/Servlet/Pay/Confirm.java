@@ -2,7 +2,7 @@ package top.knxy.fruits.Servlet.Pay;
 
 import top.knxy.library.Config.Code;
 import top.knxy.fruits.Service.Pay.C1011;
-import top.knxy.library.Utils.ApiUtils;
+import top.knxy.library.Utils.ServletUtils;
 import top.knxy.library.Utils.XmlUtils;
 
 import javax.servlet.ServletException;
@@ -23,7 +23,7 @@ public class Confirm extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String data = ApiUtils.getString(request);
+        String data = ServletUtils.getPostBodyString(request);
         PrintWriter writer = response.getWriter();
 
         C1011 c1011 = new C1011();
@@ -39,7 +39,6 @@ public class Confirm extends HttpServlet {
         }
 
         String result = XmlUtils.mapToXmlStr(map, true);
-        System.out.println("C1011:" + result);
         writer.print(result);
         writer.close();
     }

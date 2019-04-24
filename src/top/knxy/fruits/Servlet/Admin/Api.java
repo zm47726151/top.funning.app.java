@@ -1,9 +1,5 @@
 package top.knxy.fruits.Servlet.Admin;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-import top.knxy.library.Vehicle.Request;
-import top.knxy.library.Config.V;
 import top.knxy.fruits.Service.Good.Add.M1014;
 import top.knxy.fruits.Service.Good.Delete.M1012;
 import top.knxy.fruits.Service.Good.Modify.M1011;
@@ -15,94 +11,52 @@ import top.knxy.fruits.Service.Index.Poster.Remove.M1022;
 import top.knxy.fruits.Service.Order.Refund.Admin.M1018;
 import top.knxy.fruits.Service.Order.Undo.GetNumber.M1017;
 import top.knxy.fruits.Service.QiNiu.getUploadToken.M1015;
-import top.knxy.library.Utils.ApiUtils;
-import top.knxy.library.Utils.TextUtils;
+import top.knxy.library.ApiHandle;
+import top.knxy.library.BaseApi;
+import top.knxy.library.Config.V;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebServlet(urlPatterns = "/admin/api")
-public class Api extends HttpServlet {
+public class Api extends BaseApi {
 
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Api() {
-        super();
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter pw = response.getWriter();
-        ApiUtils.responseError(pw, "method should be POST");
-    }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setCharacterEncoding("UTF-8");
-        response.setCharacterEncoding("UTF-8");
-        String content = ApiUtils.getString(request);
-        PrintWriter pw = response.getWriter();
+        new Handle(request, response).start();
+    }
 
-        Gson gson = new Gson();
+    private static class Handle extends ApiHandle {
 
-        if (TextUtils.isEmpty(content)) {
-            ApiUtils.responseError(pw, "input json is empty");
-            return;
+        public Handle(HttpServletRequest request, HttpServletResponse response) throws IOException {
+            super(request, response);
         }
 
-        Request rq = gson.fromJson(content, Request.class);
-        String cmd = rq.cmd;
-        JsonObject data = rq.data == null ? new JsonObject() : rq.data;
+        public static Class[] serviceList = {
+                M1006.class, M1008.class, M1009.class, M1011.class, M1012.class,
+                M1014.class, M1015.class, M1017.class, M1018.class, M1021.class,
+                M1022.class};
 
-        System.out.println(cmd + ":" + data);
-        if ("M1006".equals(cmd)) {
-            //good type add
-            M1006 m1006 = gson.fromJson(data, M1006.class);
-            m1006.start();
-            ApiUtils.response(pw, m1006);
-        } else if ("M1009".equals(cmd)) {
-            //good type delete
-            M1009 m1006 = gson.fromJson(data, M1009.class);
-            m1006.start();
-            ApiUtils.response(pw, m1006);
-        } else if ("M1008".equals(cmd)) {
-            //good type modify
-            ApiUtils.doService(M1008.class, data, gson, pw);
-        } else if ("M1011".equals(cmd)) {
-            //good Modify
-            ApiUtils.doService(M1011.class, data, gson, pw);
-        } else if ("M1012".equals(cmd)) {
-            //good delete
-            ApiUtils.doService(M1012.class, data, gson, pw);
-        } else if ("M1014".equals(cmd)) {
-            //good add
-            ApiUtils.doService(M1014.class, data, gson, pw);
-        } else if ("M1015".equals(cmd)) {
-            //get UpToken
-            ApiUtils.doService(M1015.class, data, gson, pw);
-        } else if ("M1018".equals(cmd)) {
-            //order refund
-            ApiUtils.doService(M1018.class, data, gson, pw);
-        } else if ("M1017".equals(cmd)) {
-            //order get undo list count
-            ApiUtils.doService(M1017.class, data, gson, pw);
-        }  else if ("M1020".equals(cmd)) {
-            //exit
-            request.getSession().removeAttribute(V.adminId);
-            ApiUtils.responseSuccess(pw);
-        }else if ("M1021".equals(cmd)) {
-            //poster commit
-            ApiUtils.doService(M1021.class, data, gson, pw);
-        } else if ("M1022".equals(cmd)) {
-            //poster delete
-            ApiUtils.doService(M1022.class, data, gson, pw);
-        }  else {
-            ApiUtils.responseError(pw, "unknown cmd");
+        @Override
+        protected void run() throws ServletException, IOException {
+            if ("M1020".equals(body.cmd)) {
+                //exit
+                request.getSession().removeAttribute(V.adminId);
+                responseSuccess();
+            }
+
+
+            for (Class cls : serviceList) {
+                if (cls.getSimpleName().equals(body.cmd)) {
+                    doService(cls, body.data);
+                    return;
+                }
+            }
+
+            responseError("unknown cmd");
         }
     }
 }
-
