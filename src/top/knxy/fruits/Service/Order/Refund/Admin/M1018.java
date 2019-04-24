@@ -27,6 +27,8 @@ import java.util.TreeMap;
 
 public class M1018 extends BaseService {
 
+    public static final String TAG="Order.Refund.Admin.M1018";
+
     public String id;
 
 
@@ -65,7 +67,7 @@ public class M1018 extends BaseService {
         if (!"SUCCESS".equals(wcPayResponse.return_code)) {
             session.close();
             ServiceUtils.createError(this, wcPayResponse.return_msg);
-            System.out.println(String.format("refund fail: return_code = %s, return_msg = %s, order id = %s",
+            LogUtils.i(TAG,String.format("refund fail: return_code = %s, return_msg = %s, order id = %s",
                     wcPayResponse.return_code,
                     wcPayResponse.return_msg,
                     order.getId()));
@@ -85,7 +87,7 @@ public class M1018 extends BaseService {
                     ServiceUtils.createError(this);
                     break;
             }
-            System.out.println(String.format("refund fail: err_code = %s, err_code_des = %s, order id = %s",
+            LogUtils.i(TAG,String.format("refund fail: err_code = %s, err_code_des = %s, order id = %s",
                     wcPayResponse.err_code,
                     wcPayResponse.err_code_des,
                     order.getId()));
@@ -152,7 +154,7 @@ public class M1018 extends BaseService {
                 HttpEntity entity = response.getEntity();
 
                 String rp = EntityUtils.toString(response.getEntity(), "UTF-8");
-                System.out.println(rp);
+                LogUtils.i(TAG,rp);
                 EntityUtils.consume(entity);
                 return XmlUtils.xmlStrToBean(rp, WCPayResponse.class);
             } catch (Exception e) {

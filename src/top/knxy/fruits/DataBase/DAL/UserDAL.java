@@ -12,7 +12,7 @@ public interface UserDAL {
 
     @Select({"select u.id,u.openId, SUM(o.amount) amount " +
             "from `User` u left join `Order` o " +
-            "on u.id = o.userId group by u.id"})
+            "on u.id = o.userId where o.state=3 group by u.id"})
     public List<M1023.Data.User> getList();
 
 
