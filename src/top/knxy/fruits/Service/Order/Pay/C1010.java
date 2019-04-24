@@ -18,6 +18,7 @@ import java.util.Date;
 import java.util.TreeMap;
 
 public class C1010 extends BaseService {
+    public static final String TAG = "Order.Pay.C1010";
 
     private final static double locationLat = 23.091333102548455;
     private final static double locationLng = 113.33717442876233;
@@ -89,7 +90,7 @@ public class C1010 extends BaseService {
         String url = "http://api.map.baidu.com/geocoder/v2/?address=" +
                 URLEncoder.encode(address.provinceName + address.provinceName + address.cityName + address.detailInfo, "UTF-8") +
                 "&output=json&ak=tj3qu8wHTAFgQ3OmZbl8CLzTznki2VGR";
-        LocationInfo locationInfo = new Gson().fromJson(WebUtils.requestGet(url), LocationInfo.class);
+        LocationInfo locationInfo = new Gson().fromJson(WebUtils.get(url), LocationInfo.class);
 
         if (locationInfo.status != 0) {
             session.close();
@@ -105,7 +106,7 @@ public class C1010 extends BaseService {
         );
         distance = distance / 1000;
 
-        System.out.println(String.format("price = %s , distance = %s , lat1 = %s , lng2 = %s , lat2 = %s , lng2 = %s",
+        LogUtils.i(TAG,String.format("price = %s , distance = %s , lat1 = %s , lng2 = %s , lat2 = %s , lng2 = %s",
                 order.getPrice(), distance,
                 locationInfo.result.location.lat, locationInfo.result.location.lng,
                 locationLat, locationLng));
@@ -162,7 +163,7 @@ public class C1010 extends BaseService {
             map.put("sign", ServiceUtils.getWXPaySignValue(map,S.WCPay.apiKey));
 
             String data = XmlUtils.mapToXmlStr(map, false);
-            orderInfo = WebUtils.requestPost("https://api.mch.weixin.qq.com/pay/unifiedorder", data, OrderInfo.class);
+            orderInfo = WebUtils.postXml("https://api.mch.weixin.qq.com/pay/unifiedorder", data, OrderInfo.class);
         }
 
         if (!"SUCCESS".equals(orderInfo.return_code)) {
