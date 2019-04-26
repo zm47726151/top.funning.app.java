@@ -2,7 +2,7 @@ package top.knxy.fruits.DataBase.Table;
 
 import top.knxy.library.Bean.BaseTable;
 
-public class GroupGood extends BaseTable {
+public class Group111Good extends BaseTable {
     private String id;
     private String name;
     private String description;
