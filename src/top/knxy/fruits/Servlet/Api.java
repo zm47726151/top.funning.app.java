@@ -3,6 +3,7 @@ package top.knxy.fruits.Servlet;
 import top.knxy.fruits.Service.Address.PosterComputer.C1013;
 import top.knxy.fruits.Service.Good.Get.C1009;
 import top.knxy.fruits.Service.Good.Search.C1012;
+import top.knxy.fruits.Service.Group.Get.C1015;
 import top.knxy.fruits.Service.Index.C1001;
 import top.knxy.fruits.Service.Login.Wechat.C1003;
 import top.knxy.fruits.Service.Order.Cancel.C1007;
@@ -14,6 +15,7 @@ import top.knxy.fruits.Service.Order.Pay.C1010;
 import top.knxy.fruits.Service.Order.Refund.Client.C1008;
 import top.knxy.fruits.Service.Pay.C1011;
 import top.knxy.fruits.Service.SessionInfo;
+import top.knxy.fruits.Service.Group.List.C1014;
 import top.knxy.library.ApiHandle;
 import top.knxy.library.BaseApi;
 import top.knxy.library.Config.Code;
@@ -43,7 +45,7 @@ public class Api extends BaseApi {
         public static Class[] serviceList = {
                 C1001.class, C1002.class, C1003.class, C1004.class, C1005.class,
                 C1006.class, C1007.class, C1008.class, C1009.class, C1010.class,
-                C1011.class, C1012.class, C1013.class};
+                C1011.class, C1012.class, C1013.class, C1014.class, C1015.class};
 
         @Override
         protected void run() throws ServletException, IOException {
