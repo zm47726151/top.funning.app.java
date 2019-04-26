@@ -75,6 +75,35 @@ CREATE TABLE `KV`(
   `value` varchar(255)
 )
 
+/**
+state = {"1","2"}
+state = 1 : 上架
+state = 2 : 下架
+**/
+create table `GroupGood`(
+  id int primary key auto_increment,
+  name varchar(255),
+  description varchar(128),
+  imageUrl varchar(128),
+  price DECIMAL(14,2),
+  detail text,
+  groupNum int,
+  stopTime datetime,
+  getTimeStart datetime,
+  getTimeStop datetime,
+  state int not null default 1
+)
+
+insert into GroupGood(`name`,`description`,`imageUrl`,`price`,`detail`,`groupNum`,`stopTime`,`getTimeStart`,`getTimeStop`,`state`)values
+('【99元/3斤】A级-红宝玉草莓（大）娇艳欲滴','一份约3斤','','99.00','{}',3,'2019-04-30 00:00:00','2019-04-30 00:00:00','2019-05-04 00:00:00',1),
+('【99元/3斤】A级-红宝玉草莓（大）娇艳欲滴','一份约3斤','','98.00','{}',4,'2019-04-30 00:00:00','2019-04-30 00:00:00','2019-05-04 00:00:00',1),
+('【99元/3斤】A级-红宝玉草莓（大）娇艳欲滴','一份约3斤','','97.00','{}',5,'2019-04-30 00:00:00','2019-04-30 00:00:00','2019-05-04 00:00:00',1),
+('【99元/3斤】A级-红宝玉草莓（大）娇艳欲滴','一份约3斤','','96.00','{}',2,'2019-04-30 00:00:00','2019-04-30 00:00:00','2019-05-04 00:00:00',1),
+('【99元/3斤】A级-红宝玉草莓（大）娇艳欲滴','一份约3斤','','95.00','{}',4,'2019-04-30 00:00:00','2019-04-30 00:00:00','2019-05-04 00:00:00',1),
+('【99元/3斤】A级-红宝玉草莓（大）娇艳欲滴','一份约3斤','','96.00','{}',5,'2019-04-30 00:00:00','2019-04-30 00:00:00','2019-05-04 00:00:00',1),
+('【99元/3斤】A级-红宝玉草莓（大）娇艳欲滴','一份约3斤','','95.00','{}',2,'2019-04-30 00:00:00','2019-04-30 00:00:00','2019-05-04 00:00:00',1)
+
+
 insert into Admin(username,password,salt)values ('fruits@knxy.top','3f4870db36720549b5da31975febf212cfb33e70','33f1c5df698d');
 
 insert into GoodType(name,state) values
