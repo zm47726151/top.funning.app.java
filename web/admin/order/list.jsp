@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <link href="css/list.css?v=${version}" rel="stylesheet">
+<link href="css/common.css?v=${version}" rel="stylesheet">
 <div role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 
     <form method="get" class="row search">
@@ -28,8 +29,7 @@
                         $("#state_value").val(state);
                         $("#state_text").html(text);
                     });
-                })
-
+                });
             </script>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" state=""> - - </a>
