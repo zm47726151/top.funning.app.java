@@ -1,4 +1,4 @@
-package top.knxy.fruits.Service.Order.Undo.GetNumber;
+package top.knxy.fruits.Service.Order.Normal.Undo.GetNumber;
 
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.DataBase.DAL.OrderDAL;

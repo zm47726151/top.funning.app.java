@@ -1,4 +1,4 @@
-package top.knxy.fruits.Service.Order.List;
+package top.knxy.fruits.Service.Order.Normal.Undo.List;
 
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.DataBase.Model.Page;
@@ -11,17 +11,15 @@ import top.knxy.library.Utils.ServiceUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class M1001 extends BaseService {
+public class M1003 extends BaseService {
 
     public String page;
-    public String userId;
 
     @Override
     public void run() throws Exception {
         Page pModel = new Page(page);
         SqlSession session = MyBatisUtils.getSession();
-        OrderDAL orderDal = session.getMapper(OrderDAL.class);
-        this.data = new Data(orderDal.getList(pModel.getIndex(), pModel.getSize(), userId));
+        this.data = new Data(session.getMapper(OrderDAL.class).getUndoList(pModel));
 
         session.close();
         ServiceUtils.createSuccess(this);

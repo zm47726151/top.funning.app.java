@@ -1,4 +1,4 @@
-package top.knxy.fruits.Service.Order.List;
+package top.knxy.fruits.Service.Order.Normal.List;
 
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.DataBase.Table.Order;

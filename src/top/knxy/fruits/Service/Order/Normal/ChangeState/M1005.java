@@ -1,4 +1,4 @@
-package top.knxy.fruits.Service.Order.ChangeState;
+package top.knxy.fruits.Service.Order.Normal.ChangeState;
 
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.library.Utils.MyBatisUtils;
