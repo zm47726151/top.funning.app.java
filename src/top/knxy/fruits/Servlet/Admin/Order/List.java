@@ -3,7 +3,7 @@ package top.knxy.fruits.Servlet.Admin.Order;
 
 import top.knxy.library.Config.Code;
 import top.knxy.library.Config.V;
-import top.knxy.fruits.Service.Order.List.M1001;
+import top.knxy.fruits.Service.Order.Normal.List.M1001;
 import top.knxy.fruits.Servlet.Model.Page;
 import top.knxy.library.Utils.ServletUtils;
 

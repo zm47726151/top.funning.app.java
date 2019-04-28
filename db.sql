@@ -94,6 +94,23 @@ create table `GroupGood`(
   state int not null default 1
 )
 
+/**
+state = {"待付款" = 1,"拼团中" = 2,"待取货" = 3 ,"已完成" = 4,"退款中" = 5,"已取消" = 6,"已退款" = 7}
+**/
+create table `GroupOrder`(
+    id char(32) primary key,
+    goods text,
+    price DECIMAL(14,2),
+    getTimeStart datetime,
+    getTimeStop datetime,
+    groupNum int,
+
+    state int not null,
+    userId int,
+    createDT datetime not null,
+    payDT datetime
+)
+
 insert into GroupGood(`name`,`description`,`imageUrl`,`price`,`detail`,`groupNum`,`stopTime`,`getTimeStart`,`getTimeStop`,`state`)values
 ('【99元/3斤】A级-红宝玉草莓（大）娇艳欲滴','一份约3斤','','99.00','{}',3,'2019-04-30 00:00:00','2019-04-30 00:00:00','2019-05-04 00:00:00',1),
 ('【99元/3斤】A级-红宝玉草莓（大）娇艳欲滴','一份约3斤','','98.00','{}',4,'2019-04-30 00:00:00','2019-04-30 00:00:00','2019-05-04 00:00:00',1),
