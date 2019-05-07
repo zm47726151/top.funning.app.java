@@ -4,10 +4,11 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.Config.S;
+import top.knxy.fruits.DataBase.DAL.UserDAL;
 import top.knxy.library.Utils.MyBatisUtils;
 import top.knxy.fruits.DataBase.Table.User;
 import top.knxy.library.BaseService;
-import top.knxy.fruits.DataBase.DAL.LoginDAL;
+import top.knxy.fruits.DataBase.DAL.AdminDAL;
 import top.knxy.library.ServiceException;
 import top.knxy.library.Utils.ServiceUtils;
 import top.knxy.library.Utils.TextUtils;
@@ -43,7 +44,7 @@ public class C1003 extends BaseService {
         }
 
         SqlSession session = MyBatisUtils.getSession();
-        LoginDAL mapper = session.getMapper(LoginDAL.class);
+        UserDAL mapper = session.getMapper(UserDAL.class);
         //1. getGood user info form db
         User user = mapper.getUserByOpenId(wxrp.openid);
         if (user == null) {

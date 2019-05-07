@@ -1,7 +1,7 @@
 package top.knxy.fruits.Service.Login.ModifyPwd;
 
 import org.apache.ibatis.session.SqlSession;
-import top.knxy.fruits.DataBase.DAL.LoginDAL;
+import top.knxy.fruits.DataBase.DAL.AdminDAL;
 import top.knxy.library.Utils.MyBatisUtils;
 import top.knxy.fruits.DataBase.Table.Admin;
 import top.knxy.library.BaseService;
@@ -28,8 +28,8 @@ public class M1019 extends BaseService {
             throw new SerialException();
         }
 
-        SqlSession session = MyBatisUtils.getSession();
-        LoginDAL dal = session.getMapper(LoginDAL.class);
+        SqlSession session = getSqlSession();;
+        AdminDAL dal = session.getMapper(AdminDAL.class);
         Admin admin = dal.getAdminById(adminId);
         if (admin == null) {
             throw new SerialException();
