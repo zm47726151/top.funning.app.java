@@ -1,4 +1,4 @@
-package top.knxy.fruits.Service.Order.Normal.Comfirm;
+package top.knxy.fruits.Service.Order.Normal.Confirm;
 
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.DataBase.Table.Order;

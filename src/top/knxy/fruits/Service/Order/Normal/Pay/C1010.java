@@ -3,8 +3,10 @@ package top.knxy.fruits.Service.Order.Normal.Pay;
 import com.google.gson.Gson;
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.Config.S;
-import top.knxy.fruits.DataBase.DAL.LoginDAL;
+import top.knxy.fruits.DataBase.DAL.AdminDAL;
 import top.knxy.fruits.DataBase.DAL.OrderDAL;
+import top.knxy.fruits.DataBase.DAL.UserDAL;
+import top.knxy.fruits.Vehicle.WcPay.OrderInfo;
 import top.knxy.library.Utils.MyBatisUtils;
 import top.knxy.fruits.DataBase.Table.Order;
 import top.knxy.fruits.DataBase.Table.User;
@@ -137,7 +139,7 @@ public class C1010 extends BaseService {
         }
 
         //支付
-        LoginDAL dal = session.getMapper(LoginDAL.class);
+        UserDAL dal = session.getMapper(UserDAL.class);
         User user = dal.getUser(userId);
         if (user == null) {
             session.close();
@@ -221,19 +223,4 @@ public class C1010 extends BaseService {
         }
     }
 
-    public static class OrderInfo {
-        public String return_code;
-        public String return_msg;
-        public String appid;
-        public String mch_id;
-        public String device_info;
-        public String nonce_str;
-        public String sign;
-        public String result_code;
-        public String err_code;
-        public String err_code_des;
-        public String trade_type;
-        public String prepay_id;
-        public String code_url;
-    }
 }
