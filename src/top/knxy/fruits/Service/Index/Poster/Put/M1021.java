@@ -1,9 +1,9 @@
 package top.knxy.fruits.Service.Index.Poster.Put;
 
 import top.knxy.fruits.Config.C;
+import top.knxy.fruits.DataBase.Redis;
 import top.knxy.library.Config.Code;
 import top.knxy.library.Config.V;
-import top.knxy.fruits.DataBase.Cache.AppMap;
 import top.knxy.library.BaseService;
 import top.knxy.library.ServiceException;
 import top.knxy.library.Utils.ServiceUtils;
@@ -20,7 +20,7 @@ public class M1021 extends BaseService {
         }
 
         String value = C.getImageHost() + fileName;
-        AppMap.put(V.postImageUrl, value);
+        Redis.set(V.postImageUrl, value);
         ServiceUtils.createSuccess(this);
     }
 }
