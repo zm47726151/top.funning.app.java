@@ -78,7 +78,7 @@ public class M1004 extends BaseService {
             ServiceUtils.createError(this, "password is wrong, it is the " + admin.getFail() + " time you input wrong password");
         }
 
-        session.close();
+
     }
 
     public static Date getInitData() {

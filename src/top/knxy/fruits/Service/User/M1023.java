@@ -11,12 +11,12 @@ import java.util.List;
 public class M1023 extends BaseService {
     @Override
     protected void run() throws Exception {
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         UserDAL userDal = session.getMapper(UserDAL.class);
         Data data = new Data();
         this.data = data;
         data.users = userDal.getList();
-        session.close();
+
         ServiceUtils.createSuccess(this);
     }
 

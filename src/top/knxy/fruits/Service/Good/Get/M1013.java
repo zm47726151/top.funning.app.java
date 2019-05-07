@@ -21,12 +21,12 @@ public class M1013 extends BaseService {
             return;
         }
 
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         GoodDAL gDal = session.getMapper(GoodDAL.class);
         GoodTypeDAL gtDal = session.getMapper(GoodTypeDAL.class);
         Good good = gDal.getDetailForAdmin(id);
         if (good == null) {
-            session.close();
+
             ServiceUtils.createError(this, "没有这个商品");
             return;
         }
@@ -34,7 +34,7 @@ public class M1013 extends BaseService {
         Data data = new Data(good);
         data.typeList = gtDal.getUsefulList();
         this.data = data;
-        session.close();
+
         ServiceUtils.createSuccess(this);
     }
 

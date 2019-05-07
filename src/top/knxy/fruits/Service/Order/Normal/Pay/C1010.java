@@ -76,7 +76,7 @@ public class C1010 extends BaseService {
 
 
         //查询订单
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         OrderDAL mapper = session.getMapper(OrderDAL.class);
 
         Order order = new Order();
@@ -84,7 +84,7 @@ public class C1010 extends BaseService {
         order.setUserId(userId);
         order = mapper.getOrderByUser(order);
         if (order == null) {
-            session.close();
+
             throw new ServiceException("没有订单 id = " + id);
         }
 
@@ -95,7 +95,7 @@ public class C1010 extends BaseService {
         LocationInfo locationInfo = new Gson().fromJson(WebUtils.get(url), LocationInfo.class);
 
         if (locationInfo.status != 0) {
-            session.close();
+
             throw new ServiceException("get location fail. " + url);
         }
 
@@ -134,7 +134,7 @@ public class C1010 extends BaseService {
         int result = mapper.update(order);
         session.commit();
         if (result < 1) {
-            session.close();
+
             throw new ServiceException("订单修改失败 order id = " + id);
         }
 
@@ -142,7 +142,7 @@ public class C1010 extends BaseService {
         UserDAL dal = session.getMapper(UserDAL.class);
         User user = dal.getUser(userId);
         if (user == null) {
-            session.close();
+
             throw new ServiceException("没有用户 user id = " + userId);
         }
 
@@ -169,7 +169,7 @@ public class C1010 extends BaseService {
         }
 
         if (!"SUCCESS".equals(orderInfo.return_code)) {
-            session.close();
+
             throw new ServiceException(String.format("code = %s, msg = %s, order id = %s",
                     orderInfo.return_code,
                     orderInfo.return_msg,
@@ -177,7 +177,7 @@ public class C1010 extends BaseService {
         }
 
         if (!"SUCCESS".equals(orderInfo.result_code)) {
-            session.close();
+
             throw new ServiceException(String.format("err_code = %s, err_code_des = %s, order id = %s",
                     orderInfo.err_code,
                     orderInfo.err_code_des,
@@ -199,7 +199,7 @@ public class C1010 extends BaseService {
         }
 
         ServiceUtils.createSuccess(this);
-        session.close();
+
     }
 
     public static class LocationInfo {

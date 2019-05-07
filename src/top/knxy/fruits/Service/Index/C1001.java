@@ -18,12 +18,11 @@ public class C1001 extends BaseService {
 
     @Override
     public void run() throws Exception {
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         GoodTypeDAL gtDal = session.getMapper(GoodTypeDAL.class);
         List<M1013.GoodType> goodTypeList = gtDal.getUsefulList();
         GoodDAL gDal = session.getMapper(GoodDAL.class);
         List<Good> goodList = gDal.getUsefulList();
-        session.close();
 
 
         Data data = new Data();
@@ -47,7 +46,7 @@ public class C1001 extends BaseService {
         this.data = data;
 
         ServiceUtils.createSuccess(this);
-        session.close();
+
     }
 
     public static class Data {

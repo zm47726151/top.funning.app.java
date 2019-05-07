@@ -21,10 +21,10 @@ public class M1002 extends BaseService {
             return;
         }
 
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         OrderDAL operation = session.getMapper(OrderDAL.class);
         Order order = operation.getOrder(id);
-        session.close();
+
         this.data = OrderCollection.createOrder(order,new Gson());
 
         ServiceUtils.createSuccess(this);

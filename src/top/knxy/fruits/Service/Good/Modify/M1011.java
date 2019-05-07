@@ -69,11 +69,11 @@ public class M1011 extends BaseService {
         if (TextUtils.isNumeric(type)) good.setType(Integer.valueOf(type));
         good.setImageUrl(imageUrl);
 
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         GoodDAL gDal = session.getMapper(GoodDAL.class);
         if (gDal.update(good) < 1) {
             ServiceUtils.createError(this);
-            session.close();
+
             return;
         }
 
@@ -103,12 +103,12 @@ public class M1011 extends BaseService {
         session.commit();
         if (result < 1) {
             ServiceUtils.createError(this);
-            session.close();
+
             return;
         }
 
         ServiceUtils.createSuccess(this);
-        session.close();
+
     }
 
     public static class Content {

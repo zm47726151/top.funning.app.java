@@ -43,7 +43,7 @@ public class C1003 extends BaseService {
             return;
         }
 
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         UserDAL mapper = session.getMapper(UserDAL.class);
         //1. getGood user info form db
         User user = mapper.getUserByOpenId(wxrp.openid);
@@ -54,14 +54,14 @@ public class C1003 extends BaseService {
             int result = mapper.insert(user);
             session.commit();
             if (result < 1) {
-                session.close();
+
                 throw new ServiceException("登录失败");
             }
         }
 
         this.data = new Data(wxrp, user.getId());
         ServiceUtils.createSuccess(this);
-        session.close();
+
     }
 
     public static class Data {

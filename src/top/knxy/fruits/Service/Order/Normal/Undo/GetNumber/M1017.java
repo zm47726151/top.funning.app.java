@@ -9,14 +9,14 @@ import top.knxy.library.Utils.ServiceUtils;
 public class M1017 extends BaseService {
     @Override
     protected void run() throws Exception {
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         OrderDAL dal = session.getMapper(OrderDAL.class);
         Data data = new Data();
         data.value = String.valueOf(dal.getUnDoNumber());
-        session.close();
+
         this.data = data;
 
-        session.close();
+
         ServiceUtils.createSuccess(this);
     }
 

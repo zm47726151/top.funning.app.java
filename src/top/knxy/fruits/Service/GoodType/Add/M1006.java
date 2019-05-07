@@ -18,7 +18,7 @@ public class M1006 extends BaseService {
             return;
         }
 
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         GoodTypeDAL operation = session.getMapper(GoodTypeDAL.class);
         int row = operation.insert(name);
         session.commit();
@@ -27,6 +27,6 @@ public class M1006 extends BaseService {
             return;
         }
         ServiceUtils.createSuccess(this);
-        session.close();
+
     }
 }

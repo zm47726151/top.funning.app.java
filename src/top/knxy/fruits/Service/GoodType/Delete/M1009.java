@@ -17,11 +17,11 @@ public class M1009 extends BaseService {
             return;
         }
 
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         GoodTypeDAL dal = session.getMapper(GoodTypeDAL.class);
         int result = dal.delete(id);
         session.commit();
-        session.close();
+
         if (result < 1) {
             throw new Exception();
         }
