@@ -26,7 +26,7 @@ public class M1005 extends BaseService {
             return;
         }
 
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         OrderDAL operation = session.getMapper(OrderDAL.class);
         Order order = operation.getState(id);
         int s = Integer.valueOf(state);
@@ -40,7 +40,7 @@ public class M1005 extends BaseService {
         order.setState(s);
         operation.changeState(order);
         session.commit();
-        session.close();
+
 
         ServiceUtils.createSuccess(this);
     }

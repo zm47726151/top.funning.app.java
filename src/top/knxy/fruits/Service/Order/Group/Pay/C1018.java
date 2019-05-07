@@ -27,18 +27,18 @@ public class C1018 extends BaseService {
             throw new RuntimeException("id is empty");
         }
 
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         UserDAL uDal = session.getMapper(UserDAL.class);
         User user = uDal.getUser(userId);
         if (user == null) {
-            session.close();
+
             throw new RuntimeException("no user");
         }
 
         GroupOrderDAL gDal = session.getMapper(GroupOrderDAL.class);
         C1017.GroupOrder groupOrder = gDal.get(groupOrderId, userId);
         if (groupOrder == null) {
-            session.close();
+
             throw new RuntimeException("no order");
         }
 
@@ -65,7 +65,7 @@ public class C1018 extends BaseService {
         }
 
         if (!"SUCCESS".equals(orderInfo.return_code)) {
-            session.close();
+
             throw new ServiceException(String.format("code = %s, msg = %s, order id = %s",
                     orderInfo.return_code,
                     orderInfo.return_msg,
@@ -87,6 +87,6 @@ public class C1018 extends BaseService {
         }
 
         ServiceUtils.createSuccess(this);
-        session.close();
+
     }
 }

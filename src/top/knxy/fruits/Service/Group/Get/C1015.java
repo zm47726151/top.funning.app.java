@@ -30,13 +30,13 @@ public class C1015 extends BaseService {
 
         if (g.getStopTime().getTime() < new Date().getTime()) {
 
-            session.close();
+
             ServiceUtils.response(this, 1001,"活动已经过期了 -.-!");
             return;
         }
 
         this.data = g;
-        session.close();
+
         ServiceUtils.createSuccess(this);
     }
 }

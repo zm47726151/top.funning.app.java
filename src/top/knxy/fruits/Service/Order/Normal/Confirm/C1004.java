@@ -24,7 +24,7 @@ public class C1004 extends BaseService {
         }
 
 
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         OrderDAL mapper = session.getMapper(OrderDAL.class);
 
         Order order = new Order();
@@ -32,7 +32,7 @@ public class C1004 extends BaseService {
         order.setUserId(userId);
         order = mapper.getOrderByUser(order);
         if (order == null) {
-            session.close();
+
             throw new ServiceException("没有订单 id = " + id);
         }
 
@@ -41,13 +41,13 @@ public class C1004 extends BaseService {
             int result = mapper.update(order);
             session.commit();
             if (result < 1) {
-                session.close();
+
                 throw new ServiceException("订单修改失败 order id = " + id);
             }
         }
 
         ServiceUtils.createSuccess(this);
-        session.close();
+
     }
 
 

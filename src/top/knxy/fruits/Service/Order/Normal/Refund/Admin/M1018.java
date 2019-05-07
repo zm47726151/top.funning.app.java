@@ -40,12 +40,12 @@ public class M1018 extends BaseService {
         }
 
 
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         OrderDAL operation = session.getMapper(OrderDAL.class);
         Order order = operation.getOrder(id);
 
         if (order.getState() != 4) {
-            session.close();
+
             throw new ServiceException("修改不合法");
         }
 
@@ -65,7 +65,7 @@ public class M1018 extends BaseService {
         WCPayResponse wcPayResponse = doRefund(data);
 
         if (!"SUCCESS".equals(wcPayResponse.return_code)) {
-            session.close();
+
             ServiceUtils.createError(this, wcPayResponse.return_msg);
             LogUtils.i(TAG,String.format("refund fail: return_code = %s, return_msg = %s, order id = %s",
                     wcPayResponse.return_code,
@@ -91,14 +91,14 @@ public class M1018 extends BaseService {
                     wcPayResponse.err_code,
                     wcPayResponse.err_code_des,
                     order.getId()));
-            session.close();
+
             return;
         }
 
         order.setState(6);
         operation.changeState(order);
         session.commit();
-        session.close();
+
 
         ServiceUtils.createSuccess(this);
     }

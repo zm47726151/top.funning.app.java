@@ -22,12 +22,12 @@ public class M1012 extends BaseService {
         }
 
         int result;
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         GoodDAL gDal = session.getMapper(GoodDAL.class);
         result = gDal.delete(id);
         session.commit();
         if (result < 1) {
-            session.close();
+
             throw new ServiceException("删除失败 good id = " + id);
         }
 
@@ -38,11 +38,11 @@ public class M1012 extends BaseService {
         result = gdDal.deleteByGoodId(id);
         session.commit();
         if (result < 1) {
-            session.close();
+
             throw new ServiceException("删除失败 good id = " + id);
         }
 
-        session.close();
+
         ServiceUtils.createSuccess(this);
     }
 

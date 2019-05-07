@@ -39,7 +39,7 @@ public class M1019 extends BaseService {
         String prePassword = PwdUtils.sha1(this.prePassword + salt);
         if (!prePassword.equals(admin.getPassword())) {
             ServiceUtils.createError(this, "密码错误");
-            session.close();
+
             return;
         }
 

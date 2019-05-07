@@ -14,7 +14,7 @@ public class M1007 extends BaseService {
     @Override
     protected void run() throws Exception {
         Data data = new Data();
-        data.typeList = MyBatisUtils.getSession().getMapper(GoodTypeDAL.class).getList();
+        data.typeList = getSqlSession().getMapper(GoodTypeDAL.class).getList();
         this.data = data;
         ServiceUtils.createSuccess(this);
     }
