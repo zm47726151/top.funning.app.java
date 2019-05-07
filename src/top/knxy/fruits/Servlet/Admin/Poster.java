@@ -1,7 +1,7 @@
 package top.knxy.fruits.Servlet.Admin;
 
+import top.knxy.fruits.DataBase.Redis;
 import top.knxy.library.Config.V;
-import top.knxy.fruits.DataBase.Cache.AppMap;
 import top.knxy.library.Utils.ServletUtils;
 
 import javax.servlet.ServletException;
@@ -15,7 +15,7 @@ import java.io.IOException;
 public class Poster extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String postImageUrl = AppMap.get(V.postImageUrl);
+        String postImageUrl = Redis.get(V.postImageUrl);
         request.setAttribute(V.postImageUrl, postImageUrl);
         ServletUtils.setViewAndForward(request, response);
     }
