@@ -19,11 +19,11 @@ public class M1001 extends BaseService {
     @Override
     public void run() throws Exception {
         Page pModel = new Page(page);
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         OrderDAL orderDal = session.getMapper(OrderDAL.class);
         this.data = new Data(orderDal.getList(pModel.getIndex(), pModel.getSize(), userId));
 
-        session.close();
+
         ServiceUtils.createSuccess(this);
     }
 

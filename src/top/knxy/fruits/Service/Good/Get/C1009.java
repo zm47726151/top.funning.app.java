@@ -22,7 +22,7 @@ public class C1009 extends BaseService {
             return;
         }
 
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         Good good = session.getMapper(GoodDAL.class).getDetailForUser(id);
 
         if (good == null) {
@@ -45,7 +45,7 @@ public class C1009 extends BaseService {
 
         this.data = data;
         ServiceUtils.createSuccess(this);
-        session.close();
+
     }
 
     public static class Data {

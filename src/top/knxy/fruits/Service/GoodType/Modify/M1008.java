@@ -31,7 +31,7 @@ public class M1008 extends BaseService {
             return;
         }
 
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         GoodTypeDAL opreation = session.getMapper(GoodTypeDAL.class);
         GoodType type = new GoodType();
         type.setId(Integer.valueOf(id));
@@ -39,7 +39,7 @@ public class M1008 extends BaseService {
         type.setState(Integer.valueOf(state));
         opreation.update(type);
         session.commit();
-        session.close();
+
 
         ServiceUtils.createSuccess(this);
     }

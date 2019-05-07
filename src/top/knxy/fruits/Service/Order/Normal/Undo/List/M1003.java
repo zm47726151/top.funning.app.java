@@ -18,10 +18,10 @@ public class M1003 extends BaseService {
     @Override
     public void run() throws Exception {
         Page pModel = new Page(page);
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         this.data = new Data(session.getMapper(OrderDAL.class).getUndoList(pModel));
 
-        session.close();
+
         ServiceUtils.createSuccess(this);
     }
 

@@ -6,35 +6,43 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fa2d42c-42aa-4b36-88a0-60761e403109" name="Default Changelist" comment="pkg move">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/common.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/DAL/GroupOrderDAL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/Table/GroupOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Group/Confirm/C1019.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Group/Create/C1016.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Group/Get/C1017.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Group/Pay/C1018.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Vehicle/WcPay/OrderInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/top_knxy_fruits_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/top_knxy_fruits_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b02a58fc-f2d2-4935-b32f-039b9081fff3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b02a58fc-f2d2-4935-b32f-039b9081fff3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/commons.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/server.xml" beforeDir="false" />
+    <list default="true" id="4fa2d42c-42aa-4b36-88a0-60761e403109" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/DAL/GroupGoodDAL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/DAL/GroupGoodDAL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/DAL/LoginDAL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/DAL/AdminDAL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/DAL/UserDAL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/DAL/UserDAL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/Table/Group111Good.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/Table/GroupGood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Add/M1014.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Add/M1014.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Delete/M1012.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Delete/M1012.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Get/C1009.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Get/C1009.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Get/M1013.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Get/M1013.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/List/M1010.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/List/M1010.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Modify/M1011.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Modify/M1011.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/GoodType/Add/M1006.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/GoodType/Add/M1006.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/GoodType/Delete/M1009.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/GoodType/Delete/M1009.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/GoodType/List/M1007.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/GoodType/List/M1007.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/GoodType/Modify/M1008.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/GoodType/Modify/M1008.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/GoodType/get/M1016.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/GoodType/get/M1016.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Group/Get/C1015.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Group/Get/C1015.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Group/List/C1014.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Group/List/C1014.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Index/C1001.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Index/C1001.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Login/Manager/M1004.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Login/Manager/M1004.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Login/ModifyPwd/M1019.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Login/ModifyPwd/M1019.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Login/Wechat/C1003.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Login/Wechat/C1003.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Comfirm/C1004.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Confirm/C1004.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Group/Create/C1016.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Group/Create/C1016.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Group/Get/C1017.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Group/Get/C1017.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Group/Pay/C1018.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Group/Pay/C1018.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Cancel/C1007.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Cancel/C1007.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/ChangeState/M1005.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/ChangeState/M1005.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Confirm/C1004.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Confirm/C1004.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Create/C1002.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Create/C1002.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Get/C1006.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Get/C1006.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/List/C1005.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/List/C1005.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/List/M1001.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/List/M1001.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Pay/C1010.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Pay/C1010.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Servlet/Api.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/top.knxy.fruits.iml" beforeDir="false" afterPath="$PROJECT_DIR$/top.knxy.fruits.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Refund/Admin/M1018.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Refund/Admin/M1018.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Refund/Client/C1008.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Refund/Client/C1008.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Search/M1002.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Search/M1002.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Undo/GetNumber/M1017.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Undo/GetNumber/M1017.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Undo/List/M1003.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Undo/List/M1003.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Pay/C1011.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/Pay/C1011.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/top/knxy/fruits/Service/User/M1023.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/knxy/fruits/Service/User/M1023.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -89,27 +97,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Group/Pay/C1018.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../top.knxy.library.java/src/top/knxy/library/BaseService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Group/Confirm/C1019.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -119,19 +106,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db.sql">
+        <entry file="file://$PROJECT_DIR$/../top.knxy.library.java/src/top/knxy/library/Utils/MyBatisUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
+            <state relative-caret-position="180">
+              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Group/Create/C1016.java">
+        <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/DataBase/Cache/Good.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="752">
-              <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
+            <state relative-caret-position="189">
+              <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Get/C1009.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="24" column="42" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Search/M1002.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/ChangeState/M1005.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Index/C1001.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,43 +162,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Group/Get/C1015.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Add/M1014.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://b02a58fc-f2d2-4935-b32f-039b9081fff3/schema/r0nd38v04o/table/grouporder">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Group/Get/C1017.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2478#2479#0" expanded="true" />
-                <element signature="e#2513#2514#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Confirm/C1004.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+            <state relative-caret-position="568">
+              <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
             </state>
           </provider>
         </entry>
@@ -196,8 +187,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>3e6177a958bb4d519aa0872707c1873a</find>
-      <find>result_code</find>
       <find>ORDERPAID</find>
       <find>nonce_str</find>
       <find>refund_id</find>
@@ -225,11 +214,11 @@
       <find>stateValue</find>
       <find>userId</find>
       <find>sign</find>
+      <find>MyBatisUtils.getSession</find>
       <find>2019-05-04</find>
+      <find>session.close();</find>
     </findStrings>
     <replaceStrings>
-      <replace>this.</replace>
-      <replace>public</replace>
       <replace>http</replace>
       <replace>https://fruits.knxy.top/</replace>
       <replace>9</replace>
@@ -257,29 +246,26 @@
       <replace>pkg + tag +&quot; &quot;</replace>
       <replace>pkg + tag +&quot; &quot;+</replace>
       <replace>2019-05-23</replace>
+      <replace>getSqlSession</replace>
       <replace>2019-05-30</replace>
+      <replace />
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/web/WEB-INF/lib</dir>
       <dir>$PROJECT_DIR$/lib</dir>
       <dir>$PROJECT_DIR$/out/artifacts/top_knxy_fruits_java_war</dir>
-      <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/../top.knxy.java.library</dir>
+      <dir>$PROJECT_DIR$/src/top/knxy/fruits</dir>
+      <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../top.knxy.library.java" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Create/C1002.java" />
-        <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Create/C1002.java" />
-        <option value="$PROJECT_DIR$/../top.knxy.library.java/src/top/knxy/library/BaseApi.java" />
-        <option value="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/Cache/Good.java" />
-        <option value="$PROJECT_DIR$/src/globe.properties" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/Cache/Redis.java" />
-        <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Index/C1001.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Index/Poster/Put/M1021.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Index/Poster/Remove/M1022.java" />
         <option value="$APPLICATION_CONFIG_DIR$/iedis/Patterns.txt" />
@@ -324,6 +310,12 @@
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Group/Get/C1015.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Login/Manager/M1004.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Login/ModifyPwd/M1019.java" />
+        <option value="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/Cache/Good.java" />
+        <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Get/C1009.java" />
+        <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Search/M1002.java" />
+        <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/ChangeState/M1005.java" />
+        <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Index/C1001.java" />
+        <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Add/M1014.java" />
       </list>
     </option>
   </component>
@@ -420,7 +412,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="fruits" type="462c0819:PsiDirectoryNode" />
               <item name="DataBase" type="462c0819:PsiDirectoryNode" />
-              <item name="DAL" type="462c0819:PsiDirectoryNode" />
+              <item name="Cache" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
@@ -437,7 +429,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="fruits" type="462c0819:PsiDirectoryNode" />
               <item name="Service" type="462c0819:PsiDirectoryNode" />
-              <item name="Order" type="462c0819:PsiDirectoryNode" />
+              <item name="Good" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
@@ -446,40 +438,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="fruits" type="462c0819:PsiDirectoryNode" />
               <item name="Service" type="462c0819:PsiDirectoryNode" />
-              <item name="Order" type="462c0819:PsiDirectoryNode" />
-              <item name="Group" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="top.knxy" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fruits" type="462c0819:PsiDirectoryNode" />
-              <item name="Service" type="462c0819:PsiDirectoryNode" />
-              <item name="Order" type="462c0819:PsiDirectoryNode" />
-              <item name="Normal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="top.knxy" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fruits" type="462c0819:PsiDirectoryNode" />
-              <item name="Service" type="462c0819:PsiDirectoryNode" />
-              <item name="Order" type="462c0819:PsiDirectoryNode" />
-              <item name="Normal" type="462c0819:PsiDirectoryNode" />
-              <item name="Confirm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="top.knxy" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fruits" type="462c0819:PsiDirectoryNode" />
-              <item name="Service" type="462c0819:PsiDirectoryNode" />
-              <item name="Order" type="462c0819:PsiDirectoryNode" />
-              <item name="Normal" type="462c0819:PsiDirectoryNode" />
-              <item name="Pay" type="462c0819:PsiDirectoryNode" />
+              <item name="Good" type="462c0819:PsiDirectoryNode" />
+              <item name="Add" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
@@ -546,7 +506,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557213728486" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557214590756" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -600,33 +560,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BaseService">
-    <configuration name="BaseService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="top.knxy.library.BaseService" />
-      <module name="top.knxy.library" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="top.knxy.library.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Redis" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="top.knxy.fruits.DataBase.Redis" />
-      <module name="top.knxy.fruits" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="top.knxy.fruits.DataBase.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="Tomcat 9.0.12" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.12" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://127.0.0.1:8080/" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -764,12 +698,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.BaseService" />
-        <item itemvalue="Application.Redis" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SQLScriptSettings">
     <option name="matrix">
@@ -851,28 +779,7 @@
       <workItem from="1556939932711" duration="848000" />
       <workItem from="1557024317827" duration="8947000" />
       <workItem from="1557108460135" duration="1347000" />
-      <workItem from="1557110874370" duration="12555000" />
-    </task>
-    <task id="LOCAL-00006" summary="init">
-      <created>1551494614083</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1551494614084</updated>
-    </task>
-    <task id="LOCAL-00007" summary="c">
-      <created>1551519076385</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1551519076385</updated>
-    </task>
-    <task id="LOCAL-00008" summary="c">
-      <created>1551519084252</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1551519084252</updated>
+      <workItem from="1557110874370" duration="13464000" />
     </task>
     <task id="LOCAL-00009" summary="c">
       <created>1551533267945</created>
@@ -1196,11 +1103,32 @@
       <option name="project" value="LOCAL" />
       <updated>1557213652290</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="some dal rename">
+      <created>1557213725607</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1557213725607</updated>
+    </task>
+    <task id="LOCAL-00056" summary="redis use">
+      <created>1557213863504</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1557213863505</updated>
+    </task>
+    <task id="LOCAL-00057" summary="拼团开发">
+      <created>1557213909861</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1557213909861</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="545373000" />
+    <option name="totallyTimeSpent" value="546282000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1224,7 +1152,7 @@
       <window_info x="1520" y="319" width="291" height="309" id="Web" order="7" sideWeight="0.39490446" side_tool="true" type="FLOATING" weight="0.18677792" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32356688" />
-      <window_info anchor="bottom" x="1442" y="77" width="1280" height="723" id="Run" order="2" sideWeight="0.49935815" visible="true" weight="0.3656051" />
+      <window_info anchor="bottom" x="1442" y="77" width="1280" height="723" id="Run" order="2" sideWeight="0.49935815" weight="0.3656051" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.34012738" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1309,8 +1237,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="c" />
-    <MESSAGE value="1. 修复 商品详情 只能录入正方形图片的bug&#10;2. 修改首页左上角名字&#10;3. 隐藏添加管理员的功能" />
     <MESSAGE value="增加admin/index" />
     <MESSAGE value="1. 修复 商品详情 只能添加 正方形图片 的 bug &#10;3. 整合js文件 &#10;5. 增加退出功能" />
     <MESSAGE value="1. 删除out文件&#10;3. 修改ignore" />
@@ -1333,8 +1259,10 @@
     <MESSAGE value="WebUtils 优化" />
     <MESSAGE value="修改 order list 样式" />
     <MESSAGE value="pkg move" />
+    <MESSAGE value="some dal rename" />
     <MESSAGE value="redis use" />
-    <option name="LAST_COMMIT_MESSAGE" value="redis use" />
+    <MESSAGE value="拼团开发" />
+    <option name="LAST_COMMIT_MESSAGE" value="拼团开发" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1383,51 +1311,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.ideaLibSources/jedis-3.0.1-sources.jar!/redis/clients/jedis/BinaryJedis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="359" column="20" selection-start-line="359" selection-start-column="20" selection-end-line="359" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Index/C1001.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="44" column="33" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Index/Poster/Put/M1021.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Index/Poster/Remove/M1022.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Config/S.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="redis://IedisURI?type=Explorer&amp;label=39.106.114.110&amp;host=127.0.0.1&amp;port=6379&amp;password=mq2fOtMa3YXJEGpu3Vlx8XvZ9RvTy7Tzs6zVFY9Tlj5w48ZzXG3ggGFiPgRQPFK0&amp;timestamp=1556598305615&amp;nodeHost=127.0.0.1&amp;nodePort=6379" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b02a58fc-f2d2-4935-b32f-039b9081fff3/console_45.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1733,17 +1616,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Group/Confirm/C1019.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
           <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../top.knxy.library.java/src/top/knxy/library/BaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -1757,17 +1640,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../top.knxy.library.java/src/top/knxy/library/Utils/MyBatisUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Group/Confirm/C1019.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../top.knxy.library.java/src/top/knxy/library/BaseService.java">
+    <entry file="file://$PROJECT_DIR$/../top.knxy.library.java/src/top/knxy/library/Utils/MyBatisUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        <state relative-caret-position="180">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/DataBase/Cache/Good.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Get/C1009.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="24" column="42" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/Search/M1002.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Order/Normal/ChangeState/M1005.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Index/C1001.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Good/Add/M1014.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
         </state>
       </provider>
     </entry>

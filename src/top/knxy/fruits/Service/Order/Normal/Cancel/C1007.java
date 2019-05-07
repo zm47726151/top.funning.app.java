@@ -28,10 +28,10 @@ public class C1007 extends BaseService {
         order.setUserId(userId);
         order.setId(id);
 
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         int result = session.getMapper(OrderDAL.class).changeStateByUser(order);
         session.commit();
-        session.close();
+
 
         if (result < 1) {
             ServiceUtils.createError(this, "申请退款失败");
@@ -39,7 +39,7 @@ public class C1007 extends BaseService {
         }
 
         ServiceUtils.createSuccess(this);
-        session.close();
+
     }
 
 
