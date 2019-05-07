@@ -9,7 +9,7 @@
           <element id="module-output" name="top.knxy.fruits" />
         </element>
         <element id="directory" name="lib">
-          <element id="dir-copy" path="$PROJECT_DIR$/lib/common" />
+          <element id="library" level="project" name="common" />
         </element>
       </element>
       <element id="dir-copy" path="$PROJECT_DIR$/web" />

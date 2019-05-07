@@ -2,7 +2,9 @@ package top.knxy.fruits.DataBase.Table;
 
 import top.knxy.library.Bean.BaseTable;
 
-public class Group111Good extends BaseTable {
+import java.util.Date;
+
+public class GroupGood extends BaseTable {
     private String id;
     private String name;
     private String description;
@@ -10,9 +12,9 @@ public class Group111Good extends BaseTable {
     private String price;
     private String detail;
     private String groupNum;
-    private String stopTime;
-    private String getTimeStart;
-    private String getTimeStop;
+    private Date stopTime;
+    private Date getTimeStart;
+    private Date getTimeStop;
     private String state;
 
     public String getId() {
@@ -71,27 +73,27 @@ public class Group111Good extends BaseTable {
         this.groupNum = groupNum;
     }
 
-    public String getStopTime() {
+    public Date getStopTime() {
         return stopTime;
     }
 
-    public void setStopTime(String stopTime) {
+    public void setStopTime(Date stopTime) {
         this.stopTime = stopTime;
     }
 
-    public String getGetTimeStart() {
+    public Date getGetTimeStart() {
         return getTimeStart;
     }
 
-    public void setGetTimeStart(String getTimeStart) {
+    public void setGetTimeStart(Date getTimeStart) {
         this.getTimeStart = getTimeStart;
     }
 
-    public String getGetTimeStop() {
+    public Date getGetTimeStop() {
         return getTimeStop;
     }
 
-    public void setGetTimeStop(String getTimeStop) {
+    public void setGetTimeStop(Date getTimeStop) {
         this.getTimeStop = getTimeStop;
     }
 
