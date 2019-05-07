@@ -1,8 +1,8 @@
 package top.knxy.fruits.Service.Index;
 
 import org.apache.ibatis.session.SqlSession;
+import top.knxy.fruits.DataBase.Redis;
 import top.knxy.library.Config.V;
-import top.knxy.fruits.DataBase.Cache.AppMap;
 import top.knxy.fruits.DataBase.DAL.GoodDAL;
 import top.knxy.fruits.DataBase.DAL.GoodTypeDAL;
 import top.knxy.fruits.DataBase.Table.Good;
@@ -42,7 +42,7 @@ public class C1001 extends BaseService {
             type.goodList.add(dtg);
         }
 
-        data.postImageUrl = AppMap.get(V.postImageUrl);
+        data.postImageUrl = Redis.get(V.postImageUrl);
 
         this.data = data;
 
