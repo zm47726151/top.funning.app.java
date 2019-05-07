@@ -4,7 +4,7 @@ import org.apache.ibatis.annotations.*;
 import top.knxy.fruits.DataBase.Table.Admin;
 import top.knxy.fruits.DataBase.Table.User;
 
-public interface LoginDAL {
+public interface AdminDAL {
 
     @Select("select id,username,password,fail,lastFailTime,salt from Admin where username=#{username} limit 1")
     public Admin getAdminByUserName(String username);
@@ -18,14 +18,5 @@ public interface LoginDAL {
     @Update("update `Admin` set password=#{password}, salt=#{salt} where id = #{id}")
     public void updatePassword(Admin admin);
 
-    @Select({"select id,openId from User where openId = #{openId} limit 1"})
-    public User getUserByOpenId(String openId);
 
-    @Select({"select id,openId from User where id = #{id} limit 1"})
-    public User getUser(String id);
-
-    @Insert({"insert into User(openId) values(#{openId})"})
-    @Options(useGeneratedKeys = true, keyProperty = "id")
-    @SelectKey(statement = "SELECT LAST_INSERT_ID()", keyProperty = "id", resultType = Integer.class, before = false)
-    public int insert(User user);
 }

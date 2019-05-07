@@ -4,7 +4,7 @@ import org.apache.ibatis.session.SqlSession;
 import top.knxy.library.Utils.MyBatisUtils;
 import top.knxy.fruits.DataBase.Table.Admin;
 import top.knxy.library.BaseService;
-import top.knxy.fruits.DataBase.DAL.LoginDAL;
+import top.knxy.fruits.DataBase.DAL.AdminDAL;
 import top.knxy.library.Utils.PwdUtils;
 import top.knxy.library.Utils.ServiceUtils;
 import top.knxy.library.Utils.TextUtils;
@@ -33,8 +33,8 @@ public class M1004 extends BaseService {
         }
 
 
-        SqlSession session = MyBatisUtils.getSession();
-        LoginDAL mapper = session.getMapper(LoginDAL.class);
+        SqlSession session = getSqlSession();;
+        AdminDAL mapper = session.getMapper(AdminDAL.class);
         Admin admin = mapper.getAdminByUserName(username);
 
         if (admin == null) {
