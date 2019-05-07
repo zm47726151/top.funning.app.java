@@ -20,12 +20,12 @@ public class C1017 extends BaseService {
             throw new NullPointerException();
         }
 
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         GroupOrderDAL dal = session.getMapper(GroupOrderDAL.class);
         GroupOrder go = dal.get(id, userId);
         this.data = go;
 
-        session.close();
+
         ServiceUtils.createSuccess(this);
     }
 

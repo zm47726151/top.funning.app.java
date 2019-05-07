@@ -47,7 +47,7 @@ public class C1011 extends BaseService {
         }
 
         String orderId = requestData.out_trade_no;
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         OrderDAL dal = session.getMapper(OrderDAL.class);
         Order order = dal.getOrder(orderId);
 
@@ -56,7 +56,7 @@ public class C1011 extends BaseService {
 
 
         if (wcMoney.compareTo(ownMoney) != 0) {
-            session.close();
+
             throw new ServiceException("交易金额不对等,order id = " + orderId);
         }
 
@@ -65,11 +65,11 @@ public class C1011 extends BaseService {
         int result = dal.update(order);
         session.commit();
         if (result < 1) {
-            session.close();
+
             throw new ServiceException("订单状态修改失败,order id = " + orderId);
         }
 
-        session.close();
+
 
         Remind.broadcast();
 

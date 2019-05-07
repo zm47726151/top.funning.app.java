@@ -24,7 +24,7 @@ public class C1006 extends BaseService {
             return;
         }
 
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
 
         Order order = new Order();
         order.setUserId(userId);
@@ -40,7 +40,7 @@ public class C1006 extends BaseService {
         }
 
         ServiceUtils.createSuccess(this);
-        session.close();
+
     }
 
 

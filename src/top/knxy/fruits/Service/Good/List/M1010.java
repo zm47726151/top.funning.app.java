@@ -15,7 +15,7 @@ public class M1010 extends BaseService {
 
     @Override
     protected void run() throws Exception {
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         GoodDAL goodDAL = session.getMapper(GoodDAL.class);
 
         Data data = new Data();

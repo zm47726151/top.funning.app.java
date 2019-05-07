@@ -24,18 +24,18 @@ public class C1016 extends BaseService {
             throw new ServiceException("id is empty");
         }
 
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         GroupGoodDAL ggDal = session.getMapper(GroupGoodDAL.class);
         GroupOrderDAL goDal = session.getMapper(GroupOrderDAL.class);
         GroupGood model = ggDal.get(id);
         if (model == null) {
-            session.close();
+
             throw new ServiceException("not such GroupGood, id = " + id + " , userId = " + userId);
         }
 
         if (!TextUtils.isEmpty(teamId)) {
             if (1 > goDal.exist(id, teamId)) {
-                session.close();
+
                 throw new ServiceException("not exist teamId, id = " + id +
                         " , userId = " + userId +
                         " , teamId = " + teamId);
@@ -60,7 +60,7 @@ public class C1016 extends BaseService {
         go.setTeamId(teamId);
 
         if (goDal.create(go) < 1) {
-            session.close();
+
             throw new ServiceException("create order failure");
         }
         session.commit();
@@ -69,7 +69,7 @@ public class C1016 extends BaseService {
         data.id = go.getId();
         this.data = data;
 
-        session.close();
+
         ServiceUtils.createSuccess(this);
     }
 

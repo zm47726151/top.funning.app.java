@@ -13,7 +13,7 @@ import java.util.List;
 public class M1016 extends BaseService {
     @Override
     protected void run() throws Exception {
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         GoodTypeDAL gtDal = session.getMapper(GoodTypeDAL.class);
         List<M1013.GoodType> list = gtDal.getUsefulList();
         if (list == null || list.isEmpty()) {

@@ -31,7 +31,7 @@ public class C1002 extends BaseService {
             return;
         }
 
-        SqlSession session = MyBatisUtils.getSession();
+        SqlSession session = getSqlSession();
         OrderDAL orderDAL = session.getMapper(OrderDAL.class);
         GoodDAL goodDAL = session.getMapper(GoodDAL.class);
 
@@ -68,7 +68,7 @@ public class C1002 extends BaseService {
 
         data.id = order.getId();
         ServiceUtils.createSuccess(this);
-        session.close();
+
     }
 
 
