@@ -2,8 +2,11 @@ package top.knxy.fruits.Service.Order.Group.Pay;
 
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.Config.S;
+import top.knxy.fruits.DataBase.DAL.GroupGoodDAL;
 import top.knxy.fruits.DataBase.DAL.GroupOrderDAL;
 import top.knxy.fruits.DataBase.DAL.UserDAL;
+import top.knxy.fruits.DataBase.Table.GroupGood;
+import top.knxy.fruits.DataBase.Table.GroupOrder;
 import top.knxy.fruits.DataBase.Table.User;
 import top.knxy.fruits.Service.Order.Group.Get.C1017;
 import top.knxy.fruits.Vehicle.WcPay.OrderInfo;
@@ -31,17 +34,27 @@ public class C1018 extends BaseService {
         UserDAL uDal = session.getMapper(UserDAL.class);
         User user = uDal.getUser(userId);
         if (user == null) {
-
             throw new RuntimeException("no user");
         }
 
-        GroupOrderDAL gDal = session.getMapper(GroupOrderDAL.class);
-        C1017.GroupOrder groupOrder = gDal.get(groupOrderId, userId);
-        if (groupOrder == null) {
+        GroupOrderDAL goDal = session.getMapper(GroupOrderDAL.class);
+        GroupOrder groupOrder = goDal.get(groupOrderId, userId);
 
+        GroupGoodDAL ggDal = session.getMapper(GroupGoodDAL.class);
+        GroupGood groupGood = ggDal.get(groupOrder.getGroupGoodId());
+
+        if (groupGood.getStopTime().getTime() < new Date().getTime()) {
+            ServiceUtils.createError(this, "拼团活动已过期");
+            return;
+        }
+
+        if (groupOrder == null) {
             throw new RuntimeException("no order");
         }
 
+        if (groupOrder.getState() != 1) {
+            throw new RuntimeException("state != 1");
+        }
 
         OrderInfo orderInfo;
         {
@@ -80,7 +93,7 @@ public class C1018 extends BaseService {
             map.put("nonceStr", ServiceUtils.getUUid());
             map.put("package", "prepay_id=" + orderInfo.prepay_id);
             map.put("signType", "MD5");
-            map.put("sign", ServiceUtils.getWXPaySignValue(map,S.WCPay.apiKey));
+            map.put("sign", ServiceUtils.getWXPaySignValue(map, S.WCPay.apiKey));
 
             map.remove("appId");
             this.data = map;

@@ -24,6 +24,5 @@
         <mapper class="top.knxy.fruits.DataBase.DAL.GoodDetailDAL"/>
         <mapper class="top.knxy.fruits.DataBase.DAL.GroupGoodDAL"/>
         <mapper class="top.knxy.fruits.DataBase.DAL.GroupOrderDAL"/>
-
     </mappers>
 </configuration>
