@@ -40,10 +40,27 @@ public class C1017 extends BaseService {
         private String name;
         private String description;
         private String imageUrl;
-        private String state;
+        private int state;
         private String stateStr;
         private Date createDT;
         private Date payDT;
+        private String teamId;
+
+        public String getStateStr() {
+            return stateStr;
+        }
+
+        public void setStateStr(String stateStr) {
+            this.stateStr = stateStr;
+        }
+
+        public String getTeamId() {
+            return teamId;
+        }
+
+        public void setTeamId(String teamId) {
+            this.teamId = teamId;
+        }
 
         public String getId() {
             return id;
@@ -117,26 +134,26 @@ public class C1017 extends BaseService {
             this.imageUrl = imageUrl;
         }
 
-        public String getState() {
+        public int getState() {
             return state;
         }
 
-        public void setState(String state) {
+        public void setState(int state) {
             this.state = state;
 
-            if ("1".equals(state)) {
+            if (1 == state){
                 this.stateStr = "待付款";
-            } else if ("2".equals(state)) {
+            } else if (2 == state) {
                 this.stateStr = "拼团中";
-            } else if ("3".equals(state)) {
+            } else if (3 == state) {
                 this.stateStr = "待取货";
-            } else if ("4".equals(state)) {
+            } else if (4 == state) {
                 this.stateStr = "已完成";
-            } else if ("5".equals(state)) {
+            } else if (5 == state) {
                 this.stateStr = "退款中";
-            } else if ("6".equals(state)) {
+            } else if (6 == state) {
                 this.stateStr = "已取消";
-            } else if ("7".equals(state)) {
+            } else if (7 == state) {
                 this.stateStr = "已退款";
             }
         }

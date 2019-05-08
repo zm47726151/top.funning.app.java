@@ -38,8 +38,11 @@ public class C1018 extends BaseService {
         GroupOrderDAL gDal = session.getMapper(GroupOrderDAL.class);
         C1017.GroupOrder groupOrder = gDal.get(groupOrderId, userId);
         if (groupOrder == null) {
-
             throw new RuntimeException("no order");
+        }
+
+        if(groupOrder.getState()!=1){
+            throw new RuntimeException("state != 1");
         }
 
 

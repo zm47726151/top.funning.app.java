@@ -16,6 +16,15 @@ public class GroupGood extends BaseTable {
     private Date getTimeStart;
     private Date getTimeStop;
     private String state;
+    private String shareImageUrl;
+
+    public String getShareImageUrl() {
+        return shareImageUrl;
+    }
+
+    public void setShareImageUrl(String shareImageUrl) {
+        this.shareImageUrl = shareImageUrl;
+    }
 
     public String getId() {
         return id;
