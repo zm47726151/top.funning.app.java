@@ -48,7 +48,6 @@ public class Api extends BaseApi {
                 responseSuccess();
             }
 
-
             for (Class cls : serviceList) {
                 if (cls.getSimpleName().equals(body.cmd)) {
                     doService(cls, body.data);

@@ -8,6 +8,7 @@ import top.knxy.fruits.Service.Index.C1001;
 import top.knxy.fruits.Service.Login.Wechat.C1003;
 import top.knxy.fruits.Service.Order.Group.Create.C1016;
 import top.knxy.fruits.Service.Order.Group.Get.C1017;
+import top.knxy.fruits.Service.Order.Group.GetResult.C1019;
 import top.knxy.fruits.Service.Order.Group.Pay.C1018;
 import top.knxy.fruits.Service.Order.Normal.Cancel.C1007;
 import top.knxy.fruits.Service.Order.Normal.Confirm.C1004;
@@ -49,7 +50,7 @@ public class Api extends BaseApi {
                 C1001.class, C1002.class, C1003.class, C1004.class, C1005.class,
                 C1006.class, C1007.class, C1008.class, C1009.class, C1010.class,
                 C1011.class, C1012.class, C1013.class, C1014.class, C1015.class,
-                C1016.class, C1017.class, C1018.class};
+                C1016.class, C1017.class, C1018.class, C1019.class};
 
         @Override
         protected void run() throws ServletException, IOException {
@@ -60,7 +61,8 @@ public class Api extends BaseApi {
                     "C1006".equals(body.cmd) || "C1007".equals(body.cmd) ||
                     "C1008".equals(body.cmd) || "C1010".equals(body.cmd) ||
                     "C1012".equals(body.cmd) || "C1016".equals(body.cmd) ||
-                    "C1017".equals(body.cmd) || "C1018".equals(body.cmd)) {
+                    "C1017".equals(body.cmd) || "C1018".equals(body.cmd) ||
+                    "C1019".equals(body.cmd)) {
 
                 if (sessionInfo == null) {
                     responseError(Code.Client.NEED_LOGIN, "还没有登录");
@@ -84,6 +86,7 @@ public class Api extends BaseApi {
                 } else {
                     responseError(c1003.msg);
                 }
+                return;
             }
 
             for (Class cls : serviceList) {
