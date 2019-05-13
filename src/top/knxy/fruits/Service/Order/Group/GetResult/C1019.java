@@ -5,7 +5,6 @@ import top.knxy.fruits.DataBase.DAL.GroupGoodDAL;
 import top.knxy.fruits.DataBase.DAL.GroupOrderDAL;
 import top.knxy.fruits.DataBase.Table.GroupGood;
 import top.knxy.fruits.DataBase.Table.GroupOrder;
-import top.knxy.fruits.Service.Order.Group.Get.C1017;
 import top.knxy.library.BaseService;
 import top.knxy.library.ServiceException;
 import top.knxy.library.Utils.ServiceUtils;
@@ -28,7 +27,7 @@ public class C1019 extends BaseService {
         GroupOrderDAL goDal = session.getMapper(GroupOrderDAL.class);
 
         GroupOrder go;
-        go = goDal.get(id, userId);
+        go = goDal.getByUserId(id, userId);
         if (go == null) {
             throw new ServiceException("order is empty");
         }

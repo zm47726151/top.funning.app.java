@@ -22,7 +22,7 @@ public class C1021 extends BaseService {
 
         SqlSession session = getSqlSession();
         GroupOrderDAL goDal = session.getMapper(GroupOrderDAL.class);
-        GroupOrder go = goDal.get(id, userId);
+        GroupOrder go = goDal.getByUserId(id, userId);
 
         if (go == null) {
             throw new ServiceException();

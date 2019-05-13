@@ -2,8 +2,9 @@ package top.knxy.fruits.Service.Pay;
 
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.Config.S;
+import top.knxy.fruits.DataBase.DAL.GroupOrderDAL;
 import top.knxy.fruits.DataBase.DAL.OrderDAL;
-import top.knxy.library.Utils.MyBatisUtils;
+import top.knxy.fruits.DataBase.Table.GroupOrder;
 import top.knxy.fruits.DataBase.Table.Order;
 import top.knxy.library.BaseService;
 import top.knxy.library.ServiceException;
@@ -46,32 +47,55 @@ public class C1011 extends BaseService {
             throw new ServiceException("order id (out_trade_no) : " + requestData.out_trade_no + " is illegal");
         }
 
-        String orderId = requestData.out_trade_no;
-        SqlSession session = getSqlSession();
-        OrderDAL dal = session.getMapper(OrderDAL.class);
-        Order order = dal.getOrder(orderId);
+        if ("normal".equals(requestData.attach)) {
+            String orderId = requestData.out_trade_no;
+            SqlSession session = getSqlSession();
+            OrderDAL dal = session.getMapper(OrderDAL.class);
+            Order order = dal.getOrder(orderId);
 
-        BigDecimal wcMoney = new BigDecimal(requestData.cash_fee);
-        BigDecimal ownMoney = new BigDecimal(order.getAmount()).multiply(new BigDecimal(100));
+            BigDecimal wcMoney = new BigDecimal(requestData.cash_fee);
+            BigDecimal ownMoney = new BigDecimal(order.getAmount()).multiply(new BigDecimal(100));
 
 
-        if (wcMoney.compareTo(ownMoney) != 0) {
-            throw new ServiceException("交易金额不对等,order id = " + orderId);
+            if (wcMoney.compareTo(ownMoney) != 0) {
+                throw new ServiceException("交易金额不对等,order id = " + orderId);
+            }
+
+            order.setPayDT(new Date());
+            order.setState(2);
+            int result = dal.update(order);
+            session.commit();
+            if (result < 1) {
+                throw new ServiceException("订单状态修改失败,order id = " + orderId);
+            }
+
+            Remind.broadcast();
+
+            ServiceUtils.createSuccess(this);
+        } else if ("group".equals(requestData.attach)) {
+            String orderId = requestData.out_trade_no;
+            SqlSession session = getSqlSession();
+            GroupOrderDAL dal = session.getMapper(GroupOrderDAL.class);
+            GroupOrder order = dal.getById(orderId);
+
+            BigDecimal wcMoney = new BigDecimal(requestData.cash_fee);
+            BigDecimal ownMoney = new BigDecimal(order.getPrice()).multiply(new BigDecimal(100));
+
+
+            if (wcMoney.compareTo(ownMoney) != 0) {
+                throw new ServiceException("交易金额不对等,order id = " + orderId);
+            }
+
+            order.setPayDT(new Date());
+            order.setState(2);
+            int result = dal.updateState(order.getId(), "3");
+            session.commit();
+            if (result < 1) {
+                throw new ServiceException("订单状态修改失败,order id = " + orderId);
+            }
+
+            ServiceUtils.createSuccess(this);
         }
-
-        order.setPayDT(new Date());
-        order.setState(2);
-        int result = dal.update(order);
-        session.commit();
-        if (result < 1) {
-            throw new ServiceException("订单状态修改失败,order id = " + orderId);
-        }
-
-
-
-        Remind.broadcast();
-
-        ServiceUtils.createSuccess(this);
     }
 
     /**
