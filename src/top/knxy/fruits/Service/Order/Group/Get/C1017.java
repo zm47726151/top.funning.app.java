@@ -25,7 +25,7 @@ public class C1017 extends BaseService {
 
         SqlSession session = getSqlSession();
         GroupOrderDAL goDal = session.getMapper(GroupOrderDAL.class);
-        GroupOrder go = goDal.get(id, userId);
+        GroupOrder go = goDal.getByUserId(id, userId);
 
 
         Data data = new Data(go);

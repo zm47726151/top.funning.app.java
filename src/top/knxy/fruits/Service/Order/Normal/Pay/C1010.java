@@ -162,6 +162,7 @@ public class C1010 extends BaseService {
             map.put("spbill_create_ip", "39.106.114.227");
             map.put("notify_url", "https://fruits.knxy.top/pay/confirm");
             map.put("trade_type", "JSAPI");
+            map.put("attach","normal");
             map.put("sign", ServiceUtils.getWXPaySignValue(map,S.WCPay.apiKey));
 
             String data = XmlUtils.mapToXmlStr(map, false);
