@@ -1,10 +1,13 @@
 package top.knxy.fruits.Service.Order.Group.Get;
 
 import org.apache.ibatis.session.SqlSession;
+import top.knxy.fruits.DataBase.DAL.GroupGoodDAL;
 import top.knxy.fruits.DataBase.DAL.GroupOrderDAL;
+import top.knxy.fruits.DataBase.DAL.UserDAL;
+import top.knxy.fruits.DataBase.Table.GroupGood;
 import top.knxy.fruits.DataBase.Table.GroupOrder;
+import top.knxy.fruits.DataBase.Table.User;
 import top.knxy.library.BaseService;
-import top.knxy.library.Utils.MyBatisUtils;
 import top.knxy.library.Utils.ServiceUtils;
 import top.knxy.library.Utils.TextUtils;
 
@@ -21,16 +24,30 @@ public class C1017 extends BaseService {
         }
 
         SqlSession session = getSqlSession();
-        GroupOrderDAL dal = session.getMapper(GroupOrderDAL.class);
-        GroupOrder go = dal.get(id, userId);
-        this.data = go;
+        GroupOrderDAL goDal = session.getMapper(GroupOrderDAL.class);
+        GroupOrder go = goDal.get(id, userId);
+
+
+        Data data = new Data(go);
+
+        if (go.getState() == 2) {
+            UserDAL uDal = session.getMapper(UserDAL.class);
+            User user = uDal.getUser(userId);
+            data.setNickName(user.getNickName());
+
+            GroupGoodDAL ggDal = session.getMapper(GroupGoodDAL.class);
+            GroupGood gg = ggDal.get(go.getGroupGoodId());
+            data.setShareImageUrl(gg.getShareImageUrl());
+        }
+
+        this.data = data;
 
 
         ServiceUtils.createSuccess(this);
     }
 
 
-    public static class GroupOrder {
+    public static class Data {
         private String id;
         private String price;
         private Date getTimeStart;
@@ -40,11 +57,46 @@ public class C1017 extends BaseService {
         private String name;
         private String description;
         private String imageUrl;
-        private int state;
+        private String state;
         private String stateStr;
         private Date createDT;
         private Date payDT;
         private String teamId;
+
+        private String shareImageUrl;
+        private String nickName;
+
+        public Data(GroupOrder go) {
+            setId(go.getId());
+            setPrice(go.getPrice());
+            setGetTimeStart(go.getGetTimeStart());
+            setGetTimeStop(go.getGetTimeStop());
+            setGroupNum(go.getGroupNum());
+            setGroupGoodId(go.getGroupGoodId());
+            setName(go.getName());
+            setDescription(go.getDescription());
+            setImageUrl(go.getImageUrl());
+            setState(go.getState());
+            setCreateDT(go.getCreateDT());
+            setPayDT(go.getPayDT());
+            setTeamId(go.getTeamId());
+        }
+
+        public String getShareImageUrl() {
+            return shareImageUrl;
+        }
+
+        public void setShareImageUrl(String shareImageUrl) {
+            this.shareImageUrl = shareImageUrl;
+        }
+
+        public String getNickName() {
+            return nickName;
+        }
+
+        public void setNickName(String nickName) {
+            this.nickName = nickName;
+        }
 
         public String getStateStr() {
             return stateStr;
@@ -134,28 +186,13 @@ public class C1017 extends BaseService {
             this.imageUrl = imageUrl;
         }
 
-        public int getState() {
+        public String getState() {
             return state;
         }
 
         public void setState(int state) {
-            this.state = state;
-
-            if (1 == state){
-                this.stateStr = "待付款";
-            } else if (2 == state) {
-                this.stateStr = "拼团中";
-            } else if (3 == state) {
-                this.stateStr = "待取货";
-            } else if (4 == state) {
-                this.stateStr = "已完成";
-            } else if (5 == state) {
-                this.stateStr = "退款中";
-            } else if (6 == state) {
-                this.stateStr = "已取消";
-            } else if (7 == state) {
-                this.stateStr = "已退款";
-            }
+            this.state = String.valueOf(state);
+            this.stateStr = ServiceUtils.getGroupStateText(state);
         }
 
         public Date getCreateDT() {
