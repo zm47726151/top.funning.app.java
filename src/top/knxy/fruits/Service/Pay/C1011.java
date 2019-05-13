@@ -88,7 +88,7 @@ public class C1011 extends BaseService {
 
             order.setPayDT(new Date());
             order.setState(2);
-            int result = dal.updateState(order.getId(), "3");
+            int result = dal.payFinish(order);
             session.commit();
             if (result < 1) {
                 throw new ServiceException("订单状态修改失败,order id = " + orderId);
