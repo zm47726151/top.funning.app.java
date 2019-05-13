@@ -2,6 +2,7 @@ package top.knxy.fruits.Servlet.Pay;
 
 import top.knxy.library.Config.Code;
 import top.knxy.fruits.Service.Pay.C1011;
+import top.knxy.library.Utils.LogUtils;
 import top.knxy.library.Utils.ServletUtils;
 import top.knxy.library.Utils.XmlUtils;
 
@@ -17,6 +18,7 @@ import java.util.Map;
 
 @WebServlet(urlPatterns = "/pay/confirm")
 public class Confirm extends HttpServlet {
+    public static final String TAG = "Pay.Confirm";
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request, response);
@@ -24,6 +26,8 @@ public class Confirm extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String data = ServletUtils.getPostBodyString(request);
+        LogUtils.i(TAG, data);
+
         PrintWriter writer = response.getWriter();
 
         C1011 c1011 = new C1011();
