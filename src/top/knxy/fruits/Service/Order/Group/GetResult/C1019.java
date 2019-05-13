@@ -4,6 +4,7 @@ import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.DataBase.DAL.GroupGoodDAL;
 import top.knxy.fruits.DataBase.DAL.GroupOrderDAL;
 import top.knxy.fruits.DataBase.Table.GroupGood;
+import top.knxy.fruits.DataBase.Table.GroupOrder;
 import top.knxy.fruits.Service.Order.Group.Get.C1017;
 import top.knxy.library.BaseService;
 import top.knxy.library.ServiceException;
@@ -26,7 +27,7 @@ public class C1019 extends BaseService {
         SqlSession session = getSqlSession();
         GroupOrderDAL goDal = session.getMapper(GroupOrderDAL.class);
 
-        C1017.GroupOrder go;
+        GroupOrder go;
         go = goDal.get(id, userId);
         if (go == null) {
             throw new ServiceException("order is empty");
