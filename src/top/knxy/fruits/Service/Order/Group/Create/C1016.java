@@ -49,7 +49,6 @@ public class C1016 extends BaseService {
         uDal.update(user);
         session.commit();
 
-
         GroupGoodDAL ggDal = session.getMapper(GroupGoodDAL.class);
         GroupOrderDAL goDal = session.getMapper(GroupOrderDAL.class);
         GroupGood model = ggDal.get(orderInfo.id);
@@ -67,6 +66,13 @@ public class C1016 extends BaseService {
                 ServiceUtils.response(this, -1001, "已经超过课参团人数");
                 return;
             }
+
+            count = goDal.countUserInTeam(userId, orderInfo.teamId);
+            if (count > 1) {
+                ServiceUtils.response(this, -1002, "你已经参与了该团");
+                return;
+            }
+
         } else {
             orderInfo.teamId = ServiceUtils.getUUid();
         }
@@ -87,7 +93,6 @@ public class C1016 extends BaseService {
         go.setTeamId(orderInfo.teamId);
 
         if (goDal.create(go) < 1) {
-
             throw new ServiceException("create order failure");
         }
         session.commit();

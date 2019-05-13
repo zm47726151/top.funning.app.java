@@ -19,7 +19,7 @@ public interface UserDAL {
     @Select({"select id,openId from `User` where openId = #{openId} limit 1"})
     User getUserByOpenId(String openId);
 
-    @Select({"select id,openId from `User` where id = #{id} limit 1"})
+    @Select({"select * from `User` where id = #{id} limit 1"})
     User getUser(String id);
 
     @Insert({"insert into User(openId) values(#{openId})"})

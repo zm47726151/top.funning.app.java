@@ -56,7 +56,6 @@ public class C1011 extends BaseService {
 
 
         if (wcMoney.compareTo(ownMoney) != 0) {
-
             throw new ServiceException("交易金额不对等,order id = " + orderId);
         }
 
@@ -65,7 +64,6 @@ public class C1011 extends BaseService {
         int result = dal.update(order);
         session.commit();
         if (result < 1) {
-
             throw new ServiceException("订单状态修改失败,order id = " + orderId);
         }
 
