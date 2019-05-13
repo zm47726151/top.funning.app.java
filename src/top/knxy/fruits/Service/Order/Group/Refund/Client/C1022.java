@@ -2,11 +2,7 @@ package top.knxy.fruits.Service.Order.Group.Refund.Client;
 
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.DataBase.DAL.GroupOrderDAL;
-import top.knxy.fruits.DataBase.DAL.OrderDAL;
 import top.knxy.fruits.DataBase.Table.GroupOrder;
-import top.knxy.fruits.DataBase.Table.Order;
-import top.knxy.fruits.Service.Order.Group.Get.C1017;
-import top.knxy.fruits.Servlet.Admin.Remind;
 import top.knxy.library.BaseService;
 import top.knxy.library.ServiceException;
 import top.knxy.library.Utils.ServiceUtils;
@@ -26,7 +22,7 @@ public class C1022 extends BaseService {
 
         SqlSession session = getSqlSession();
         GroupOrderDAL goDal = session.getMapper(GroupOrderDAL.class);
-        GroupOrder go = goDal.get(id, userId);
+        GroupOrder go = goDal.getByUserId(id, userId);
         if (2 != go.getState() && 3 != go.getState()) {
             throw new ServiceException();
         }

@@ -41,7 +41,10 @@ public interface GroupOrderDAL {
     int create(GroupOrder groupOrder);
 
     @Select("SELECT id, price, getTimeStart,teamId, getTimeStop, groupNum, groupGoodId, name, description, imageUrl, state,  createDT, payDT FROM `GroupOrder` WHERE id=#{id} and userId=#{userId}")
-    GroupOrder get(@Param("id") String id, @Param("userId") String userId);
+    GroupOrder getByUserId(@Param("id") String id, @Param("userId") String userId);
+
+    @Select("SELECT * FROM `GroupOrder` WHERE id=#{id}")
+    GroupOrder getById(@Param("id") String id);
 
     @Select("SELECT count(*) FROM `GroupOrder` WHERE id=#{id} and userId=#{userId} and state=2")
     int count(@Param("id") String id, @Param("teamId") String teamId);
