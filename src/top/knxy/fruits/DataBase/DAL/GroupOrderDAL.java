@@ -60,4 +60,8 @@ public interface GroupOrderDAL {
 
     @Update("update `GroupOrder` set state=#{state} where id=#{id}")
     int updateState(@Param("id") String id, @Param("state") String state);
+
+
+    @Update("update `GroupOrder` set state=#{state} , payDT=#{payDT} where id=#{id}")
+    int payFinish(GroupOrder order);
 }
