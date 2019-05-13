@@ -8,7 +8,6 @@ import top.knxy.fruits.DataBase.DAL.UserDAL;
 import top.knxy.fruits.DataBase.Table.GroupGood;
 import top.knxy.fruits.DataBase.Table.GroupOrder;
 import top.knxy.fruits.DataBase.Table.User;
-import top.knxy.fruits.Service.Order.Group.Get.C1017;
 import top.knxy.fruits.Vehicle.WcPay.OrderInfo;
 import top.knxy.library.BaseService;
 import top.knxy.library.ServiceException;
@@ -38,7 +37,7 @@ public class C1018 extends BaseService {
         }
 
         GroupOrderDAL goDal = session.getMapper(GroupOrderDAL.class);
-        GroupOrder groupOrder = goDal.get(groupOrderId, userId);
+        GroupOrder groupOrder = goDal.getByUserId(groupOrderId, userId);
 
         GroupGoodDAL ggDal = session.getMapper(GroupGoodDAL.class);
         GroupGood groupGood = ggDal.get(groupOrder.getGroupGoodId());
@@ -71,6 +70,7 @@ public class C1018 extends BaseService {
             map.put("spbill_create_ip", "39.106.114.227");
             map.put("notify_url", "https://fruits.knxy.top/pay/confirm");
             map.put("trade_type", "JSAPI");
+            map.put("attach","group");
             map.put("sign", ServiceUtils.getWXPaySignValue(map, S.WCPay.apiKey));
 
             String data = XmlUtils.mapToXmlStr(map, false);
