@@ -21,8 +21,7 @@
         if (!id) {
             $("#content").hide();
         }
-    })
-
+    });
 </script>
 <div role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
     <form method="get" class="row form">
@@ -110,11 +109,15 @@
 
         <!-- 暂时不做修改 -->
         <div class="detail">
-            <h5>商品 Banner 图片列表</h5>
+            <div class="title">
+                <h5>商品 Banner 图片列表</h5><span>(限定尺寸：750*750像素)</span>
+            </div>
             <div id="detail_header_imageList" class="row">
             </div>
 
-            <h5>商品详情图片列表</h5>
+            <div class="title">
+                <h5>商品详情图片列表</h5><span>(限定宽度：750像素)</span>
+            </div>
             <div id="detail_content_imageList" class="row">
             </div>
         </div>

@@ -2,7 +2,7 @@ package top.knxy.fruits.Servlet.Admin.Good;
 
 import top.knxy.library.Config.Code;
 import top.knxy.library.Config.V;
-import top.knxy.fruits.Service.Good.Get.M1013;
+import top.knxy.fruits.Service.Normal.Good.Get.M1013;
 import top.knxy.library.Utils.ServletUtils;
 
 import javax.servlet.ServletException;

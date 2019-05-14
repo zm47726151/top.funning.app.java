@@ -3,9 +3,9 @@ package top.knxy.fruits.DataBase.DAL;
 import org.apache.ibatis.annotations.*;
 import top.knxy.fruits.DataBase.Model.Page;
 import top.knxy.fruits.DataBase.Table.Good;
-import top.knxy.fruits.Service.Good.Get.C1009;
-import top.knxy.fruits.Service.Good.Get.M1013;
-import top.knxy.fruits.Service.Good.List.M1010;
+import top.knxy.fruits.Service.Normal.Good.Get.C1009;
+import top.knxy.fruits.Service.Normal.Good.Get.M1013;
+import top.knxy.fruits.Service.Normal.Good.List.M1010;
 
 import java.util.List;
 
