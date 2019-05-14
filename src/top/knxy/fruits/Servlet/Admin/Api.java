@@ -1,15 +1,15 @@
 package top.knxy.fruits.Servlet.Admin;
 
-import top.knxy.fruits.Service.Good.Add.M1014;
-import top.knxy.fruits.Service.Good.Delete.M1012;
-import top.knxy.fruits.Service.Good.Modify.M1011;
-import top.knxy.fruits.Service.GoodType.Add.M1006;
-import top.knxy.fruits.Service.GoodType.Delete.M1009;
-import top.knxy.fruits.Service.GoodType.Modify.M1008;
+import top.knxy.fruits.Service.Normal.Good.Add.M1014;
+import top.knxy.fruits.Service.Normal.Good.Delete.M1012;
+import top.knxy.fruits.Service.Normal.Good.Modify.M1011;
+import top.knxy.fruits.Service.Normal.GoodType.Add.M1006;
+import top.knxy.fruits.Service.Normal.GoodType.Delete.M1009;
+import top.knxy.fruits.Service.Normal.GoodType.Modify.M1008;
 import top.knxy.fruits.Service.Index.Poster.Put.M1021;
 import top.knxy.fruits.Service.Index.Poster.Remove.M1022;
-import top.knxy.fruits.Service.Order.Normal.Refund.Admin.M1018;
-import top.knxy.fruits.Service.Order.Normal.Undo.GetNumber.M1017;
+import top.knxy.fruits.Service.Normal.Order.Refund.Admin.M1018;
+import top.knxy.fruits.Service.Normal.Order.Undo.GetNumber.M1017;
 import top.knxy.fruits.Service.QiNiu.getUploadToken.M1015;
 import top.knxy.library.ApiHandle;
 import top.knxy.library.BaseApi;

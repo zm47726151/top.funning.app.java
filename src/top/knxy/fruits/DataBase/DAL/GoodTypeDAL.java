@@ -5,7 +5,7 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 import top.knxy.fruits.DataBase.Table.GoodType;
-import top.knxy.fruits.Service.Good.Get.M1013;
+import top.knxy.fruits.Service.Normal.Good.Get.M1013;
 
 import java.util.List;
 

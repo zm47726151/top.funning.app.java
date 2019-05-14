@@ -4,9 +4,11 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
+import top.knxy.fruits.DataBase.Model.Page;
 import top.knxy.fruits.DataBase.Table.GroupOrder;
-import top.knxy.fruits.Service.Order.Group.GetResult.C1019;
-import top.knxy.fruits.Service.Order.Group.List.C1020;
+import top.knxy.fruits.Service.Group.Order.List.M1025;
+import top.knxy.fruits.Service.Group.Order.GetResult.C1019;
+import top.knxy.fruits.Service.Group.Order.List.C1020;
 
 import java.util.List;
 
@@ -61,7 +63,9 @@ public interface GroupOrderDAL {
     @Update("update `GroupOrder` set state=#{state} where id=#{id}")
     int updateState(@Param("id") String id, @Param("state") String state);
 
-
-    @Update("update `GroupOrder` set state=#{state} , payDT=#{payDT} where id=#{id}")
+    @Update("update `GroupOrder` set state=#{state}, payDT=#{payDT} where id=#{id}")
     int payFinish(GroupOrder order);
+
+    @Select("select id,price,getTimeStart,getTimeStop,name,state,createDT,payDT from `GroupOrder` limit #{index}, #{size}")
+    List<M1025.Data.GroupOrder> getListByAdmin(Page page);
 }

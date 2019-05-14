@@ -3,8 +3,8 @@ package top.knxy.fruits.Servlet.Admin.Order;
 
 import top.knxy.library.Config.Code;
 import top.knxy.library.Config.V;
-import top.knxy.fruits.Service.Order.Normal.ChangeState.M1005;
-import top.knxy.fruits.Service.Order.Normal.Search.M1002;
+import top.knxy.fruits.Service.Normal.Order.ChangeState.M1005;
+import top.knxy.fruits.Service.Normal.Order.Search.M1002;
 import top.knxy.library.Utils.ServletUtils;
 
 import javax.servlet.ServletException;
