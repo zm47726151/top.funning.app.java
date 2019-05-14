@@ -3,7 +3,7 @@ package top.knxy.fruits.Service.Address.PosterComputer;
 import com.google.gson.Gson;
 import top.knxy.fruits.Config.S;
 import top.knxy.library.BaseService;
-import top.knxy.fruits.Service.Order.Normal.Pay.C1010;
+import top.knxy.fruits.Service.Normal.Order.Pay.C1010;
 import top.knxy.library.ServiceException;
 import top.knxy.library.Utils.ServiceUtils;
 import top.knxy.library.Utils.WebUtils;

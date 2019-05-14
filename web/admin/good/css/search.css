@@ -14,6 +14,22 @@
     padding-top: 30px;
 }
 
+.detail .title {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.detail .title h5{
+    margin-bottom: 0px;
+}
+
+.detail .title span {
+    color: #e51c23;
+    margin-left: 10px;
+}
+
 .detail .row {
     margin-bottom: 30px;
 }

@@ -3,7 +3,7 @@ package top.knxy.fruits.DataBase.DAL;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import top.knxy.fruits.DataBase.Table.GroupGood;
-import top.knxy.fruits.Service.Group.List.C1014;
+import top.knxy.fruits.Service.Group.Good.List.C1014;
 
 import java.util.List;
 

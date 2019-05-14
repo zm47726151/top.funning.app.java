@@ -2,7 +2,7 @@ package top.knxy.fruits.Servlet.Admin.Good;
 
 import top.knxy.library.Config.Code;
 import top.knxy.library.Config.V;
-import top.knxy.fruits.Service.Good.List.M1010;
+import top.knxy.fruits.Service.Normal.Good.List.M1010;
 import top.knxy.fruits.Servlet.Model.Page;
 import top.knxy.library.Utils.ServletUtils;
 
