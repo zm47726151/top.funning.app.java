@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link rel="icon" href="/image/favicon.png">
+    <link rel="icon" href="/image/favicon.ico">
     <title>Admin</title>
 
     <!-- Bootstrap core CSS -->
