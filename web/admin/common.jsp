@@ -86,70 +86,104 @@
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/order/undo">
-                            未处理订单 <span id="red_point" class="red_point hide"></span>
+                            订单 -- 未处理列表 <span id="red_point" class="red_point hide"></span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/order/list">
                             <span data-feather="file"></span>
-                            订单列表
+                            订单 -- 所有订单列表
                         </a>
                     </li>
                     <li class="nav-item line">
                         <a class="nav-link" href="/admin/order/search">
                             <span data-feather="file"></span>
-                            订单详情
+                            订单 -- 订单详情
                         </a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/good/list">
                             <span data-feather="shopping-cart"></span>
-                            商品列表<br/>
+                            商品 -- 所有商品列表<br/>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/good/add">
                             <span data-feather="shopping-cart"></span>
-                            添加商品<br/>
+                            商品 -- 添加商品<br/>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/good/search">
                             <span data-feather="shopping-cart"></span>
-                            商品详情<br/>
+                            商品 -- 商品详情<br/>
                         </a>
                     </li>
 
                     <li class="nav-item line">
                         <a class="nav-link" href="/admin/goodtype/list">
                             <span data-feather="shopping-cart"></span>
-                            商品类型列表<br/>
+                            商品 -- 分组管理<br/><!-- 商品类型列表 -->
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/group/order/list">
+                            <span data-feather="file"></span>
+                            团购 -- 订单 -- 所有订单列表
+                        </a>
+                    </li>
+                    <li class="nav-item line">
+                        <a class="nav-link" href="/admin/group/order/search">
+                            <span data-feather="file"></span>
+                            团购 -- 订单 -- 订单详情
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/group/good/list">
+                            <span data-feather="shopping-cart"></span>
+                            团购 -- 商品 -- 所有商品列表<br/>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/group/good/add">
+                            <span data-feather="shopping-cart"></span>
+                            团购 -- 商品 -- 添加商品<br/>
+                        </a>
+                    </li>
+                    <li class="nav-item line">
+                        <a class="nav-link" href="/admin/group/good/search">
+                            <span data-feather="shopping-cart"></span>
+                            团购 -- 商品 -- 商品详情<br/>
                         </a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/user/list">
                             <span data-feather="shopping-cart"></span>
-                            消费者列表<br/>
+                            运营 -- 消费者列表<br/>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item line">
                         <a class="nav-link" href="/admin/poster">
                             <span data-feather="shopping-cart"></span>
-                            修改首页海报<br/>
+                            运营 -- 修改首页海报<br/>
                         </a>
                     </li>
+
+
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/modifyPwd">
                             <span data-feather="shopping-cart"></span>
-                            修改密码<br/>
+                            管理 -- 修改密码<br/>
                         </a>
                     </li>
                     <li class="nav-item hide">
                         <a class="nav-link" href="/admin/order/goodType">
                             <span data-feather="shopping-cart"></span>
-                            添加管理员<br/>
+                            管理 -- 添加管理员<br/>
                         </a>
                     </li>
                 </ul>
