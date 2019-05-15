@@ -1,6 +1,7 @@
 package top.knxy.fruits.Servlet.Admin.Group.Order;
 
 
+import top.knxy.fruits.Service.Group.Order.Get.M1026;
 import top.knxy.fruits.Service.Normal.Order.ChangeState.M1005;
 import top.knxy.fruits.Service.Normal.Order.Search.M1002;
 import top.knxy.library.Config.Code;
@@ -18,7 +19,7 @@ import java.io.IOException;
 public class Search extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        M1002 service = ServletUtils.requestParamToModel(req, M1002.class);
+        M1026 service = ServletUtils.requestParamToModel(req, M1026.class);
         service.start();
         if (service.code == Code.Service.SUCCESS) {
             req.setAttribute(V.data, service.data);
@@ -30,13 +31,6 @@ public class Search extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        M1005 service = ServletUtils.requestParamToModel(req, M1005.class);
-        service.start();
-        if (service.code == Code.Service.SUCCESS) {
-            doGet(req, resp);
-        } else {
-            resp.sendError(500, service.msg);
-        }
-
+        doGet(req,resp);
     }
 }

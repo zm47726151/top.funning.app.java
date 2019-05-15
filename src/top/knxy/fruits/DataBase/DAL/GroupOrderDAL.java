@@ -68,4 +68,5 @@ public interface GroupOrderDAL {
 
     @Select("select id,price,getTimeStart,getTimeStop,name,state,createDT,payDT from `GroupOrder` limit #{index}, #{size}")
     List<M1025.Data.GroupOrder> getListByAdmin(Page page);
+
 }

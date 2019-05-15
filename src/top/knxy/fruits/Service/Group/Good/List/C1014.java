@@ -13,7 +13,7 @@ public class C1014 extends BaseService {
     protected void run() throws Exception {
         SqlSession session = getSqlSession();
         GroupGoodDAL dal = session.getMapper(GroupGoodDAL.class);
-        List<Data.GroupGood> list = dal.getList();
+        List<Data.GroupGood> list = dal.getListByClient();
         Data data = new Data();
         data.dataList = list;
         this.data = data;

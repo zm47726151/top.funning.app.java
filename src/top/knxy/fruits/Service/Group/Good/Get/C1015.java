@@ -26,8 +26,6 @@ public class C1015 extends BaseService {
 
 
         if (g.getStopTime().getTime() < new Date().getTime()) {
-
-
             ServiceUtils.response(this, 1001,"活动已经过期了 -.-!");
             return;
         }

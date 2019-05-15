@@ -8,7 +8,7 @@ import top.knxy.fruits.DataBase.DAL.UserDAL;
 import top.knxy.fruits.DataBase.Table.GroupGood;
 import top.knxy.fruits.DataBase.Table.GroupOrder;
 import top.knxy.fruits.DataBase.Table.User;
-import top.knxy.fruits.Vehicle.WcPay.OrderInfo;
+import top.knxy.library.Vehicle.WeChat.Pay.OrderInfo;
 import top.knxy.library.BaseService;
 import top.knxy.library.ServiceException;
 import top.knxy.library.Utils.*;
