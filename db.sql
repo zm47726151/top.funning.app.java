@@ -31,7 +31,7 @@ create table Good(
     imageUrl varchar(128),
     price DECIMAL(14,2),
     stock int,
-    state int  enum('1','2') not null default 1,
+    state int enum('1','2') not null default 1,
     type int/** foreign key GoodType(id) **/
 )
 
@@ -114,6 +114,12 @@ state = {"待付款" = 1,"拼团中" = 2,"待取货" = 3 ,"已完成" = 4,"退�
 待付款 -> 已过期
 待付款 -> 拼团中 -> 已过期
 待付款 -> 拼团中 -> 待取货  -> 已过期
+
+
+3 -- 已完成
+5 -- 退款
+1 -- 取消订单
+
 **/
 create table `GroupOrder`(
     id char(32) primary key,

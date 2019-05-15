@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <link href="css/list.css?v=${version}" rel="stylesheet">
 <link href="css/common.css?v=${version}" rel="stylesheet">
 <div role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
@@ -50,8 +51,7 @@
             <tr>
                 <th>订单编号</th>
                 <th>商品价格</th>
-                <th>取货开始时间</th>
-                <th>取货结束时间</th>
+                <th>取货时间</th>
                 <th>商品名称</th>
                 <th>状态</th>
                 <th>创建时间</th>
@@ -64,8 +64,7 @@
                 <tr>
                     <td>${order.id}</td>
                     <td>${order.price}</td>
-                    <td>${order.getTimeStart}</td>
-                    <td>${order.getTimeStop}</td>
+                    <td><fmt:formatDate value="${order.getTimeStart}" pattern="yyyy-MM-dd" /> 至 <fmt:formatDate value="${order.getTimeStop}" pattern="yyyy-MM-dd" /></td>
                     <td>${order.name}</td>
                     <td>${order.stateStr}</td>
                     <td>${order.createDT}</td>

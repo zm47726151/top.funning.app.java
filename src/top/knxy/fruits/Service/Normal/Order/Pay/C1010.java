@@ -5,7 +5,7 @@ import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.Config.S;
 import top.knxy.fruits.DataBase.DAL.OrderDAL;
 import top.knxy.fruits.DataBase.DAL.UserDAL;
-import top.knxy.fruits.Vehicle.WcPay.OrderInfo;
+import top.knxy.library.Vehicle.WeChat.Pay.OrderInfo;
 import top.knxy.fruits.DataBase.Table.Order;
 import top.knxy.fruits.DataBase.Table.User;
 import top.knxy.library.BaseService;
