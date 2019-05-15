@@ -94,8 +94,7 @@
                         3. 管理员点击保存，上传图片到七牛云，保存到数据库。
                     -->
                     <div class="col-md-4">
-                        <button type="submit" onclick="Page.changeImage()"
-                                class="btn btn-primary btn-md">
+                        <button type="submit" onclick="Page.changeImage()" class="btn btn-primary btn-md">
                             点击修改封面图片
                         </button>
                     </div>

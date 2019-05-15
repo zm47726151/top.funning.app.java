@@ -6,6 +6,8 @@ import top.knxy.fruits.DataBase.Model.Page;
 import top.knxy.library.BaseService;
 import top.knxy.library.Utils.ServiceUtils;
 
+import java.util.Date;
+
 public class M1025 extends BaseService {
 
     public String page;
@@ -37,10 +39,10 @@ public class M1025 extends BaseService {
         public static class GroupOrder {
             private String id;
             private String price;
-            private String getTimeStart;
-            private String getTimeStop;
+            private Date getTimeStart;
+            private Date getTimeStop;
             private String name;
-            private String stateVal;
+            private String state;
             private String stateStr;
             private String createDT;
             private String payDT;
@@ -61,19 +63,19 @@ public class M1025 extends BaseService {
                 this.price = price;
             }
 
-            public String getGetTimeStart() {
+            public Date getGetTimeStart() {
                 return getTimeStart;
             }
 
-            public void setGetTimeStart(String getTimeStart) {
+            public void setGetTimeStart(Date getTimeStart) {
                 this.getTimeStart = getTimeStart;
             }
 
-            public String getGetTimeStop() {
+            public Date getGetTimeStop() {
                 return getTimeStop;
             }
 
-            public void setGetTimeStop(String getTimeStop) {
+            public void setGetTimeStop(Date getTimeStop) {
                 this.getTimeStop = getTimeStop;
             }
 
@@ -85,20 +87,17 @@ public class M1025 extends BaseService {
                 this.name = name;
             }
 
-            public String getStateVal() {
-                return stateVal;
+            public String getState() {
+                return state;
             }
 
-            public void setStateVal(String stateVal) {
-                this.stateVal = stateVal;
+            public void setState(String state) {
+                this.state = state;
+                this.stateStr = ServiceUtils.getGroupOrderStateText(state);
             }
 
             public String getStateStr() {
                 return stateStr;
-            }
-
-            public void setStateStr(String stateStr) {
-                this.stateStr = stateStr;
             }
 
             public String getCreateDT() {

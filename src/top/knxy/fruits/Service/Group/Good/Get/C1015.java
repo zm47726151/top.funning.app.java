@@ -5,6 +5,7 @@ import top.knxy.fruits.DataBase.DAL.GroupGoodDAL;
 import top.knxy.fruits.DataBase.Table.GroupGood;
 import top.knxy.library.BaseService;
 import top.knxy.library.ServiceException;
+import top.knxy.library.Utils.LogUtils;
 import top.knxy.library.Utils.ServiceUtils;
 import top.knxy.library.Utils.TextUtils;
 
@@ -24,16 +25,17 @@ public class C1015 extends BaseService {
         GroupGoodDAL dal = session.getMapper(GroupGoodDAL.class);
         GroupGood g = dal.get(id);
 
-
-        if (g.getStopTime().getTime() < new Date().getTime()) {
-
-
-            ServiceUtils.response(this, 1001,"活动已经过期了 -.-!");
+        LogUtils.i("C1015", g.getState());
+        if ("2".equals(g.getState())) {
+            ServiceUtils.response(this, 1002, "商品已经下架");
             return;
         }
 
+        if (g.getStopTime().getTime() < new Date().getTime()) {
+            ServiceUtils.response(this, 1001, "活动已经过期了 -.-!");
+            return;
+        }
         this.data = g;
-
         ServiceUtils.createSuccess(this);
     }
 }

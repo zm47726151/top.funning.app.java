@@ -37,6 +37,5 @@ public class Search extends HttpServlet {
         } else {
             resp.sendError(500, service.msg);
         }
-
     }
 }

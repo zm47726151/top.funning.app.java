@@ -1,4 +1,4 @@
-package top.knxy.fruits.Service.Normal.Order.Undo.List;
+package top.knxy.fruits.Service.Normal.Order.Undo;
 
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.DataBase.Model.Page;
@@ -68,7 +68,7 @@ public class M1003 extends BaseService {
                 this.telNumber = o.getTelNumber();
                 this.userName = o.getUserName();
 
-                this.stateStr = ServiceUtils.getNormalStateStr(o.getState());
+                this.stateStr = ServiceUtils.getNormalOrderStateStr(o.getState());
                 this.userId = o.getUserId();
 
                 if (o.getCreateDT() != null) {

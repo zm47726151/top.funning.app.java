@@ -2,10 +2,11 @@ package top.knxy.fruits.Service.Normal.Order.Pay;
 
 import com.google.gson.Gson;
 import org.apache.ibatis.session.SqlSession;
+import top.knxy.fruits.Config.C;
 import top.knxy.fruits.Config.S;
 import top.knxy.fruits.DataBase.DAL.OrderDAL;
 import top.knxy.fruits.DataBase.DAL.UserDAL;
-import top.knxy.fruits.Vehicle.WcPay.OrderInfo;
+import top.knxy.library.Vehicle.WeChat.Pay.OrderInfo;
 import top.knxy.fruits.DataBase.Table.Order;
 import top.knxy.fruits.DataBase.Table.User;
 import top.knxy.library.BaseService;
@@ -106,7 +107,7 @@ public class C1010 extends BaseService {
         );
         distance = distance / 1000;
 
-        LogUtils.i(TAG,String.format("price = %s , distance = %s , lat1 = %s , lng2 = %s , lat2 = %s , lng2 = %s",
+        LogUtils.i(TAG, String.format("price = %s , distance = %s , lat1 = %s , lng2 = %s , lat2 = %s , lng2 = %s",
                 order.getPrice(), distance,
                 locationInfo.result.location.lat, locationInfo.result.location.lng,
                 locationLat, locationLng));
@@ -157,11 +158,11 @@ public class C1010 extends BaseService {
             map.put("out_trade_no", order.getId());
             map.put("total_fee", new BigDecimal(order.getAmount()).multiply(new BigDecimal(100)).setScale(0, BigDecimal.ROUND_UP));
             map.put("openid", user.getOpenId());
-            map.put("spbill_create_ip", "39.106.114.227");
-            map.put("notify_url", "https://fruits.knxy.top/pay/confirm");
+            map.put("spbill_create_ip", C.getIp());
+            map.put("notify_url", C.getDomain() + "/pay/confirm");
             map.put("trade_type", "JSAPI");
-            map.put("attach","normal");
-            map.put("sign", ServiceUtils.getWXPaySignValue(map,S.WCPay.apiKey));
+            map.put("attach", "normal");
+            map.put("sign", ServiceUtils.getWXPaySignValue(map, S.WCPay.apiKey));
 
             String data = XmlUtils.mapToXmlStr(map, false);
             orderInfo = WebUtils.postXml("https://api.mch.weixin.qq.com/pay/unifiedorder", data, OrderInfo.class);
@@ -191,7 +192,7 @@ public class C1010 extends BaseService {
             map.put("nonceStr", ServiceUtils.getUUid());
             map.put("package", "prepay_id=" + orderInfo.prepay_id);
             map.put("signType", "MD5");
-            map.put("sign", ServiceUtils.getWXPaySignValue(map,S.WCPay.apiKey));
+            map.put("sign", ServiceUtils.getWXPaySignValue(map, S.WCPay.apiKey));
 
             map.remove("appId");
             this.data = map;

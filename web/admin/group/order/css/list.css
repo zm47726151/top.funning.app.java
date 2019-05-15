@@ -14,7 +14,14 @@
 }
 
 
-tr td{
+tr td:nth-child(1){
     width: 10%;
 }
 
+tr td:nth-child(3){
+    width: 20%;
+}
+
+tr td:nth-child(5){
+    width: 5%;
+}

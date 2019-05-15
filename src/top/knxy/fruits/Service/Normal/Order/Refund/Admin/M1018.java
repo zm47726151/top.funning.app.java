@@ -16,6 +16,7 @@ import top.knxy.fruits.DataBase.Table.Order;
 import top.knxy.library.BaseService;
 import top.knxy.library.ServiceException;
 import top.knxy.library.Utils.*;
+import top.knxy.library.Vehicle.WeChat.Refund.Result;
 
 import javax.net.ssl.SSLContext;
 import java.io.File;
@@ -26,7 +27,7 @@ import java.util.TreeMap;
 
 public class M1018 extends BaseService {
 
-    public static final String TAG="Order.Refund.Admin.M1018";
+    public static final String TAG = "Normal.Order.Refund.Admin";
 
     public String id;
 
@@ -58,39 +59,26 @@ public class M1018 extends BaseService {
         BigDecimal money = new BigDecimal(order.getAmount()).multiply(new BigDecimal(100)).setScale(0, BigDecimal.ROUND_UP);
         map.put("total_fee", money);
         map.put("refund_fee", money);
-        map.put("sign", ServiceUtils.getWXPaySignValue(map,S.WCPay.apiKey));
+        map.put("sign", ServiceUtils.getWXPaySignValue(map, S.WCPay.apiKey));
 
         String data = XmlUtils.mapToXmlStr(map, false);
-        WCPayResponse wcPayResponse = doRefund(data);
+        Result result = doRefund(data);
 
-        if (!"SUCCESS".equals(wcPayResponse.return_code)) {
-
-            ServiceUtils.createError(this, wcPayResponse.return_msg);
-            LogUtils.i(TAG,String.format("refund fail: return_code = %s, return_msg = %s, order id = %s",
-                    wcPayResponse.return_code,
-                    wcPayResponse.return_msg,
+        if (!"SUCCESS".equals(result.return_code)) {
+            ServiceUtils.createError(this, result.return_msg);
+            LogUtils.i(TAG, String.format("refund fail: return_code = %s, return_msg = %s, order id = %s",
+                    result.return_code,
+                    result.return_msg,
                     order.getId()));
             return;
         }
 
-        if (!"SUCCESS".equals(wcPayResponse.result_code)) {
-            switch (wcPayResponse.err_code) {
-                case "SYSTEMERROR":
-                case "TRADE_OVERDUE":
-                case "ERROR":
-                case "USER_ACCOUNT_ABNORMAL":
-                case "INVALID_REQ_TOO_MUCH":
-                    ServiceUtils.createError(this, wcPayResponse.err_code_des);
-                    break;
-                default:
-                    ServiceUtils.createError(this);
-                    break;
-            }
-            LogUtils.i(TAG,String.format("refund fail: err_code = %s, err_code_des = %s, order id = %s",
-                    wcPayResponse.err_code,
-                    wcPayResponse.err_code_des,
+        if (!"SUCCESS".equals(result.result_code)) {
+            ServiceUtils.createError(this, result.err_code + ":" + result.err_code_des);
+            LogUtils.i(TAG, String.format("refund fail: err_code = %s, err_code_des = %s, order id = %s",
+                    result.err_code,
+                    result.err_code_des,
                     order.getId()));
-
             return;
         }
 
@@ -98,11 +86,10 @@ public class M1018 extends BaseService {
         operation.changeState(order);
         session.commit();
 
-
         ServiceUtils.createSuccess(this);
     }
 
-    public WCPayResponse doRefund(String data) throws Exception {
+    public static Result doRefund(String data) throws Exception {
         String url = "https://api.mch.weixin.qq.com/secapi/pay/refund";
         /**
          * 注意PKCS12证书 是从微信商户平台-》账户设置-》 API安全 中下载的
@@ -153,9 +140,9 @@ public class M1018 extends BaseService {
                 HttpEntity entity = response.getEntity();
 
                 String rp = EntityUtils.toString(response.getEntity(), "UTF-8");
-                LogUtils.i(TAG,rp);
+                LogUtils.i(TAG, rp);
                 EntityUtils.consume(entity);
-                return XmlUtils.xmlStrToBean(rp, WCPayResponse.class);
+                return XmlUtils.xmlStrToBean(rp, Result.class);
             } catch (Exception e) {
                 throw e;
             } finally {
@@ -168,33 +155,4 @@ public class M1018 extends BaseService {
         }
     }
 
-
-    public static class WCPayResponse {
-        public String return_code;
-        public String return_msg;
-        public String result_code;
-        public String err_code;
-        public String err_code_des;
-        public String appid;
-        public String mch_id;
-        public String nonce_str;
-        public String sign;
-        public String transaction_id;
-        public String out_trade_no;
-        public String out_refund_no;
-        public String refund_id;
-        public String refund_fee;
-        public String settlement_refund_fee;
-        public String total_fee;
-        public String settlement_total_fee;
-        public String fee_type;
-        public String cash_fee;
-        public String cash_fee_type;
-        public String cash_refund_fee;
-        public String coupon_type_$n;
-        public String coupon_refund_fee;
-        public String coupon_refund_fee_$n;
-        public String coupon_refund_count;
-        public String coupon_refund_id_$n;
-    }
 }

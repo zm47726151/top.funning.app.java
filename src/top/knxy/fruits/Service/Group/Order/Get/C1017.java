@@ -192,7 +192,7 @@ public class C1017 extends BaseService {
 
         public void setState(int state) {
             this.state = String.valueOf(state);
-            this.stateStr = ServiceUtils.getGroupStateText(state);
+            this.stateStr = ServiceUtils.getGroupOrderStateText(state);
         }
 
         public Date getCreateDT() {
