@@ -3,7 +3,7 @@
 }
 
 
-.good_list .item {
+.good_info {
     display: flex;
     flex-direction: column;
     border: #eee solid 1px;
@@ -12,9 +12,8 @@
 }
 
 
-.good_list .item img {
+.good_info img {
     width: 100%;
-    margin-bottom: 10px;
     height: auto;
 }
 
