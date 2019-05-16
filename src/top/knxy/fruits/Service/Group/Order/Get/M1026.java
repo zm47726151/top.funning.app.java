@@ -56,7 +56,7 @@ public class M1026 extends BaseService {
             this.groupNum = o.getGroupNum();
 
             this.state = o.getState();
-            this.stateStr = ServiceUtils.getGroupStateText(o.getState());
+            this.stateStr = ServiceUtils.getGroupOrderStateText(o.getState());
             this.userId = o.getUserId();
             this.createDT = o.getCreateDT();
             this.payDT = o.getPayDT();

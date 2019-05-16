@@ -6,8 +6,81 @@
     margin-right: 15px;
 }
 
-.base_info .row {
+#content .base_info .row {
     margin-top: 25px;
+}
+
+#content .base_info .row2 .get_time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#content .base_info .row2 .get_time input:nth-child(1) {
+    margin-right: 10px;
+}
+
+#content .base_info .row2 .get_time input:nth-child(2) {
+    margin-left: 10px;
+}
+
+#content .image {
+    margin-top: 20px;
+}
+
+#content .image .item {
+    text-align: center;
+}
+
+
+#content .image .item .holder {
+    border-color: #eee;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 10px;
+    text-align: center;
+    min-height: 150px;
+}
+
+#content .image .item:nth-child(1) .holder:active {
+    background-color: #eee;
+}
+
+#content .image .item:nth-child(3) .holder:active {
+    background-color: #eee;
+}
+
+#content .image .item:nth-child(2) .button {
+    color: #e51c23;
+}
+
+#content .image .item .holder img {
+    width: 100%;
+    max-width: 250px;
+}
+
+#content .image .outside:nth-child(1) {
+    width: 120px;
+    height: 155px;
+}
+
+#content .image .outside:nth-child(2) {
+    width: 120px;
+    height: 130px;
+}
+
+#content .image .outside:active {
+    background: #eee;
+}
+
+#content .image .outside img {
+    width: 120px;
+    height: 120px;
+}
+
+#content .image .outside .button {
+    padding: 5px 0px 5px 0px;
 }
 
 .detail {
@@ -19,9 +92,10 @@
     display: -webkit-flex;
     flex-direction: row;
     align-items: flex-end;
+    margin-bottom: 15px;
 }
 
-.detail .title h5{
+.detail .title h5 {
     margin-bottom: 0px;
 }
 
@@ -49,6 +123,14 @@
 
 .detail .row .add:active {
     background: #eee;
+}
+
+.detail #detail_header_imageList .item button{
+    margin-top: 5px;
+}
+
+.detail #detail_content_imageList .item button{
+    margin-top: 5px;
 }
 
 .operation {

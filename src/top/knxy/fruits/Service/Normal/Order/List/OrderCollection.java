@@ -39,7 +39,7 @@ public class OrderCollection {
 
         order.note = o.getNote();
         order.state = String.valueOf(o.getState());
-        order.stateStr = ServiceUtils.getNormalStateStr(o.getState());
+        order.stateStr = ServiceUtils.getNormalOrderStateStr(o.getState());
         order.userId = o.getUserId();
         if (o.getCreateDT() != null)
             order.createDT = DateUtils.dateToString(o.getCreateDT(), DateUtils.dateStringType2);

@@ -23,7 +23,6 @@ let Page = {
         }
         Page.data.header = {"imageList": newImgs};
 
-
         oldImgs = Page.data.detail.imageList;
         newImgs = [];
         for (let i = 0; i < oldImgs.length; i++) {
@@ -36,7 +35,7 @@ let Page = {
         }
         Page.data.content = {"imageList": newImgs};
     },
-    changeImage: function () {
+    changeCoverImage: function () {
         let ele = document.getElementById("imageUrl_input");
         ele.value = null;
         ele.onchange = function () {
@@ -44,10 +43,28 @@ let Page = {
             Utils.getImageInfo(imageFile, function (width, height) {
                 if (width == height) {
                     let path = window.URL.createObjectURL(imageFile);
-                    Page.data.imageFile = imageFile;
-                    $("#imageUrl").attr({"src": path});
+                    Page.data.coverImageFile = imageFile;
+                    $("#coverImageUrl").attr({"src": path});
                 } else {
                     alert("请选择一张正方形的图片");
+                }
+            });
+        };
+        $("#imageUrl_input").trigger("click");
+    },
+    changeShareImage: function () {
+        let ele = document.getElementById("imageUrl_input");
+        ele.value = null;
+        ele.onchange = function () {
+            let imageFile = document.getElementById("imageUrl_input").files[0];
+            Utils.getImageInfo(imageFile, function (width, height) {
+                console.log((width / height));
+                if ((width / height) == 1.25) {
+                    let path = window.URL.createObjectURL(imageFile);
+                    Page.data.shareImageFile = imageFile;
+                    $("#shareImageUrl").attr({"src": path});
+                } else {
+                    alert("请选择一张长宽比等于5 : 4的图片");
                 }
             });
         };
@@ -60,11 +77,6 @@ let Page = {
         } else if (value == "2") {
             $("#state_text").html("保存成功后：下架");
         }
-
-    },
-    changeType: function (text, value) {
-        $("#type").val(value);
-        $("#type_text").html(text);
     },
     detail: {
         header: {
@@ -195,12 +207,9 @@ let Page = {
             console.log("save", "click");
             Page.save.data = {
                 "id": $("#id").val(),
-                "name": $("#name").val(),
-                "description": $("#description").val(),
-                "price": $("#price").val(),
                 "state": $("#state").val(),
-                "type": $("#type").val(),
-                "imageUrl": $("#imageUrl").attr("src"),
+                "shareImageUrl": $("#shareImageUrl").attr("src"),
+                "coverImageUrl": $("#coverImageUrl").attr("src"),
                 "detail": {
                     "content": {
                         "imageList": []
@@ -210,18 +219,6 @@ let Page = {
                     }
                 }
             };
-            if (!Page.save.data.name) {
-                alert("名称不能为空");
-                return;
-            }
-            if (!Page.save.data.price) {
-                alert("价格不能为空");
-                return;
-            }
-            if (!Utils.validMoney(Page.save.data.price)) {
-                alert("金额格式不正确");
-                return;
-            }
 
             let list = Page.data.header.imageList;
             if (!list || list.length < 1) {
@@ -234,15 +231,15 @@ let Page = {
         },
         _uploadCover: function () {
             console.log("save", "uploadCover");
-            if (!Page.data.imageFile) {
-                Page.save._uploadContentImageList(0);
+            if (!Page.data.coverImageFile) {
+                Page.save._uploadShare();
                 return;
             }
-            let imageFile = Page.data.imageFile;
+            let imageFile = Page.data.coverImageFile;
             let upload = new Upload(imageFile);
             upload.listener = {
                 next: function (fname, percent) {
-                    let message = "正在上传 \"" + fname + "\"<br/>已经上传了: " + percent.toFixed(2) + "%";
+                    let message = "正在上传 封面图片 \"" + fname + "\"<br/>已经上传了: " + percent.toFixed(2) + "%";
                     LoadingDialog.msg(message);
                 },
                 error: function (code, msg) {
@@ -250,7 +247,31 @@ let Page = {
                     alert(msg);
                 },
                 complete: function (res) {
-                    Page.save.data.imageUrl = imageHost + res.fileName;
+                    Page.save.data.coverImageUrl = imageHost + res.fileName;
+                    Page.save._uploadShare();
+                }
+            };
+            upload.start();
+        },
+        _uploadShare: function () {
+            console.log("save", "_uploadShare");
+            if (!Page.data.shareImageFile) {
+                Page.save._uploadContentImageList(0);
+                return;
+            }
+            let imageFile = Page.data.shareImageFile;
+            let upload = new Upload(imageFile);
+            upload.listener = {
+                next: function (fname, percent) {
+                    let message = "正在上传 分享图片\"" + fname + "\"<br/>已经上传了: " + percent.toFixed(2) + "%";
+                    LoadingDialog.msg(message);
+                },
+                error: function (code, msg) {
+                    LoadingDialog.hide();
+                    alert(msg);
+                },
+                complete: function (res) {
+                    Page.save.data.shareImageUrl = imageHost + res.fileName;
                     Page.save._uploadContentImageList(0);
                 }
             };
@@ -336,7 +357,7 @@ let Page = {
                 data.detail.header.imageList.push(item.url);
             }
 
-            Web.request("M1011", data, {
+            Web.request("M1033", data, {
                 onSuccess: function (p) {
                     LoadingDialog.hide();
                     window.location.reload();
