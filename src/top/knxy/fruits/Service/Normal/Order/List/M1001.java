@@ -69,7 +69,7 @@ public class M1001 extends BaseService {
                 this.telNumber = o.getTelNumber();
                 this.userName = o.getUserName();
 
-                this.stateStr = ServiceUtils.getNormalStateStr(o.getState());
+                this.stateStr = ServiceUtils.getNormalOrderStateStr(o.getState());
                 this.userId = o.getUserId();
 
                 if (o.getCreateDT() != null) {

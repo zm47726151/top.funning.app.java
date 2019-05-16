@@ -24,14 +24,11 @@ public class C1015 extends BaseService {
         GroupGoodDAL dal = session.getMapper(GroupGoodDAL.class);
         GroupGood g = dal.get(id);
 
-
         if (g.getStopTime().getTime() < new Date().getTime()) {
             ServiceUtils.response(this, 1001,"活动已经过期了 -.-!");
             return;
         }
-
         this.data = g;
-
         ServiceUtils.createSuccess(this);
     }
 }

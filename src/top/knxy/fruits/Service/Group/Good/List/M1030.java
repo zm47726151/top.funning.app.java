@@ -108,12 +108,7 @@ public class M1030 extends BaseService {
 
             public void setState(String state) {
                 this.state = state;
-
-                if ("1".equals(state)) {
-                    stateStr = "上架中";
-                } else if ("2".equals(state)) {
-                    stateStr = "已下架";
-                }
+                ServiceUtils.getGroupGoodStateText(state);
             }
 
             public String getStateStr() {
