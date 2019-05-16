@@ -1,6 +1,6 @@
 package top.knxy.fruits.Servlet.Admin.Group.Good;
 
-import top.knxy.fruits.Service.Normal.Good.Get.M1013;
+import top.knxy.fruits.Service.Group.Good.Get.M1032;
 import top.knxy.library.Config.Code;
 import top.knxy.library.Config.V;
 import top.knxy.library.Utils.ServletUtils;
@@ -17,7 +17,7 @@ public class Search extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        M1013 service = ServletUtils.requestParamToModel(req, M1013.class);
+        M1032 service = ServletUtils.requestParamToModel(req, M1032.class);
         service.start();
         if (service.code == Code.Service.SUCCESS) {
             req.setAttribute(V.data, service.data);

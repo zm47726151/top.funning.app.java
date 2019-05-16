@@ -113,7 +113,7 @@ public class C1020 extends BaseService {
 
             public void setState(String state) {
                 this.state = state;
-                this.stateStr = ServiceUtils.getGroupStateText(state);
+                this.stateStr = ServiceUtils.getGroupOrderStateText(state);
             }
 
             public String getStateStr() {

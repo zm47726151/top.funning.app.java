@@ -98,6 +98,7 @@ create table `GroupGood`(
   getTimeStart datetime,
   getTimeStop datetime,
   shareImageUrl varchar(255),
+  goodImageUrl varchar(255),
   state int not null default 1
 )
 
