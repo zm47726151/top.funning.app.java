@@ -13,7 +13,24 @@ let Page = {
             "content": {"imageList": []}
         }
     },
-    changeImage: function () {
+    addCoverImage: function () {
+        let ele = document.getElementById("imageUrl_input");
+        ele.value = null;
+        ele.onchange = function () {
+            let imageFile = document.getElementById("imageUrl_input").files[0];
+            Utils.getImageInfo(imageFile, function (width, height) {
+                if (width == 690) {
+                    let path = window.URL.createObjectURL(imageFile);
+                    Page.data.coverImageFile = imageFile;
+                    $("#coverImageUrl").attr({"src": path});
+                } else {
+                    alert("请选择一张宽度等于690px的图片");
+                }
+            });
+        };
+        $("#imageUrl_input").trigger("click");
+    },
+    addGoodImage: function () {
         let ele = document.getElementById("imageUrl_input");
         ele.value = null;
         ele.onchange = function () {
@@ -21,10 +38,27 @@ let Page = {
             Utils.getImageInfo(imageFile, function (width, height) {
                 if (width == height) {
                     let path = window.URL.createObjectURL(imageFile);
-                    Page.data.imageFile = imageFile;
-                    $("#imageUrl").attr({"src": path});
+                    Page.data.goodImageFile = imageFile;
+                    $("#goodImageUrl").attr({"src": path});
                 } else {
                     alert("请选择一张正方形的图片");
+                }
+            });
+        };
+        $("#imageUrl_input").trigger("click");
+    },
+    addShareImage: function () {
+        let ele = document.getElementById("imageUrl_input");
+        ele.value = null;
+        ele.onchange = function () {
+            let imageFile = document.getElementById("imageUrl_input").files[0];
+            Utils.getImageInfo(imageFile, function (width, height) {
+                if ((width / height) == 1.25) {
+                    let path = window.URL.createObjectURL(imageFile);
+                    Page.data.shareImageFile = imageFile;
+                    $("#shareImageUrl").attr({"src": path});
+                } else {
+                    alert("请选择一张长宽比为4:5的图片");
                 }
             });
         };
@@ -37,10 +71,6 @@ let Page = {
         } else if (value == "2") {
             $("#state_text").html("下架");
         }
-    },
-    changeType: function (text, value) {
-        $("#type").val(value);
-        $("#type_text").html(text);
     },
     detail: {
         header: {
@@ -176,13 +206,17 @@ let Page = {
         click: function () {
             console.log("save", "click");
             Page.save.data = {
-                "id": $("#id").val(),
                 "name": $("#name").val(),
-                "description": $("#description").val(),
                 "price": $("#price").val(),
+                "groupNum": $("#groupNum").val(),
                 "state": $("#state").val(),
-                "type": $("#type").val(),
-                "imageUrl": $("#imageUrl").attr("src"),
+                "stopTime": $("#stopTime").val(),
+                "getTimeStart": $("#getTimeStart").val(),
+                "getTimeStop": $("#getTimeStop").val(),
+                "description": $("#description").val(),
+                "coverImageUrl": $("#coverImageUrl").attr("src"),
+                "goodImageUrl": $("#coverImageUrl").attr("src"),
+                "shareImageUrl": $("#coverImageUrl").attr("src"),
                 "detail": {
                     "content": {
                         "imageList": []
@@ -192,6 +226,20 @@ let Page = {
                     }
                 }
             };
+
+
+            if (!Page.save.data.coverImageUrl) {
+                alert("封面图片不能为空");
+                return;
+            }
+            if (!Page.save.data.goodImageUrl) {
+                alert("商品图片不能为空");
+                return;
+            }
+            if (!Page.save.data.shareImageUrl) {
+                alert("分享图片不能为空");
+                return;
+            }
             if (!Page.save.data.name) {
                 alert("名称不能为空");
                 return;
@@ -200,9 +248,48 @@ let Page = {
                 alert("价格不能为空");
                 return;
             }
-
+            if (!Page.save.data.groupNum) {
+                alert("拼团人数不能为空");
+                return;
+            }
+            if (!Page.save.data.stopTime) {
+                alert("拼团结束时间不能为空");
+                return;
+            }
+            if (!Page.save.data.getTimeStart) {
+                alert("取货时间不能为空");
+                return;
+            }
+            if (!Page.save.data.getTimeStop) {
+                alert("取货时间不能为空");
+                return;
+            }
+            if (!Page.save.data.description) {
+                alert("描述不能为空");
+                return;
+            }
             if (!Utils.validMoney(Page.save.data.price)) {
                 alert("金额格式不正确");
+                return;
+            }
+
+            let now = new Date();
+            let stopTime = new Date(Page.save.data.stopTime);
+            let getStartTime = new Date(Page.save.data.getTimeStart);
+            let getStopTime = new Date(Page.save.data.getTimeStop);
+
+            if (now.getTime() > stopTime.getTime()) {
+                alert("结束时间不能早与当前时间");
+                return;
+            }
+
+            if (stopTime.getTime() > getStartTime.getTime()) {
+                alert("结束时间不能晚与取货开始时间");
+                return;
+            }
+
+            if (getStopTime.getTime() < getStartTime.getTime()) {
+                alert("取货开始时间晚与取货结束时间");
                 return;
             }
 
@@ -213,15 +300,15 @@ let Page = {
             }
 
             LoadingDialog.show();
-            Page.save._uploadCover();
+            Page.save._uploadCoverImage();
         },
-        _uploadCover: function () {
+        _uploadCoverImage: function () {
             console.log("save", "uploadCover");
-            if (!Page.data.imageFile) {
-                Page.save._uploadContentImageList(0);
+            if (!Page.data.coverImageFile) {
+                Page.save._uploadGoodImage(0);
                 return;
             }
-            let imageFile = Page.data.imageFile;
+            let imageFile = Page.data.coverImageFile;
             let upload = new Upload(imageFile);
             upload.listener = {
                 next: function (fname, percent) {
@@ -233,7 +320,55 @@ let Page = {
                     alert(msg);
                 },
                 complete: function (res) {
-                    Page.save.data.imageUrl = imageHost + res.fileName;
+                    Page.save.data.coverImageUrl = imageHost + res.fileName;
+                    Page.save._uploadGoodImage(0);
+                }
+            };
+            upload.start();
+        },
+        _uploadGoodImage: function () {
+            console.log("save", "uploadCover");
+            if (!Page.data.goodImageFile) {
+                Page.save._uploadShareImage(0);
+                return;
+            }
+            let imageFile = Page.data.goodImageFile;
+            let upload = new Upload(imageFile);
+            upload.listener = {
+                next: function (fname, percent) {
+                    let message = "正在上传 \"" + fname + "\"<br/>已经上传了: " + percent.toFixed(2) + "%";
+                    LoadingDialog.msg(message);
+                },
+                error: function (code, msg) {
+                    LoadingDialog.hide();
+                    alert(msg);
+                },
+                complete: function (res) {
+                    Page.save.data.goodImageUrl = imageHost + res.fileName;
+                    Page.save._uploadShareImage(0);
+                }
+            };
+            upload.start();
+        },
+        _uploadShareImage: function () {
+            console.log("save", "uploadCover");
+            if (!Page.data.shareImageFile) {
+                Page.save._uploadContentImageList(0);
+                return;
+            }
+            let imageFile = Page.data.shareImageFile;
+            let upload = new Upload(imageFile);
+            upload.listener = {
+                next: function (fname, percent) {
+                    let message = "正在上传 \"" + fname + "\"<br/>已经上传了: " + percent.toFixed(2) + "%";
+                    LoadingDialog.msg(message);
+                },
+                error: function (code, msg) {
+                    LoadingDialog.hide();
+                    alert(msg);
+                },
+                complete: function (res) {
+                    Page.save.data.shareImageUrl = imageHost + res.fileName;
                     Page.save._uploadContentImageList(0);
                 }
             };
@@ -319,7 +454,7 @@ let Page = {
                 data.detail.header.imageList.push(item.url);
             }
 
-            Web.request("M1014", data, {
+            Web.request("M1034", data, {
                 onSuccess: function (p) {
                     LoadingDialog.hide();
                     window.location.reload();
@@ -330,7 +465,6 @@ let Page = {
                 }
             })
         },
-
     }
 }
 

@@ -35,21 +35,24 @@
             </div>
             <div class="row">
                 <div class="col-md-9 base_info">
+
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-12">
                             <label>名称: </label>
                             <input class="form-control" disabled value="${data.name}" id="name"/>
                         </div>
-                        <div class="col-md-3">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
                             <label>价格: </label>
                             <input class="form-control" disabled value="${data.price}" id="price"
                                    onkeyup="this.value=this.value.replace(/[^\d.]/g,'')"/>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <label>拼团人数: </label>
                             <input class="form-control" disabled value="${data.groupNum}" id="groupNum"/>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <label>状态: </label>
                             <div class="dropdown">
                                 <button id="state_text" class="btn btn-secondary dropdown-toggle" type="button"

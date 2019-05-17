@@ -88,7 +88,7 @@ public class C1016 extends BaseService {
         go.setGroupGoodId(model.getId());
         go.setName(model.getName());
         go.setDescription(model.getDescription());
-        go.setImageUrl(model.getImageUrl());
+        go.setImageUrl(model.getGoodImageUrl());
         go.setState(1);
         go.setTeamId(orderInfo.teamId);
 
