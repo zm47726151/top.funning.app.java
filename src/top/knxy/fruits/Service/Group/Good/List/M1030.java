@@ -108,7 +108,7 @@ public class M1030 extends BaseService {
 
             public void setState(String state) {
                 this.state = state;
-                ServiceUtils.getGroupGoodStateText(state);
+                this.stateStr = ServiceUtils.getGroupGoodStateText(state);
             }
 
             public String getStateStr() {

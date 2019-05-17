@@ -1,9 +1,6 @@
 package top.knxy.fruits.DataBase.DAL;
 
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 import top.knxy.fruits.DataBase.Model.Page;
 import top.knxy.fruits.DataBase.Table.GroupGood;
 import top.knxy.fruits.Service.Group.Good.Get.M1032;
@@ -20,7 +17,7 @@ public interface GroupGoodDAL {
     @Select("select id,state,getTimeStop,getTimeStart,stopTime,groupNum,price,name from `GroupGood` order by stopTime desc limit #{index},#{size}")
     List<M1030.Data.GroupGood> getListByAdmin(Page page);
 
-    @Select("select id,name,imageUrl,shareImageUrl,detail,name,description,price,groupNum,stopTime,getTimeStart,getTimeStop from `GroupGood` where id=#{id} limit 1")
+    @Select("select id,name,state,imageUrl,shareImageUrl,detail,name,description,price,groupNum,stopTime,getTimeStart,getTimeStop,goodImageUrl from `GroupGood` where id=#{id} limit 1")
     GroupGood get(@Param("id") String id);
 
     @Select("select * from `GroupGood` where id=#{id} limit 1")
@@ -31,4 +28,8 @@ public interface GroupGoodDAL {
 
     @Update("update `GroupGood` set shareImageUrl=#{shareImageUrl},imageUrl=#{imageUrl},detail=#{detail},state=#{state} where id=#{id}")
     int update(GroupGood gg);
+
+    @Insert("insert into `GroupGood`(id,name,description,imageUrl,price,detail,groupNum,stopTime,getTimeStart,getTimeStop,state,shareImageUrl,goodImageUrl)" +
+            "values(#{id},#{name},#{description},#{imageUrl},#{price},#{detail},#{groupNum},#{stopTime},#{getTimeStart},#{getTimeStop},#{state},#{shareImageUrl},#{goodImageUrl})")
+    int insert(GroupGood order);
 }
