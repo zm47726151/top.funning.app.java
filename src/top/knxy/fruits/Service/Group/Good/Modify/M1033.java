@@ -1,17 +1,15 @@
-package top.knxy.fruits.Service.Group.Good.Change;
+package top.knxy.fruits.Service.Group.Good.Modify;
 
 import com.google.gson.Gson;
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.DataBase.DAL.GroupGoodDAL;
 import top.knxy.fruits.DataBase.Table.GroupGood;
-import top.knxy.fruits.Service.Normal.Good.Modify.M1011;
 import top.knxy.library.BaseService;
 import top.knxy.library.ServiceException;
 import top.knxy.library.Utils.ServiceUtils;
 import top.knxy.library.Utils.TextUtils;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class M1033 extends BaseService {

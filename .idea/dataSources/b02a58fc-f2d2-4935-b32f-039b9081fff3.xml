@@ -1007,87 +1007,87 @@
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="245" parent="205" name="PRIMARY">
+    <column id="245" parent="205" name="goodImageUrl">
+      <Position>13</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="246" parent="205" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="246" parent="206" name="id">
+    <column id="247" parent="206" name="id">
       <Position>1</Position>
       <DataType>char(32)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="206" name="price">
+    <column id="248" parent="206" name="price">
       <Position>2</Position>
       <DataType>decimal(14,2 digit)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="206" name="getTimeStart">
+    <column id="249" parent="206" name="getTimeStart">
       <Position>3</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="249" parent="206" name="getTimeStop">
+    <column id="250" parent="206" name="getTimeStop">
       <Position>4</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="206" name="groupNum">
+    <column id="251" parent="206" name="groupNum">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="206" name="groupGoodId">
+    <column id="252" parent="206" name="groupGoodId">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="252" parent="206" name="name">
+    <column id="253" parent="206" name="name">
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="253" parent="206" name="description">
+    <column id="254" parent="206" name="description">
       <Position>8</Position>
       <DataType>varchar(128)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="206" name="imageUrl">
+    <column id="255" parent="206" name="imageUrl">
       <Position>9</Position>
       <DataType>varchar(128)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="206" name="state">
+    <column id="256" parent="206" name="state">
       <Position>10</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="206" name="userId">
+    <column id="257" parent="206" name="userId">
       <Position>11</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="206" name="createDT">
+    <column id="258" parent="206" name="createDT">
       <Position>12</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="206" name="payDT">
+    <column id="259" parent="206" name="payDT">
       <Position>13</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="206" name="teamId">
+    <column id="260" parent="206" name="teamId">
       <Position>14</Position>
       <DataType>char(32)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="260" parent="206" name="goodImageUrl">
-      <Position>15</Position>
-      <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <key id="261" parent="206" name="PRIMARY">
