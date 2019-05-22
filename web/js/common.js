@@ -1,6 +1,3 @@
-
-
-
 let Web = {
     request: function (cmd, data, listenet) {
         if (cmd == null) {

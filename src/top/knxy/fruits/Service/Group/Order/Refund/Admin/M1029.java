@@ -5,6 +5,7 @@ import top.knxy.fruits.Config.S;
 import top.knxy.fruits.DataBase.DAL.GroupOrderDAL;
 import top.knxy.fruits.DataBase.Table.GroupOrder;
 import top.knxy.fruits.Service.Normal.Order.Refund.Admin.M1018;
+import top.knxy.fruits.Servlet.Admin.Remind;
 import top.knxy.library.BaseService;
 import top.knxy.library.ServiceException;
 import top.knxy.library.Utils.LogUtils;
@@ -72,9 +73,10 @@ public class M1029 extends BaseService {
             return;
         }
 
-        goDal.updateState(id, "7");
+        int row = goDal.updateState(id, "7");
         session.commit();
 
+        Remind.broadcast();
         ServiceUtils.createSuccess(this);
     }
 
