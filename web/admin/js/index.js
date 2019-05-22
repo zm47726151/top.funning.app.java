@@ -71,40 +71,44 @@ let Reminder = {
         }
         socket.onopen = function () {
             console.log("WebSocket", "open");
-            Manager.getUnDoCount();
         };
         socket.onclose = function () {
             console.log("WebSocket", "close");
         };
         socket.onmessage = function (message) {
             console.log("WebSocket", "message : " + message);
-            Manager.remind()
+            Manager.remind(message)
         };
     },
 }
 
 let Manager = {
-    remind: function () {
-        let m = document.getElementById('sound_remind');
-        m.play();//播放
-        this.getUnDoCount();
-    },
-    getUnDoCount:function () {
-        Web.request("M1017", {}, {
-            onSuccess: function (rp) {
-                let value = rp.data.value;
-                $("#red_point").html(value);
-                value = Number(value);
-                if (value < 1) {
-                    $("#red_point").hide();
-                } else {
-                    $("#red_point").show();
-                }
-            },
-            onError: function (rp) {
+    remind: function (data) {
+        data = JSON.parse(data.data);
+        let groupUnDoCount = data.groupUnDoCount;
+        let normalUnDoCount = data.normalUnDoCount;
+        normalUnDoCount = Number(normalUnDoCount);
+        groupUnDoCount = Number(groupUnDoCount);
+        if (normalUnDoCount > 1 || groupUnDoCount > 1) {
+            let m = document.getElementById('sound_remind');
+            m.play();//播放
+        }
 
-            }
-        });
+        console.log(data);
+
+        $("#normal_red_point").html(data.normalUnDoCount);
+        if (normalUnDoCount < 1) {
+            $("#normal_red_point").hide();
+        } else {
+            $("#normal_red_point").show();
+        }
+
+        $("#group_red_point").html(data.groupUnDoCount);
+        if (groupUnDoCount < 1) {
+            $("#group_red_point").hide();
+        } else {
+            $("#group_red_point").show();
+        }
     }
 }
 

@@ -1,4 +1,4 @@
-package top.knxy.fruits.Service.Normal.Order.Undo.List;
+package top.knxy.fruits.Service.Normal.Order.Undo;
 
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.DataBase.Model.Page;

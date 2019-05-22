@@ -86,7 +86,7 @@
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/order/undo">
-                            订单 -- 未处理列表 <span id="red_point" class="red_point hide"></span>
+                            订单 -- 未处理列表 <span id="normal_red_point" class="red_point hide"></span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -127,7 +127,12 @@
                             商品 -- 分组管理<br/><!-- 商品类型列表 -->
                         </a>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/group/order/undo">
+                            <span data-feather="file"></span>
+                            团购 -- 订单 -- 未处理订单 <span id="group_red_point" class="red_point hide"></span>
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/group/order/list">
                             <span data-feather="file"></span>
