@@ -3,6 +3,7 @@ package top.knxy.fruits.Service.Group.Order.Refund.Client;
 import org.apache.ibatis.session.SqlSession;
 import top.knxy.fruits.DataBase.DAL.GroupOrderDAL;
 import top.knxy.fruits.DataBase.Table.GroupOrder;
+import top.knxy.fruits.Servlet.Admin.Remind;
 import top.knxy.library.BaseService;
 import top.knxy.library.ServiceException;
 import top.knxy.library.Utils.ServiceUtils;
@@ -34,7 +35,8 @@ public class C1022 extends BaseService {
             throw new ServiceException();
         }
 
-        //TODO
+        Remind.broadcast();
+
         ServiceUtils.createSuccess(this);
 
     }

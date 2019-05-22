@@ -15,7 +15,7 @@ import top.knxy.fruits.Service.Normal.GoodType.Modify.M1008;
 import top.knxy.fruits.Service.Index.Poster.Put.M1021;
 import top.knxy.fruits.Service.Index.Poster.Remove.M1022;
 import top.knxy.fruits.Service.Normal.Order.Refund.Admin.M1018;
-import top.knxy.fruits.Service.Normal.Order.Undo.GetNumber.M1017;
+import top.knxy.fruits.Service.Index.GetNumber.M1017;
 import top.knxy.fruits.Service.QiNiu.getUploadToken.M1015;
 import top.knxy.library.ApiHandle;
 import top.knxy.library.BaseApi;

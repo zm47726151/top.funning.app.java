@@ -69,4 +69,9 @@ public interface GroupOrderDAL {
     @Select("select id,price,getTimeStart,getTimeStop,name,state,createDT,payDT from `GroupOrder` limit #{index}, #{size}")
     List<M1025.Data.GroupOrder> getListByAdmin(Page page);
 
+    @Select("select id,price,getTimeStart,getTimeStop,name,state,createDT,payDT from `GroupOrder` where state=5 limit #{index}, #{size}")
+    List<M1025.Data.GroupOrder> getUndoList(Page page);
+
+    @Select("SELECT count(*) FROM `GroupOrder` WHERE state=5")
+    int countUnDo();
 }
