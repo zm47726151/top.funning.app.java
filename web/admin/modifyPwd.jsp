@@ -46,7 +46,6 @@
                 $("#error_msg").html("密码的长度是 6 ～ 18 位");
                 return false;
             }
-
         }
     </script>
     <div id="success_view" class="hide" >
