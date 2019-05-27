@@ -1,22 +1,28 @@
-create table User(
-    `id` int primary key auto_increment,
-    `openId` varchar(32) UNIQUE,
-    `nickName` varchar(32),
-    `avatarUrl` varchar(255),
-    `gender` int,
-    `province` varchar(32),
-    `city` varchar(32),
-    `country` varchar(32),
-)
+create table `User`
+(
+  id        int auto_increment
+    constraint `PRIMARY`
+    primary key,
+  openId    varchar(32)  null,
+  nickName  varchar(32)  null,
+  gender    int          null,
+  avatarUrl varchar(255) null,
+  province  varchar(32)  null,
+  city      varchar(32)  null,
+  country   varchar(32)  null
+);
 
 /**
 state = {"show" = 1,"hide" = 2}
 **/
-create table GoodType(
-    `id` int primary key auto_increment,
-    name varchar(32),
-    state int enum('1','2') not null;
-)
+create table `GoodType`
+(
+  id    int auto_increment
+    constraint `PRIMARY`
+    primary key,
+  name  varchar(32) null,
+  state int         null
+);
 
 
 /**
@@ -24,22 +30,28 @@ state = {"1","2"}
 state = 1 : 上架
 state = 2 : 下架
 **/
-create table Good(
-    id int primary key auto_increment,
-    name varchar(32),
-    description varchar(128),
-    imageUrl varchar(128),
-    price DECIMAL(14,2),
-    stock int,
-    state int enum('1','2') not null default 1,
-    type int/** foreign key GoodType(id) **/
-)
+create table `Good`
+(
+  id          int auto_increment
+    constraint `PRIMARY`
+    primary key,
+  name        varchar(32)    null,
+  description varchar(128)   null,
+  imageUrl    varchar(128)   null,
+  price       decimal(14, 2) null,
+  stock       int            null,
+  state       int default 1  null,
+  type        int            null
+);
 
-create table GoodDetail(
-    id int primary key auto_increment,
-    content text,
-    goodId int
-)
+create table `GoodDetail`
+(
+  id      int auto_increment
+    constraint `PRIMARY`
+    primary key,
+  content text null,
+  goodId  int  null
+);
 
 /**
 state = {"待付款" = 1,"准备中" = 2,"已完成" = 3,"退款中" = 4,"已取消" = 5,"已退款" = 6,"已付款" = 7}
@@ -49,58 +61,66 @@ state = {"待付款" = 1,"准备中" = 2,"已完成" = 3,"退款中" = 4,"已取
 待付款 -> 准备中 -> 退款中 -> 已完成 (收单，准备(开切，包装)，配送)
 
 **/
-create table `Order`(
-    id char(32) primary key,
-    goods text,
-    price DECIMAL(14,2),
-    poster DECIMAL(14,2),
-    amount DECIMAL(14,2),
+create table `Order`
+(
+  id           char(32)       not null
+    constraint `PRIMARY`
+    primary key,
+  goods        text           null,
+  price        decimal(14, 2) null,
+  poster       decimal(14, 2) null,
+  amount       decimal(14, 2) null,
+  provinceName varchar(32)    null,
+  cityName     varchar(32)    null,
+  countyName   varchar(32)    null,
+  detailInfo   varchar(255)   null,
+  telNumber    varchar(32)    null,
+  userName     varchar(32)    null,
+  nationalCode varchar(32)    null,
+  postalCode   varchar(32)    null,
+  note         varchar(255)   null,
+  state        int            not null,
+  userId       int            null,
+  createDT     datetime       not null,
+  payDT        datetime       null
+);
 
-    provinceName  varchar(32),
-    cityName varchar(32),
-    countyName varchar(32),
-    detailInfo varchar(255),
-    telNumber varchar(32),
-    userName varchar(32),
-    nationalCode varchar(32),
-    postalCode varchar(32),
+ create table `Admin`
+(
+  id           int auto_increment
+    constraint `PRIMARY`
+    primary key,
+  username     varchar(64) not null,
+  password     char(40)    not null,
+  fail         int         null,
+  lastFailTime datetime    null,
+  salt         char(12)    not null
+);
 
-    note varchar(255),
-    state int enum('1','2','3','4','5','6','7') not null,
-    userId int,
-    createDT datetime not null,
-    payDT datetime
-)
-
-CREATE TABLE `Admin` (
-  `id` int primary key auto_increment,
-  `username` varchar(64) UNIQUE NOT NULL,
-  `password` char(40) NOT NULL,
-  `fail` int,
-  `lastFailTime` datetime,
-  `salt` char(12) NOT NULL
-)
 
 /**
 state = {"1","2"}
 state = 1 : 上架
 state = 2 : 下架
 **/
-create table `GroupGood`(
-  id int primary key auto_increment,
-  name varchar(255),
-  description varchar(128),
-  imageUrl varchar(128),
-  price DECIMAL(14,2),
-  detail text,
-  groupNum int,
-  stopTime datetime,
-  getTimeStart datetime,
-  getTimeStop datetime,
-  shareImageUrl varchar(255),
-  goodImageUrl varchar(255),
-  state int not null default 1
-)
+create table `GroupGood`
+(
+  id            int auto_increment
+    constraint `PRIMARY`
+    primary key,
+  name          varchar(255)   null,
+  description   varchar(128)   null,
+  imageUrl      varchar(128)   null,
+  price         decimal(14, 2) null,
+  detail        text           null,
+  groupNum      int            null,
+  stopTime      datetime       null,
+  getTimeStart  datetime       null,
+  getTimeStop   datetime       null,
+  state         int default 1  not null,
+  shareImageUrl varchar(255)   null,
+  goodImageUrl  varchar(255)   null
+);
 
 /**
 state = {"待付款" = 1,"拼团中" = 2,"待取货" = 3 ,"已完成" = 4,"退款中" = 5,"已取消" = 6,"已退款" = 7，"已过期" = 8，"未取货" = 9}
@@ -122,23 +142,25 @@ state = {"待付款" = 1,"拼团中" = 2,"待取货" = 3 ,"已完成" = 4,"退�
 1 -- 取消订单
 
 **/
-create table `GroupOrder`(
-    id char(32) primary key,
-    price DECIMAL(14,2),
-    getTimeStart datetime,
-    getTimeStop datetime,
-    groupNum int,
-
-    groupGoodId int,
-    name varchar(255),
-    description varchar(128),
-    imageUrl varchar(128),
-
-    state int not null,
-    userId int,
-    createDT datetime not null,
-    payDT datetime
-)
+create table `GroupOrder`
+(
+  id           char(32)       not null
+    constraint `PRIMARY`
+    primary key,
+  price        decimal(14, 2) null,
+  getTimeStart datetime       null,
+  getTimeStop  datetime       null,
+  groupNum     int            null,
+  groupGoodId  int            null,
+  name         varchar(255)   null,
+  description  varchar(128)   null,
+  imageUrl     varchar(128)   null,
+  state        int            not null,
+  userId       int            null,
+  createDT     datetime       not null,
+  payDT        datetime       null,
+  teamId       char(32)       null
+);
 
 insert into GroupGood(`name`,`description`,`imageUrl`,`price`,`groupNum`,`stopTime`,`getTimeStart`,`getTimeStop`,`state`,`detail`,`goodImageUrl`,`shareImageUrl`)values
 ('A级-红宝玉草莓（大）娇艳欲滴','一份约3斤','http://image.fruits.knxy.top/5761685fa4dd419ba3dadecda6b01ada.png','1.00',3,'2019-05-23 00:00:00','2019-04-30 00:00:00','2019-05-30 00:00:00',1,'{"header":{"imageList":["http://image.fruits.knxy.top/16e5364ce85446f285c665384e8d0121.jpg","http://image.fruits.knxy.top/5c97c9f875e54ce68575824e421a0340.jpg","http://image.fruits.knxy.top/e6acbb9da13e4b77ac41bc78baae9aab.jpg"]},"detail":{"imageList":["http://image.fruits.knxy.top/a6b3b51d95fa4541978fd5ad897702bf.jpg","http://image.fruits.knxy.top/95da1ad0c01d4bb4aec76ddac505799b.jpg","http://image.fruits.knxy.top/4b6722da36634b77a2efd7ede13227d7.jpg","http://image.fruits.knxy.top/82c435c6b2d746cea07e12fd9f8d9adf.jpg","http://image.fruits.knxy.top/2609707d1c0e404d8154236c99919e80.jpg","http://image.fruits.knxy.top/f9fb5b8ad48d42a89d65bda797052a4c.jpg","http://image.fruits.knxy.top/aa69293c34584f5a9f75c97851edc878.jpg","http://image.fruits.knxy.top/0e1fc63812cc4f228d406e66499ac30b.jpg","http://image.fruits.knxy.top/2f48ba9c90784975901cce57cdee7882.jpg"]}}','http://image.fruits.knxy.top/f68771de631a4427ac44d6aca0177790.png','http://image.fruits.knxy.top/b77217d2ecf749f7a7be6a1fc216be01.png'),
