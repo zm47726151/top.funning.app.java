@@ -7,7 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fa2d42c-42aa-4b36-88a0-60761e403109" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b02a58fc-f2d2-4935-b32f-039b9081fff3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b02a58fc-f2d2-4935-b32f-039b9081fff3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,32 +37,7 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="TestMySQL" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="TestMySQL" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="TestMySQL" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="r0nd38v04o: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="TestMySQL" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="r0nd38v04o: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="groupgood: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="TestMySQL" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="r0nd38v04o: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="grouporder: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="xyg" type="feb32156:DbDataSourceImpl" />
       </path>
     </expand>
     <select />
@@ -68,70 +47,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/admin/user/list.jsp">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/dataSources.xml">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/admin/poster.jsp">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/admin/modifyPwd.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="46" column="29" lean-forward="true" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://b02a58fc-f2d2-4935-b32f-039b9081fff3/schema/r0nd38v04o/table/groupgood">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="145" selection-start-line="142" selection-end-line="145" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b02a58fc-f2d2-4935-b32f-039b9081fff3/console_65.sql">
+        <entry file="file://$PROJECT_DIR$/property/app_develope.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+              <caret line="3" column="17" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/30.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/20.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/10.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/Desktop/00.jpg">
-          <provider selected="true" editor-type-id="images" />
+        <entry file="file://$PROJECT_DIR$/property/app_release.properties">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -230,8 +162,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Group/Order/Pay/C1018.java" />
-        <option value="$PROJECT_DIR$/../top.knxy.library.java/src/top/knxy/library/Vehicle/WeChat/OrderInfo.java" />
         <option value="$PROJECT_DIR$/../top.knxy.library.java/src/top/knxy/library/Vehicle/WeChat/Pay/OrderInfo.java" />
         <option value="$PROJECT_DIR$/../top.knxy.library.java/src/top/knxy/library/Vehicle/WeChat/Refund/Result.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Normal/Order/Refund/Admin/M1018.java" />
@@ -263,7 +193,6 @@
         <option value="$PROJECT_DIR$/web/admin/group/good/js/add.js" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Group/Good/Add/M1034.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b02a58fc-f2d2-4935-b32f-039b9081fff3/console_64.sql" />
-        <option value="$PROJECT_DIR$/db.sql" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Group/Order/List/M1025.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/Service/Group/Good/List/M1030.java" />
         <option value="$PROJECT_DIR$/src/top/knxy/fruits/DataBase/DAL/GroupGoodDAL.java" />
@@ -281,6 +210,9 @@
         <option value="$PROJECT_DIR$/web/admin/js/index.js" />
         <option value="$PROJECT_DIR$/web/admin/modifyPwd.jsp" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b02a58fc-f2d2-4935-b32f-039b9081fff3/console_65.sql" />
+        <option value="$PROJECT_DIR$/db.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b02a58fc-f2d2-4935-b32f-039b9081fff3/console.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/9f8ae687-b03f-4c06-929c-3a311cc0724d/console.sql" />
       </list>
     </option>
   </component>
@@ -310,60 +242,17 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="1280" />
     <option name="y" value="-77" />
     <option name="width" value="1600" />
-    <option name="height" value="823" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="top.knxy.fruits.java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="top" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="top" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="knxy" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="top.knxy.fruits.java" type="58d84e3e:PackageViewProjectNode" />
-              <item name="top.knxy" type="eaaa3913:PackageViewModuleGroupNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="58d84e3e:PackageViewProjectNode" />
-              <item name="top.knxy" type="eaaa3913:PackageViewModuleGroupNode" />
-              <item name="top.knxy.fruits" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="58d84e3e:PackageViewProjectNode" />
-              <item name="top.knxy" type="eaaa3913:PackageViewModuleGroupNode" />
-              <item name="top.knxy.fruits" type="616d4139:PackageViewModuleNode" />
-              <item name="top.knxy.fruits" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="top.knxy.fruits.java" type="58d84e3e:PackageViewProjectNode" />
-              <item name="top.knxy" type="eaaa3913:PackageViewModuleGroupNode" />
-              <item name="top.knxy.library" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -380,7 +269,19 @@
               <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
               <item name="top.knxy" type="9c53a853:ProjectViewModuleGroupNode" />
               <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="top.knxy" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="top.knxy" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="top.knxy.fruits.java" type="462c0819:PsiDirectoryNode" />
+              <item name="property" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
@@ -481,6 +382,49 @@
             <path>
               <item name="top.knxy.fruits.java" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="top.knxy.fruits.java" type="58d84e3e:PackageViewProjectNode" />
+              <item name="top.knxy" type="eaaa3913:PackageViewModuleGroupNode" />
+            </path>
+            <path>
+              <item name="top.knxy.fruits.java" type="58d84e3e:PackageViewProjectNode" />
+              <item name="top.knxy" type="eaaa3913:PackageViewModuleGroupNode" />
+              <item name="top.knxy.fruits" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="top.knxy.fruits.java" type="58d84e3e:PackageViewProjectNode" />
+              <item name="top.knxy" type="eaaa3913:PackageViewModuleGroupNode" />
+              <item name="top.knxy.fruits" type="616d4139:PackageViewModuleNode" />
+              <item name="top.knxy.fruits" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="top.knxy.fruits.java" type="58d84e3e:PackageViewProjectNode" />
+              <item name="top.knxy" type="eaaa3913:PackageViewModuleGroupNode" />
+              <item name="top.knxy.library" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="top.knxy.fruits.java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="top" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="top.knxy.fruits.java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="top" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="knxy" type="2674bda8:ScopeViewTreeModel$GroupNode" />
             </path>
           </expand>
           <select />
@@ -782,6 +726,7 @@
       <workItem from="1558404649236" duration="8452000" />
       <workItem from="1558507694103" duration="2925000" />
       <workItem from="1558598537719" duration="5059000" />
+      <workItem from="1558954798731" duration="4032000" />
     </task>
     <task id="LOCAL-00020" summary="c">
       <created>1552448252918</created>
@@ -1130,7 +1075,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="685740000" />
+    <option name="totallyTimeSpent" value="689772000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1142,10 +1087,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="-77" width="1600" height="823" extended-state="6" />
-    <editor active="true" />
+    <frame x="1280" y="-77" width="1600" height="877" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.627907" visible="true" weight="0.22978178" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.627907" visible="true" weight="0.23234917" />
       <window_info id="Structure" order="1" sideWeight="0.37209302" side_tool="true" weight="0.19512194" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1169,16 +1113,16 @@
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.37893298" />
       <window_info anchor="bottom" id="Spring" order="15" weight="0.32831737" />
-      <window_info anchor="bottom" id="Database Console" order="16" sideWeight="0.49935815" weight="0.5129959" />
+      <window_info anchor="bottom" id="Database Console" order="16" sideWeight="0.49935815" weight="0.510828" />
       <window_info anchor="bottom" id="Duplicate detector" order="17" weight="0.32968536" />
-      <window_info anchor="bottom" id="SQL Generator" order="18" visible="true" weight="0.32866243" />
+      <window_info anchor="bottom" id="SQL Generator" order="18" weight="0.32866243" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.1758665" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" weight="0.32991013" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" sideWeight="0.4978903" visible="true" weight="0.20860077" />
+      <window_info active="true" anchor="right" id="Database" order="6" sideWeight="0.4978903" visible="true" weight="0.20860077" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Coverage" order="9" sideWeight="0.5021097" side_tool="true" weight="0.32991013" />
@@ -1290,56 +1234,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b02a58fc-f2d2-4935-b32f-039b9081fff3/console_63.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" selection-start-column="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/DataBase/Table/GroupOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/good/add.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-523" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/good/js/add.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-695">
-          <caret line="110" column="12" selection-start-line="110" selection-start-column="12" selection-end-line="110" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/group/good/js/add.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="287" column="23" lean-forward="true" selection-start-line="287" selection-start-column="23" selection-end-line="287" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/group/good/add.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="68" column="71" selection-start-line="68" selection-start-column="71" selection-end-line="68" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/knxy/fruits/Service/Group/Good/Add/M1034.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="129" column="18" selection-start-line="129" selection-start-column="18" selection-end-line="129" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b02a58fc-f2d2-4935-b32f-039b9081fff3/console_64.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1584,42 +1478,12 @@
     <entry file="file://$PROJECT_DIR$/web/js/common.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/user/list.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/poster.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/modifyPwd.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="46" column="29" lean-forward="true" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="145" selection-start-line="142" selection-end-line="145" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://b02a58fc-f2d2-4935-b32f-039b9081fff3/schema/r0nd38v04o/table/groupgood">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b02a58fc-f2d2-4935-b32f-039b9081fff3/console_65.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/30.jpg">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$USER_HOME$/Desktop/20.jpg">
       <provider selected="true" editor-type-id="images" />
@@ -1629,6 +1493,73 @@
     </entry>
     <entry file="file://$USER_HOME$/Desktop/00.jpg">
       <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/30.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b02a58fc-f2d2-4935-b32f-039b9081fff3/console_65.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/modifyPwd.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/poster.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/user/list.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b02a58fc-f2d2-4935-b32f-039b9081fff3/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="11" lean-forward="true" selection-end-line="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9f8ae687-b03f-4c06-929c-3a311cc0724d/console_1.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://9f8ae687-b03f-4c06-929c-3a311cc0724d/schema/top_knxy_xyg/table/goodtype">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/property/app_release.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/property/app_develope.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9f8ae687-b03f-4c06-929c-3a311cc0724d/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="32" selection-end-line="32" selection-end-column="186" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/dataSources.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
