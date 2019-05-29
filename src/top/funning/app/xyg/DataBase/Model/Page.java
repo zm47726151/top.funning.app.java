@@ -1,6 +1,6 @@
 package top.funning.app.xyg.DataBase.Model;
 
-import top.funning.library.Utils.TextUtils;
+import top.knxy.library.Utils.TextUtils;
 
 public class Page {
 

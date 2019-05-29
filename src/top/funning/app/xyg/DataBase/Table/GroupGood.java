@@ -1,6 +1,6 @@
 package top.funning.app.xyg.DataBase.Table;
 
-import top.funning.library.Bean.BaseTable;
+import top.knxy.library.Bean.BaseTable;
 
 import java.util.Date;
 

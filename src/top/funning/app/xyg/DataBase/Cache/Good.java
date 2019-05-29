@@ -2,7 +2,7 @@ package top.funning.app.xyg.DataBase.Cache;
 
 import org.apache.ibatis.session.SqlSession;
 import top.funning.app.xyg.DataBase.DAL.GoodDAL;
-import top.funning.library.Utils.MyBatisUtils;
+import top.knxy.library.Utils.MyBatisUtils;
 
 import java.util.ArrayList;
 import java.util.List;

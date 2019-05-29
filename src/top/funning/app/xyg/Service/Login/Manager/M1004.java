@@ -3,10 +3,10 @@ package top.funning.app.xyg.Service.Login.Manager;
 import org.apache.ibatis.session.SqlSession;
 import top.funning.app.xyg.DataBase.DAL.AdminDAL;
 import top.funning.app.xyg.DataBase.Table.Admin;
-import top.funning.library.BaseService;
-import top.funning.library.Utils.PwdUtils;
-import top.funning.library.Utils.ServiceUtils;
-import top.funning.library.Utils.TextUtils;
+import top.knxy.library.BaseService;
+import top.knxy.library.Utils.PwdUtils;
+import top.knxy.library.Utils.ServiceUtils;
+import top.knxy.library.Utils.TextUtils;
 
 import java.util.Calendar;
 import java.util.Date;

@@ -3,7 +3,7 @@ package top.funning.app.xyg.DataBase.DAL;
 import org.apache.ibatis.annotations.*;
 import top.funning.app.xyg.DataBase.Model.Page;
 import top.funning.app.xyg.DataBase.Table.Order;
-import top.funning.library.Utils.TextUtils;
+import top.knxy.library.Utils.TextUtils;
 
 import java.util.List;
 

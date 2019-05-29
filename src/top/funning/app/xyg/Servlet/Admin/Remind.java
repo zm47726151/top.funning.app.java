@@ -2,7 +2,7 @@ package top.funning.app.xyg.Servlet.Admin;
 
 import com.google.gson.Gson;
 import top.funning.app.xyg.Service.Index.GetNumber.M1017;
-import top.funning.library.Config.Code;
+import top.knxy.library.Config.Code;
 
 import java.io.IOException;
 import java.util.Set;
