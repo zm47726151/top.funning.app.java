@@ -3,10 +3,10 @@ package top.funning.app.xyg.Service.Normal.Good.Get;
 import com.google.gson.Gson;
 import org.apache.ibatis.session.SqlSession;
 import top.funning.app.xyg.DataBase.DAL.GoodDAL;
-import top.funning.library.Bean.BaseTable;
-import top.funning.library.BaseService;
-import top.funning.library.Utils.ServiceUtils;
-import top.funning.library.Utils.TextUtils;
+import top.knxy.library.Bean.BaseTable;
+import top.knxy.library.BaseService;
+import top.knxy.library.Utils.ServiceUtils;
+import top.knxy.library.Utils.TextUtils;
 
 import java.util.List;
 

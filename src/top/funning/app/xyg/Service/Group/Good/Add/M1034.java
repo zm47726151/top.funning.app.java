@@ -5,10 +5,10 @@ import org.apache.ibatis.session.SqlSession;
 import top.funning.app.xyg.DataBase.DAL.GroupGoodDAL;
 import top.funning.app.xyg.DataBase.Table.GroupGood;
 import top.funning.app.xyg.Service.Group.Good.Modify.M1033;
-import top.funning.library.BaseService;
-import top.funning.library.ServiceException;
-import top.funning.library.Utils.DateUtils;
-import top.funning.library.Utils.ServiceUtils;
+import top.knxy.library.BaseService;
+import top.knxy.library.ServiceException;
+import top.knxy.library.Utils.DateUtils;
+import top.knxy.library.Utils.ServiceUtils;
 
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
