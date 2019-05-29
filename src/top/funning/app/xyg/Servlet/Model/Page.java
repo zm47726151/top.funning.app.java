@@ -1,6 +1,6 @@
 package top.funning.app.xyg.Servlet.Model;
 
-import top.funning.library.Utils.TextUtils;
+import top.knxy.library.Utils.TextUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;

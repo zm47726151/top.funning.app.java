@@ -2,8 +2,8 @@ package top.funning.app.xyg.Service.QiNiu.getUploadToken;
 
 import com.qiniu.util.Auth;
 import top.funning.app.xyg.Config.S;
-import top.funning.library.BaseService;
-import top.funning.library.Utils.ServiceUtils;
+import top.knxy.library.BaseService;
+import top.knxy.library.Utils.ServiceUtils;
 
 public class M1015 extends BaseService {
 

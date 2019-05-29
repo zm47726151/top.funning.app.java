@@ -23,7 +23,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Tomcat9_lib" level="application" />
-    <orderEntry type="library" name="common" level="project" />
+    <orderEntry type="library" exported="" name="common" level="project" />
     <orderEntry type="module" module-name="top.knxy.library" exported="" />
   </component>
 </module>

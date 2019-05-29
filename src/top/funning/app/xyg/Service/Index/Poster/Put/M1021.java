@@ -2,11 +2,11 @@ package top.funning.app.xyg.Service.Index.Poster.Put;
 
 import top.funning.app.xyg.Config.C;
 import top.funning.app.xyg.DataBase.Redis;
-import top.funning.library.Config.V;
-import top.funning.library.BaseService;
-import top.funning.library.ServiceException;
-import top.funning.library.Utils.ServiceUtils;
-import top.funning.library.Utils.TextUtils;
+import top.knxy.library.Config.V;
+import top.knxy.library.BaseService;
+import top.knxy.library.ServiceException;
+import top.knxy.library.Utils.ServiceUtils;
+import top.knxy.library.Utils.TextUtils;
 
 public class M1021 extends BaseService {
 

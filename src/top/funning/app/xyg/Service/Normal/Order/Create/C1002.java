@@ -6,8 +6,8 @@ import top.funning.app.xyg.DataBase.DAL.GoodDAL;
 import top.funning.app.xyg.DataBase.DAL.OrderDAL;
 import top.funning.app.xyg.DataBase.Table.Good;
 import top.funning.app.xyg.DataBase.Table.Order;
-import top.funning.library.BaseService;
-import top.funning.library.Utils.ServiceUtils;
+import top.knxy.library.BaseService;
+import top.knxy.library.Utils.ServiceUtils;
 
 import java.math.BigDecimal;
 import java.util.Date;

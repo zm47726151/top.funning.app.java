@@ -2,9 +2,9 @@ package top.funning.app.xyg.Service.Normal.GoodType.Add;
 
 import org.apache.ibatis.session.SqlSession;
 import top.funning.app.xyg.DataBase.DAL.GoodTypeDAL;
-import top.funning.library.BaseService;
-import top.funning.library.Utils.ServiceUtils;
-import top.funning.library.Utils.TextUtils;
+import top.knxy.library.BaseService;
+import top.knxy.library.Utils.ServiceUtils;
+import top.knxy.library.Utils.TextUtils;
 
 public class M1006 extends BaseService {
 
