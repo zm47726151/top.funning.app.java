@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="xyg" uuid="9f8ae687-b03f-4c06-929c-3a311cc0724d">
+    <data-source name="top_funning_app_xyg" uuid="c0a01b3e-3412-477b-9a0c-c9120bbd79c2">
       <database-info product="MySQL" version="8.0.15" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )" dbms="MYSQL" exact-version="8.0.15" exact-driver-version="5.1">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
-      <user-name>top_knxy_xyg</user-name>
+      <user-name>top_funning_app_xyg</user-name>
       <introspection-schemas>*:@</introspection-schemas>
     </data-source>
-    <data-source name="fruit" uuid="88bc8c43-dfc0-468e-9ab9-98e82893eb98">
+    <data-source name="top_funning_app" uuid="d67cd95c-b166-4969-936e-46f42d9fa177">
       <database-info product="MySQL" version="8.0.15" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )" dbms="MYSQL" exact-version="8.0.15" exact-driver-version="5.1">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
-      <user-name>top_knxy_fruit</user-name>
+      <user-name>top_funning_app</user-name>
       <introspection-schemas>*:@</introspection-schemas>
     </data-source>
   </component>
