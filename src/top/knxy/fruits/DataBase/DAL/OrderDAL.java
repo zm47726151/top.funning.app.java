@@ -42,13 +42,13 @@ public interface OrderDAL {
     public int update(Order order);
 
     @Select("select id,price,poster,amount,telNumber,userName,state,userId,createDT,payDT " +
-            "from `order` where state=2 or state=4 order by payDT desc " +
+            "from `Order` where state=2 or state=4 order by payDT desc " +
             "limit #{index},#{size}")
     public List<Order> getUndoList(Page page);
 
     @Select("select id,goods,price,poster,amount,provinceName,cityName,countyName," +
             "detailInfo,telNumber,userName,nationalCode,postalCode,note,state,userId,createDT,payDT " +
-            "from `order` where userId = #{userId} order by createDT desc")
+            "from `Order` where userId = #{userId} order by createDT desc")
     public List<Order> getListByUserId(String userId);
 
     /*@Select("select id,price,poster,amount,telNumber,userName,state,userId,createDT,payDT " +

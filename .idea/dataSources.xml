@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="xyg" uuid="9f8ae687-b03f-4c06-929c-3a311cc0724d">
+    <data-source source="LOCAL" name="top_funning_app_xyg" uuid="c0a01b3e-3412-477b-9a0c-c9120bbd79c2">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://39.106.114.227:3306/top_knxy_xyg</jdbc-url>
+      <jdbc-url>jdbc:mysql://39.106.114.227:3306/top_funning_app_xyg</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />
@@ -15,11 +15,11 @@
         <property name="yearIsDateType" value="false" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="fruit" uuid="88bc8c43-dfc0-468e-9ab9-98e82893eb98">
+    <data-source source="LOCAL" name="top_funning_app" uuid="d67cd95c-b166-4969-936e-46f42d9fa177">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://39.106.114.227:3306/top_knxy_fruit</jdbc-url>
+      <jdbc-url>jdbc:mysql://39.106.114.227:3306/top_funning_app</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />
