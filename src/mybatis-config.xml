@@ -16,13 +16,13 @@
         </environment>
     </environments>
     <mappers>
-        <mapper class="top.knxy.fruits.DataBase.DAL.AdminDAL"/>
-        <mapper class="top.knxy.fruits.DataBase.DAL.UserDAL"/>
-        <mapper class="top.knxy.fruits.DataBase.DAL.GoodDAL"/>
-        <mapper class="top.knxy.fruits.DataBase.DAL.OrderDAL"/>
-        <mapper class="top.knxy.fruits.DataBase.DAL.GoodTypeDAL"/>
-        <mapper class="top.knxy.fruits.DataBase.DAL.GoodDetailDAL"/>
-        <mapper class="top.knxy.fruits.DataBase.DAL.GroupGoodDAL"/>
-        <mapper class="top.knxy.fruits.DataBase.DAL.GroupOrderDAL"/>
+        <mapper class="top.funning.app.xyg.DataBase.DAL.AdminDAL"/>
+        <mapper class="top.funning.app.xyg.DataBase.DAL.UserDAL"/>
+        <mapper class="top.funning.app.xyg.DataBase.DAL.GoodDAL"/>
+        <mapper class="top.funning.app.xyg.DataBase.DAL.OrderDAL"/>
+        <mapper class="top.funning.app.xyg.DataBase.DAL.GoodTypeDAL"/>
+        <mapper class="top.funning.app.xyg.DataBase.DAL.GoodDetailDAL"/>
+        <mapper class="top.funning.app.xyg.DataBase.DAL.GroupGoodDAL"/>
+        <mapper class="top.funning.app.xyg.DataBase.DAL.GroupOrderDAL"/>
     </mappers>
 </configuration>
