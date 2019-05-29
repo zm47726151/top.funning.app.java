@@ -2,8 +2,8 @@ package top.funning.app.xyg.Service.Normal.GoodType.List;
 
 import top.funning.app.xyg.DataBase.DAL.GoodTypeDAL;
 import top.funning.app.xyg.DataBase.Table.GoodType;
-import top.funning.library.BaseService;
-import top.funning.library.Utils.ServiceUtils;
+import top.knxy.library.BaseService;
+import top.knxy.library.Utils.ServiceUtils;
 
 import java.util.List;
 

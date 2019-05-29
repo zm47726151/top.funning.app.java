@@ -1,8 +1,8 @@
 package top.funning.app.xyg.Servlet.Admin;
 
 import top.funning.app.xyg.DataBase.Redis;
-import top.funning.library.Config.V;
-import top.funning.library.Utils.ServletUtils;
+import top.knxy.library.Config.V;
+import top.knxy.library.Utils.ServletUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

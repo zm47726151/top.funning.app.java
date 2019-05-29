@@ -3,8 +3,8 @@ package top.funning.app.xyg.Service.Normal.Good.List;
 import org.apache.ibatis.session.SqlSession;
 import top.funning.app.xyg.DataBase.DAL.GoodDAL;
 import top.funning.app.xyg.DataBase.Model.Page;
-import top.funning.library.BaseService;
-import top.funning.library.Utils.ServiceUtils;
+import top.knxy.library.BaseService;
+import top.knxy.library.Utils.ServiceUtils;
 
 import java.util.List;
 

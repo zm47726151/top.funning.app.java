@@ -6,9 +6,9 @@ import top.funning.app.xyg.DataBase.DAL.GoodDAL;
 import top.funning.app.xyg.DataBase.DAL.GoodDetailDAL;
 import top.funning.app.xyg.DataBase.Table.Good;
 import top.funning.app.xyg.DataBase.Table.GoodDetail;
-import top.funning.library.BaseService;
-import top.funning.library.Utils.ServiceUtils;
-import top.funning.library.Utils.TextUtils;
+import top.knxy.library.BaseService;
+import top.knxy.library.Utils.ServiceUtils;
+import top.knxy.library.Utils.TextUtils;
 
 import java.util.ArrayList;
 import java.util.List;
