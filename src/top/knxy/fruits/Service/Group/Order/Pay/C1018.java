@@ -1,6 +1,7 @@
 package top.knxy.fruits.Service.Group.Order.Pay;
 
 import org.apache.ibatis.session.SqlSession;
+import top.knxy.fruits.Config.C;
 import top.knxy.fruits.Config.S;
 import top.knxy.fruits.DataBase.DAL.GroupGoodDAL;
 import top.knxy.fruits.DataBase.DAL.GroupOrderDAL;
@@ -67,10 +68,10 @@ public class C1018 extends BaseService {
             map.put("out_trade_no", groupOrder.getId());
             map.put("total_fee", new BigDecimal(groupOrder.getPrice()).multiply(new BigDecimal(100)).setScale(0, BigDecimal.ROUND_UP));
             map.put("openid", user.getOpenId());
-            map.put("spbill_create_ip", "39.106.114.227");
-            map.put("notify_url", "https://fruits.knxy.top/pay/confirm");
+            map.put("spbill_create_ip", C.getIp());
+            map.put("notify_url", C.getDomain() + "/pay/confirm");
             map.put("trade_type", "JSAPI");
-            map.put("attach","group");
+            map.put("attach", "group");
             map.put("sign", ServiceUtils.getWXPaySignValue(map, S.WCPay.apiKey));
 
             String data = XmlUtils.mapToXmlStr(map, false);
