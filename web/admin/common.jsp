@@ -22,10 +22,8 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-
     <!-- Custom styles for this template -->
     <link href="/admin/css/common.css?version=${version}" rel="stylesheet">
-
 
     <!-- Bootstrap core JavaScript
         ================================================== -->
@@ -40,7 +38,6 @@
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
-
 
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
@@ -79,55 +76,74 @@
                 $("[href='" + page + "']").addClass("active");
             })
         </script>
-
+        <!-- https://www.flaticon.com/packs/ui-ux-interface -->
         <audio id="sound_remind" class="hide" auto src="/admin/res/remind.mp3"></audio>
-        <nav style="position:static" class="col-md-2 d-none d-md-block bg-light sidebar">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
             <div class="sidebar-sticky">
                 <ul class="nav flex-column">
+                    <li class="nav-item title">
+                        <a class="nav-link">
+
+                            <object data="/admin/image/sidebar/order.svg"
+                                    type="image/svg+xml"
+                                    codebase="http://www.adobe.com/svg/viewer/install/"></object>
+                            订单
+                        </a>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/order/undo">
-                            订单 -- 未处理列表 <span id="normal_red_point" class="red_point hide"></span>
+                            未处理列表 <span id="normal_red_point" class="red_point hide"></span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/order/list">
                             <span data-feather="file"></span>
-                            订单 -- 所有订单列表
+                            所有订单列表
                         </a>
                     </li>
                     <li class="nav-item line">
                         <a class="nav-link" href="/admin/order/search">
                             <span data-feather="file"></span>
-                            订单 -- 订单详情
+                            订单详情
                         </a>
                     </li>
+                    <li class="nav-item title">
+                        <a class="nav-link">
 
+
+                            <object data="/admin/image/sidebar/good.svg"
+                                    type="image/svg+xml"
+                                    codebase="http://www.adobe.com/svg/viewer/install/"></object>
+                            商品
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/good/list">
                             <span data-feather="shopping-cart"></span>
-                            商品 -- 所有商品列表<br/>
+                            所有商品列表<br/>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/good/add">
                             <span data-feather="shopping-cart"></span>
-                            商品 -- 添加商品<br/>
+                            添加商品<br/>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/good/search">
                             <span data-feather="shopping-cart"></span>
-                            商品 -- 商品详情<br/>
+                            商品详情<br/>
                         </a>
                     </li>
 
                     <li class="nav-item line">
                         <a class="nav-link" href="/admin/goodtype/list">
                             <span data-feather="shopping-cart"></span>
-                            商品 -- 分组管理<br/><!-- 商品类型列表 -->
+                            分组管理<br/><!-- 商品类型列表 -->
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <!--li class="nav-item">
                         <a class="nav-link" href="/admin/group/order/undo">
                             <span data-feather="file"></span>
                             团购 -- 订单 -- 未处理订单 <span id="group_red_point" class="red_point hide"></span>
@@ -163,32 +179,47 @@
                             <span data-feather="shopping-cart"></span>
                             团购 -- 商品 -- 商品详情<br/>
                         </a>
-                    </li>
+                    </li-->
+                    <li class="nav-item title">
+                        <a class="nav-link">
 
+                            <object data="/admin/image/sidebar/operate.svg"
+                                    type="image/svg+xml"
+                                    codebase="http://www.adobe.com/svg/viewer/install/"></object>
+                            运营
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/user/list">
                             <span data-feather="shopping-cart"></span>
-                            运营 -- 消费者列表<br/>
+                            消费者列表<br/>
                         </a>
                     </li>
                     <li class="nav-item line">
                         <a class="nav-link" href="/admin/poster">
                             <span data-feather="shopping-cart"></span>
-                            运营 -- 修改首页海报<br/>
+                            修改首页海报<br/>
                         </a>
                     </li>
 
-
+                    <li class="nav-item title">
+                        <a class="nav-link">
+                            <object data="/admin/image/sidebar/manager.svg"
+                                    type="image/svg+xml"
+                                    codebase="http://www.adobe.com/svg/viewer/install/"></object>
+                            管理
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/modifyPwd">
                             <span data-feather="shopping-cart"></span>
-                            管理 -- 修改密码<br/>
+                            修改密码<br/>
                         </a>
                     </li>
                     <li class="nav-item hide">
                         <a class="nav-link" href="/admin/order/goodType">
                             <span data-feather="shopping-cart"></span>
-                            管理 -- 添加管理员<br/>
+                            添加管理员<br/>
                         </a>
                     </li>
                 </ul>

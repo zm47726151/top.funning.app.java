@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/top.funning.app.xyg.iml" filepath="$PROJECT_DIR$/top.funning.app.xyg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../top.knxy.library.java/top.knxy.library.iml" filepath="$PROJECT_DIR$/../top.knxy.library.java/top.knxy.library.iml" />
       <module fileurl="file://$PROJECT_DIR$/../top.knxy.java.library/top.knxy.library.iml" filepath="$PROJECT_DIR$/../top.knxy.java.library/top.knxy.library.iml" />
     </modules>
   </component>
