@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="top.funning.app.xyg:war">
     <output-path>$PROJECT_DIR$/out/artifacts/top_funning_app_xyg_war</output-path>
-    <root id="archive" name="top.knxy.fruits.war">
+    <root id="archive" name="top.funning.app.xyg.war">
       <element id="dir-copy" path="$PROJECT_DIR$/web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
