@@ -2,22 +2,14 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
+      <artifact name="top.funning.app.xyg:war" />
       <artifact name="top.funning.app.xyg:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fa2d42c-42aa-4b36-88a0-60761e403109" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/admin/image/sidebar/good.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/admin/image/sidebar/manager.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/admin/image/sidebar/operate.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/admin/image/sidebar/order.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d67cd95c-b166-4969-936e-46f42d9fa177.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/top_funning_app_xyg_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/top_funning_app_xyg_war.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/top.funning.app.xyg.iml" beforeDir="false" afterPath="$PROJECT_DIR$/top.funning.app.xyg.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/common.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/common.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../top.knxy.library.java/top.knxy.library.java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../top.knxy.library.java/top.knxy.library.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,11 +39,11 @@
     <favorites_list name="top.knxy.fruits.java" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/admin/common.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2043">
+            <state relative-caret-position="3090">
               <caret line="206" column="49" selection-start-line="206" selection-start-column="49" selection-end-line="206" selection-end-column="49" />
             </state>
           </provider>
@@ -60,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/admin/css/common.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+            <state relative-caret-position="283">
+              <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -242,7 +234,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="1280" />
     <option name="y" value="-77" />
     <option name="width" value="1600" />
@@ -253,6 +245,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -284,7 +277,7 @@
               <item name="funning" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="app" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="xyg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="out" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="top.funning.app.xyg.java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -292,8 +285,8 @@
               <item name="funning" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="app" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="xyg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="admin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="out" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="artifacts" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="top.funning.app.xyg.java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -301,35 +294,14 @@
               <item name="funning" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="app" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="xyg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="admin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="image" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="top.funning.app.xyg.java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="top" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="funning" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="app" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="xyg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="admin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="image" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="sidebar" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="top.funning.app.xyg.java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="top" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="funning" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="app" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="xyg" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="image" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="out" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="artifacts" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="top_funning_app_xyg_war" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -359,14 +331,14 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559186455571" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559209215326" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.27701148" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -651,7 +623,8 @@
       <workItem from="1559033863487" duration="11523000" />
       <workItem from="1559122458264" duration="40000" />
       <workItem from="1559122708875" duration="1843000" />
-      <workItem from="1559181671931" duration="4327000" />
+      <workItem from="1559181671931" duration="5019000" />
+      <workItem from="1559197715603" duration="1221000" />
     </task>
     <task id="LOCAL-00021" summary="c">
       <created>1552471598169</created>
@@ -1000,7 +973,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="708174000" />
+    <option name="totallyTimeSpent" value="710087000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1012,10 +985,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="-77" width="1600" height="877" extended-state="6" />
-    <editor active="true" />
+    <frame x="1280" y="-77" width="1600" height="877" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.627907" visible="true" weight="0.21887034" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.627907" visible="true" weight="0.2804878" />
       <window_info id="Structure" order="1" sideWeight="0.37209302" side_tool="true" weight="0.19512194" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1025,7 +997,7 @@
       <window_info x="1520" y="319" width="291" height="309" id="Web" order="7" sideWeight="0.39490446" side_tool="true" type="FLOATING" weight="0.18677792" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32147744" />
-      <window_info active="true" anchor="bottom" x="1442" y="77" width="1280" height="723" id="Run" order="2" sideWeight="0.49935815" visible="true" weight="0.18853503" />
+      <window_info anchor="bottom" x="1442" y="77" width="1280" height="723" id="Run" order="2" sideWeight="0.49935815" weight="0.18853503" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.33630574" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1034,7 +1006,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5006418" side_tool="true" weight="0.28180575" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.31082803" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32738853" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32738853" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32831737" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.37893298" />
@@ -1376,15 +1348,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/admin/common.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2043">
+        <state relative-caret-position="3090">
           <caret line="206" column="49" selection-start-line="206" selection-start-column="49" selection-end-line="206" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/admin/css/common.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+        <state relative-caret-position="283">
+          <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1394,7 +1366,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>top.funning.app.xyg:war exploded</last-edited>
+          <last-edited>top.funning.app.xyg:war</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
