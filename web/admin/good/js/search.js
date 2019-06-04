@@ -80,10 +80,15 @@ let Page = {
             getItemView: function (item) {
                 let html = `
                 <div class="col-md-2 item">
-                    <img src="{imageUrl}"/>
+                    <img src="{imageHost}{imageUrl}"/>
                     <button class="btn btn-sm btn-danger" onclick="Page.detail.header.delete('{id}')">删除</button>
                 </div>`;
                 html = html.replace("{imageUrl}", item.url).replace("{id}", item.id);
+                if (item.type == 'server') {
+                    html = html.replace("{imageHost}", imageHost)
+                } else {
+                    html = html.replace("{imageHost}", "")
+                }
                 return html;
             },
             getInsertView: function () {
@@ -143,10 +148,15 @@ let Page = {
             getItemView: function (item) {
                 let html = `
                 <div  class="col-md-2 item">
-                    <img src="{imageUrl}"/>
+                    <img src="{imageHost}{imageUrl}"/>
                     <button class="btn btn-sm btn-danger" onclick="Page.detail.content.delete('{id}')">删除</button>
                 </div>`;
                 html = html.replace("{imageUrl}", item.url).replace("{id}", item.id);
+                if (item.type == 'server') {
+                    html = html.replace("{imageHost}", imageHost)
+                } else {
+                    html = html.replace("{imageHost}", "")
+                }
                 return html;
             },
             getInsertView: function () {
@@ -200,7 +210,7 @@ let Page = {
                 "price": $("#price").val(),
                 "state": $("#state").val(),
                 "type": $("#type").val(),
-                "imageUrl": $("#imageUrl").attr("src"),
+                "imageUrl": imageUrl,
                 "detail": {
                     "content": {
                         "imageList": []
@@ -250,7 +260,7 @@ let Page = {
                     alert(msg);
                 },
                 complete: function (res) {
-                    Page.save.data.imageUrl = imageHost + res.fileName;
+                    Page.save.data.imageUrl = res.fileName;//imageHost +
                     Page.save._uploadContentImageList(0);
                 }
             };
@@ -280,7 +290,7 @@ let Page = {
                     LoadingDialog.hide();
                 },
                 complete: function (res) {
-                    item.url = imageHost + res.fileName;
+                    item.url = res.fileName;//imageHost +
                     item.type = "server";
                     item.file = null;
                     Page.save._uploadContentImageList(index);
@@ -312,7 +322,7 @@ let Page = {
                     LoadingDialog.hide();
                 },
                 complete: function (res) {
-                    item.url = imageHost + res.fileName;
+                    item.url = res.fileName;//imageHost +
                     item.type = "server";
                     item.file = null;
                     Page.save._uploadHeaderImageList(index);
@@ -336,6 +346,7 @@ let Page = {
                 data.detail.header.imageList.push(item.url);
             }
 
+            console.log(data);
             Web.request("M1011", data, {
                 onSuccess: function (p) {
                     LoadingDialog.hide();
@@ -345,7 +356,7 @@ let Page = {
                     LoadingDialog.hide();
                     alert(p.msg);
                 }
-            })
+            });
         },
     }
 }

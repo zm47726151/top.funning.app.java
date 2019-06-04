@@ -234,7 +234,7 @@ let Page = {
                     alert(msg);
                 },
                 complete: function (res) {
-                    Page.save.data.imageUrl = imageHost + res.fileName;
+                    Page.save.data.imageUrl = res.fileName;//imageHost
                     Page.save._uploadContentImageList(0);
                 }
             };
@@ -264,7 +264,7 @@ let Page = {
                     LoadingDialog.hide();
                 },
                 complete: function (res) {
-                    item.url = imageHost + res.fileName;
+                    item.url = res.fileName;//imageHost +
                     item.type = "server";
                     item.file = null;
                     Page.save._uploadContentImageList(index);
@@ -296,7 +296,7 @@ let Page = {
                     LoadingDialog.hide();
                 },
                 complete: function (res) {
-                    item.url = imageHost + res.fileName;
+                    item.url = res.fileName;//imageHost +
                     item.type = "server";
                     item.file = null;
                     Page.save._uploadHeaderImageList(index);
@@ -331,7 +331,6 @@ let Page = {
                 }
             })
         },
-
     }
 }
 
