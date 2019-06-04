@@ -22,7 +22,5 @@
         <mapper class="top.funning.app.xyg.DataBase.DAL.OrderDAL"/>
         <mapper class="top.funning.app.xyg.DataBase.DAL.GoodTypeDAL"/>
         <mapper class="top.funning.app.xyg.DataBase.DAL.GoodDetailDAL"/>
-        <mapper class="top.funning.app.xyg.DataBase.DAL.GroupGoodDAL"/>
-        <mapper class="top.funning.app.xyg.DataBase.DAL.GroupOrderDAL"/>
     </mappers>
 </configuration>

@@ -1,7 +1,6 @@
 package top.funning.app.xyg.Service.Index.GetNumber;
 
 import org.apache.ibatis.session.SqlSession;
-import top.funning.app.xyg.DataBase.DAL.GroupOrderDAL;
 import top.funning.app.xyg.DataBase.DAL.OrderDAL;
 import top.knxy.library.BaseService;
 import top.knxy.library.Utils.ServiceUtils;
@@ -15,9 +14,6 @@ public class M1017 extends BaseService {
 
         OrderDAL oDal = session.getMapper(OrderDAL.class);
         data.normalUnDoCount = String.valueOf(oDal.getUnDoNumber());
-
-        GroupOrderDAL goDal = session.getMapper(GroupOrderDAL.class);
-        data.groupUnDoCount = String.valueOf(goDal.countUnDo());
 
         ServiceUtils.createSuccess(this);
     }

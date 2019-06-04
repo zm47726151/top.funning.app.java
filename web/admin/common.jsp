@@ -143,43 +143,7 @@
                             分组管理<br/><!-- 商品类型列表 -->
                         </a>
                     </li>
-                    <!--li class="nav-item">
-                        <a class="nav-link" href="/admin/group/order/undo">
-                            <span data-feather="file"></span>
-                            团购 -- 订单 -- 未处理订单 <span id="group_red_point" class="red_point hide"></span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/admin/group/order/list">
-                            <span data-feather="file"></span>
-                            团购 -- 订单 -- 所有订单列表
-                        </a>
-                    </li>
-                    <li class="nav-item line">
-                        <a class="nav-link" href="/admin/group/order/search">
-                            <span data-feather="file"></span>
-                            团购 -- 订单 -- 订单详情
-                        </a>
-                    </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/admin/group/good/list">
-                            <span data-feather="shopping-cart"></span>
-                            团购 -- 商品 -- 所有商品列表<br/>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/admin/group/good/add">
-                            <span data-feather="shopping-cart"></span>
-                            团购 -- 商品 -- 添加商品<br/>
-                        </a>
-                    </li>
-                    <li class="nav-item line">
-                        <a class="nav-link" href="/admin/group/good/search">
-                            <span data-feather="shopping-cart"></span>
-                            团购 -- 商品 -- 商品详情<br/>
-                        </a>
-                    </li-->
                     <li class="nav-item title">
                         <a class="nav-link">
 

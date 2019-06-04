@@ -1,11 +1,5 @@
 package top.funning.app.xyg.Servlet.Admin;
 
-import top.funning.app.xyg.Service.Group.Good.Add.M1034;
-import top.funning.app.xyg.Service.Group.Good.Delete.M1031;
-import top.funning.app.xyg.Service.Group.Good.Modify.M1033;
-import top.funning.app.xyg.Service.Group.Order.Cancel.M1027;
-import top.funning.app.xyg.Service.Group.Order.Refund.Admin.M1029;
-import top.funning.app.xyg.Service.Group.Order.ToFinish.M1028;
 import top.funning.app.xyg.Service.Index.GetNumber.M1017;
 import top.funning.app.xyg.Service.Index.Poster.Put.M1021;
 import top.funning.app.xyg.Service.Index.Poster.Remove.M1022;
@@ -44,8 +38,7 @@ public class Api extends BaseApi {
         public static Class[] serviceList = {
                 M1006.class, M1008.class, M1009.class, M1011.class, M1012.class,
                 M1014.class, M1015.class, M1017.class, M1018.class, M1021.class,
-                M1022.class, M1027.class, M1028.class, M1029.class, M1031.class,
-                M1033.class, M1034.class};
+                M1022.class};
 
         @Override
         protected void run() throws ServletException, IOException {

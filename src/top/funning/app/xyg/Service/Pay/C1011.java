@@ -1,8 +1,6 @@
 package top.funning.app.xyg.Service.Pay;
 
 import org.apache.ibatis.session.SqlSession;
-import top.funning.app.xyg.DataBase.DAL.GroupOrderDAL;
-import top.funning.app.xyg.DataBase.Table.GroupOrder;
 import top.funning.app.xyg.DataBase.Table.Order;
 import top.funning.app.xyg.Config.C;
 import top.funning.app.xyg.DataBase.DAL.OrderDAL;
@@ -70,29 +68,6 @@ public class C1011 extends BaseService {
             }
 
             Remind.broadcast();
-
-            ServiceUtils.createSuccess(this);
-        } else if ("group".equals(requestData.attach)) {
-            String orderId = requestData.out_trade_no;
-            SqlSession session = getSqlSession();
-            GroupOrderDAL dal = session.getMapper(GroupOrderDAL.class);
-            GroupOrder order = dal.getById(orderId);
-
-            BigDecimal wcMoney = new BigDecimal(requestData.cash_fee);
-            BigDecimal ownMoney = new BigDecimal(order.getPrice()).multiply(new BigDecimal(100));
-
-
-            if (wcMoney.compareTo(ownMoney) != 0) {
-                throw new ServiceException("交易金额不对等,order id = " + orderId);
-            }
-
-            order.setPayDT(new Date());
-            order.setState(2);
-            int result = dal.payFinish(order);
-            session.commit();
-            if (result < 1) {
-                throw new ServiceException("订单状态修改失败,order id = " + orderId);
-            }
 
             ServiceUtils.createSuccess(this);
         }
