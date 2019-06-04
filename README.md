@@ -14,6 +14,10 @@
 
 微信支付证书
 
+### 引入 Library
+
+[https://github.com/MrNeptune/top.knxy.java.library](https://github.com/MrNeptune/top.knxy.java.library)
+
 ### 打包文件
 
 文件目录：out/artifacts/top_funning_app.war
