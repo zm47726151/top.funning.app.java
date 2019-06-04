@@ -24,6 +24,7 @@ hs_err_pid*
 
 .DS_Store
 
+.idea/dataSources
 .idea/dataSources.xml
 .idea/dataSources.local.xml
 .idea/workspace.xml
