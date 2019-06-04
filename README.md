@@ -22,6 +22,10 @@
 
 文件目录：out/artifacts/top_funning_app.war
 
+### 数据库文件
+
+文件目录：db.sql
+
 ## 界面展示
 
 ![actor](https://raw.githubusercontent.com/MrNeptune/top.funning.app.java/master/actor.png)

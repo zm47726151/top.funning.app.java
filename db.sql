@@ -59,7 +59,6 @@ state = {"待付款" = 1,"准备中" = 2,"已完成" = 3,"退款中" = 4,"已取
 待付款 -> 已取消
 待付款 -> 准备中 -> 退款中 -> 已退款
 待付款 -> 准备中 -> 退款中 -> 已完成 (收单，准备(开切，包装)，配送)
-
 **/
 create table `Order`
 (
@@ -96,84 +95,6 @@ create table `Order`
   lastFailTime datetime    null,
   salt         char(12)    not null
 );
-
-
-/**
-state = {"1","2"}
-state = 1 : 上架
-state = 2 : 下架
-**/
-create table `GroupGood`
-(
-  id            int auto_increment
-    constraint `PRIMARY`
-    primary key,
-  name          varchar(255)   null,
-  description   varchar(128)   null,
-  imageUrl      varchar(128)   null,
-  price         decimal(14, 2) null,
-  detail        text           null,
-  groupNum      int            null,
-  stopTime      datetime       null,
-  getTimeStart  datetime       null,
-  getTimeStop   datetime       null,
-  state         int default 1  not null,
-  shareImageUrl varchar(255)   null,
-  goodImageUrl  varchar(255)   null
-);
-
-/**
-state = {"待付款" = 1,"拼团中" = 2,"待取货" = 3 ,"已完成" = 4,"退款中" = 5,"已取消" = 6,"已退款" = 7，"已过期" = 8，"未取货" = 9}
-待付款 -> 拼团中 -> 待取货 -> 已完成
-待付款 -> 拼团中 -> 待取货 -> 未取货
-待付款 -> 已取消
-待付款 -> 拼团中 -> 退款中 -> 已退款
-待付款 -> 拼团中 -> 退款中 -> 已完成
-待付款 -> 拼团中 -> 待取货 -> 退款中 -> 已退款
-待付款 -> 拼团中 -> 待取货 -> 退款中 -> 已完成
-
-待付款 -> 已过期
-待付款 -> 拼团中 -> 已过期
-待付款 -> 拼团中 -> 待取货  -> 已过期
-
-
-3 -- 已完成
-5 -- 退款
-1 -- 取消订单
-
-**/
-create table `GroupOrder`
-(
-  id           char(32)       not null
-    constraint `PRIMARY`
-    primary key,
-  price        decimal(14, 2) null,
-  getTimeStart datetime       null,
-  getTimeStop  datetime       null,
-  groupNum     int            null,
-  groupGoodId  int            null,
-  name         varchar(255)   null,
-  description  varchar(128)   null,
-  imageUrl     varchar(128)   null,
-  state        int            not null,
-  userId       int            null,
-  createDT     datetime       not null,
-  payDT        datetime       null,
-  teamId       char(32)       null
-);
-
-insert into GroupGood(`name`,`description`,`imageUrl`,`price`,`groupNum`,`stopTime`,`getTimeStart`,`getTimeStop`,`state`,`detail`,`goodImageUrl`,`shareImageUrl`)values
-('A级-红宝玉草莓（大）娇艳欲滴','一份约3斤','http://image.fruits.knxy.top/5761685fa4dd419ba3dadecda6b01ada.png','1.00',3,'2019-05-23 00:00:00','2019-04-30 00:00:00','2019-05-30 00:00:00',1,'{"header":{"imageList":["http://image.fruits.knxy.top/16e5364ce85446f285c665384e8d0121.jpg","http://image.fruits.knxy.top/5c97c9f875e54ce68575824e421a0340.jpg","http://image.fruits.knxy.top/e6acbb9da13e4b77ac41bc78baae9aab.jpg"]},"detail":{"imageList":["http://image.fruits.knxy.top/a6b3b51d95fa4541978fd5ad897702bf.jpg","http://image.fruits.knxy.top/95da1ad0c01d4bb4aec76ddac505799b.jpg","http://image.fruits.knxy.top/4b6722da36634b77a2efd7ede13227d7.jpg","http://image.fruits.knxy.top/82c435c6b2d746cea07e12fd9f8d9adf.jpg","http://image.fruits.knxy.top/2609707d1c0e404d8154236c99919e80.jpg","http://image.fruits.knxy.top/f9fb5b8ad48d42a89d65bda797052a4c.jpg","http://image.fruits.knxy.top/aa69293c34584f5a9f75c97851edc878.jpg","http://image.fruits.knxy.top/0e1fc63812cc4f228d406e66499ac30b.jpg","http://image.fruits.knxy.top/2f48ba9c90784975901cce57cdee7882.jpg"]}}','http://image.fruits.knxy.top/f68771de631a4427ac44d6aca0177790.png','http://image.fruits.knxy.top/b77217d2ecf749f7a7be6a1fc216be01.png'),
-('A级-红宝玉草莓（大）娇艳欲滴','一份约3斤','http://image.fruits.knxy.top/5761685fa4dd419ba3dadecda6b01ada.png','2.00',3,'2019-05-23 00:00:00','2019-05-23 00:00:00','2019-05-30 00:00:00',1,'{"header":{"imageList":["http://image.fruits.knxy.top/16e5364ce85446f285c665384e8d0121.jpg","http://image.fruits.knxy.top/5c97c9f875e54ce68575824e421a0340.jpg","http://image.fruits.knxy.top/e6acbb9da13e4b77ac41bc78baae9aab.jpg"]},"detail":{"imageList":["http://image.fruits.knxy.top/a6b3b51d95fa4541978fd5ad897702bf.jpg","http://image.fruits.knxy.top/95da1ad0c01d4bb4aec76ddac505799b.jpg","http://image.fruits.knxy.top/4b6722da36634b77a2efd7ede13227d7.jpg","http://image.fruits.knxy.top/82c435c6b2d746cea07e12fd9f8d9adf.jpg","http://image.fruits.knxy.top/2609707d1c0e404d8154236c99919e80.jpg","http://image.fruits.knxy.top/f9fb5b8ad48d42a89d65bda797052a4c.jpg","http://image.fruits.knxy.top/aa69293c34584f5a9f75c97851edc878.jpg","http://image.fruits.knxy.top/0e1fc63812cc4f228d406e66499ac30b.jpg","http://image.fruits.knxy.top/2f48ba9c90784975901cce57cdee7882.jpg"]}}','http://image.fruits.knxy.top/f68771de631a4427ac44d6aca0177790.png','http://image.fruits.knxy.top/b77217d2ecf749f7a7be6a1fc216be01.png'),
-('A级-红宝玉草莓（大）娇艳欲滴','一份约3斤','http://image.fruits.knxy.top/5761685fa4dd419ba3dadecda6b01ada.png','99.00',3,'2019-05-23 00:00:00','2019-05-23 00:00:00','2019-05-30 00:00:00',1,'{"header":{"imageList":["http://image.fruits.knxy.top/16e5364ce85446f285c665384e8d0121.jpg","http://image.fruits.knxy.top/5c97c9f875e54ce68575824e421a0340.jpg","http://image.fruits.knxy.top/e6acbb9da13e4b77ac41bc78baae9aab.jpg"]},"detail":{"imageList":["http://image.fruits.knxy.top/a6b3b51d95fa4541978fd5ad897702bf.jpg","http://image.fruits.knxy.top/95da1ad0c01d4bb4aec76ddac505799b.jpg","http://image.fruits.knxy.top/4b6722da36634b77a2efd7ede13227d7.jpg","http://image.fruits.knxy.top/82c435c6b2d746cea07e12fd9f8d9adf.jpg","http://image.fruits.knxy.top/2609707d1c0e404d8154236c99919e80.jpg","http://image.fruits.knxy.top/f9fb5b8ad48d42a89d65bda797052a4c.jpg","http://image.fruits.knxy.top/aa69293c34584f5a9f75c97851edc878.jpg","http://image.fruits.knxy.top/0e1fc63812cc4f228d406e66499ac30b.jpg","http://image.fruits.knxy.top/2f48ba9c90784975901cce57cdee7882.jpg"]}}','http://image.fruits.knxy.top/f68771de631a4427ac44d6aca0177790.png','http://image.fruits.knxy.top/b77217d2ecf749f7a7be6a1fc216be01.png'),
-('A级-红宝玉草莓（大）娇艳欲滴','一份约3斤','http://image.fruits.knxy.top/5761685fa4dd419ba3dadecda6b01ada.png','99.00',3,'2019-05-23 00:00:00','2019-05-23 00:00:00','2019-05-30 00:00:00',1,'{"header":{"imageList":["http://image.fruits.knxy.top/16e5364ce85446f285c665384e8d0121.jpg","http://image.fruits.knxy.top/5c97c9f875e54ce68575824e421a0340.jpg","http://image.fruits.knxy.top/e6acbb9da13e4b77ac41bc78baae9aab.jpg"]},"detail":{"imageList":["http://image.fruits.knxy.top/a6b3b51d95fa4541978fd5ad897702bf.jpg","http://image.fruits.knxy.top/95da1ad0c01d4bb4aec76ddac505799b.jpg","http://image.fruits.knxy.top/4b6722da36634b77a2efd7ede13227d7.jpg","http://image.fruits.knxy.top/82c435c6b2d746cea07e12fd9f8d9adf.jpg","http://image.fruits.knxy.top/2609707d1c0e404d8154236c99919e80.jpg","http://image.fruits.knxy.top/f9fb5b8ad48d42a89d65bda797052a4c.jpg","http://image.fruits.knxy.top/aa69293c34584f5a9f75c97851edc878.jpg","http://image.fruits.knxy.top/0e1fc63812cc4f228d406e66499ac30b.jpg","http://image.fruits.knxy.top/2f48ba9c90784975901cce57cdee7882.jpg"]}}','http://image.fruits.knxy.top/f68771de631a4427ac44d6aca0177790.png','http://image.fruits.knxy.top/b77217d2ecf749f7a7be6a1fc216be01.png'),
-('A级-红宝玉草莓（大）娇艳欲滴','一份约3斤','http://image.fruits.knxy.top/5761685fa4dd419ba3dadecda6b01ada.png','99.00',3,'2019-05-23 00:00:00','2019-05-23 00:00:00','2019-05-30 00:00:00',1,'{"header":{"imageList":["http://image.fruits.knxy.top/16e5364ce85446f285c665384e8d0121.jpg","http://image.fruits.knxy.top/5c97c9f875e54ce68575824e421a0340.jpg","http://image.fruits.knxy.top/e6acbb9da13e4b77ac41bc78baae9aab.jpg"]},"detail":{"imageList":["http://image.fruits.knxy.top/a6b3b51d95fa4541978fd5ad897702bf.jpg","http://image.fruits.knxy.top/95da1ad0c01d4bb4aec76ddac505799b.jpg","http://image.fruits.knxy.top/4b6722da36634b77a2efd7ede13227d7.jpg","http://image.fruits.knxy.top/82c435c6b2d746cea07e12fd9f8d9adf.jpg","http://image.fruits.knxy.top/2609707d1c0e404d8154236c99919e80.jpg","http://image.fruits.knxy.top/f9fb5b8ad48d42a89d65bda797052a4c.jpg","http://image.fruits.knxy.top/aa69293c34584f5a9f75c97851edc878.jpg","http://image.fruits.knxy.top/0e1fc63812cc4f228d406e66499ac30b.jpg","http://image.fruits.knxy.top/2f48ba9c90784975901cce57cdee7882.jpg"]}}','http://image.fruits.knxy.top/f68771de631a4427ac44d6aca0177790.png','http://image.fruits.knxy.top/b77217d2ecf749f7a7be6a1fc216be01.png'),
-('A级-红宝玉草莓（大）娇艳欲滴','一份约3斤','http://image.fruits.knxy.top/5761685fa4dd419ba3dadecda6b01ada.png','99.00',3,'2019-05-23 00:00:00','2019-05-23 00:00:00','2019-05-30 00:00:00',1,'{"header":{"imageList":["http://image.fruits.knxy.top/16e5364ce85446f285c665384e8d0121.jpg","http://image.fruits.knxy.top/5c97c9f875e54ce68575824e421a0340.jpg","http://image.fruits.knxy.top/e6acbb9da13e4b77ac41bc78baae9aab.jpg"]},"detail":{"imageList":["http://image.fruits.knxy.top/a6b3b51d95fa4541978fd5ad897702bf.jpg","http://image.fruits.knxy.top/95da1ad0c01d4bb4aec76ddac505799b.jpg","http://image.fruits.knxy.top/4b6722da36634b77a2efd7ede13227d7.jpg","http://image.fruits.knxy.top/82c435c6b2d746cea07e12fd9f8d9adf.jpg","http://image.fruits.knxy.top/2609707d1c0e404d8154236c99919e80.jpg","http://image.fruits.knxy.top/f9fb5b8ad48d42a89d65bda797052a4c.jpg","http://image.fruits.knxy.top/aa69293c34584f5a9f75c97851edc878.jpg","http://image.fruits.knxy.top/0e1fc63812cc4f228d406e66499ac30b.jpg","http://image.fruits.knxy.top/2f48ba9c90784975901cce57cdee7882.jpg"]}}','http://image.fruits.knxy.top/f68771de631a4427ac44d6aca0177790.png','http://image.fruits.knxy.top/b77217d2ecf749f7a7be6a1fc216be01.png'),
-('A级-红宝玉草莓（大）娇艳欲滴','一份约3斤','http://image.fruits.knxy.top/5761685fa4dd419ba3dadecda6b01ada.png','99.00',3,'2019-05-23 00:00:00','2019-05-23 00:00:00','2019-05-30 00:00:00',1,'{"header":{"imageList":["http://image.fruits.knxy.top/16e5364ce85446f285c665384e8d0121.jpg","http://image.fruits.knxy.top/5c97c9f875e54ce68575824e421a0340.jpg","http://image.fruits.knxy.top/e6acbb9da13e4b77ac41bc78baae9aab.jpg"]},"detail":{"imageList":["http://image.fruits.knxy.top/a6b3b51d95fa4541978fd5ad897702bf.jpg","http://image.fruits.knxy.top/95da1ad0c01d4bb4aec76ddac505799b.jpg","http://image.fruits.knxy.top/4b6722da36634b77a2efd7ede13227d7.jpg","http://image.fruits.knxy.top/82c435c6b2d746cea07e12fd9f8d9adf.jpg","http://image.fruits.knxy.top/2609707d1c0e404d8154236c99919e80.jpg","http://image.fruits.knxy.top/f9fb5b8ad48d42a89d65bda797052a4c.jpg","http://image.fruits.knxy.top/aa69293c34584f5a9f75c97851edc878.jpg","http://image.fruits.knxy.top/0e1fc63812cc4f228d406e66499ac30b.jpg","http://image.fruits.knxy.top/2f48ba9c90784975901cce57cdee7882.jpg"]}}','http://image.fruits.knxy.top/f68771de631a4427ac44d6aca0177790.png','http://image.fruits.knxy.top/b77217d2ecf749f7a7be6a1fc216be01.png'),
-('A级-红宝玉草莓（大）娇艳欲滴','一份约3斤','http://image.fruits.knxy.top/5761685fa4dd419ba3dadecda6b01ada.png','99.00',3,'2019-05-23 00:00:00','2019-05-23 00:00:00','2019-05-30 00:00:00',1,'{"header":{"imageList":["http://image.fruits.knxy.top/16e5364ce85446f285c665384e8d0121.jpg","http://image.fruits.knxy.top/5c97c9f875e54ce68575824e421a0340.jpg","http://image.fruits.knxy.top/e6acbb9da13e4b77ac41bc78baae9aab.jpg"]},"detail":{"imageList":["http://image.fruits.knxy.top/a6b3b51d95fa4541978fd5ad897702bf.jpg","http://image.fruits.knxy.top/95da1ad0c01d4bb4aec76ddac505799b.jpg","http://image.fruits.knxy.top/4b6722da36634b77a2efd7ede13227d7.jpg","http://image.fruits.knxy.top/82c435c6b2d746cea07e12fd9f8d9adf.jpg","http://image.fruits.knxy.top/2609707d1c0e404d8154236c99919e80.jpg","http://image.fruits.knxy.top/f9fb5b8ad48d42a89d65bda797052a4c.jpg","http://image.fruits.knxy.top/aa69293c34584f5a9f75c97851edc878.jpg","http://image.fruits.knxy.top/0e1fc63812cc4f228d406e66499ac30b.jpg","http://image.fruits.knxy.top/2f48ba9c90784975901cce57cdee7882.jpg"]}}','http://image.fruits.knxy.top/f68771de631a4427ac44d6aca0177790.png','http://image.fruits.knxy.top/b77217d2ecf749f7a7be6a1fc216be01.png'),
-('A级-红宝玉草莓（大）娇艳欲滴','一份约3斤','http://image.fruits.knxy.top/5761685fa4dd419ba3dadecda6b01ada.png','99.00',3,'2019-05-23 00:00:00','2019-05-23 00:00:00','2019-05-30 00:00:00',1,'{"header":{"imageList":["http://image.fruits.knxy.top/16e5364ce85446f285c665384e8d0121.jpg","http://image.fruits.knxy.top/5c97c9f875e54ce68575824e421a0340.jpg","http://image.fruits.knxy.top/e6acbb9da13e4b77ac41bc78baae9aab.jpg"]},"detail":{"imageList":["http://image.fruits.knxy.top/a6b3b51d95fa4541978fd5ad897702bf.jpg","http://image.fruits.knxy.top/95da1ad0c01d4bb4aec76ddac505799b.jpg","http://image.fruits.knxy.top/4b6722da36634b77a2efd7ede13227d7.jpg","http://image.fruits.knxy.top/82c435c6b2d746cea07e12fd9f8d9adf.jpg","http://image.fruits.knxy.top/2609707d1c0e404d8154236c99919e80.jpg","http://image.fruits.knxy.top/f9fb5b8ad48d42a89d65bda797052a4c.jpg","http://image.fruits.knxy.top/aa69293c34584f5a9f75c97851edc878.jpg","http://image.fruits.knxy.top/0e1fc63812cc4f228d406e66499ac30b.jpg","http://image.fruits.knxy.top/2f48ba9c90784975901cce57cdee7882.jpg"]}}','http://image.fruits.knxy.top/f68771de631a4427ac44d6aca0177790.png','http://image.fruits.knxy.top/b77217d2ecf749f7a7be6a1fc216be01.png'),
-('A级-红宝玉草莓（大）娇艳欲滴','一份约3斤','http://image.fruits.knxy.top/5761685fa4dd419ba3dadecda6b01ada.png','0.20',3,'2019-05-21 00:00:00','2019-05-23 00:00:00','2019-05-30 00:00:00',1,'{"header":{"imageList":["http://image.fruits.knxy.top/16e5364ce85446f285c665384e8d0121.jpg","http://image.fruits.knxy.top/5c97c9f875e54ce68575824e421a0340.jpg","http://image.fruits.knxy.top/e6acbb9da13e4b77ac41bc78baae9aab.jpg"]},"detail":{"imageList":["http://image.fruits.knxy.top/a6b3b51d95fa4541978fd5ad897702bf.jpg","http://image.fruits.knxy.top/95da1ad0c01d4bb4aec76ddac505799b.jpg","http://image.fruits.knxy.top/4b6722da36634b77a2efd7ede13227d7.jpg","http://image.fruits.knxy.top/82c435c6b2d746cea07e12fd9f8d9adf.jpg","http://image.fruits.knxy.top/2609707d1c0e404d8154236c99919e80.jpg","http://image.fruits.knxy.top/f9fb5b8ad48d42a89d65bda797052a4c.jpg","http://image.fruits.knxy.top/aa69293c34584f5a9f75c97851edc878.jpg","http://image.fruits.knxy.top/0e1fc63812cc4f228d406e66499ac30b.jpg","http://image.fruits.knxy.top/2f48ba9c90784975901cce57cdee7882.jpg"]}}','http://image.fruits.knxy.top/f68771de631a4427ac44d6aca0177790.png','http://image.fruits.knxy.top/b77217d2ecf749f7a7be6a1fc216be01.png'),
-('A级-红宝玉草莓（大）娇艳欲滴','一份约3斤','http://image.fruits.knxy.top/5761685fa4dd419ba3dadecda6b01ada.png','0.10',3,'2019-05-21 00:00:00','2019-05-23 00:00:00','2019-05-30 00:00:00',1,'{"header":{"imageList":["http://image.fruits.knxy.top/16e5364ce85446f285c665384e8d0121.jpg","http://image.fruits.knxy.top/5c97c9f875e54ce68575824e421a0340.jpg","http://image.fruits.knxy.top/e6acbb9da13e4b77ac41bc78baae9aab.jpg"]},"detail":{"imageList":["http://image.fruits.knxy.top/a6b3b51d95fa4541978fd5ad897702bf.jpg","http://image.fruits.knxy.top/95da1ad0c01d4bb4aec76ddac505799b.jpg","http://image.fruits.knxy.top/4b6722da36634b77a2efd7ede13227d7.jpg","http://image.fruits.knxy.top/82c435c6b2d746cea07e12fd9f8d9adf.jpg","http://image.fruits.knxy.top/2609707d1c0e404d8154236c99919e80.jpg","http://image.fruits.knxy.top/f9fb5b8ad48d42a89d65bda797052a4c.jpg","http://image.fruits.knxy.top/aa69293c34584f5a9f75c97851edc878.jpg","http://image.fruits.knxy.top/0e1fc63812cc4f228d406e66499ac30b.jpg","http://image.fruits.knxy.top/2f48ba9c90784975901cce57cdee7882.jpg"]}}','http://image.fruits.knxy.top/f68771de631a4427ac44d6aca0177790.png','http://image.fruits.knxy.top/b77217d2ecf749f7a7be6a1fc216be01.png')
 
 insert into Admin(username,password,salt)values ('fruits@knxy.top','3f4870db36720549b5da31975febf212cfb33e70','33f1c5df698d');
 
