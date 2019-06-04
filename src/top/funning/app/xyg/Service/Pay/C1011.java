@@ -4,7 +4,7 @@ import org.apache.ibatis.session.SqlSession;
 import top.funning.app.xyg.DataBase.DAL.GroupOrderDAL;
 import top.funning.app.xyg.DataBase.Table.GroupOrder;
 import top.funning.app.xyg.DataBase.Table.Order;
-import top.funning.app.xyg.Config.S;
+import top.funning.app.xyg.Config.C;
 import top.funning.app.xyg.DataBase.DAL.OrderDAL;
 import top.knxy.library.BaseService;
 import top.knxy.library.ServiceException;
@@ -32,7 +32,7 @@ public class C1011 extends BaseService {
             tMap.put(key, map.get(key));
         }
 
-        String sign = ServiceUtils.getWXPaySignValue(tMap, S.WCPay.apiKey);
+        String sign = ServiceUtils.getWXPaySignValue(tMap, C.WCPay.apiKey);
 
         if (!sign.equals(tMap.get("sign"))) {
             throw new ServiceException("签名失败 order id (out_trade_no) = " + map.get("out_trade_no"));

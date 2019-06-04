@@ -1,7 +1,7 @@
 package top.funning.app.xyg.Service.Group.Order.Pay;
 
 import org.apache.ibatis.session.SqlSession;
-import top.funning.app.xyg.Config.S;
+import top.funning.app.xyg.Config.C;
 import top.funning.app.xyg.DataBase.DAL.GroupGoodDAL;
 import top.funning.app.xyg.DataBase.DAL.GroupOrderDAL;
 import top.funning.app.xyg.DataBase.DAL.UserDAL;
@@ -63,19 +63,19 @@ public class C1018 extends BaseService {
         {
             TreeMap<Object, Object> map = new TreeMap<>();
             map.clear();
-            map.put("appid", S.WeChat.appid);
-            map.put("mch_id", S.WCPay.mchId);
+            map.put("appid", C.WeChat.appid);
+            map.put("mch_id", C.WCPay.mchId);
             map.put("nonce_str", ServiceUtils.getUUid());
             map.put("sign_type", "MD5");
             map.put("body", "购买商品");
             map.put("out_trade_no", groupOrder.getId());
             map.put("total_fee", new BigDecimal(groupOrder.getPrice()).multiply(new BigDecimal(100)).setScale(0, BigDecimal.ROUND_UP));
             map.put("openid", user.getOpenId());
-            map.put("spbill_create_ip", C.getIp());
-            map.put("notify_url", C.getDomain() + "/pay/confirm");
+            map.put("spbill_create_ip", C.ip);
+            map.put("notify_url", C.domain + "/pay/confirm");
             map.put("trade_type", "JSAPI");
             map.put("attach", "group");
-            map.put("sign", ServiceUtils.getWXPaySignValue(map, S.WCPay.apiKey));
+            map.put("sign", ServiceUtils.getWXPaySignValue(map, C.WCPay.apiKey));
 
             String data = XmlUtils.mapToXmlStr(map, false);
             orderInfo = WebUtils.postXml("https://api.mch.weixin.qq.com/pay/unifiedorder", data, OrderInfo.class);
@@ -92,12 +92,12 @@ public class C1018 extends BaseService {
         {
             TreeMap<Object, Object> map = new TreeMap<>();
             map.clear();
-            map.put("appId", S.WeChat.appid);
+            map.put("appId", C.WeChat.appid);
             map.put("timeStamp", String.valueOf(new Date().getTime()));
             map.put("nonceStr", ServiceUtils.getUUid());
             map.put("package", "prepay_id=" + orderInfo.prepay_id);
             map.put("signType", "MD5");
-            map.put("sign", ServiceUtils.getWXPaySignValue(map, S.WCPay.apiKey));
+            map.put("sign", ServiceUtils.getWXPaySignValue(map, C.WCPay.apiKey));
 
             map.remove("appId");
             this.data = map;

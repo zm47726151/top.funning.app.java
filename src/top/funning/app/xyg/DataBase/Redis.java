@@ -1,7 +1,7 @@
 package top.funning.app.xyg.DataBase;
 
 import redis.clients.jedis.Jedis;
-import top.funning.app.xyg.Config.S;
+import top.funning.app.xyg.Config.C;
 import top.knxy.library.Utils.LogUtils;
 
 public class Redis {
@@ -11,9 +11,9 @@ public class Redis {
 
     static {
         try {
-            jedis = new Jedis(S.Redis.host);
-            jedis.auth(S.Redis.password);
-            jedis.select(S.Redis.db);
+            jedis = new Jedis(C.Redis.host);
+            jedis.auth(C.Redis.password);
+            jedis.select(C.Redis.db);
         } catch (Exception e) {
             LogUtils.i(TAG, "Redis Open Failure", e);
             jedis = null;

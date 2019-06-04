@@ -1,7 +1,7 @@
 package top.funning.app.xyg.Service.Group.Order.Refund.Admin;
 
 import org.apache.ibatis.session.SqlSession;
-import top.funning.app.xyg.Config.S;
+import top.funning.app.xyg.Config.C;
 import top.funning.app.xyg.DataBase.DAL.GroupOrderDAL;
 import top.funning.app.xyg.DataBase.Table.GroupOrder;
 import top.funning.app.xyg.Service.Normal.Order.Refund.Admin.M1018;
@@ -40,8 +40,8 @@ public class M1029 extends BaseService {
         }
 
         TreeMap<Object, Object> map = new TreeMap<>();
-        map.put("appid", S.WeChat.appid);
-        map.put("mch_id", S.WCPay.mchId);
+        map.put("appid", C.WeChat.appid);
+        map.put("mch_id", C.WCPay.mchId);
         map.put("nonce_str", ServiceUtils.getUUid());
         map.put("sign_type", "MD5");
         map.put("out_trade_no", order.getId());
@@ -49,7 +49,7 @@ public class M1029 extends BaseService {
         BigDecimal money = new BigDecimal(order.getPrice()).multiply(new BigDecimal(100)).setScale(0, BigDecimal.ROUND_UP);
         map.put("total_fee", money);
         map.put("refund_fee", money);
-        map.put("sign", ServiceUtils.getWXPaySignValue(map, S.WCPay.apiKey));
+        map.put("sign", ServiceUtils.getWXPaySignValue(map, C.WCPay.apiKey));
 
         String data = XmlUtils.mapToXmlStr(map, false);
         Result result = M1018.doRefund(data);

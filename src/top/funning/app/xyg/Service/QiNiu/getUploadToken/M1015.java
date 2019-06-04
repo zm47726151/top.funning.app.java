@@ -1,7 +1,7 @@
 package top.funning.app.xyg.Service.QiNiu.getUploadToken;
 
 import com.qiniu.util.Auth;
-import top.funning.app.xyg.Config.S;
+import top.funning.app.xyg.Config.C;
 import top.knxy.library.BaseService;
 import top.knxy.library.Utils.ServiceUtils;
 
@@ -16,8 +16,8 @@ public class M1015 extends BaseService {
             return;
         }
 
-        String accessKey = S.QiNiu.AccessKey;
-        String secretKey = S.QiNiu.SecretKey;
+        String accessKey = C.QiNiu.AccessKey;
+        String secretKey = C.QiNiu.SecretKey;
         String bucket = "shop_fruits";
         String key = ServiceUtils.getUUid() + "." + suffix;
         Auth auth = Auth.create(accessKey, secretKey);

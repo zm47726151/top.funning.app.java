@@ -18,7 +18,7 @@ public class M1021 extends BaseService {
             throw new ServiceException();
         }
 
-        String value = C.getImageHost() + fileName;
+        String value = C.imageHost + fileName;
         Redis.set(V.postImageUrl, value);
         ServiceUtils.createSuccess(this);
     }

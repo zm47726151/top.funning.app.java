@@ -2,7 +2,7 @@ package top.funning.app.xyg.Service.Index.Statistics;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
-import top.funning.app.xyg.Config.S;
+import top.funning.app.xyg.Config.C;
 import top.knxy.library.BaseService;
 import top.knxy.library.Utils.ServiceUtils;
 import top.knxy.library.Utils.WebUtils;
@@ -21,8 +21,8 @@ public class M1024 extends BaseService {
         {
             Map<String, String> map = new HashMap<>();
             map.put("grant_type", "client_credential");
-            map.put("appid", S.WeChat.appid);
-            map.put("secret", S.WeChat.secret);
+            map.put("appid", C.WeChat.appid);
+            map.put("secret", C.WeChat.secret);
             accessToken = WebUtils.getJson("https://api.weixin.qq.com/cgi-bin/token", map, AccessCode.class);
 
             if (accessToken.errcode != null && !"0".equals(accessToken.errcode)) {

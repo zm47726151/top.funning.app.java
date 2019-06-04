@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import org.apache.ibatis.session.SqlSession;
 import top.funning.app.xyg.DataBase.DAL.UserDAL;
 import top.funning.app.xyg.DataBase.Table.User;
-import top.funning.app.xyg.Config.S;
+import top.funning.app.xyg.Config.C;
 import top.knxy.library.BaseService;
 import top.knxy.library.ServiceException;
 import top.knxy.library.Utils.ServiceUtils;
@@ -28,8 +28,8 @@ public class C1003 extends BaseService {
         }
 
         Map<String, String> map = new HashMap<>();
-        map.put("appid", S.WeChat.appid);
-        map.put("secret", S.WeChat.secret);
+        map.put("appid", C.WeChat.appid);
+        map.put("secret", C.WeChat.secret);
         map.put("js_code", jsCode);
         map.put("grant_type", "authorization_code");
         String str = WebUtils.get("https://api.weixin.qq.com/sns/jscode2session", map);

@@ -10,7 +10,7 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.ssl.SSLContexts;
 import org.apache.http.util.EntityUtils;
 import org.apache.ibatis.session.SqlSession;
-import top.funning.app.xyg.Config.S;
+import top.funning.app.xyg.Config.C;
 import top.funning.app.xyg.DataBase.DAL.OrderDAL;
 import top.funning.app.xyg.DataBase.Table.Order;
 import top.knxy.library.BaseService;
@@ -50,8 +50,8 @@ public class M1018 extends BaseService {
         }
 
         TreeMap<Object, Object> map = new TreeMap<>();
-        map.put("appid", S.WeChat.appid);
-        map.put("mch_id", S.WCPay.mchId);
+        map.put("appid", C.WeChat.appid);
+        map.put("mch_id", C.WCPay.mchId);
         map.put("nonce_str", ServiceUtils.getUUid());
         map.put("sign_type", "MD5");
         map.put("out_trade_no", order.getId());
@@ -59,7 +59,7 @@ public class M1018 extends BaseService {
         BigDecimal money = new BigDecimal(order.getAmount()).multiply(new BigDecimal(100)).setScale(0, BigDecimal.ROUND_UP);
         map.put("total_fee", money);
         map.put("refund_fee", money);
-        map.put("sign", ServiceUtils.getWXPaySignValue(map, S.WCPay.apiKey));
+        map.put("sign", ServiceUtils.getWXPaySignValue(map, C.WCPay.apiKey));
 
         String data = XmlUtils.mapToXmlStr(map, false);
         Result result = doRefund(data);
@@ -102,7 +102,7 @@ public class M1018 extends BaseService {
             /**
              * 此处要改
              **/
-            keyStore.load(instream, S.WCPay.mchId.toCharArray());//这里写密码..默认是你的MCHID
+            keyStore.load(instream, C.WCPay.mchId.toCharArray());//这里写密码..默认是你的MCHID
         } catch (Exception e) {
             throw e;
         } finally {
@@ -114,7 +114,7 @@ public class M1018 extends BaseService {
          * 此处要改
          **/
         SSLContext sslcontext = SSLContexts.custom()
-                .loadKeyMaterial(keyStore, S.WCPay.mchId.toCharArray())//这里也是写密码的
+                .loadKeyMaterial(keyStore, C.WCPay.mchId.toCharArray())//这里也是写密码的
                 .build();
         // Allow TLSv1 protocol only
         SSLConnectionSocketFactory sslsf = new SSLConnectionSocketFactory(

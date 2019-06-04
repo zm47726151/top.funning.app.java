@@ -27,7 +27,7 @@ public class GlobeFilter implements Filter {
         response.setCharacterEncoding("UTF-8");
 
         request.setAttribute("version", C.getVersion());
-        request.setAttribute("imageHost", C.getImageHost());
+        request.setAttribute("imageHost", C.imageHost);
 
         String requestURI = request.getRequestURI();
 
