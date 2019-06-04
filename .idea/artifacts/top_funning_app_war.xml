@@ -5,9 +5,9 @@
       <element id="dir-copy" path="$PROJECT_DIR$/web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="file-copy" path="$PROJECT_DIR$/property/app_release.properties" output-file-name="app.properties" />
           <element id="module-output" name="top.knxy.library" />
           <element id="module-output" name="top.funning.app" />
+          <element id="file-copy" path="$PROJECT_DIR$/src/app.properties" />
         </element>
       </element>
     </root>
