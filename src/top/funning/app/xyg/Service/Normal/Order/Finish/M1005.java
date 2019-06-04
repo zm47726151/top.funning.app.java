@@ -1,4 +1,4 @@
-package top.funning.app.xyg.Service.Normal.Order.ChangeState;
+package top.funning.app.xyg.Service.Normal.Order.Finish;
 
 import org.apache.ibatis.session.SqlSession;
 import top.funning.app.xyg.DataBase.DAL.OrderDAL;
@@ -7,11 +7,11 @@ import top.knxy.library.BaseService;
 import top.knxy.library.Utils.ServiceUtils;
 import top.knxy.library.Utils.TextUtils;
 
+import javax.validation.constraints.Size;
+
 public class M1005 extends BaseService {
-
+    @Size(max = 32, min = 32)
     public String id;
-    public String state;
-
 
     @Override
     protected void run() throws Exception {
@@ -20,26 +20,17 @@ public class M1005 extends BaseService {
             return;
         }
 
-        if (!TextUtils.isNumeric(state)) {
-            ServiceUtils.createError(this);
-            return;
-        }
-
         SqlSession session = getSqlSession();
         OrderDAL operation = session.getMapper(OrderDAL.class);
         Order order = operation.getState(id);
-        int s = Integer.valueOf(state);
 
-        if (!((order.getState() == 2 && s == 3) ||
-                (order.getState() == 4 && s == 6) ||
-                (order.getState() == 2 && s == 5))) {
+        if (order.getState() != 2) {
             throw new Exception("修改不合法");
         }
 
-        order.setState(s);
+        order.setState(3);
         operation.changeState(order);
         session.commit();
-
 
         ServiceUtils.createSuccess(this);
     }

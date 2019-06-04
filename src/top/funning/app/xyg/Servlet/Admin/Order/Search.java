@@ -3,7 +3,7 @@ package top.funning.app.xyg.Servlet.Admin.Order;
 
 import top.knxy.library.Config.Code;
 import top.knxy.library.Config.V;
-import top.funning.app.xyg.Service.Normal.Order.ChangeState.M1005;
+import top.funning.app.xyg.Service.Normal.Order.Finish.M1005;
 import top.funning.app.xyg.Service.Normal.Order.Search.M1002;
 import top.knxy.library.Utils.ServletUtils;
 
@@ -30,12 +30,6 @@ public class Search extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        M1005 service = ServletUtils.requestParamToModel(req, M1005.class);
-        service.start();
-        if (service.code == Code.Service.SUCCESS) {
-            doGet(req, resp);
-        } else {
-            resp.sendError(500, service.msg);
-        }
+
     }
 }

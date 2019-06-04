@@ -9,6 +9,7 @@ import top.funning.app.xyg.Service.Normal.Good.Modify.M1011;
 import top.funning.app.xyg.Service.Normal.GoodType.Add.M1006;
 import top.funning.app.xyg.Service.Normal.GoodType.Delete.M1009;
 import top.funning.app.xyg.Service.Normal.GoodType.Modify.M1008;
+import top.funning.app.xyg.Service.Normal.Order.Finish.M1005;
 import top.funning.app.xyg.Service.Normal.Order.Refund.Admin.M1018;
 import top.funning.app.xyg.Service.QiNiu.getUploadToken.M1015;
 import top.knxy.library.ApiHandle;
@@ -35,7 +36,7 @@ public class Api extends BaseApi {
             super(request, response);
         }
 
-        public static Class[] serviceList = {
+        public static Class[] serviceList = {M1005.class,
                 M1006.class, M1008.class, M1009.class, M1011.class, M1012.class,
                 M1014.class, M1015.class, M1017.class, M1018.class, M1021.class,
                 M1022.class};
