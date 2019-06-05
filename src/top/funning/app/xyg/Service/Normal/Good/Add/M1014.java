@@ -1,6 +1,10 @@
 package top.funning.app.xyg.Service.Normal.Good.Add;
 
 import com.google.gson.Gson;
+import net.sf.oval.ConstraintViolation;
+import net.sf.oval.Validator;
+import net.sf.oval.constraint.Length;
+import net.sf.oval.constraint.NotNull;
 import org.apache.ibatis.session.SqlSession;
 import top.funning.app.xyg.DataBase.DAL.GoodDAL;
 import top.funning.app.xyg.DataBase.DAL.GoodDetailDAL;
@@ -10,22 +14,34 @@ import top.knxy.library.BaseService;
 import top.funning.app.xyg.Service.Normal.Good.Modify.M1011;
 import top.knxy.library.ServiceException;
 import top.knxy.library.Utils.ServiceUtils;
-import top.knxy.library.Utils.TextUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class M1014 extends BaseService {
-
-
+    @NotNull
+    @Length(min = 1, max = 32)
     public String name;
-    public String description;
-    public String price;
-    public String state;
-    public String imageUrl;
-    public String type;
-    public M1011.Detail detail;
 
+    @NotNull
+    @Length(min = 1, max = 128)
+    public String description;
+
+    @NotNull
+    public String price;
+
+    @NotNull
+    public String state;
+
+    @NotNull
+    @Length(min = 1, max = 128)
+    public String imageUrl;
+
+    @NotNull
+    public String type;
+
+    @NotNull
+    public M1011.Detail detail;
 
     public static class Detail {
 
@@ -41,16 +57,11 @@ public class M1014 extends BaseService {
         }
     }
 
+
     @Override
     protected void run() throws Exception {
-        if (TextUtils.isEmpty(name) ||
-                TextUtils.isEmpty(price) ||
-                TextUtils.isEmpty(imageUrl) ||
-                !TextUtils.isNumeric(state) ||
-                detail == null ||
-                detail.header == null ||
-                detail.header.imageList.isEmpty()
-        ) {
+
+        if (detail == null || detail.header == null || detail.header.imageList.isEmpty()) {
             throw new ServiceException();
         }
 

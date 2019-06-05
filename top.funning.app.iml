@@ -25,5 +25,6 @@
     <orderEntry type="library" name="Tomcat9_lib" level="application" />
     <orderEntry type="library" exported="" name="common" level="project" />
     <orderEntry type="module" module-name="top.knxy.library" exported="" />
+    <orderEntry type="library" name="net.sf.oval:oval:1.86" level="project" />
   </component>
 </module>
