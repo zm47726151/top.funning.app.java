@@ -11,7 +11,7 @@ public interface UserDAL {
 
     @Select({"select u.id,u.openId, SUM(o.amount) amount " +
             "from `User` u left join `Order` o " +
-            "on u.id = o.userId where o.state=3 group by u.id"})
+            "on u.id = o.userId and  o.state=3  group by u.id order by u.id desc"})
     List<M1023.Data.User> getList();
 
     @Select({"select id,openId from `User` where openId = #{openId} limit 1"})
