@@ -52,6 +52,7 @@ let LoadingDialog = {
 
 
 let Reminder = {
+    isFirst: true,
     init: function () {
         let host;
         if (window.location.protocol == 'http:') {
@@ -89,9 +90,13 @@ let Manager = {
         let normalUnDoCount = data.normalUnDoCount;
         normalUnDoCount = Number(normalUnDoCount);
         groupUnDoCount = Number(groupUnDoCount);
-        if (normalUnDoCount > 1 || groupUnDoCount > 1) {
-            let m = document.getElementById('sound_remind');
-            m.play();//播放
+        if (!remind.isFirst) {
+            if (normalUnDoCount > 1 || groupUnDoCount > 1) {
+                let m = document.getElementById('sound_remind');
+                m.play();//播放
+            }
+        } else {
+            remind.isFirst = false;
         }
 
         console.log(data);
