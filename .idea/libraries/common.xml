@@ -12,6 +12,7 @@
       <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.13.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/qiniu-java-sdk-7.2.17.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/jedis-3.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/oval-1.86.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
