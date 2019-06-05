@@ -48,7 +48,7 @@ public interface GoodDAL {
             "g.stock," +
             "g.type " +
             "from Good g,GoodType gd " +
-            "where g.type = gd.id and gd.state = 1 and g.state = 1"})
+            "where g.type = gd.id and gd.state = 1 and g.state = 1 order by id desc"})
     public List<top.funning.app.xyg.DataBase.Table.Good> getUsefulList();
 
     @Select("select id,name,price,imageUrl " +
