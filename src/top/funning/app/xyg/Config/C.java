@@ -27,6 +27,7 @@ public class C {
     public static class QiNiu {
         public static final String AccessKey = getValue("qiniu_AccessKey");
         public static final String SecretKey = getValue("qiniu_SecretKey");
+        public static final String bucket = getValue("qiniu_bucket");
     }
 
     public static class Redis {

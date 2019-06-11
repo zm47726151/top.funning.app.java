@@ -23,8 +23,7 @@ public class M1014 extends BaseService {
     @Length(min = 1, max = 32)
     public String name;
 
-    @NotNull
-    @Length(min = 1, max = 128)
+    @Length(min = 0, max = 128)
     public String description;
 
     @NotNull

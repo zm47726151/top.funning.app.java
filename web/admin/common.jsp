@@ -53,7 +53,7 @@
 <body>
 
 <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/admin/index">小程序商城</a>
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/admin/index">昕阳光果品店</a>
     <div class="w-100"></div>
     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">

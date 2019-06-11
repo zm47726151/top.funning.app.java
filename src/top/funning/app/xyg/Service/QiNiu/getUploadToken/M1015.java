@@ -18,7 +18,7 @@ public class M1015 extends BaseService {
 
         String accessKey = C.QiNiu.AccessKey;
         String secretKey = C.QiNiu.SecretKey;
-        String bucket = "shop_fruits";
+        String bucket =C.QiNiu.bucket;
         String key = ServiceUtils.getUUid() + "." + suffix;
         Auth auth = Auth.create(accessKey, secretKey);
         String token = auth.uploadToken(bucket, key);
