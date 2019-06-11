@@ -17,6 +17,7 @@
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.ideaLibSources/mybatis-3.5.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/jedis-3.0.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

@@ -90,13 +90,13 @@ let Manager = {
         let normalUnDoCount = data.normalUnDoCount;
         normalUnDoCount = Number(normalUnDoCount);
         groupUnDoCount = Number(groupUnDoCount);
-        if (!remind.isFirst) {
+        if (!Reminder.isFirst) {
             if (normalUnDoCount > 1 || groupUnDoCount > 1) {
                 let m = document.getElementById('sound_remind');
                 m.play();//播放
             }
         } else {
-            remind.isFirst = false;
+            Reminder.isFirst = false;
         }
 
         console.log(data);
